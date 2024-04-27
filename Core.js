@@ -1139,7 +1139,7 @@ A17.sendMessage(from, { react: { text: '❤', key: m.key }});
 
          // report and suggest ...
 
-      case 'report': case 'suggest ': {
+    /*  case 'report': case 'suggest ': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`please provide a report message you want to deliver`)
@@ -1150,7 +1150,7 @@ A17.sendMessage(from, { react: { text: '❤', key: m.key }});
       await A17.sendMessage(`2347080968564@s.whatsapp.net`, {text: `${txtmsg}`, { quoted: m })
         reply(`*✅ Your Report has been submitted Successfully to bot creator*\n\n*You will get response shortly... ♥️*`); 
      }
-     break;
+     break;*/
      
 
 
