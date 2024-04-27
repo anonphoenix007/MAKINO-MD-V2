@@ -26,7 +26,7 @@ If you re-upload  anything from my ***REPOSITORY*** then Don't forget to give***
 
 1. Fork the repo
     <br>
-<a href="https://github.com/anonphoenix007/MAKINO-MD-V2/fork"><img title="MAKINO-MD-V2" src="https://img.shields.io/badge/FORK MAKINO-MD-V2-h?color=black&style=for-the-badge&logo=stackshare"></a>
+<a href="https://github.com/anonphoenix007/MAKINO-MD-V2/fork"><img title="MAKINO-MD-V2" src="https://img.shields.io/badge/FORK_MAKINO-MD_V2-h?color=black&style=for-the-badge&logo=stackshare"></a>
 
 2. Scan and Upload the `creds.json` to ***sessionDir*** Folder
     <br>
