@@ -30,7 +30,7 @@ If you re-upload  anything from my ***REPOSITORY*** then Don't forget to give***
 
 2. Scan and Upload the `creds.json` to ***sessionDir*** Folder
     <br>
-<a href='https://replit.com/@ahil15/?v=1' target="_blank"><img alt='SCAN QR-1' src='https://img.shields.io/badge/Scan_qr-1-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=black&color=blue'/></a>
+<a href='https://taira-tech-session.onrender.com/' target="_blank"><img alt='Get Session ID' src='https://img.shields.io/badge/Scan_qr-1-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=black&color=blue'/></a>
 
 #### DEPLOY STEPS
 
