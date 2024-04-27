@@ -114,7 +114,7 @@ global.BotName = "🐦Makino-md-v2";
 
 ## ```Support Me```
 <a href='https://www.instagram.com/anonphoenix007' target="_blank"><img alt='Instagram' src='https://img.shields.io/badge/CONTACT-h?color=black&style=for-the-badge&logo=instagram' width="96.35" height="28"/></a></p>
-<a href='wa.me/2347080968564' target="_blank"><img alt='Whatsapp' src='https://img.shields.io/badge/CONTACT-h?color=black&style=for-the-badge&logo=whatsapp' width="96.35" height="28"/></a></p>
+<a href='https://wa.me/2347080968564' target="_blank"><img alt='Whatsapp' src='https://img.shields.io/badge/CONTACT-h?color=black&style=for-the-badge&logo=whatsapp' width="96.35" height="28"/></a></p>
 <a href='https://chat.whatsapp.com/KEg0G3UUs1G39ikdyfF5Pm' target="_blank"><img alt='Whatsapp' src='https://img.shields.io/badge/OFFICIAL-GC-h?color=black&style=for-the-badge&logo=whatsapp' width="96.35" height="28"/></a></p>
 <a href='https://whatsapp.com/channel/0029VaY0Zq32P59piTo5rg0K' target="_blank"><img alt='Whatsapp' src='https://img.shields.io/badge/OFFICIAL-Channel-h?color=black&style=for-the-badge&logo=whatsapp' width="96.35" height="28"/></a></p>
 <a href='https://www.youtube.com' target="_blank"><img alt='Youtube' src='https://img.shields.io/badge/SUBSCRIBE-h?color=black&style=for-the-badge&logo=youtube' width="96.35" height="28"/></a></p>
@@ -131,12 +131,15 @@ global.BotName = "🐦Makino-md-v2";
 
 
  
- ## 🎯 Author 🎯
+ ## 🎯 Authors 🎯
   <div align="center">
   
 | [![Tᴀɪʀᴀ Mᴀᴋɪɴᴏ](https://github.com/anonphoenix007.png?size=150)](https://github.com/anonphoenix007) |
 |----|
-| [  S ʟ ᴀ ꜱ ʜ ᴇ ʀ ](https://github.com/ahil15) |
+| [  Tᴀɪʀᴀ Mᴀᴋɪɴᴏ ](https://github.com/anonphoenix007) |
+|  Developer |
+| [ S ʟ ᴀ ꜱ ʜ ᴇ ʀ ]
+(https://github.com/ahil15) |
 |  Bot Base |
 
   </div>
