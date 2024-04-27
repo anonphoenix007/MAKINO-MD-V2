@@ -1,5 +1,5 @@
 <p align="center">
-<a href="https://github.com/anonphoenix007"><img title="Author" src="https://img.shields.io/badge/Author_Of-Beluga_Bot-black"></a>
+<a href="https://github.com/anonphoenix007"><img title="Author" src="https://img.shields.io/badge/Author_Of-MAKINO_V2-black"></a>
 
 <p align="center">  
   <a href="wa.me/2347080968564/">
@@ -138,10 +138,6 @@ global.BotName = "🐦Makino-md-v2";
 |----|
 | [  Tᴀɪʀᴀ Mᴀᴋɪɴᴏ ](https://github.com/anonphoenix007) |
 |  Developer |
-| [ ![S ʟ ᴀ ꜱ ʜ ᴇ ʀ]
-(https://github.com/V-E-N-O-X.png?size=150)]
-(https://github.com/V-E-N-O-X) |
-|  Bot Base |
 
   </div>
   
