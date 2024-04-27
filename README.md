@@ -2,7 +2,7 @@
 <a href="https://github.com/anonphoenix007"><img title="Author" src="https://img.shields.io/badge/Author_Of-MAKINO_V2-black"></a>
 
 <p align="center">  
-  <a href="wa.me/2347080968564/">
+  <a href="https://wa.me/2347080968564">
     <img alt="X-2.0" height="300" src="https://telegra.ph/file/9fd9e372ed366eca3adb3.jpg">
     <h1 align="center">MAKINO-MD-V2</h1>
   </a>
