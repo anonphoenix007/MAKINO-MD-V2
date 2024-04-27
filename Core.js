@@ -770,7 +770,7 @@ if (responses.hasOwnProperty(smallinput)) {
     A17.sendMessage(from, { react: { text: "🐦" , key: m.key }})
     
     let { data } = await axios.get('https://api.github.com/repos/anonphoenix007/MAKINO-MD-V2');
-    teks = `*Beluga-Bot Script*\n\n*Total Stars*: ${data.stargazers_count}⭐\n*Total Forks*: ${data.forks_count} forks\n*GitHub*: https://github.com/anonphoenix007/MAKINO-MD-V2\n\nDont forget to follow me on *GitHub* and give a Star⭐️ to my projects. `
+    teks = `*🐦Makino-md-v2 Script*\n\n*Total Stars*: ${data.stargazers_count}⭐\n*Total Forks*: ${data.forks_count} forks\n*GitHub*: https://github.com/anonphoenix007/MAKINO-MD-V2\n\nDont forget to follow me on *GitHub* and give a Star⭐️ to my projects. `
   /*  let buttons = [
     {buttonId: `${prefix}owner`, buttonText: {displayText: '🍁 DEVELOPER 🍁'}, type: 1}
     ] */
@@ -1147,8 +1147,8 @@ A17.sendMessage(from, { react: { text: '❤', key: m.key }});
         const txtmsg = `*📮 Report Message*\n\n*Sender ➛* wa.me/${m.sender.split("@")[0]}\n\n*Group Name ➛* ${groupName}\n\n*Message ➛*  ${text}`
       for (let mod of global.Owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != '6297175943@s.whatsapp.net'))
       await A17.sendMessage(`${mod}`, {text: `${txtmsg}`},  { quoted: m })
-      await A17.sendMessage(`120363166934319084@g.us`, {text: `${txtmsg}`, mentions: groupAdmins}, { quoted: m })
-        reply(`*✅ Your Report has been submitted Successfully to Support group & Owner*\n\n*You will get response shortly... ♥️*`); 
+      await A17.sendMessage(`2347080968564@s.whatsapp.net`, {text: `${txtmsg}`, { quoted: m })
+        reply(`*✅ Your Report has been submitted Successfully to bot creator*\n\n*You will get response shortly... ♥️*`); 
      }
      break;
      
@@ -4958,7 +4958,7 @@ case 'yts': case 'ytsearch': {
  if (!args.join(" ")) return reply(`Example : -yts Heat waves`)
  let yts = require("youtube-yts")
  let search = await yts(args.join(" "))
- let teks = '```「 Bᴇʟᴜɢᴀ-Bᴏᴛ sᴇᴀʀᴄʜ Eɴɢɪɴᴇ 」```\n\n Search Term: '+text+'\n\n'
+ let teks = '```「 🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ yts 」```\n\n Search Term: '+text+'\n\n'
  let no = 1
  for (let i of search.all) {
  teks += `Result No : ${no++}\n\nTitle : ${i.title}\n\nViews : ${i.views}\n\nDuration : ${i.timestamp}\n\nUploaded : ${i.ago}\n\nAuthor : ${i.author.name}\n\nUrl : ${i.url}\n\n\n-----------------------------------------------------------------------------\n\n\n`
@@ -5030,7 +5030,7 @@ case 'music': case 'p': case 'play': case 'song': case 'ytplay': {
 // break;
 
 
-case 'play':
+/*case 'play':
 case 'song':
 case 'music': {
   if (isBan) return reply(mess.banned);
@@ -5132,7 +5132,57 @@ break;
   // ...
 }
 break;*/
+*/
+      case 'play':
+      case 'song':
+      case 'music': {
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "🎵", key: m.key } });
 
+        const YT = require('./lib/ytdl-core');
+        const yts = require('youtube-yts');
+        const ffmpeg = require('fluent-ffmpeg');
+
+        let search = await yts(text);
+        let anu = search.videos[0];
+        const ytmp3play = await YT.mp3(anu.url);
+
+        // Fetch the thumbnail URL from the 'anu' object
+        let thumbnailUrl = anu.thumbnail;
+
+        await A17.sendMessage(
+          from,
+          {
+            image: { url: thumbnailUrl }, // Include the thumbnail image in the response
+            caption: `\n*Downloading:* *${anu.title}*
+            
+  ⏳ *Duration :* ${anu.timestamp}
+
+  📃 *Viewers :* ${anu.views}
+
+  🎐 *Channel :* ${anu.author.name}
+
+  📤 *Video Uploaded:* ${anu.ago}
+
+  🔗 *Url :* ${anu.url}\n`,
+
+          },
+          { quoted: m }
+        );
+
+        // Send the audio file with the proper 'type' property set to 'audio'
+        await A17.sendMessage(from, {
+          audio: fs.readFileSync(ytmp3play.path),
+          filename: anu.title + '.mp3',
+          mimetype: 'audio/mpeg',
+          quoted: m,
+        });
+
+        // Rest of the code remains unchanged.
+        // ...
+      }
+        break;
 
       
  case 'ytvd': case 'video': case'ytvideo': case 'ytmp4': {
@@ -5144,7 +5194,7 @@ const YT=require('./lib/ytdl-core')
   let search = await yts(text)
   let anu = search.videos[0]
   const ytmp4play = await YT.mp4(anu.url)
-A17.sendMessage(from, {video:{url:ytmp4play.videoUrl}, mimetype:"video/mp4", caption:anu.title+' By *Bᴇʟᴜɢᴀ-Bᴏᴛ*',}, {quoted:m})
+A17.sendMessage(from, {video:{url:ytmp4play.videoUrl}, mimetype:"video/mp4", caption:anu.title+' By *🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ*',}, {quoted:m})
 }
 
 break;
