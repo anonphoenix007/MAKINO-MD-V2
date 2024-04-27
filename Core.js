@@ -744,6 +744,8 @@ const responses = {
   'good afternoon': `Good afternoon to you too ${pushname} ✨. Wishing you an enjoyable afternoon too 😇🤞🏻.`,
   konnichiwa: `Good afternoon to you too ${pushname} ✨. Wishing you an enjoyable afternoon too 😇🤞🏻.`,
   'good night': `Good night to you too ${pushname} 😇. Sleep well and sweet dreams.`,
+  'good evening': `Good evening to you too ${pushname} ☺️❤️.`
+  'who': `Let's ask your Father🫳🎤`
  
 };
 
@@ -3378,7 +3380,7 @@ case 'block': {
 if (isBan) return reply(mess.banned);	 			
 if (isBanChat) return reply(mess.bangc);
 if (!isCreator) return reply(mess.botowner)
-A17.sendMessage(from, { react: { text: "🫡" , key: m.key }})
+A17.sendMessage(from, { react: { text: "🔒" , key: m.key }})
 let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
 await A17.updateBlockStatus(users, 'block').then((res) => reply(`User blocked Successfully!`)).catch((err) => reply(`Cannot block!`))/*.then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))*/
 }
@@ -3389,7 +3391,7 @@ case 'unblock': {
       if (isBan) return reply(mess.banned);	 			
 if (isBanChat) return reply(mess.bangc);
 if (!isCreator) return reply(mess.botowner)
-A17.sendMessage(from, { react: { text: "🫡" , key: m.key }})
+A17.sendMessage(from, { react: { text: "🔓" , key: m.key }})
 let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
 await A17.updateBlockStatus(users, 'unblock').then((res) => reply(`User unblocked Successfully!`)).catch((err) => reply(`Cannot unblock user`))/*.then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))*/
 }
@@ -3641,26 +3643,26 @@ A17.sendMessage(m.chat, buttonMessage, { quoted: m })
 break;
 
 
-case 'promote': case 'leader': {
+case 'promote': case 'boss' case 'leader': {
   if (isBan) return reply(mess.banned);	 			
 if (isBanChat) return reply(mess.bangc);
 if (!m.isGroup) return reply(mess.grouponly);
 if (!isBotAdmins) return reply(mess.botadmin);
 if (!isAdmins && !isCreator) return reply(mess.useradmin)
-A17.sendMessage(from, { react: { text: "🫡" , key: m.key }})
+A17.sendMessage(from, { react: { text: "🤫" , key: m.key }})
 let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
 await A17.groupParticipantsUpdate(m.chat, [users], 'promote').then((res) => reply(`User promoted Successfully!`)).catch((err) => reply(`couldn't promote user in group!`))/*.then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))*/
 }
 break;
 
 
-case 'demote': case 'slave': {
+case 'demote': case 'enslave' case 'slave': {
   if (isBan) return reply(mess.banned);	 			
 if (isBanChat) return reply(mess.bangc);
 if (!m.isGroup) return reply(mess.grouponly);
 if (!isBotAdmins) return reply(mess.botadmin);
 if (!isAdmins && !isCreator) return reply(mess.useradmin)
-A17.sendMessage(from, { react: { text: "🫡" , key: m.key }})
+A17.sendMessage(from, { react: { text: "😜" , key: m.key }})
 let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
 await A17.groupParticipantsUpdate(m.chat, [users], 'demote').then((res) => reply(`User demoted Successfully!`)).catch((err) => reply(`Couldn't demote user`))/*.then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))*/
 }
@@ -3706,9 +3708,9 @@ if (isBanChat) return reply(mess.bangc);
 if (!m.isGroup) return reply(mess.grouponly);
 if (!isBotAdmins) return reply(mess.botadmin);
 if (!isAdmins && !isCreator) return reply(mess.useradmin)
-A17.sendMessage(from, { react: { text: "😹" , key: m.key }})
+A17.sendMessage(from, { react: { text: "🦶" , key: m.key }})
 let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
-await A17.groupParticipantsUpdate(m.chat, [users], 'remove').then((res) => reply(`Bastardos 😹🚮!`)).catch((err) => reply(`Oops,Couldn't kick user from group!`)) 
+await A17.groupParticipantsUpdate(m.chat, [users], 'remove').then((res) => reply(`Bastardos 😹🚮!,dw cus he was kicked successfully`)).catch((err) => reply(`Oops,Couldn't kick user from group!`)) 
 }
 break;
 
@@ -3718,7 +3720,7 @@ case 'join': {
   if (isBan) return reply(mess.banned);	 			
 if (isBanChat) return reply(mess.bangc);
 if (!isCreator) return reply(mess.botowner)
-A17.sendMessage(from, { react: { text: "🫡" , key: m.key }})
+A17.sendMessage(from, { react: { text: "🖇️" , key: m.key }})
 if (!args[0]) return reply(`Where's the link?`)
 vdd = args[0]
 let vcc = vdd.split("https://chat.whatsapp.com/")[1]
@@ -3808,7 +3810,7 @@ if (!isAdmins && !isCreator) return reply(mess.useradmin)
     if (isBan) return reply(mess.banned);	 			
     if (isBanChat) return reply(mess.bangc);
     if (!isCreator) return reply(mess.botowner)
-    A17.sendMessage(from, { react: { text: "🫡" , key: m.key }})
+    A17.sendMessage(from, { react: { text: "😮‍💨" , key: m.key }})
     
     if (!args[0]) return reply(`Select add or del (add to ban, del to unban), For Example: reply *${prefix}ban add* to the user you want to ban.`)
     if (args[1]) {
