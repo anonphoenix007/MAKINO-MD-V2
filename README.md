@@ -138,8 +138,9 @@ global.BotName = "🐦Makino-md-v2";
 |----|
 | [  Tᴀɪʀᴀ Mᴀᴋɪɴᴏ ](https://github.com/anonphoenix007) |
 |  Developer |
-| [ S ʟ ᴀ ꜱ ʜ ᴇ ʀ ]
-(https://github.com/ahil15) |
+| [ ![S ʟ ᴀ ꜱ ʜ ᴇ ʀ]
+(https://github.com/V-E-N-O-X.png?size=150)]
+(https://github.com/V-E-N-O-X) |
 |  Bot Base |
 
   </div>
