@@ -80,7 +80,7 @@ global.BotName = "🐦Makino-md-v2";
 
 9. If You don't have a account in Mongenius. Create a account.
     <br>
-<a hrefhttps://app.mogenius.com/user/registration' target="_blank"><img alt='Mongenius' src='https://img.shields.io/badge/CREATE-h?color=black&style=for-the-badge&logo=genius' width="96.35" height="28"/></a></p>
+<a href='https://app.mogenius.com/user/registration' target="_blank"><img alt='Mongenius' src='https://img.shields.io/badge/CREATE-h?color=black&style=for-the-badge&logo=genius' width="96.35" height="28"/></a></p>
 
 10. Now Deploy
     <br>
