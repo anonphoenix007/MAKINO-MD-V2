@@ -5086,7 +5086,7 @@ case 'music': {
                return fs.unlinkSync(`./${randomName}`);
 }
 break;
-/*  A17.sendMessage(from, { react: { text: "🍁", key: m.key }});
+ A17.sendMessage(from, { react: { text: "🍁", key: m.key }});
 
   const YT = require('./lib/ytdl-core');
   const yts = require('secktor-pack');
@@ -5105,7 +5105,7 @@ break;
     from,
     {
       image: { url: thumbnailUrl }, // Include the thumbnail image in the response
-      caption: `\"ytdl-secktor": "latest",
+      caption: "ytdl-secktor": "latest",
      contextInfo: {
            externalAdReply: {
              title: "🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ",
@@ -5132,7 +5132,7 @@ break;
   // ...
 }
 break;*/
-*/
+
       case 'play':
       case 'song':
       case 'music': {
