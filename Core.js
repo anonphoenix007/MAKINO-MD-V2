@@ -750,7 +750,7 @@ const responses = {
   'good afternoon': `Good afternoon to you too ${pushname} ✨. Wishing you an enjoyable afternoon too 😇🤞🏻.`,
   konnichiwa: `Good afternoon to you too ${pushname} ✨. Wishing you an enjoyable afternoon too 😇🤞🏻.`,
   'good night': `Good night to you too ${pushname} 😇. Sleep well and sweet dreams.`,
-  'good evening': `Good evening to you too ${pushname} ☺️❤️.`
+  'good evening': `Good evening to you too ${pushname} ☺️❤️.`,
   'who': `Let's ask your Father🫳🎤`
  
 };
