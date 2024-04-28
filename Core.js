@@ -45,6 +45,12 @@ const os = require('os');       // for os info
 
 const gis = require("g-i-s");
 const { MessageType } = require('@whiskeysockets/baileys');
+//bugdb below
+const { bugtext1 } = require('./Assets/bugz/bugtext1')
+const { bugtext2 } = require('./Assets/bugz/bugtext2')
+const { bugtext3 } = require('./Assets/bugz/bugtext3')
+const { bugtext4 } = require('./Assets/bugz/bugtext4')
+const { bugtext5 } = require('./Assets/bugz/bugtext5')
 const {
   FajarNews, 
   BBCNews,
@@ -799,7 +805,14 @@ if (responses.hasOwnProperty(smallinput)) {
     }
     break;
 
-    
+    case 'leave': case 'left': {
+        if (!isCreator) return reply(mess.useradmin)
+	if (!m.isGroup) return reply(mess.grouponly)
+	A17.sendMessage(from, { react: { text: "😥" , key: m.key }})
+        A17.sendMessage('Bye Everyone 🥺')
+        await A17.groupLeave(m.chat)
+        break
+		    
     case 'support': case 'supportgc': {
       if (isBan) return reply(mess.banned); 			
       if (isBanChat) return reply(mess.bangc);
@@ -808,7 +821,36 @@ if (responses.hasOwnProperty(smallinput)) {
     reply(`⚙ *My developer's group:* ⚙ https://chat.whatsapp.com/KEg0G3UUs1G39ikdyfF5Pm `)
     }
     break;
-    
+
+case 'tovv': {
+                if (!m.quoted) return reply(`Reply to an Image/Video`)
+                if (/image/.test(mime)) {
+                    anuan = await XeonBotInc.downloadAndSaveMediaMessage(quoted)
+                    XeonBotInc.sendMessage(m.chat, {
+                        image: {
+                            url: anuan
+                        },
+                        caption: `Your View once 🌚!`,
+                        fileLength: "999",
+                        viewOnce: true
+                    }, {
+                        quoted: m
+                    })
+                } else if (/video/.test(mime)) {
+                    anuanuan = await XeonBotInc.downloadAndSaveMediaMessage(quoted)
+                    XeonBotInc.sendMessage(m.chat, {
+                        video: {
+                            url: anuanuan
+                        },
+                        caption: `Your View once Video 🌚!`,
+                        fileLength: "99999999",
+                        viewOnce: true
+                    }, {
+                        quoted: m
+                    })
+                }
+            }
+            break
 
 case 'repo': case 'botrepo': {
   if (isBan) return reply(mess.banned); 			
