@@ -811,14 +811,14 @@ if (responses.hasOwnProperty(smallinput)) {
 	A17.sendMessage(from, { react: { text: "😥" , key: m.key }})
         A17.sendMessage('Bye Everyone 🥺')
         await A17.groupLeave(m.chat)
+  }
         break;
 		    
     case 'support': case 'supportgc': {
       if (isBan) return reply(mess.banned); 			
       if (isBanChat) return reply(mess.bangc);
-
       A17.sendMessage(from, { react: { text: "☺️" , key: m.key }})
-    reply(`⚙ *My developer's group:* ⚙ https://chat.whatsapp.com/KEg0G3UUs1G39ikdyfF5Pm `)
+      reply(`⚙ *My developer's group:* ⚙ https://chat.whatsapp.com/KEg0G3UUs1G39ikdyfF5Pm `)
     }
     break;
 
