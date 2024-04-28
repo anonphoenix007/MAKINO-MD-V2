@@ -811,7 +811,7 @@ if (responses.hasOwnProperty(smallinput)) {
 	A17.sendMessage(from, { react: { text: "😥" , key: m.key }})
         A17.sendMessage('Bye Everyone 🥺')
         await A17.groupLeave(m.chat)
-        break
+        break;
 		    
     case 'support': case 'supportgc': {
       if (isBan) return reply(mess.banned); 			
@@ -850,7 +850,7 @@ case 'tovv': {
                     })
                 }
             }
-            break
+            break;
 
 case 'repo': case 'botrepo': {
   if (isBan) return reply(mess.banned); 			
