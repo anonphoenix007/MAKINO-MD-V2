@@ -51,9 +51,8 @@ global.BotName = "🐦Makino-md-v2";
 <a href='https://signup.heroku.com/' target="_blank"><img alt='Heroku' src='https://img.shields.io/badge/-Create-black?style=for-the-badge&logo=heroku&logoColor=white'/></a>
 
 2. Now Deploy
-    ```https://dashboard.heroku.com/new?template=```
-~ copy your forked repository link and add it after = to deploy ,like 
-```https://dashboard.heroku.com/new?template=https://github.com/Anonphoenix007/MAKINO-MD-V2```
+    <a href='https://taira-tech-session.onrender.com/heroku' target="_blank"><img alt='DEPLOY Heroku' src='https://img.shields.io/badge/-Create-black?style=for-the-badge&logo=heroku&logoColor=white'/></a>
+
 
 #### DEPLOY TO CODESPACE
 
