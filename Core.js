@@ -7835,7 +7835,7 @@ let stalkerl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg.'
 └───────────────···▸▸▸`
           let buttonMessage = {
                       //video:fs.readFileSync('./system/BelugaBot_3.mp4'),gifPlayback:true,
-		      image: fs.readFileSync('./Assets/pic7.jpg')
+		      image: fs.readFileSync('./Assets/pic7.jpg'),
                       caption: _0x171ddd,
                       
                       headerType: 4
