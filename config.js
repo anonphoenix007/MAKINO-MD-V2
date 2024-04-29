@@ -12,19 +12,19 @@ global.antitags = false;
 
 //auto functioner
 global.autoTyping = false;                //make true to enable auto typing
-global.autoRecord = true;                //make true to enable auto recording
+global.autoRecord = false;                //make true to enable auto recording
 global.groupevent = false;                //This is the new variable for controlling group event handling.
 global.statusseen = false;                 //make true to view statuses 
 
 
 //
-global.Owner = [""];
-global.OwnerNumber = [""]; 
+global.Owner = ["2348020713291"];
+global.OwnerNumber = ["2348020713291"]; 
 global.ownertag = [""]; 
-global.OwnerName = "Tᴀɪʀᴀ Mᴀᴋɪɴᴏ";
+global.OwnerName = "𝚇𝚊𝚗𝚍𝚎𝚛𝚛";
 global.BotName = "🐦Makino-md-v2";
-global.packname = "Tᴀɪʀᴀ Mᴀᴋɪɴᴏ";                             //Do not change.
-global.author = "🐦Makino md ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ";                               //Do not change.
+global.packname = "BruH";                             //Do not change.
+global.author = "𝚇𝚊𝚗𝚍𝚎𝚛𝚛";                               //Do not change.
 global.BotSourceCode = "https://github.com/anonphoenix007/MAKINO-MD-V2"; //Do not change.
 global.SupportGroupLink = "v2https://chat.whatsapp.com/KEg0G3UUs1G39ikdyfF5Pm "; 
 
@@ -34,15 +34,15 @@ global.sessionName = "session";                          //Do not change.
 
 
 //
-global.prefa = ["/"];                                    //Default prefix here.
-global.openAiAPI = "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";
+global.prefa = ["."];                                    //Default prefix here.
+global.openAiAPI = "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";
 
 
 //
 global.location = "Lagos, Nigeria";                   
-global.reactmoji = "🐦";
-global.themeemoji = "😏";
-global.vidmenu = { url: 'https://tenor.com/view/jujutsu-kaisen0-yuta-okkotsu-gif-26767662' };
+global.reactmoji = "";
+global.themeemoji = "";
+global.vidmenu = { url: '' };
 global.websitex = "https://github.com/anonphoenix007";
 global.lolhuman = "KaysaS";
 
@@ -79,7 +79,7 @@ global.ntilink = []
 global.mess = {
     jobdone: 'Here you go...',
     useradmin: 'Only group Admin can use the command 😂 ',
-    botadmin: 'Make me Admin first 😌📍.',
+    botadmin: 'I am not admin',
     botowner: 'Only my *Owner* can use this command,Dont trespass, Baka!',
     grouponly: 'This command is only made for *Groups*, Baka!',
     privateonly: 'This command is only made for *Private Chat*, Baka!',
