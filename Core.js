@@ -3684,7 +3684,7 @@ A17.sendMessage(m.chat, buttonMessage, { quoted: m })
 break;
 
 
-case 'promote': case 'boss' case 'leader': {
+case 'promote': case 'boss': case 'leader': {
   if (isBan) return reply(mess.banned);	 			
 if (isBanChat) return reply(mess.bangc);
 if (!m.isGroup) return reply(mess.grouponly);
@@ -3697,7 +3697,7 @@ await A17.groupParticipantsUpdate(m.chat, [users], 'promote').then((res) => repl
 break;
 
 
-case 'demote': case 'enslave' case 'slave': {
+case 'demote': case 'enslave': case 'slave': {
   if (isBan) return reply(mess.banned);	 			
 if (isBanChat) return reply(mess.bangc);
 if (!m.isGroup) return reply(mess.grouponly);
