@@ -45,12 +45,6 @@ const os = require('os');       // for os info
 
 const gis = require("g-i-s");
 const { MessageType } = require('@whiskeysockets/baileys');
-//bugdb below
-const { bugtext1 } = require('./Assets/bugz/bugtext1')
-const { bugtext2 } = require('./Assets/bugz/bugtext2')
-const { bugtext3 } = require('./Assets/bugz/bugtext3')
-const { bugtext4 } = require('./Assets/bugz/bugtext4')
-const { bugtext5 } = require('./Assets/bugz/bugtext5')
 const {
   FajarNews, 
   BBCNews,
@@ -100,37 +94,37 @@ const {
 //
         if(time2 < "23:59:00"){
 
-        var nowtime = 'Good night! 🌌'
+        var nowtime = 'Good night Baby! 🌌'
 
 }
 
         if(time2 < "19:00:00"){
 
-        var nowtime = 'Good afternoon! 🌆'
+        var nowtime = 'Good afternoon Baby! 🌆'
 
 }
 
         if(time2 < "18:00:00"){
 
-        var nowtime = 'Good afternoon! 🌇'
+        var nowtime = 'Good afternoon Baby! 🌇'
 
 }
 
         if(time2 < "15:00:00"){
 
-        var nowtime = 'Good afternoon! 🏞'
+        var nowtime = 'Good afternoon Baby! 🏞'
 
 }
 
         if(time2 < "11:00:00"){
 
-        var nowtime = 'Good morning! 🌅'
+        var nowtime = 'Good morning Baby! 🌅'
 
 }
 
         if(time2 < "05:00:00"){
 
-        var nowtime = 'Good night! 🏙'
+        var nowtime = 'Good night Baby! 🏙'
 
 }
 
@@ -324,48 +318,19 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     autoreadsw = true;
     _sewa.expiredCheck(A17, sewa);
 
-    /*const reply = (teks) => {
+    const reply = (teks) => {
             A17.sendMessage(m.chat, { text: teks},{ quoted: m})
         }
-        */
-    
+        
+
+    /* const reply = (teks) => {
+      A17.sendMessage(m.chat, { text: teks }, { quoted: m }); 
+    }; */
+
+
     const sender = m.isGroup ? (m.key.participant ? m.key.participant : m.participant) : m.key.remoteJid
     const senderNumber = sender.split('@')[0]
 
-const reply = (teks) => {
-A17.sendMessage(m.chat,
-{ text: teks,
-contextInfo:{
-mentionedJid:[sender],
-forwardingScore: 9999999,
-isForwarded: true, 
-"externalAdReply": {
-"showAdAttribution": true,
-"containsAutoReply": true,
-"title": `🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ`,
-"body": `${global.OwnerName}`,
-"previewType": "PHOTO",
-"thumbnailUrl": ``,
-"thumbnail": fs.readFileSync(`./Assets/pic7.jpg`),
-"sourceUrl": `https://whatsapp.com/channel/0029VaY0Zq32P59piTo5rg0K`}}},
-{ quoted: m})
-	  } 
-
-async function loading () {
-var lod = [
-"《 █▒▒▒▒▒▒▒▒▒▒▒》10%",
-"《 ████▒▒▒▒▒▒▒▒》30%",
-"《 ███████▒▒▒▒▒》50%",
-"《 ██████████▒▒》80%",
-"《 ████████████》100%",
-"Loading is Completed✅"
-]
-let { key } = await A17.sendMessage(from, {text: 'Loading 💀'})
-
-for (let i = 0; i < lod.length; i++) {
-await A17.sendMessage(from, {text: lod[i], edit: key });
-}
-} 
     function randomNomor(angka) {
       return Math.floor(Math.random() * angka) + 1;
     }
@@ -506,10 +471,10 @@ function updateStatus() {
   const uptimeFormatted = formatTime(uptimeInSeconds);
 
   // const status = `
-  // ㅤㅤ〄ㅤㅤ〘 BELUGA-BOT BETA EDITION 〙ㅤㅤ〄ㅤㅤㅤㅤ
+  // ㅤㅤ〄ㅤㅤ〘 SUBZERO BETA EDITION 〙ㅤㅤ〄ㅤㅤㅤㅤ
   // ㅤㅤㅤ〘ㅤ Auto Uptime: ${uptimeFormatted}ㅤ〙`;
 
-  function _0x582b(_0xabb6f8,_0x12cdd8){const _0x58e890=_0x58e8();return _0x582b=function(_0x582b90,_0x4387b3){_0x582b90=_0x582b90-0x189;let _0x932613=_0x58e890[_0x582b90];return _0x932613;},_0x582b(_0xabb6f8,_0x12cdd8);}function _0x58e8(){const _0x109554=['12896370RDSmnX','3BgvPel','189HbmdoW','18854HvEPNh','11TZHUID','9125326EcyeIg','464328lPaAMf','3400722cbWEOK','2263175KIczdo','12TaHNqM','2521564eqJRHK'];_0x58e8=function(){return _0x109554;};return _0x58e8();}(function(_0x429d7b,_0x532ab5){const _0x527567=_0x582b,_0x130eb4=_0x429d7b();while(!![]){try{const _0x75c57a=-parseInt(_0x527567(0x18b))/0x1+-parseInt(_0x527567(0x192))/0x2*(-parseInt(_0x527567(0x189))/0x3)+parseInt(_0x527567(0x191))/0x4*(-parseInt(_0x527567(0x190))/0x5)+-parseInt(_0x527567(0x18f))/0x6+parseInt(_0x527567(0x18d))/0x7+parseInt(_0x527567(0x18e))/0x8*(-parseInt(_0x527567(0x18a))/0x9)+parseInt(_0x527567(0x193))/0xa*(parseInt(_0x527567(0x18c))/0xb);if(_0x75c57a===_0x532ab5)break;else _0x130eb4['push'](_0x130eb4['shift']());}catch(_0x19ea04){_0x130eb4['push'](_0x130eb4['shift']());}}}(_0x58e8,0xa8dae));const status='\x0a\x20          \x20『•• \x20🐦Makino-md-v2\x20Bᴏᴛ\x20 ••』       \x0a\x20ㅤㅤ〘ㅤ\x20Auto-Uptime:\x20'+uptimeFormatted+'ㅤ〙';
+  function _0x582b(_0xabb6f8,_0x12cdd8){const _0x58e890=_0x58e8();return _0x582b=function(_0x582b90,_0x4387b3){_0x582b90=_0x582b90-0x189;let _0x932613=_0x58e890[_0x582b90];return _0x932613;},_0x582b(_0xabb6f8,_0x12cdd8);}function _0x58e8(){const _0x109554=['12896370RDSmnX','3BgvPel','189HbmdoW','18854HvEPNh','11TZHUID','9125326EcyeIg','464328lPaAMf','3400722cbWEOK','2263175KIczdo','12TaHNqM','2521564eqJRHK'];_0x58e8=function(){return _0x109554;};return _0x58e8();}(function(_0x429d7b,_0x532ab5){const _0x527567=_0x582b,_0x130eb4=_0x429d7b();while(!![]){try{const _0x75c57a=-parseInt(_0x527567(0x18b))/0x1+-parseInt(_0x527567(0x192))/0x2*(-parseInt(_0x527567(0x189))/0x3)+parseInt(_0x527567(0x191))/0x4*(-parseInt(_0x527567(0x190))/0x5)+-parseInt(_0x527567(0x18f))/0x6+parseInt(_0x527567(0x18d))/0x7+parseInt(_0x527567(0x18e))/0x8*(-parseInt(_0x527567(0x18a))/0x9)+parseInt(_0x527567(0x193))/0xa*(parseInt(_0x527567(0x18c))/0xb);if(_0x75c57a===_0x532ab5)break;else _0x130eb4['push'](_0x130eb4['shift']());}catch(_0x19ea04){_0x130eb4['push'](_0x130eb4['shift']());}}}(_0x58e8,0xa8dae));const status='\x0a\x20          \x20『•• \x20❄Subzero⚡-md-v2\x20Bᴏᴛ\x20 ••』       \x0a\x20ㅤㅤ〘ㅤ\x20Auto-Uptime:\x20'+uptimeFormatted+'ㅤ〙';
 
   A17.setStatus(status); // Set the status using A17.setStatus or your equivalent method
 
@@ -584,7 +549,7 @@ updateStatus();
 
 
 //     const menulist = `
-//     Konichiwa ${pushname} dear 👋. I am ${global.BotName}, a bot developed by: Slasher to take your WhatsApp usage into next level.
+//     Konichiwa ${pushname} dear 👋. I am ${global.BotName}, a bot developed by: Mr Frank to take your WhatsApp usage into next level.
         
 //        「 System Info 」
     
@@ -614,7 +579,7 @@ updateStatus();
     
 //     Type *-menu* or press any button below to start using *${global.BotName}*
     
-//     ©️ *${global.BotName}* All Rights Reserved by: *Slasher*
+//     ©️ *${global.BotName}* All Rights Reserved by: *Mr Frank*
 //     `
 //         const qtod = m.quoted? "true":"false"
         
@@ -700,24 +665,85 @@ const pickRandom = (arr) => {
   return arr[Math.floor(Math.random() * arr.length)]
   }
 
+	/*
+let smallinput = budy.toLowerCase()
+if (smallinput.includes('hello')) {
+  reply (`Hello ${pushname}, I am ${BotName}. How can i help you?`);
+} 
+
+//if (smallinput.includes('hi')) {
+
+//   reply (`Hello ${pushname}, I am ${BotName}. How can i help you?`);
+
+// } 
+
+if (smallinput=='mrfrank') {
+    reply (`My Boss is lost in Anime World, and I lost the connection with him...`)
+}
+
+
+if (smallinput=='runtime') {
+  reply (`Hey ${pushname} my runtime is ${runtime(process.uptime())}\n\nCurrent Time: ${kaitime}\n\nCurrent Date: ${kaidate}`)
+}
+
+
+
+if( smallinput.includes('konichiwa') || smallinput.includes('konochiwa') || smallinput.includes('konichiba') || smallinput.includes('salute')){
+  reply (`Konichiwa ${pushname}, I am BelugaBot-MD. How can i help you?`);
+}
+
+
+if (smallinput=='subzero') {
+    reply ('Yes I am Alive 🫂')
+}
+
+if (smallinput=='ping') {
+    reply (`Hey ${pushname} Pong ${latensie.toFixed(4)} ms`)
+}
+
+
+if (smallinput.includes('good morning') || smallinput.includes('ohayo')) {
+  reply (`Good morning to you too ${pushname} ☺️. Have a great day 😇.`);
+}
+
+if (smallinput.includes('good afternoon') || smallinput.includes('konnichiwa')) {
+
+  reply (`Good afternoon to you too ${pushname} ✨. Wishing you an enjoyable afternoon too 😇🤞🏻.`);
+
+}
+
+
+//if (smallinput.includes('good afthernoon')) {
+ // reply (`Huh ${pushname} ??. Wishing you an enjoyable afternoon too.`);
+//   }
+
+
+if (smallinput.includes('good night')) {
+  reply (`Good night to you too ${pushname} 😇. Sleep well and sweet dreams.`);
+}
+
+if (smallinput.includes('arigato')|| smallinput.includes('arigatou') || smallinput.includes('thank')) {
+  reply (`Mention not ${pushname} 😇. I am a bot afterall.`);
+}
+*/
+
+
 const responses = {
 
   
   hello: `Hello ${pushname}, I am ${BotName}. My current prefix is "${prefix}". How can I help you?`,
-  taira: `Taira Makino,My Creator is lost in Anime World, and I lost connection with him...`,
-  makino: `Taira Makino,My creator is lost in Anime World, and I lost connection with him...`,
-  fred: `I am busy,will reply you when I f33l like (¬_¬)ﾉ...`,
+  mrfrank: `Mr Frank,My Creator is lost in Anime World, and I lost connection with him...`,
+  Mr Frank: `Mr Frank,My creator is lost in Anime World, and I lost connection with him...`,
+  darrell: `I am busy,will reply you when I f33l like (¬_¬)ﾉ...`,
   runtime: `Hey ${pushname}\n${nowtime}\n\nMy runtime:${runtime(process.uptime())}\n\nPrefix is: *${prefix}*\n\nTime: ${kaitime}\n\nDate: ${kaidate}\n\nToday is ${currentDay}`,
   konichiwa: `Konichiwa ${pushname}, I am ${BotName}. How can I help you?`,
-  //ping: `Hey ${pushname}, Pong ${latensie.toFixed(4)} ms`,
+  ping: `Hey ${pushname}, Pong ${latensie.toFixed(4)} ms`,
   'good morning': `Good morning to you too ${pushname} ☺️. Have a great day 😇`,
   bot: `We have a bot here 🌚,DM owner to get yours 😉 `,
   ohayo: `Good morning to you too ${pushname} ☺️. Have a great day 😇.`,
   'good afternoon': `Good afternoon to you too ${pushname} ✨. Wishing you an enjoyable afternoon too 😇🤞🏻.`,
   konnichiwa: `Good afternoon to you too ${pushname} ✨. Wishing you an enjoyable afternoon too 😇🤞🏻.`,
   'good night': `Good night to you too ${pushname} 😇. Sleep well and sweet dreams.`,
-  'good evening': `Good evening to you too ${pushname} ☺️❤️.`,
-  'who': `Let's ask your Father🫳🎤`
  
 };
 
@@ -738,40 +764,13 @@ if (responses.hasOwnProperty(smallinput)) {
 
 
       //
-      /*
-      case 'vv': {
-      if (isBan) return reply(mess.banned)
-      If (isBanChat) return reply(mess.bangc)
-      If (!isCreator) return reply(mess.useradmin)
-      A17.sendMessage(from, { react: { text: "🖼️" , key: m.key }})
-      If (!quoted) return reply('You have not tag a view once message🙁')
-      const quot = citel.msg.contextInfo.quotedMessage.viewOnceMessageV2;
-if(quot)
-{
-if(quot.message.imageMessage)
-{ console.log("Quot Entered")
-   let cap =quot.message.imageMessage.caption;
-   let anu = await Void.downloadAndSaveMediaMessage(quot.message.imageMessage)
-   return Void.sendMessage(citel.chat,{image:{url : anu},caption : cap })
-}
-if(quot.message.videoMessage)
-{
-   let cap =quot.message.videoMessage.caption;
-   let anu = await Void.downloadAndSaveMediaMessage(quot.message.videoMessage)
-   return Void.sendMessage(citel.chat,{video:{url : anu},caption : cap })
-}
-
-} 
-      break;
-      }
-      */
       case 'sc': case 'script': case 'sourcecode': {
         if (isBan) return reply(mess.banned);	 			
     if (isBanChat) return reply(mess.bangc);
     A17.sendMessage(from, { react: { text: "🐦" , key: m.key }})
     
     let { data } = await axios.get('https://api.github.com/repos/anonphoenix007/MAKINO-MD-V2');
-    teks = `*🐦Makino-md-v2 Script*\n\n*Total Stars*: ${data.stargazers_count}⭐\n*Total Forks*: ${data.forks_count} forks\n*GitHub*: https://github.com/anonphoenix007/MAKINO-MD-V2\n\nDont forget to follow me on *GitHub* and give a Star⭐️ to my projects. `
+    teks = `*Beluga-Bot Script*\n\n*Total Stars*: ${data.stargazers_count}⭐\n*Total Forks*: ${data.forks_count} forks\n*GitHub*: https://github.com/MrFr3nk/SubZero-Md-V2\n\nDont forget to follow me on *GitHub* and give a Star⭐️ to my projects. `
   /*  let buttons = [
     {buttonId: `${prefix}owner`, buttonText: {displayText: '🍁 DEVELOPER 🍁'}, type: 1}
     ] */
@@ -798,61 +797,23 @@ if(quot.message.videoMessage)
     }
     break;
 
-    case 'leave': case 'left': {
-        if (!isCreator) return reply(mess.useradmin)
-	if (!m.isGroup) return reply(mess.grouponly)
-	A17.sendMessage(from, { react: { text: "😥" , key: m.key }})
-        A17.sendMessage('Bye Everyone 🥺')
-        await A17.groupLeave(m.chat)
-  }
-        break;
-		    
+    
     case 'support': case 'supportgc': {
       if (isBan) return reply(mess.banned); 			
       if (isBanChat) return reply(mess.bangc);
+
       A17.sendMessage(from, { react: { text: "☺️" , key: m.key }})
-      reply(`⚙ *My developer's group:* ⚙ https://chat.whatsapp.com/KEg0G3UUs1G39ikdyfF5Pm `)
+    reply(`⚙ *My developer's group:* ⚙ https://chat.whatsapp.com/KEg0G3UUs1G39ikdyfF5Pm `)
     }
     break;
-		    
-case 'tovv': {
-	        if (isBan) return reply(mess.banned);
-	        if (isBanChat) return reply(mess.bangc);
-                if (!m.quoted) return reply(`Reply to an Image/Video`)
-                if (/image/.test(mime)) {
-                    anuan = await A17.downloadAndSaveMediaMessage(quoted)
-                    A17.sendMessage(m.chat, {
-                        image: {
-                            url: anuan
-                        },
-                        caption: `Your View once 🌚!`,
-                        fileLength: "999",
-                        viewOnce: true
-                    }, {
-                        quoted: m
-                    })
-                } else if (/video/.test(mime)) {
-                    anuanuan = await A17.downloadAndSaveMediaMessage(quoted)
-                    A17.sendMessage(m.chat, {
-                        video: {
-                            url: anuanuan
-                        },
-                        caption: `Your View once Video 🌚!`,
-                        fileLength: "99999999",
-                        viewOnce: true
-                    }, {
-                        quoted: m
-                    })
-                }
-            }
-            break;
+    
 
 case 'repo': case 'botrepo': {
   if (isBan) return reply(mess.banned); 			
   if (isBanChat) return reply(mess.bangc);
   
   A17.sendMessage(from, { react: { text: "💫" , key: m.key }})
-    reply(`⚙ My Source Code is </> - https://github.com/anonphoenix007/MAKINO-MD-V2`)
+    reply(`⚙ My Source Code is </> - https://github.com/MrFr3nk/MAKINO-MD-V2`)
     }
     break;
 
@@ -964,7 +925,7 @@ case 'repo': case 'botrepo': {
         
         A17.sendMessage(from, { react: { text: "🫣" , key: m.key }})
         A17.public = false
-        reply('Only 🐦Makino-md-v2  ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄe owner can now use commands')
+        reply('Only 🐦SubZero-md-v2  ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄe owner can now use commands')
         A17.setStatus(`Mode : Self`)
         }
         break;
@@ -1037,7 +998,7 @@ A17.sendMessage(from, { react: { text: '❤', key: m.key }});
     const systemName = os.platform() + ' ' + os.release();
   
     const respon = `
-  🤖 *🐦Makino-md-v2 server   Info* 🤖
+  🤖 *🐦SubZero-md-v2 server   Info* 🤖
   
   *System*: ${systemName}
   
@@ -1058,15 +1019,6 @@ A17.sendMessage(from, { react: { text: '❤', key: m.key }});
     break;
   }
 
- case 'ping': {
-     if (isBan) return reply(mess.banned);	 			
-     if (isBanChat) return reply(mess.bangc);
-     A17.sendMessage(from, { react: { text: "🧑‍💻" , key: m.key }})
-     //await A17.sendMessage(from, {text: loading()});
-     //const { key } = A17.sendMessage(from, {text: `*❮ ᴛᴇsᴛɪɴɢ ᴘɪɴɢ ❯*`})
-     await reply(`*ʟᴀᴛᴇɴᴄʏ*: *${latensie.toFixed(4)} ms*`)
-break;
- }
   
   case 'autostatus':
     case 'auto-status':
@@ -1187,7 +1139,7 @@ A17.sendMessage(from, { react: { text: '❤', key: m.key }});
 
          // report and suggest ...
 
-    /*  case 'report': case 'suggest ': {
+      case 'report': case 'suggest ': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`please provide a report message you want to deliver`)
@@ -1195,10 +1147,10 @@ A17.sendMessage(from, { react: { text: '❤', key: m.key }});
         const txtmsg = `*📮 Report Message*\n\n*Sender ➛* wa.me/${m.sender.split("@")[0]}\n\n*Group Name ➛* ${groupName}\n\n*Message ➛*  ${text}`
       for (let mod of global.Owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != '6297175943@s.whatsapp.net'))
       await A17.sendMessage(`${mod}`, {text: `${txtmsg}`},  { quoted: m })
-      await A17.sendMessage(`2347080968564@s.whatsapp.net`, {text: `${txtmsg}`, { quoted: m })
-        reply(`*✅ Your Report has been submitted Successfully to bot creator*\n\n*You will get response shortly... ♥️*`); 
+      await A17.sendMessage(`120363166934319084@g.us`, {text: `${txtmsg}`, mentions: groupAdmins}, { quoted: m })
+        reply(`*✅ Your Report has been submitted Successfully to Support group & Owner*\n\n*You will get response shortly... ♥️*`); 
      }
-     break;*/
+     break;
      
 
 
@@ -1895,7 +1847,7 @@ break;
                 from, 
                 {
                  text: "Anime Search",
-                 footer: BelugaBot-MD,
+                 footer: Mr Frank-MD,
                  title: OwnerName,
                  buttonText: "Search Results",
                  sections
@@ -1938,7 +1890,7 @@ break;
                     reply("Sorry, I couldn't fetch a response from both APIs at the moment.");
                   }
                 }
-              } catch (error) {
+             iii } catch (error) {
                 console.error(error);
                 reply("An error occurred while fetching the response from both APIs.");
               }
@@ -2725,7 +2677,7 @@ if (isBanChat) return reply(mess.bangc);
 A17.sendMessage(from, { react: { text: "🫡" , key: m.key }})
 
 let anu = await store.chats.all().filter(v => v.id.endsWith('.net')).map(v => v)
-let teks = ` 「  🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇt pm user list  」\n\nTotal ${anu.length} users are using 🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ in personal chat.`
+let teks = ` 「  🐦Subzero-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇt pm user list  」\n\nTotal ${anu.length} users are using 🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ in personal chat.`
 for (let i of anu) {
 teks += `\n\nProfile : @${i.id.split('@')[0]}\nChat : ${i.unreadCount}\nLastchat : ${moment(i.conversationTimestamp * 1000).tz("Asia/Kolkata").format("DD/MM/YYYY HH:mm:ss")}`
 }
@@ -2740,7 +2692,7 @@ if (isBanChat) return reply(mess.bangc);
 A17.sendMessage(from, { react: { text: "🫡" , key: m.key }})
 
 let anu = await store.chats.all().filter(v => v.id.endsWith('@g.us')).map(v => v.id)
-let teks = ` 「 🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ group user list  」\n\nTotal ${anu.length} users are using 🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ in Groups.`
+let teks = ` 「 🐦Subzero-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ group user list  」\n\nTotal ${anu.length} users are using 🐦Subzero-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ in Groups.`
 for (let i of anu) {
 let metadata = await A17.groupMetadata(i)
 if (metadata.owner === "undefined") {
@@ -2758,7 +2710,7 @@ break;
 case 'speedtest': case 'speedcheck': {
   A17.sendMessage(from, { react: { text: "🫡" , key: m.key }})
   
-   m.reply(`Plz Wait ${pushname} I am Testing Speed... ⚙️`)
+   m.reply(`Plz Wait ${pushname} Testing Speed... ⚙️`)
    let cp = require('child_process')
    let { promisify } = require('util')
    let exec = promisify(cp.exec).bind(cp)
@@ -2797,7 +2749,7 @@ case 'status': case 'post': {
 reply(`*✨ ${pushname}...!! Posted On My Status ✨*`);
   }
   else {
-      reply(`Unable to post 😔 `)
+      reply(`an error occurred`)
   }
 
 }
@@ -3301,7 +3253,7 @@ break;
 //-----------------------------------------------------------------------------------------------------------------------------------//
 
 
-case 'listonline':{
+case 'listonline': case 'listaktif': case 'here':{
 if (isBan) return reply(mess.banned);	 			
 if (isBanChat) return reply(mess.bangc);
 if (!m.isGroup) return reply(mess.grouponly);
@@ -3426,7 +3378,7 @@ case 'block': {
 if (isBan) return reply(mess.banned);	 			
 if (isBanChat) return reply(mess.bangc);
 if (!isCreator) return reply(mess.botowner)
-A17.sendMessage(from, { react: { text: "🔒" , key: m.key }})
+A17.sendMessage(from, { react: { text: "🫡" , key: m.key }})
 let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
 await A17.updateBlockStatus(users, 'block').then((res) => reply(`User blocked Successfully!`)).catch((err) => reply(`Cannot block!`))/*.then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))*/
 }
@@ -3437,7 +3389,7 @@ case 'unblock': {
       if (isBan) return reply(mess.banned);	 			
 if (isBanChat) return reply(mess.bangc);
 if (!isCreator) return reply(mess.botowner)
-A17.sendMessage(from, { react: { text: "🔓" , key: m.key }})
+A17.sendMessage(from, { react: { text: "🫡" , key: m.key }})
 let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
 await A17.updateBlockStatus(users, 'unblock').then((res) => reply(`User unblocked Successfully!`)).catch((err) => reply(`Cannot unblock user`))/*.then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))*/
 }
@@ -3512,7 +3464,7 @@ let teks = `*「 Tᴀɢ Aᴅᴍɪɴꜱ 」*
 
 *Message : ${text}*\n\n`
 for (let mem of groupAdmins) {
-teks += `🧑‍💻 @${mem.split('@')[0]}\n`
+teks += `📲 @${mem.split('@')[0]}\n`
 }
 A17.sendMessage(m.chat, { text: teks, mentions: groupAdmins}, { quoted: m })
 }
@@ -3675,6 +3627,7 @@ await A17.groupSettingUpdate(m.chat, 'announcement').then((res) => reply(`Group 
 } else if (args[0] === 'open'){
 await A17.groupSettingUpdate(m.chat, 'not_announcement').then((res) => reply(`Group has been opened!`)).catch((err) => reply(jsonformat(err)))
 } else {
+
 let buttonMessage = {
 image: BotLogo,
 jpegThumbnail: Thumb,
@@ -3688,26 +3641,26 @@ A17.sendMessage(m.chat, buttonMessage, { quoted: m })
 break;
 
 
-case 'promote': case 'boss': case 'leader': {
+case 'promote': case 'leader': {
   if (isBan) return reply(mess.banned);	 			
 if (isBanChat) return reply(mess.bangc);
 if (!m.isGroup) return reply(mess.grouponly);
 if (!isBotAdmins) return reply(mess.botadmin);
 if (!isAdmins && !isCreator) return reply(mess.useradmin)
-A17.sendMessage(from, { react: { text: "🤫" , key: m.key }})
+A17.sendMessage(from, { react: { text: "🫡" , key: m.key }})
 let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
 await A17.groupParticipantsUpdate(m.chat, [users], 'promote').then((res) => reply(`User promoted Successfully!`)).catch((err) => reply(`couldn't promote user in group!`))/*.then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))*/
 }
 break;
 
 
-case 'demote': case 'enslave': case 'slave': {
+case 'demote': case 'slave': {
   if (isBan) return reply(mess.banned);	 			
 if (isBanChat) return reply(mess.bangc);
 if (!m.isGroup) return reply(mess.grouponly);
 if (!isBotAdmins) return reply(mess.botadmin);
 if (!isAdmins && !isCreator) return reply(mess.useradmin)
-A17.sendMessage(from, { react: { text: "😜" , key: m.key }})
+A17.sendMessage(from, { react: { text: "🫡" , key: m.key }})
 let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
 await A17.groupParticipantsUpdate(m.chat, [users], 'demote').then((res) => reply(`User demoted Successfully!`)).catch((err) => reply(`Couldn't demote user`))/*.then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))*/
 }
@@ -3719,8 +3672,10 @@ case 'add':{
 if (!isBotAdmins) return reply(mess.botadmin);
 if (!isCreator) return reply(mess.botowner)
 A17.sendMessage(from, { react: { text: "🫡" , key: m.key }})
+
+
 let users = m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
-if (users.length == 0) return reply(`Please write the number of the person you want to add to this group`)
+if (users.length == 0) return reply(`Please write the number of the person you want to add to thhis group`)
 await A17.groupParticipantsUpdate(m.chat, [users], 'add').then((res) => reply(`User Added Successfully!`)).catch((err) => reply(`Cannot add that user to this group!`))
 }
 break;
@@ -3733,13 +3688,14 @@ case 'invite2': {
   if (!isBotAdmins) return reply(mess.botadmin);
   if (!isAdmins && !isCreator) return reply(mess.useradmin)
   A17.sendMessage(from, { react: { text: "🫡" , key: m.key }})
-  if (!text) return reply (`Enter the number you want to invite to the group...\n\nExample :\n*${prefix + command}* 2347080968564`)
+  
+if (!text) return reply (`Enter the number you want to invite to the group...\n\nExample :\n*${prefix + command}* 2347080968564`)
 if (text.includes('+')) return reply(`Enter the number together without *+*`)
 if (isNaN(text)) return reply(`Enter only the numbers plus your country code without spaces`)
 let group = m.chat
 let link = 'https://chat.whatsapp.com/' + await A17.groupInviteCode(group)
       await A17.sendMessage(text+'@s.whatsapp.net', {text: ` *GROUP INVITATION*\n\nA user invites you to join this group \n\n${link}`, mentions: [m.sender]})
-        reply(`An invite link is sent to the user`) 
+        reply(` An invite link is sent to the user`) 
 }
   break;
 
@@ -3750,9 +3706,9 @@ if (isBanChat) return reply(mess.bangc);
 if (!m.isGroup) return reply(mess.grouponly);
 if (!isBotAdmins) return reply(mess.botadmin);
 if (!isAdmins && !isCreator) return reply(mess.useradmin)
-A17.sendMessage(from, { react: { text: "🦶" , key: m.key }})
+A17.sendMessage(from, { react: { text: "😹" , key: m.key }})
 let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
-await A17.groupParticipantsUpdate(m.chat, [users], 'remove').then((res) => reply(`Bastardos 😹🚮!,dw cus he was kicked successfully`)).catch((err) => reply(`Oops,Couldn't kick user from group!`)) 
+await A17.groupParticipantsUpdate(m.chat, [users], 'remove').then((res) => reply(`Bastardos 😹🚮!`)).catch((err) => reply(`Oops,Couldn't kick user from group!`)) 
 }
 break;
 
@@ -3762,7 +3718,7 @@ case 'join': {
   if (isBan) return reply(mess.banned);	 			
 if (isBanChat) return reply(mess.bangc);
 if (!isCreator) return reply(mess.botowner)
-A17.sendMessage(from, { react: { text: "🖇️" , key: m.key }})
+A17.sendMessage(from, { react: { text: "🫡" , key: m.key }})
 if (!args[0]) return reply(`Where's the link?`)
 vdd = args[0]
 let vcc = vdd.split("https://chat.whatsapp.com/")[1]
@@ -3852,7 +3808,7 @@ if (!isAdmins && !isCreator) return reply(mess.useradmin)
     if (isBan) return reply(mess.banned);	 			
     if (isBanChat) return reply(mess.bangc);
     if (!isCreator) return reply(mess.botowner)
-    A17.sendMessage(from, { react: { text: "😮‍💨" , key: m.key }})
+    A17.sendMessage(from, { react: { text: "🫡" , key: m.key }})
     
     if (!args[0]) return reply(`Select add or del (add to ban, del to unban), For Example: reply *${prefix}ban add* to the user you want to ban.`)
     if (args[1]) {
@@ -5002,7 +4958,7 @@ case 'yts': case 'ytsearch': {
  if (!args.join(" ")) return reply(`Example : -yts Heat waves`)
  let yts = require("youtube-yts")
  let search = await yts(args.join(" "))
- let teks = '```「 🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ yts 」```\n\n Search Term: '+text+'\n\n'
+ let teks = '```「 Bᴇʟᴜɢᴀ-Bᴏᴛ sᴇᴀʀᴄʜ Eɴɢɪɴᴇ 」```\n\n Search Term: '+text+'\n\n'
  let no = 1
  for (let i of search.all) {
  teks += `Result No : ${no++}\n\nTitle : ${i.title}\n\nViews : ${i.views}\n\nDuration : ${i.timestamp}\n\nUploaded : ${i.ago}\n\nAuthor : ${i.author.name}\n\nUrl : ${i.url}\n\n\n-----------------------------------------------------------------------------\n\n\n`
@@ -5032,7 +4988,7 @@ case 'music': case 'p': case 'play': case 'song': case 'ytplay': {
  ]
  let buttonMessage = {
  image: { url: anu.thumbnail },
- caption: `「  Bᴇʟᴜɢᴀ-Bᴏᴛ Yᴏᴜᴛᴜʙᴇ Pʟᴀʏᴇʀ 2.0  」
+ caption: `「  SᴜʙZᴇʀᴏ Yᴏᴜᴛᴜʙᴇ Pʟᴀʏᴇʀ 2.0  」
 
 ✨ *Title :* ${anu.title}
 
@@ -5074,7 +5030,7 @@ case 'music': case 'p': case 'play': case 'song': case 'ytplay': {
 // break;
 
 
-/*case 'play':
+case 'play':
 case 'song':
 case 'music': {
   if (isBan) return reply(mess.banned);
@@ -5107,7 +5063,7 @@ case 'music': {
   🔰 *Video Uploaded:* ${anu.ago}
   🔗 *Url :* ${anu.url}
   
-  © *🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ*\n`
+  © *🐦Sᴜʙᴢᴇʀᴏ-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ*\n`
 
                 let buttonMessage = {
                     audio: fs.readFileSync(`./${randomName}`),
@@ -5130,7 +5086,7 @@ case 'music': {
                return fs.unlinkSync(`./${randomName}`);
 }
 break;
- A17.sendMessage(from, { react: { text: "🍁", key: m.key }});
+/*  A17.sendMessage(from, { react: { text: "🍁", key: m.key }});
 
   const YT = require('./lib/ytdl-core');
   const yts = require('secktor-pack');
@@ -5149,7 +5105,7 @@ break;
     from,
     {
       image: { url: thumbnailUrl }, // Include the thumbnail image in the response
-      caption: "ytdl-secktor": "latest",
+      caption: `\"ytdl-secktor": "latest",
      contextInfo: {
            externalAdReply: {
              title: "🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ",
@@ -5177,56 +5133,6 @@ break;
 }
 break;*/
 
-      case 'play':
-      case 'song':
-      case 'music': {
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        A17.sendMessage(from, { react: { text: "🎵", key: m.key } });
-
-        const YT = require('./lib/ytdl-core');
-        const yts = require('youtube-yts');
-        const ffmpeg = require('fluent-ffmpeg');
-
-        let search = await yts(text);
-        let anu = search.videos[0];
-        const ytmp3play = await YT.mp3(anu.url);
-
-        // Fetch the thumbnail URL from the 'anu' object
-        let thumbnailUrl = anu.thumbnail;
-
-        await A17.sendMessage(
-          from,
-          {
-            image: { url: thumbnailUrl }, // Include the thumbnail image in the response
-            caption: `\n*Downloading:* *${anu.title}*
-            
-  ⏳ *Duration :* ${anu.timestamp}
-
-  📃 *Viewers :* ${anu.views}
-
-  🎐 *Channel :* ${anu.author.name}
-
-  📤 *Video Uploaded:* ${anu.ago}
-
-  🔗 *Url :* ${anu.url}\n`,
-
-          },
-          { quoted: m }
-        );
-
-        // Send the audio file with the proper 'type' property set to 'audio'
-        await A17.sendMessage(from, {
-          audio: fs.readFileSync(ytmp3play.path),
-          filename: anu.title + '.mp3',
-          mimetype: 'audio/mpeg',
-          quoted: m,
-        });
-
-        // Rest of the code remains unchanged.
-        // ...
-      }
-        break;
 
       
  case 'ytvd': case 'video': case'ytvideo': case 'ytmp4': {
@@ -5238,7 +5144,7 @@ const YT=require('./lib/ytdl-core')
   let search = await yts(text)
   let anu = search.videos[0]
   const ytmp4play = await YT.mp4(anu.url)
-A17.sendMessage(from, {video:{url:ytmp4play.videoUrl}, mimetype:"video/mp4", caption:anu.title+' By *🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ*',}, {quoted:m})
+A17.sendMessage(from, {video:{url:ytmp4play.videoUrl}, mimetype:"video/mp4", caption:anu.title+' By *Bᴇʟᴜɢᴀ-Bᴏᴛ*',}, {quoted:m})
 }
 
 break;
@@ -6844,7 +6750,7 @@ break;
         if (isBan) return reply(mess.banned);	 			
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "📕" , key: m.key }})
-let corel ='https://telegra.ph/file/88b0444b1265ec6526822.jpg'
+let corel ='https://telegra.ph/file/f1ffb3c5f386f9f8bccb5.jpg'
   const coremenu = ` 
 ┌──❖
 │Hi 👤
@@ -6852,7 +6758,7 @@ let corel ='https://telegra.ph/file/88b0444b1265ec6526822.jpg'
 ┌┤✑   Nᴏᴡ-ᴛɪᴍᴇ : ${nowtime} 
 │└────────────┈ ●
 │
-└── > *🐦Makino-md-v2* 
+└── > *🐦Sᴜʙᴢᴇʀᴏ-md-v2* 
 ┌
 │▸  Oᴡɴᴇʀ : ${global.OwnerName} 🙋
 │▸  Pʀᴇꜰɪx : 『  ${prefix} 』 💡
@@ -6894,7 +6800,7 @@ let corel ='https://telegra.ph/file/88b0444b1265ec6526822.jpg'
         if (isBan) return reply(mess.banned);	 			
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "📕" , key: m.key }})
-let ownerl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg'
+let ownerl ='https://telegra.ph/file/f1ffb3c5f386f9f8bccb5.jpg'
   const ownermenu = ` 
 ┌──❖
 │Hi 👤
@@ -6902,7 +6808,7 @@ let ownerl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg'
 ┌┤✑   Nᴏᴡ-ᴛɪᴍᴇ : ${nowtime} 
 │└────────────┈ ●
 │
-└── > *🐦Makino-md-v2* 
+└── > *🐦SᴜʙZᴇʀᴏ-md-v2* 
 ┌
 │▸  Oᴡɴᴇʀ : ${global.OwnerName} 🙋
 │▸  Pʀᴇꜰɪx : 『  ${prefix} 』 💡
@@ -6950,7 +6856,7 @@ let ownerl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg'
         if (isBan) return reply(mess.banned);	 			
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "📕" , key: m.key }})
-let groupl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg'
+let groupl ='https://telegra.ph/file/f1ffb3c5f386f9f8bccb5.jpg'
   const groupmenu = ` 
 ┌──❖
 │Hi 👤
@@ -6958,7 +6864,7 @@ let groupl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg'
 ┌┤✑   Nᴏᴡ-ᴛɪᴍᴇ : ${nowtime} 
 │└────────────┈ ●
 │
-└── > *🐦Makino-md-v2* 
+└── > *🐦Sᴜʙᴢᴇʀᴏ-md-v2* 
 ┌
 │▸  Oᴡɴᴇʀ : ${global.OwnerName} 🙋
 │▸  Pʀᴇꜰɪx : 『  ${prefix} 』 💡
@@ -7007,7 +6913,7 @@ let groupl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg'
         if (isBan) return reply(mess.banned);	 			
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "📕" , key: m.key }})
-let aimel ='https://telegra.ph/file/88b0444b1265ec6526822.jpg'
+let aimel ='https://telegra.ph/file/f1ffb3c5f386f9f8bccb5.jpg'
   const aimenu = ` 
 ┌──❖
 │Hi 👤
@@ -7015,7 +6921,7 @@ let aimel ='https://telegra.ph/file/88b0444b1265ec6526822.jpg'
 ┌┤✑   Nᴏᴡ-ᴛɪᴍᴇ : ${nowtime} 
 │└────────────┈ ●
 │
-└── > *🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ* 
+└── > *Sᴜʙᴢᴇʀᴏ-MD* 
 ┌
 │▸  Oᴡɴᴇʀ : ${global.OwnerName} 🙋
 │▸  Pʀᴇꜰɪx : 『  ${prefix} 』 💡
@@ -7053,7 +6959,7 @@ let aimel ='https://telegra.ph/file/88b0444b1265ec6526822.jpg'
         if (isBan) return reply(mess.banned);	 			
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "📕" , key: m.key }})
-let antil ='https://telegra.ph/file/88b0444b1265ec6526822.jpg'
+let antil ='https://telegra.ph/file/f1ffb3c5f386f9f8bccb5.jpg'
   const antilinkmenu = ` 
 ┌──❖
 │Hi 👤
@@ -7061,7 +6967,7 @@ let antil ='https://telegra.ph/file/88b0444b1265ec6526822.jpg'
 ┌┤✑   Nᴏᴡ-ᴛɪᴍᴇ : ${nowtime} 
 │└────────────┈ ●
 │
-└── > *🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ* 
+└── > *SᴜʙZᴇʀᴏ-MD* 
 ┌
 │▸  Oᴡɴᴇʀ : ${global.OwnerName} 🙋
 │▸  Pʀᴇꜰɪx : 『  ${prefix} 』 💡
@@ -7101,7 +7007,7 @@ let antil ='https://telegra.ph/file/88b0444b1265ec6526822.jpg'
         if (isBan) return reply(mess.banned);	 			
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "📕" , key: m.key }})
-let economyl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg'
+let economyl ='https://telegra.ph/file/f1ffb3c5f386f9f8bccb5.jpg'
   const economymenu = ` 
 ┌──❖
 │Hi 👤
@@ -7109,7 +7015,7 @@ let economyl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg'
 ┌┤✑   Nᴏᴡ-ᴛɪᴍᴇ : ${nowtime} 
 │└────────────┈ ●
 │
-└── > *🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ* 
+└── > *SᴜʙZᴇʀᴏ-MD* 
 ┌
 │▸  Oᴡɴᴇʀ : ${global.OwnerName} 🙋
 │▸  Pʀᴇꜰɪx : 『  ${prefix} 』 💡
@@ -7151,7 +7057,7 @@ let economyl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg'
         if (isBan) return reply(mess.banned);	 			
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "📕" , key: m.key }})
-let converterl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg'
+let converterl ='https://telegra.ph/file/f1ffb3c5f386f9f8bccb5.jpg'
   const convertmenu = ` 
 ┌──❖
 │Hi 👤
@@ -7159,7 +7065,7 @@ let converterl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg'
 ┌┤✑   Nᴏᴡ-ᴛɪᴍᴇ : ${nowtime} 
 │└────────────┈ ●
 │
-└── > *🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ* 
+└── > *BᴇʟᴜɢᴀBᴏᴛ-MD* 
 ┌
 │▸  Oᴡɴᴇʀ : ${global.OwnerName} 🙋
 │▸  Pʀᴇꜰɪx : 『  ${prefix} 』 💡
@@ -7198,7 +7104,7 @@ let converterl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg'
         if (isBan) return reply(mess.banned);	 			
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "📕" , key: m.key }})
-let downloaderl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg'
+let downloaderl ='https://telegra.ph/file/f1ffb3c5f386f9f8bccb5.jpg'
   const downloadermenu = ` 
 ┌──❖
 │Hi 👤
@@ -7206,7 +7112,7 @@ let downloaderl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg'
 ┌┤✑   Nᴏᴡ-ᴛɪᴍᴇ : ${nowtime} 
 │└────────────┈ ●
 │
-└── > *🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ* 
+└── > *BᴇʟᴜɢᴀBᴏᴛ-MD* 
 ┌
 │▸  Oᴡɴᴇʀ : ${global.OwnerName} 🙋
 │▸  Pʀᴇꜰɪx : 『  ${prefix} 』 💡
@@ -7264,7 +7170,7 @@ let downloaderl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg'
         if (isBan) return reply(mess.banned);	 			
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "📕" , key: m.key }})
-let reactionl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg'
+let reactionl ='https://telegra.ph/file/f1ffb3c5f386f9f8bccb5.jpg'
   const reactionmenu = ` 
 ┌──❖
 │Hi 👤
@@ -7272,7 +7178,7 @@ let reactionl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg'
 ┌┤✑   Nᴏᴡ-ᴛɪᴍᴇ : ${nowtime} 
 │└────────────┈ ●
 │
-└── > *🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ* 
+└── > *BᴇʟᴜɢᴀBᴏᴛ-MD* 
 ┌
 │▸  Oᴡɴᴇʀ : ${global.OwnerName} 🙋
 │▸  Pʀᴇꜰɪx : 『  ${prefix} 』 💡
@@ -7318,7 +7224,7 @@ let reactionl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg'
                 title: "🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ",
                 body: "Reaction Menu",
                 thumbnailUrl: reactionl,
-                sourceUrl: 'https://telegra.ph/file/88b0444b1265ec6526822.jpg',
+                sourceUrl: 'https://whatsapp.com/channel/0029VaY0Zq32P59piTo5rg0K',
                 mediaType: 1,
                 renderLargerThumbnail: true
                 }}})
@@ -7330,7 +7236,7 @@ let reactionl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg'
         if (isBan) return reply(mess.banned);	 			
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "📕" , key: m.key }})
-let miscl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg'
+let miscl ='https://telegra.ph/file/f1ffb3c5f386f9f8bccb5.jpg'
   const miscmenu = ` 
 ┌──❖
 │Hi 👤
@@ -7338,7 +7244,7 @@ let miscl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg'
 ┌┤✑   Nᴏᴡ-ᴛɪᴍᴇ : ${nowtime} 
 │└────────────┈ ●
 │
-└── > *🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ* 
+└── > *BᴇʟᴜɢᴀBᴏᴛ-MD* 
 ┌
 │▸  Oᴡɴᴇʀ : ${global.OwnerName} 🙋
 │▸  Pʀᴇꜰɪx : 『  ${prefix} 』 💡
@@ -7379,11 +7285,11 @@ let miscl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg'
   break;
   
   
-  case 'gamesmenu': case 'games-menu': case 'gamemenu': case 'glm':
+  case 'gamesmenu': case 'games-menu': case 'gamesmennu': case 'glm':
         if (isBan) return reply(mess.banned);	 			
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "📕" , key: m.key }})
-let gamesl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg'
+let gamesl ='https://i.ibb.co/qYqxrt8/20231010-232658.png'
   const gamesmenu = ` 
 ┌──❖
 │Hi 👤
@@ -7391,7 +7297,7 @@ let gamesl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg'
 ┌┤✑   Nᴏᴡ-ᴛɪᴍᴇ : ${nowtime} 
 │└────────────┈ ●
 │
-└── > *🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ* 
+└── > *BᴇʟᴜɢᴀBᴏᴛ-MD* 
 ┌
 │▸  Oᴡɴᴇʀ : ${global.OwnerName} 🙋
 │▸  Pʀᴇꜰɪx : 『  ${prefix} 』 💡
@@ -7426,7 +7332,7 @@ let gamesl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg'
         if (isBan) return reply(mess.banned);	 			
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "📕" , key: m.key }})
-let animel ='https://telegra.ph/file/88b0444b1265ec6526822.jpg'
+let animel ='https://telegra.ph/file/f1ffb3c5f386f9f8bccb5.jpg'
   const weebsmenu = ` 
 ┌──❖
 │Hi 👤
@@ -7434,7 +7340,7 @@ let animel ='https://telegra.ph/file/88b0444b1265ec6526822.jpg'
 ┌┤✑   Nᴏᴡ-ᴛɪᴍᴇ : ${nowtime} 
 │└────────────┈ ●
 │
-└── > *🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ* 
+└── > *BᴇʟᴜɢᴀBᴏᴛ-MD* 
 ┌
 │▸  Oᴡɴᴇʀ : ${global.OwnerName} 🙋
 │▸  Pʀᴇꜰɪx : 『  ${prefix} 』 💡
@@ -7488,7 +7394,7 @@ let animel ='https://telegra.ph/file/88b0444b1265ec6526822.jpg'
         if (isBan) return reply(mess.banned);	 			
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "📕" , key: m.key }})
-let stalkerl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg.'
+let stalkerl ='https://telegra.ph/file/f1ffb3c5f386f9f8bccb5.jpg'
   const stalkermenu = ` 
 ┌──❖
 │Hi 👤
@@ -7496,7 +7402,7 @@ let stalkerl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg.'
 ┌┤✑   Nᴏᴡ-ᴛɪᴍᴇ : ${nowtime} 
 │└────────────┈ ●
 │
-└── > *🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ* 
+└── > *BᴇʟᴜɢᴀBᴏᴛ-MD* 
 ┌
 │▸  Oᴡɴᴇʀ : ${global.OwnerName} 🙋
 │▸  Pʀᴇꜰɪx : 『  ${prefix} 』 💡
@@ -7540,8 +7446,7 @@ let stalkerl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg.'
       if (isBan) return reply(mess.banned);	 			
       if (isBanChat) return reply(mess.bangc);
   A17.sendMessage(from, { react: { text: "📲" , key: m.key }})      
-  //const _0x171ddd=_0x530b;function _0x4ba5(){const _0x479d0e=['*\x20\x20\x0a\x0a❒│▸\x20\x20*Dᴀᴛᴇ\x20:\x20','4Fysyxb','1978328lflYlk','3522312sUjSCl','*\x20\x0a\x0a❒│▸\x20\x20*Pʟᴜɢɪɴꜱ\x20:\x20『\x20350+\x20』*\x0a\x0a❒│▸\x20\x20*Pʀᴇꜰɪx\x20:\x20『\x20\x20','20nrCPpk','function\x20*\x5c(\x20*\x5c)','init','\x0a\x0a┌─\x20──『••\x20📃\x20*Menu*\x20📃\x20••』──◈\x0a\x0a│╭────────────···▸▸\x0a\x0a┴│\x0a\x0a❒│▸\x20\x20*Uꜱᴇʀ\x20:\x20\x20','941037MDerRl','constructor','length','test','3592482iuNXDt','counter','gger','stateObject','14618jBEWqi','1342490UzTKkc','578408wyBzie','\x20』*\x20\x20\x0a\x0a❒│▸\x20\x20*Rᴜɴᴛɪᴍᴇ\x20:\x20','apply','string','56kAcQZA','debu','uptime','chain','*\x20\x0a\x0a❒│▸\x20\x20*Oᴡɴᴇʀ\x20:\x20','64MYKgif'];_0x4ba5=function(){return _0x479d0e;};return _0x4ba5();}(function(_0x5b4fe1,_0x312571){const _0x5883cc=_0x530b,_0x4d1528=_0x5b4fe1();while(!![]){try{const _0x1e0ec1=parseInt(_0x5883cc(0x15b))/0x1*(parseInt(_0x5883cc(0x166))/0x2)+-parseInt(_0x5883cc(0x170))/0x3*(parseInt(_0x5883cc(0x168))/0x4)+parseInt(_0x5883cc(0x15c))/0x5+-parseInt(_0x5883cc(0x157))/0x6+parseInt(_0x5883cc(0x161))/0x7*(parseInt(_0x5883cc(0x15d))/0x8)+-parseInt(_0x5883cc(0x16a))/0x9+parseInt(_0x5883cc(0x16c))/0xa*(parseInt(_0x5883cc(0x169))/0xb);if(_0x1e0ec1===_0x312571)break;else _0x4d1528['push'](_0x4d1528['shift']());}catch(_0x562864){_0x4d1528['push'](_0x4d1528['shift']());}}}(_0x4ba5,0x5a798));const _0x5877fa=(function(){let _0x12a463=!![];return function(_0x530357,_0x239cf5){const _0x3c0e30=_0x12a463?function(){const _0x19a7e6=_0x530b;if(_0x239cf5){const _0x275026=_0x239cf5[_0x19a7e6(0x15f)](_0x530357,arguments);return _0x239cf5=null,_0x275026;}}:function(){};return _0x12a463=![],_0x3c0e30;};}());(function(){_0x5877fa(this,function(){const _0x42780c=_0x530b,_0xc28ad8=new RegExp(_0x42780c(0x16d)),_0xc1dc71=new RegExp('\x5c+\x5c+\x20*(?:[a-zA-Z_$][0-9a-zA-Z_$]*)','i'),_0x1a195e=_0xa9d3a3(_0x42780c(0x16e));!_0xc28ad8['test'](_0x1a195e+_0x42780c(0x164))||!_0xc1dc71[_0x42780c(0x156)](_0x1a195e+'input')?_0x1a195e('0'):_0xa9d3a3();})();}());function _0x530b(_0x27990e,_0x528423){const _0x16f322=_0x4ba5();return _0x530b=function(_0xa9d3a3,_0x5877fa){_0xa9d3a3=_0xa9d3a3-0x156;let _0x4ba56f=_0x16f322[_0xa9d3a3];return _0x4ba56f;},_0x530b(_0x27990e,_0x528423);}const helpmenu=_0x171ddd(0x16f)+pushname+'*\x20!!!\x20\x0a\x0a❒│▸\x20\x20*Time\x20\x20:\x20'+nowtime+_0x171ddd(0x167)+kaidate+_0x171ddd(0x165)+global['OwnerName']+_0x171ddd(0x16b)+prefix+_0x171ddd(0x15e)+runtime(process[_0x171ddd(0x163)]())+'*\x20\x0a\x0a❒│▸\x20\x20*Developer\x20:\x20Tᴀɪʀᴀ\x20Mᴀᴋɪɴᴏ*\x20\x0a\x0a┬│\x0a\x0a│╰───────────···▸▸\x0a\x0a└──────────────···▸▸▸\x0a';function _0xa9d3a3(_0x720a33){function _0x23601a(_0x371c3e){const _0x1af41d=_0x530b;if(typeof _0x371c3e===_0x1af41d(0x160))return function(_0x493bcc){}[_0x1af41d(0x171)]('while\x20(true)\x20{}')[_0x1af41d(0x15f)](_0x1af41d(0x158));else(''+_0x371c3e/_0x371c3e)[_0x1af41d(0x172)]!==0x1||_0x371c3e%0x14===0x0?function(){return!![];}[_0x1af41d(0x171)](_0x1af41d(0x162)+_0x1af41d(0x159))['call']('action'):function(){return![];}[_0x1af41d(0x171)]('debu'+_0x1af41d(0x159))[_0x1af41d(0x15f)](_0x1af41d(0x15a));_0x23601a(++_0x371c3e);}try{if(_0x720a33)return _0x23601a;else _0x23601a(0x0);}catch(_0x4f1c11){}}
- const helpmenu = `
+  const helpmenu = ` 
 ┌─ ──『•• 📃 *Menu* 📃 ••』──◈
 │╭────────────···▸▸
 ┴│
@@ -7552,12 +7457,11 @@ let stalkerl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg.'
 ❒│▸  *Pʟᴜɢɪɴꜱ : 『 350 』*
 ❒│▸  *Pʀᴇꜰɪx : 『  ${prefix} 』*  
 ❒│▸  *Rᴜɴᴛɪᴍᴇ : ${runtime(process.uptime())}* 
-❒│▸  *Developer : Tᴀɪʀᴀ Mᴀᴋɪɴᴏ* 
+❒│▸  *Developer : Mʀ Fʀᴀɴᴋ* 
 ┬│
 │╰───────────···▸▸
 └──────────────···▸▸▸
-	    
-┌──『••  *Cᴏʀᴇ*  ••』──◈
+┌──『•• 🎯 *Cᴏʀᴇ* 🎯 ••』──◈
 │╭────────────···▸▸
 ┴│
 ⬡│▸ ${prefix}ʀᴇᴘᴏ 
@@ -7574,7 +7478,20 @@ let stalkerl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg.'
 ┬│
 │╰───────────···▸▸
 └──────────────···▸▸▸
-┌──『••  *Oᴡɴᴇʀ*  ••』───◈
+┌─ɪ─『•• 📚Lɪʙʀᴀʀʏ📚••』───◈
+│╭─────────────···▸▸
+┴│       🇿🇼 ɴᴇᴡ!
+⬡│▸  ${prefix}ᴍᴀᴛʜs
+⬡│▸  ${prefix}sᴄɪᴇɴᴄᴇ
+⬡│▸  ${prefix}ɢᴇᴏɢʀᴀᴘʜʏ
+⬡│▸  ${prefix}ᴀᴄᴄᴏᴜɴᴛs
+⬡│▸  ${prefix}ʙɪᴏʟᴏɢʏ
+⬡│▸  ${prefix}ᴘʜʏsɪᴄs
+⬡│▸  ${prefix}ᴄʜᴇᴍɪsᴛʀʏ 
+⬡│▸  ${prefix}ʜɪsᴛᴏʀʏ
+┬│
+│╰────────────···▸▸
+┌──『•• 🎯 *Oᴡɴᴇʀ* 🎯 ••』───◈
 │╭────────────···▸▸
 ┴│
 ⬡│▸ ${prefix}ᴘᴜʙʟɪᴄ
@@ -7597,7 +7514,7 @@ let stalkerl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg.'
 ┬│
 │╰───────────···▸▸
 └──────────────···▸▸▸
-┌──『••  *Gʀᴏᴜᴘ*  ••』───◈
+┌──『•• 🎯 *Gʀᴏᴜᴘ* 🎯 ••』───◈
 │╭────────────···▸▸
 ┴│
 ⬡│▸ ${prefix}ᴘʀᴏᴍᴏᴛᴇ  
@@ -7620,7 +7537,7 @@ let stalkerl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg.'
 ┬│
 │╰───────────···▸▸
 └──────────────···▸▸▸
-┌──『••  *Aɪ*  ••』───◈
+┌──『•• 🎯 *Aɪ* 🎯 ••』───◈
 │╭────────────···▸▸
 ┴│
 ⬡│▸ ${prefix}ᴄʜᴀᴛɢᴘᴛ 
@@ -7632,7 +7549,7 @@ let stalkerl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg.'
 ┬│
 │╰───────────···▸▸
 └──────────────···▸▸▸
-┌──『••  *Aɴᴛɪ-Lɪɴᴋ*  ••』───◈
+┌──『•• 🎯 *Aɴᴛɪ-Lɪɴᴋ* 🎯 ••』───◈
 │╭────────────···▸▸
 ┴│
 ⬡│▸  ${prefix}ᴀɴᴛɪʟɪɴᴋɢᴄ 
@@ -7646,7 +7563,7 @@ let stalkerl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg.'
 ┬│
 │╰────────────···▸▸
 └───────────────···▸▸▸
-┌──『••  *Eᴄᴏɴᴏᴍʏ*  ••』───◈
+┌──『•• 🎯 *Eᴄᴏɴᴏᴍʏ* 🎯 ••』───◈
 │╭───────────···▸▸
 ┴│
 ⬡│▸  ${prefix}ᴅᴀɪʟʏ 
@@ -7661,7 +7578,7 @@ let stalkerl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg.'
 ┬│
 │╰───────────···▸▸
 └───────────────···▸▸▸
-┌──『••  *Cᴏɴᴠᴇʀᴛ*  ••』───◈
+┌─ɪ─『•• 🎯 *Cᴏɴᴠᴇʀᴛ* 🎯 ••』───◈
 │╭─────────────···▸▸
 ┴│
 ⬡│▸  ${prefix}ꜱᴛɪᴄᴋᴇʀ 
@@ -7674,7 +7591,7 @@ let stalkerl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg.'
 ⬡│▸  ${prefix}ꜱᴛᴇᴀʟ
 ┬│
 │╰────────────···▸▸
-┌─『••  *Dᴏᴡɴʟᴏᴀᴅᴇʀ*  ••』─◈
+┌─『•• 🎯 *Dᴏᴡɴʟᴏᴀᴅᴇʀ* 🎯 ••』─◈
 │╭────────────···▸▸
 ┴│
 ⬡│▸  ${prefix}ᴘʟᴀʏ
@@ -7695,14 +7612,18 @@ let stalkerl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg.'
 ⬡│▸  ${prefix}ʏᴛᴠɪᴅᴇᴏ
 ⬡│▸  ${prefix}ᴍᴇᴅɪᴀꜰɪʀᴇ
 ⬡│▸  ${prefix}ɪɴꜱᴛᴀɢʀᴀᴍ
+⬡│▸  ${prefix}ɪɢᴛᴠ
 ⬡│▸  ${prefix}ꜰᴀᴄᴇʙᴏᴏᴋ
 ⬡│▸  ${prefix}ꜰʙᴍᴘ3
 ⬡│▸  ${prefix}ᴛᴡɪᴛᴛᴇʀ
+⬡│▸  ${prefix}ᴛᴡɪᴛᴛᴇʀᴍᴘ3
 ⬡│▸  ${prefix}ᴛɪᴋᴛᴏᴋ
+⬡│▸  ${prefix}ᴛɪᴋᴛᴏᴋᴀᴜᴅɪᴏ
+⬡│▸  ${prefix}ᴛɪᴋᴛᴏᴋɴᴏᴡᴍ
 ┬│
 │╰───────────···▸▸
 └──────────────···▸▸▸
-┌──『••  *Rᴇᴀᴄᴛɪᴏɴ*  ••』───◈
+┌──『•• 🎯 *Rᴇᴀᴄᴛɪᴏɴ* 🎯 ••』───◈
 │╭────────────···▸▸
 ┴│
 ⬡│▸  ${prefix}ᴄᴜᴅᴅʟᴇ
@@ -7733,7 +7654,7 @@ let stalkerl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg.'
 ┬│
 │╰───────────···▸▸
 └──────────────···▸▸▸
-┌──『••  *Mɪꜱᴄ*  ••』───◈
+┌──『•• 🎯 *Mɪꜱᴄ* 🎯 ••』───◈
 │╭────────────···▸▸
 ┴│
 ⬡│▸ ${prefix}ʀɪɴɢᴛᴏɴᴇ 
@@ -7752,7 +7673,7 @@ let stalkerl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg.'
 ┬│
 │╰───────────···▸▸
 └──────────────···▸▸
-┌──『••  *ɢᴀᴍᴇꜱ*  ••』───◈
+┌──『•• 🎯 *ɢᴀᴍᴇꜱ* 🎯 ••』───◈
 │╭────────────···▸▸
 ┴│
 ⬡│▸ ${prefix}ᴛᴛᴛ / ᴛɪᴄᴛᴀᴄᴛᴏᴇ   
@@ -7762,7 +7683,7 @@ let stalkerl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg.'
 ⬡│▸ ${prefix}ɢᴀᴍʙʟᴇ / ʟᴏᴛᴛᴇʀʏ  
 ┬│
 │╰───────────···▸▸
-┌──『••  *Wᴇᴇʙꜱ*  ••』───◈
+┌──『•• 🎯 *Wᴇᴇʙꜱ* 🎯 ••』───◈
 │╭────────────···▸▸
 ┴│
 ⬡│▸  ${prefix}ᴀɴɪᴍᴇ
@@ -7790,15 +7711,7 @@ let stalkerl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg.'
 ┬│
 │╰───────────···▸▸
 └──────────────···▸▸▸
-┌──『••  *Additional*  ••』───◈
-│╭─────────────···▸▸
-┴│
-⬡│▸  ${prefix}tovv 
-⬡│▸  ${prefix}ping
-⬡│▸  ${prefix}left
-┬│
-│╰────────────···▸▸
-┌─『••  *Eꜱꜱᴇɴᴛɪᴀʟꜱ*  ••』─◈
+┌─『•• 🎯 *Eꜱꜱᴇɴᴛɪᴀʟꜱ* 🎯 ••』─◈
 │╭─────────────···▸▸
 ┴│
 ⬡│▸  ${prefix}Qᴜᴏᴛᴇ
@@ -7813,12 +7726,11 @@ let stalkerl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg.'
 ⬡│▸  ${prefix}ꜱᴛɪᴄᴋᴇʀᴍᴇᴍᴇ
 ⬡│▸  ${prefix}ᴀꜰᴋ
 ⬡│▸  ${prefix}ᴅᴀʀᴋᴊᴏᴋᴇ
-┬│©🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ
+┬│© 🐦Sᴜʙᴢᴇʀᴏ-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ
 │╰────────────···▸▸
 └───────────────···▸▸▸`
           let buttonMessage = {
-                      //video:fs.readFileSync('./system/BelugaBot_3.mp4'),gifPlayback:true,
-		      image: fs.readFileSync('./Assets/pic7.jpg'),
+                      video:fs.readFileSync('./system/BelugaBot_3.mp4'),gifPlayback:true,
                       caption: helpmenu,
                       
                       headerType: 4
