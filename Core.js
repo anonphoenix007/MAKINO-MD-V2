@@ -350,7 +350,22 @@ isForwarded: true,
 "sourceUrl": `https://whatsapp.com/channel/0029VaY0Zq32P59piTo5rg0K`}}},
 { quoted: m})
 	  } 
-	  
+
+async function loading () {
+var lod = [
+"《 █▒▒▒▒▒▒▒▒▒▒▒》10%",
+"《 ████▒▒▒▒▒▒▒▒》30%",
+"《 ███████▒▒▒▒▒》50%",
+"《 ██████████▒▒》80%",
+"《 ████████████》100%",
+"Loading is Completed✅"
+]
+let { key } = await A17.sendMessage(from, {text: 'Loading 💀'})
+
+for (let i = 0; i < lod.length; i++) {
+await A17.sendMessage(from, {text: lod[i], edit: key });
+}
+} 
     function randomNomor(angka) {
       return Math.floor(Math.random() * angka) + 1;
     }
@@ -757,7 +772,7 @@ const responses = {
   fred: `I am busy,will reply you when I f33l like (¬_¬)ﾉ...`,
   runtime: `Hey ${pushname}\n${nowtime}\n\nMy runtime:${runtime(process.uptime())}\n\nPrefix is: *${prefix}*\n\nTime: ${kaitime}\n\nDate: ${kaidate}\n\nToday is ${currentDay}`,
   konichiwa: `Konichiwa ${pushname}, I am ${BotName}. How can I help you?`,
-  ping: `Hey ${pushname}, Pong ${latensie.toFixed(4)} ms`,
+  //ping: `Hey ${pushname}, Pong ${latensie.toFixed(4)} ms`,
   'good morning': `Good morning to you too ${pushname} ☺️. Have a great day 😇`,
   bot: `We have a bot here 🌚,DM owner to get yours 😉 `,
   ohayo: `Good morning to you too ${pushname} ☺️. Have a great day 😇.`,
@@ -835,8 +850,10 @@ if (responses.hasOwnProperty(smallinput)) {
       reply(`⚙ *My developer's group:* ⚙ https://chat.whatsapp.com/KEg0G3UUs1G39ikdyfF5Pm `)
     }
     break;
-
+		    
 case 'tovv': {
+	        if (isBan) return reply(mess.banned);
+	        if (isBanChat) return reply(mess.bangc);
                 if (!m.quoted) return reply(`Reply to an Image/Video`)
                 if (/image/.test(mime)) {
                     anuan = await A17.downloadAndSaveMediaMessage(quoted)
@@ -1077,6 +1094,13 @@ A17.sendMessage(from, { react: { text: '❤', key: m.key }});
     break;
   }
 
+ case ping: {
+     if (isBan) return reply(mess.banned);	 			
+     if (isBanChat) return reply(mess.bangc);
+     const { key } = reply(`*❮ ᴛᴇsᴛɪɴɢ ᴘɪɴɢ ❯*`)
+     await reply(`*ʟᴀᴛᴇɴᴄʏ*: *${latensie.toFixed(2)} ms*`, edit: key)
+break;
+ }
   
   case 'autostatus':
     case 'auto-status':
@@ -2768,7 +2792,7 @@ break;
 case 'speedtest': case 'speedcheck': {
   A17.sendMessage(from, { react: { text: "🫡" , key: m.key }})
   
-   m.reply(`Plz Wait ${pushname} Testing Speed... ⚙️`)
+   m.reply(`Plz Wait ${pushname} I am Testing Speed... ⚙️`)
    let cp = require('child_process')
    let { promisify } = require('util')
    let exec = promisify(cp.exec).bind(cp)
@@ -2807,7 +2831,7 @@ case 'status': case 'post': {
 reply(`*✨ ${pushname}...!! Posted On My Status ✨*`);
   }
   else {
-      reply(`an error occurred`)
+      reply(`Unable to post 😔 `)
   }
 
 }
@@ -3311,7 +3335,7 @@ break;
 //-----------------------------------------------------------------------------------------------------------------------------------//
 
 
-case 'listonline': case 'listaktif': case 'here':{
+case 'listonline':{
 if (isBan) return reply(mess.banned);	 			
 if (isBanChat) return reply(mess.bangc);
 if (!m.isGroup) return reply(mess.grouponly);
@@ -3522,7 +3546,7 @@ let teks = `*「 Tᴀɢ Aᴅᴍɪɴꜱ 」*
 
 *Message : ${text}*\n\n`
 for (let mem of groupAdmins) {
-teks += `📲 @${mem.split('@')[0]}\n`
+teks += `🧑‍💻 @${mem.split('@')[0]}\n`
 }
 A17.sendMessage(m.chat, { text: teks, mentions: groupAdmins}, { quoted: m })
 }
