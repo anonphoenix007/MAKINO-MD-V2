@@ -347,7 +347,7 @@ isForwarded: true,
 "previewType": "PHOTO",
 "AbhinailUrl": ``,
 "Abhinail": fs.readFileSync(`./Assets/pic7.jpg`),
-"sourceUrl": `${link}`}}},
+"sourceUrl": `https://github.com/Anonphoenix007/MAKINO-MD-V2`}}},
 { quoted: m})
 	  } 
 	  
