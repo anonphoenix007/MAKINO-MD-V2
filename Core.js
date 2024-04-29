@@ -1100,7 +1100,7 @@ A17.sendMessage(from, { react: { text: '❤', key: m.key }});
      A17.sendMessage(from, { react: { text: "🧑‍💻" , key: m.key }})
      //await A17.sendMessage(from, {text: loading()});
      //const { key } = A17.sendMessage(from, {text: `*❮ ᴛᴇsᴛɪɴɢ ᴘɪɴɢ ❯*`})
-     await reply(`*ʟᴀᴛᴇɴᴄʏ*: *${latensie.toFixed(2)} ms*`)
+     await reply(`*ʟᴀᴛᴇɴᴄʏ*: *${latensie.toFixed(4)} ms*`)
 break;
  }
   
