@@ -18,12 +18,12 @@ global.statusseen = false;                 //make true to view statuses
 
 
 //
-global.Owner = [""];
-global.OwnerNumber = [""]; 
-global.ownertag = [""]; 
-global.OwnerName = "Tᴀɪʀᴀ Mᴀᴋɪɴᴏ";
-global.BotName = "🐦Makino-md-v2";
-global.packname = "Tᴀɪʀᴀ Mᴀᴋɪɴᴏ";                             //Do not change.
+global.Owner = ["Mʀ Fʀᴀɴᴋ"];
+global.OwnerNumber = ["263719647303"]; 
+global.ownertag = ["263719647303"]; 
+global.OwnerName = "Mʀ Fʀᴀɴᴋ";
+global.BotName = "🐦Subzeʀo-md-v2";
+global.packname = " ᴍʀ ғʀᴀɴᴋ";                             //Do not change.
 global.author = "🐦Makino md ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ";                               //Do not change.
 global.BotSourceCode = "https://github.com/anonphoenix007/MAKINO-MD-V2"; //Do not change.
 global.SupportGroupLink = "v2https://chat.whatsapp.com/KEg0G3UUs1G39ikdyfF5Pm "; 
