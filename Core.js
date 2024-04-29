@@ -324,19 +324,33 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     autoreadsw = true;
     _sewa.expiredCheck(A17, sewa);
 
-    const reply = (teks) => {
+    /*const reply = (teks) => {
             A17.sendMessage(m.chat, { text: teks},{ quoted: m})
         }
-        
-
-    /* const reply = (teks) => {
-      A17.sendMessage(m.chat, { text: teks }, { quoted: m }); 
-    }; */
-
-
+        */
+    
     const sender = m.isGroup ? (m.key.participant ? m.key.participant : m.participant) : m.key.remoteJid
     const senderNumber = sender.split('@')[0]
 
+const reply = (teks) => {
+A17.sendMessage(m.chat,
+{ text: teks,
+contextInfo:{
+mentionedJid:[sender],
+forwardingScore: 9999999,
+isForwarded: true, 
+"externalAdReply": {
+"showAdAttribution": true,
+"containsAutoReply": true,
+"title": ` ${global.botname}`,
+"body": `${ownername}`,
+"previewType": "PHOTO",
+"AbhinailUrl": ``,
+"Abhinail": fs.readFileSync(`./Assets/pic7.jpg`),
+"sourceUrl": `${link}`}}},
+{ quoted: m})
+	  } 
+	  
     function randomNomor(angka) {
       return Math.floor(Math.random() * angka) + 1;
     }
