@@ -3671,7 +3671,6 @@ await A17.groupSettingUpdate(m.chat, 'announcement').then((res) => reply(`Group 
 } else if (args[0] === 'open'){
 await A17.groupSettingUpdate(m.chat, 'not_announcement').then((res) => reply(`Group has been opened!`)).catch((err) => reply(jsonformat(err)))
 } else {
-
 let buttonMessage = {
 image: BotLogo,
 jpegThumbnail: Thumb,
@@ -3716,10 +3715,8 @@ case 'add':{
 if (!isBotAdmins) return reply(mess.botadmin);
 if (!isCreator) return reply(mess.botowner)
 A17.sendMessage(from, { react: { text: "🫡" , key: m.key }})
-
-
 let users = m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
-if (users.length == 0) return reply(`Please write the number of the person you want to add to thhis group`)
+if (users.length == 0) return reply(`Please write the number of the person you want to add to this group`)
 await A17.groupParticipantsUpdate(m.chat, [users], 'add').then((res) => reply(`User Added Successfully!`)).catch((err) => reply(`Cannot add that user to this group!`))
 }
 break;
@@ -3732,14 +3729,13 @@ case 'invite2': {
   if (!isBotAdmins) return reply(mess.botadmin);
   if (!isAdmins && !isCreator) return reply(mess.useradmin)
   A17.sendMessage(from, { react: { text: "🫡" , key: m.key }})
-  
-if (!text) return reply (`Enter the number you want to invite to the group...\n\nExample :\n*${prefix + command}* 2347080968564`)
+  if (!text) return reply (`Enter the number you want to invite to the group...\n\nExample :\n*${prefix + command}* 2347080968564`)
 if (text.includes('+')) return reply(`Enter the number together without *+*`)
 if (isNaN(text)) return reply(`Enter only the numbers plus your country code without spaces`)
 let group = m.chat
 let link = 'https://chat.whatsapp.com/' + await A17.groupInviteCode(group)
       await A17.sendMessage(text+'@s.whatsapp.net', {text: ` *GROUP INVITATION*\n\nA user invites you to join this group \n\n${link}`, mentions: [m.sender]})
-        reply(` An invite link is sent to the user`) 
+        reply(`An invite link is sent to the user`) 
 }
   break;
 
