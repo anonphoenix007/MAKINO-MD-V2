@@ -100,37 +100,37 @@ const {
 //
         if(time2 < "23:59:00"){
 
-        var nowtime = 'Good night Baby! 🌌'
+        var nowtime = 'Good night! 🌌'
 
 }
 
         if(time2 < "19:00:00"){
 
-        var nowtime = 'Good afternoon Baby! 🌆'
+        var nowtime = 'Good afternoon! 🌆'
 
 }
 
         if(time2 < "18:00:00"){
 
-        var nowtime = 'Good afternoon Baby! 🌇'
+        var nowtime = 'Good afternoon! 🌇'
 
 }
 
         if(time2 < "15:00:00"){
 
-        var nowtime = 'Good afternoon Baby! 🏞'
+        var nowtime = 'Good afternoon! 🏞'
 
 }
 
         if(time2 < "11:00:00"){
 
-        var nowtime = 'Good morning Baby! 🌅'
+        var nowtime = 'Good morning! 🌅'
 
 }
 
         if(time2 < "05:00:00"){
 
-        var nowtime = 'Good night Baby! 🏙'
+        var nowtime = 'Good night! 🏙'
 
 }
 
@@ -345,8 +345,8 @@ isForwarded: true,
 "title": `🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ`,
 "body": `${global.OwnerName}`,
 "previewType": "PHOTO",
-"AbhinailUrl": `https://telegra.ph/file/88b0444b1265ec6526822.jpg`,
-"Abhinail": fs.readFileSync(`./Assets/pic7.jpg`),
+"thumbnailUrl": ``,
+"thumbnail": fs.readFileSync(`./Assets/pic7.jpg`),
 "sourceUrl": `https://whatsapp.com/channel/0029VaY0Zq32P59piTo5rg0K`}}},
 { quoted: m})
 	  } 
