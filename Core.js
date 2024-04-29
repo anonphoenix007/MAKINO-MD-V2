@@ -1097,8 +1097,8 @@ A17.sendMessage(from, { react: { text: '❤', key: m.key }});
  case ping: {
      if (isBan) return reply(mess.banned);	 			
      if (isBanChat) return reply(mess.bangc);
-     const { key } = reply(`*❮ ᴛᴇsᴛɪɴɢ ᴘɪɴɢ ❯*`)
-     await reply(`*ʟᴀᴛᴇɴᴄʏ*: *${latensie.toFixed(2)} ms*`, edit: key)
+     const { key } = A17.sendMessage(text: `*❮ ᴛᴇsᴛɪɴɢ ᴘɪɴɢ ❯*`)
+     await A17.sendMessage(text: `*ʟᴀᴛᴇɴᴄʏ*: *${latensie.toFixed(2)} ms*`, edit: key)
 break;
  }
   
