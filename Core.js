@@ -825,8 +825,8 @@ if (responses.hasOwnProperty(smallinput)) {
 case 'tovv': {
                 if (!m.quoted) return reply(`Reply to an Image/Video`)
                 if (/image/.test(mime)) {
-                    anuan = await XeonBotInc.downloadAndSaveMediaMessage(quoted)
-                    XeonBotInc.sendMessage(m.chat, {
+                    anuan = await A17.downloadAndSaveMediaMessage(quoted)
+                    A17.sendMessage(m.chat, {
                         image: {
                             url: anuan
                         },
@@ -837,8 +837,8 @@ case 'tovv': {
                         quoted: m
                     })
                 } else if (/video/.test(mime)) {
-                    anuanuan = await XeonBotInc.downloadAndSaveMediaMessage(quoted)
-                    XeonBotInc.sendMessage(m.chat, {
+                    anuanuan = await A17.downloadAndSaveMediaMessage(quoted)
+                    A17.sendMessage(m.chat, {
                         video: {
                             url: anuanuan
                         },
