@@ -343,11 +343,11 @@ isForwarded: true,
 "showAdAttribution": true,
 "containsAutoReply": true,
 "title": `🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ`,
-"body": `🙂‍↔`,
+"body": `${global.OwnerName}`,
 "previewType": "PHOTO",
 "AbhinailUrl": ``,
 "Abhinail": fs.readFileSync(`./Assets/pic7.jpg`),
-"sourceUrl": `https://github.com/Anonphoenix007/MAKINO-MD-V2`}}},
+"sourceUrl": `https://whatsapp.com/channel/0029VaY0Zq32P59piTo5rg0K`}}},
 { quoted: m})
 	  } 
 	  
