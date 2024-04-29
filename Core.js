@@ -1101,8 +1101,9 @@ A17.sendMessage(from, { react: { text: '❤', key: m.key }});
      await A17.sendMessage(from, {text: loading()});
      const { key } = A17.sendMessage(from, {text: `*❮ ᴛᴇsᴛɪɴɢ ᴘɪɴɢ ❯*`})
      await A17.sendMessage(from, {text: `*ʟᴀᴛᴇɴᴄʏ*: *${latensie.toFixed(2)} ms*`, edit: key});
+				  }
 break;
- }
+ 
   
   case 'autostatus':
     case 'auto-status':
