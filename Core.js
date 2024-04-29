@@ -700,69 +700,6 @@ const pickRandom = (arr) => {
   return arr[Math.floor(Math.random() * arr.length)]
   }
 
-	/*
-let smallinput = budy.toLowerCase()
-if (smallinput.includes('hello')) {
-  reply (`Hello ${pushname}, I am ${BotName}. How can i help you?`);
-} 
-
-//if (smallinput.includes('hi')) {
-
-//   reply (`Hello ${pushname}, I am ${BotName}. How can i help you?`);
-
-// } 
-
-if (smallinput=='slasher') {
-    reply (`My Boss is lost in Anime World, and I lost the connection with him...`)
-}
-
-
-if (smallinput=='runtime') {
-  reply (`Hey ${pushname} my runtime is ${runtime(process.uptime())}\n\nCurrent Time: ${kaitime}\n\nCurrent Date: ${kaidate}`)
-}
-
-
-
-if( smallinput.includes('konichiwa') || smallinput.includes('konochiwa') || smallinput.includes('konichiba') || smallinput.includes('salute')){
-  reply (`Konichiwa ${pushname}, I am BelugaBot-MD. How can i help you?`);
-}
-
-
-if (smallinput=='beluga') {
-    reply ('Yes I am Alive 🫂')
-}
-
-if (smallinput=='ping') {
-    reply (`Hey ${pushname} Pong ${latensie.toFixed(4)} ms`)
-}
-
-
-if (smallinput.includes('good morning') || smallinput.includes('ohayo')) {
-  reply (`Good morning to you too ${pushname} ☺️. Have a great day 😇.`);
-}
-
-if (smallinput.includes('good afternoon') || smallinput.includes('konnichiwa')) {
-
-  reply (`Good afternoon to you too ${pushname} ✨. Wishing you an enjoyable afternoon too 😇🤞🏻.`);
-
-}
-
-
-//if (smallinput.includes('good afthernoon')) {
- // reply (`Huh ${pushname} ??. Wishing you an enjoyable afternoon too.`);
-//   }
-
-
-if (smallinput.includes('good night')) {
-  reply (`Good night to you too ${pushname} 😇. Sleep well and sweet dreams.`);
-}
-
-if (smallinput.includes('arigato')|| smallinput.includes('arigatou') || smallinput.includes('thank')) {
-  reply (`Mention not ${pushname} 😇. I am a bot afterall.`);
-}
-*/
-
-
 const responses = {
 
   
@@ -801,6 +738,33 @@ if (responses.hasOwnProperty(smallinput)) {
 
 
       //
+      /*
+      case 'vv': {
+      if (isBan) return reply(mess.banned)
+      If (isBanChat) return reply(mess.bangc)
+      If (!isCreator) return reply(mess.useradmin)
+      A17.sendMessage(from, { react: { text: "🖼️" , key: m.key }})
+      If (!quoted) return reply('You have not tag a view once message🙁')
+      const quot = citel.msg.contextInfo.quotedMessage.viewOnceMessageV2;
+if(quot)
+{
+if(quot.message.imageMessage)
+{ console.log("Quot Entered")
+   let cap =quot.message.imageMessage.caption;
+   let anu = await Void.downloadAndSaveMediaMessage(quot.message.imageMessage)
+   return Void.sendMessage(citel.chat,{image:{url : anu},caption : cap })
+}
+if(quot.message.videoMessage)
+{
+   let cap =quot.message.videoMessage.caption;
+   let anu = await Void.downloadAndSaveMediaMessage(quot.message.videoMessage)
+   return Void.sendMessage(citel.chat,{video:{url : anu},caption : cap })
+}
+
+} 
+      break;
+      }
+      */
       case 'sc': case 'script': case 'sourcecode': {
         if (isBan) return reply(mess.banned);	 			
     if (isBanChat) return reply(mess.bangc);
