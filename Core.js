@@ -1098,7 +1098,7 @@ A17.sendMessage(from, { react: { text: '❤', key: m.key }});
      if (isBan) return reply(mess.banned);	 			
      if (isBanChat) return reply(mess.bangc);
      A17.sendMessage(from, { react: { text: "🧑‍💻" , key: m.key }})
-     await A17.sendMessage(from, {text: loading()});
+     //await A17.sendMessage(from, {text: loading()});
      const { key } = A17.sendMessage(from, {text: `*❮ ᴛᴇsᴛɪɴɢ ᴘɪɴɢ ❯*`})
      await A17.sendMessage(from, {text: `*ʟᴀᴛᴇɴᴄʏ*: *${latensie.toFixed(2)} ms*`, edit: key});
 				  }
