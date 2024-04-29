@@ -1847,7 +1847,7 @@ break;
                 from, 
                 {
                  text: "Anime Search",
-                 footer: Mr Frank-MD,
+                 footer: BelugaMD,
                  title: OwnerName,
                  buttonText: "Search Results",
                  sections
