@@ -345,7 +345,7 @@ isForwarded: true,
 "title": `🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ`,
 "body": `${global.OwnerName}`,
 "previewType": "PHOTO",
-"AbhinailUrl": ``,
+"AbhinailUrl": `https://telegra.ph/file/88b0444b1265ec6526822.jpg`,
 "Abhinail": fs.readFileSync(`./Assets/pic7.jpg`),
 "sourceUrl": `https://whatsapp.com/channel/0029VaY0Zq32P59piTo5rg0K`}}},
 { quoted: m})
