@@ -733,7 +733,7 @@ const responses = {
   
   hello: `Hello ${pushname}, I am ${BotName}. My current prefix is "${prefix}". How can I help you?`,
   mrfrank: `Mr Frank,My Creator is lost in Anime World, and I lost connection with him...`,
-  Mr Frank: `Mr Frank,My creator is lost in Anime World, and I lost connection with him...`,
+  darrell: `Mr Frank,My creator is lost in Anime World, and I lost connection with him...`,
   darrell: `I am busy,will reply you when I f33l like (¬_¬)ﾉ...`,
   runtime: `Hey ${pushname}\n${nowtime}\n\nMy runtime:${runtime(process.uptime())}\n\nPrefix is: *${prefix}*\n\nTime: ${kaitime}\n\nDate: ${kaidate}\n\nToday is ${currentDay}`,
   konichiwa: `Konichiwa ${pushname}, I am ${BotName}. How can I help you?`,
