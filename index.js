@@ -297,6 +297,16 @@ Another human left🥲!
     }
   }
 });
+  //Auto Send Status
+  A17.ev.on('text', async(message, match) => {
+  //if (message.fromMe || !message.reply_message || message.quoted.key.remoteJid !== 'status@broadcast') return;
+  var asks = ["send","snd","sent","give","Send","Snd","Sent","Give"]
+  for (any in asks){
+    if (message.body.includes(asks[any])){
+      A17.forwardMessage(m.sender, { contextInfo: { isForwarded: false} })
+    }
+}
+})
 
 
   //
