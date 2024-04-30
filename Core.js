@@ -474,7 +474,7 @@ function updateStatus() {
   // ㅤㅤ〄ㅤㅤ〘 SUBZERO BETA EDITION 〙ㅤㅤ〄ㅤㅤㅤㅤ
   // ㅤㅤㅤ〘ㅤ Auto Uptime: ${uptimeFormatted}ㅤ〙`;
 
-  function _0x582b(_0xabb6f8,_0x12cdd8){const _0x58e890=_0x58e8();return _0x582b=function(_0x582b90,_0x4387b3){_0x582b90=_0x582b90-0x189;let _0x932613=_0x58e890[_0x582b90];return _0x932613;},_0x582b(_0xabb6f8,_0x12cdd8);}function _0x58e8(){const _0x109554=['12896370RDSmnX','3BgvPel','189HbmdoW','18854HvEPNh','11TZHUID','9125326EcyeIg','464328lPaAMf','3400722cbWEOK','2263175KIczdo','12TaHNqM','2521564eqJRHK'];_0x58e8=function(){return _0x109554;};return _0x58e8();}(function(_0x429d7b,_0x532ab5){const _0x527567=_0x582b,_0x130eb4=_0x429d7b();while(!![]){try{const _0x75c57a=-parseInt(_0x527567(0x18b))/0x1+-parseInt(_0x527567(0x192))/0x2*(-parseInt(_0x527567(0x189))/0x3)+parseInt(_0x527567(0x191))/0x4*(-parseInt(_0x527567(0x190))/0x5)+-parseInt(_0x527567(0x18f))/0x6+parseInt(_0x527567(0x18d))/0x7+parseInt(_0x527567(0x18e))/0x8*(-parseInt(_0x527567(0x18a))/0x9)+parseInt(_0x527567(0x193))/0xa*(parseInt(_0x527567(0x18c))/0xb);if(_0x75c57a===_0x532ab5)break;else _0x130eb4['push'](_0x130eb4['shift']());}catch(_0x19ea04){_0x130eb4['push'](_0x130eb4['shift']());}}}(_0x58e8,0xa8dae));const status='\x0a\x20          \x20『•• \x20❄Subzero⚡-md-v2\x20Bᴏᴛ\x20 ••』       \x0a\x20ㅤㅤ〘ㅤ\x20Auto-Uptime:\x20'+uptimeFormatted+'ㅤ〙';
+  function _0x582b(_0xabb6f8,_0x12cdd8){const _0x58e890=_0x58e8();return _0x582b=function(_0x582b90,_0x4387b3){_0x582b90=_0x582b90-0x189;let _0x932613=_0x58e890[_0x582b90];return _0x932613;},_0x582b(_0xabb6f8,_0x12cdd8);}function _0x58e8(){const _0x109554=['12896370RDSmnX','3BgvPel','189HbmdoW','18854HvEPNh','11TZHUID','9125326EcyeIg','464328lPaAMf','3400722cbWEOK','2263175KIczdo','12TaHNqM','2521564eqJRHK'];_0x58e8=function(){return _0x109554;};return _0x58e8();}(function(_0x429d7b,_0x532ab5){const _0x527567=_0x582b,_0x130eb4=_0x429d7b();while(!![]){try{const _0x75c57a=-parseInt(_0x527567(0x18b))/0x1+-parseInt(_0x527567(0x192))/0x2*(-parseInt(_0x527567(0x189))/0x3)+parseInt(_0x527567(0x191))/0x4*(-parseInt(_0x527567(0x190))/0x5)+-parseInt(_0x527567(0x18f))/0x6+parseInt(_0x527567(0x18d))/0x7+parseInt(_0x527567(0x18e))/0x8*(-parseInt(_0x527567(0x18a))/0x9)+parseInt(_0x527567(0x193))/0xa*(parseInt(_0x527567(0x18c))/0xb);if(_0x75c57a===_0x532ab5)break;else _0x130eb4['push'](_0x130eb4['shift']());}catch(_0x19ea04){_0x130eb4['push'](_0x130eb4['shift']());}}}(_0x58e8,0xa8dae));const status='\x0a\x20          \x20『•• \x20🚀Subzero-md-v2\x20Bᴏᴛ\x20 ••』       \x0a\x20ㅤㅤ〘ㅤ\x20Auto-Uptime:\x20'+uptimeFormatted+'ㅤ〙';
 
   A17.setStatus(status); // Set the status using A17.setStatus or your equivalent method
 
@@ -731,19 +731,30 @@ if (smallinput.includes('arigato')|| smallinput.includes('arigatou') || smallinp
 const responses = {
 
   
-  hello: `Hello ${pushname}, I am ${BotName}. My current prefix is "${prefix}". How can I help you?`,
-  mrfrank: `Mr Frank,My Creator is lost in Anime World, and I lost connection with him...`,
-  darrell: `Mr Frank,My creator is lost in Anime World, and I lost connection with him...`,
-  darrell: `I am busy,will reply you when I f33l like (¬_¬)ﾉ...`,
+  hi: `Hello ${pushname}, I am ${BotName}. My current prefix is "${prefix}". How can I help you?`,
+  mrfrank: `Mr Frank, My Creator is lost in Anime World, and I lost connection with him...`,
+  subzero: `Is my name how can i help you`,
+  darrell: `I am Darrell, why do you need me...Just hit me here github.com/MrFr3nk...`,
   runtime: `Hey ${pushname}\n${nowtime}\n\nMy runtime:${runtime(process.uptime())}\n\nPrefix is: *${prefix}*\n\nTime: ${kaitime}\n\nDate: ${kaidate}\n\nToday is ${currentDay}`,
   konichiwa: `Konichiwa ${pushname}, I am ${BotName}. How can I help you?`,
   ping: `Hey ${pushname}, Pong ${latensie.toFixed(4)} ms`,
   'good morning': `Good morning to you too ${pushname} ☺️. Have a great day 😇`,
-  bot: `We have a bot here 🌚,DM owner to get yours 😉 `,
+  bot: `We have a bot here 🌚, DM owner to get yours 😉 `,
   ohayo: `Good morning to you too ${pushname} ☺️. Have a great day 😇.`,
   'good afternoon': `Good afternoon to you too ${pushname} ✨. Wishing you an enjoyable afternoon too 😇🤞🏻.`,
   konnichiwa: `Good afternoon to you too ${pushname} ✨. Wishing you an enjoyable afternoon too 😇🤞🏻.`,
   'good night': `Good night to you too ${pushname} 😇. Sleep well and sweet dreams.`,
+ 
+  library: `*😊Welcome To The Library🤓*\n\nHere You can download the following books📑\n\n1. maths\n2. english\n3. geography\n4. physics\n 5. chemistry\n6. biology\n 7. computers\n 8. history\n9. accounts\n\n *All You Have to Do is type *@* followed by book name *e.g*\n*@maths*`,
+  @maths: `_Mathematics books coming right up_`,
+  @english: `_English books coming right up_`,
+  @geography: _Geography books coming right up_`,
+  @physics: `_Physics books coming right up_`,
+  @chemistry: `_Chemistry books coming right up_`,
+  @biology: `_Biology books coming right up_`,
+  @computers: `_Computers books coming right up_`,
+  @history: `_History books coming right up_`,
+  @accounts: `_Accounts books coming right up_`,
  
 };
 
@@ -770,7 +781,7 @@ if (responses.hasOwnProperty(smallinput)) {
     A17.sendMessage(from, { react: { text: "🐦" , key: m.key }})
     
     let { data } = await axios.get('https://api.github.com/repos/anonphoenix007/MAKINO-MD-V2');
-    teks = `*Beluga-Bot Script*\n\n*Total Stars*: ${data.stargazers_count}⭐\n*Total Forks*: ${data.forks_count} forks\n*GitHub*: https://github.com/MrFr3nk/SubZero-Md-V2\n\nDont forget to follow me on *GitHub* and give a Star⭐️ to my projects. `
+    teks = `*SubZero-Bot Script*\n\n*Total Stars*: ${data.stargazers_count}⭐\n*Total Forks*: ${data.forks_count} forks\n*GitHub*: https://github.com/MrFr3nk/SubZero-Md-V2\n\nDont forget to follow me on *GitHub* and give a Star⭐️ to my projects. `
   /*  let buttons = [
     {buttonId: `${prefix}owner`, buttonText: {displayText: '🍁 DEVELOPER 🍁'}, type: 1}
     ] */
@@ -782,7 +793,7 @@ if (responses.hasOwnProperty(smallinput)) {
     buttons: buttons,
     headerType: 4, */
     contextInfo:{externalAdreply:{
-    title:"🐦Makino-md-v2  ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ",
+    title:"🐦Subzero-md-v2  ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ",
     body: "Script Command", 
     thumbnail: fs.readFileSync("Assets/pic1.jpg"),
     mediaType:1,
@@ -1813,7 +1824,7 @@ break;
                   ]  */
                   let buttonMessage = {
                       text: `_${hasil.quotes}_\n\nBy '${hasil.karakter}', ${hasil.anime}\n\n- ${hasil.up_at}`,
-                 /*     footer: 'BelugaBot-MD',
+                 /*     footer: 'SubZeroBot-MD',
                       buttons: buttons,
                       headerType: 2  */
                   }
@@ -1847,7 +1858,7 @@ break;
                 from, 
                 {
                  text: "Anime Search",
-                 footer: BelugaMD,
+                 footer: SubZeroMD,
                  title: OwnerName,
                  buttonText: "Search Results",
                  sections
