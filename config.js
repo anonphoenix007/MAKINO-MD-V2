@@ -18,7 +18,7 @@ global.statusseen = false;                 //make true to view statuses
 
 
 //
-global.Owner = ["Mʀ Fʀᴀɴᴋ"];
+global.Owner = ["263719647303"];
 global.OwnerNumber = ["263719647303"]; 
 global.ownertag = ["263719647303"]; 
 global.OwnerName = "Mʀ Fʀᴀɴᴋ";
