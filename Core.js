@@ -270,7 +270,8 @@ var yye = tgel.getYear();
 //
 module.exports = A17 = async (A17, m, chatUpdate, store) => {
   try {
-    var body = (m.mtype === 'conversation') ? m.message.conversation : (m.mtype == 'imageMessage') ? m.message.imageMessage.caption : (m.mtype == 'videoMessage') ? m.message.videoMessage.caption : (m.mtype == 'extendedTextMessage') ? m.message.extendedTextMessage.text : (m.mtype == 'buttonsResponseMessage') ? m.message.buttonsResponseMessage.selectedButtonId : (m.mtype == 'listResponseMessage') ? m.message.listResponseMessage.singleSelectreply.selectedRowId : (m.mtype == 'templateButtonreplyMessage') ? m.message.templateButtonreplyMessage.selectedId : (m.mtype === 'messageContextInfo') ? (m.message.buttonsResponseMessage?.selectedButtonId || m.message.listResponseMessage?.singleSelectreply.selectedRowId || m.text) : ''
+    //var body = (m.mtype === 'conversation') ? m.message.conversation : (m.mtype == 'imageMessage') ? m.message.imageMessage.caption : (m.mtype == 'videoMessage') ? m.message.videoMessage.caption : (m.mtype == 'extendedTextMessage') ? m.message.extendedTextMessage.text : (m.mtype == 'buttonsResponseMessage') ? m.message.buttonsResponseMessage.selectedButtonId : (m.mtype == 'listResponseMessage') ? m.message.listResponseMessage.singleSelectreply.selectedRowId : (m.mtype == 'templateButtonreplyMessage') ? m.message.templateButtonreplyMessage.selectedId : (m.mtype === 'messageContextInfo') ? (m.message.buttonsResponseMessage?.selectedButtonId || m.message.listResponseMessage?.singleSelectreply.selectedRowId || m.text) : ''
+    var body = (m.mtype === 'conversation') ? m.message.conversation : (m.mtype == 'imageMessage') ? m.message.imageMessage.caption : (m.mtype == 'videoMessage') ? m.message.videoMessage.caption : (m.mtype == 'extendedTextMessage') ? m.message.extendedTextMessage.text : (m.mtype == 'buttonsResponseMessage') ? m.message.buttonsResponseMessage.selectedButtonId : (m.mtype == 'listResponseMessage') ? m.message.listResponseMessage.singleSelectreply.selectedRowId : (m.mtype == 'templateButtonreplyMessage') ? m.message.templateButtonreplyMessage.selectedId : (m.mtype === 'messageContextInfo') ? (m.message.buttonsResponseMessage?.selectedButtonId || m.message.listResponseMessage?.singleSelectreply.selectedRowId || m.text) : (m.mtype === 'viewOnceMessage') ? m.message.viewOnceMessage.message : '';
     var budy = (typeof m.text == 'string' ? m.text : '')
     const prefix = global.prefa
     const isCmd = body.startsWith(prefix)
@@ -711,10 +712,29 @@ const responses = {
   konichiwa: `Konichiwa ${pushname}, I am ${BotName}. How can I help you?`,
   //ping: `Hey ${pushname}, Pong ${latensie.toFixed(4)} ms`,
   'good morning': `Good morning to you too ${pushname} ☺️. Have a great day 😇`,
-  bot: `We have a bot here 🌚,DM owner to get yours 😉 `,
+  bot: `Hey ${pushname},
+  ┏━━⟪ *`Revolutionize Your WhatsApp Experience with Cutting-Edge Bots!`* 🚀⟫━⦿
+✨ **Unlock Exclusive Features:**
+┃✗ 📖 Seamless Message Reading
+┃✗ 📸 Automatic Status Viewing
+┃✗ 🤖 AI-Powered Chat Capabilities
+┃✗ ☎️ Swift Call Rejection
+┃✗ 🌐 24/7 Online Presence
+┃✗ 🚫 Auto-block Unwanted DMs 
+┃✗ 📥 Effortless Media Downloads
+┃✗ 🎶 Instant Song Lyrics Dive
+┃✗ ✏️ Text to Image Editors
+┃✗ 🏷️ Effortless Member Tagging
+┃✗ 🕰️ Timeless View-once Pics
+┃✗ 🎮 designing of game fonts or name
+┃✗ 📅 Message Scheduler
+┃✗ 📲 Offline Message Scheduler
+📞 For inquiries, Taira Makino at +2347080968564
+`Transform your WhatsApp world now!` 🌟. We are trustworthy 👍
+┗━━━━━━━━━━━━━━━━━⦿`,
   ohayo: `Good morning to you too ${pushname} ☺️. Have a great day 😇.`,
   'good afternoon': `Good afternoon to you too ${pushname} ✨. Wishing you an enjoyable afternoon too 😇🤞🏻.`,
-  konnichiwa: `Good afternoon to you too ${pushname} ✨. Wishing you an enjoyable afternoon too 😇🤞🏻.`,
+  //konnichiwa: `Good afternoon to you too ${pushname} ✨. Wishing you an enjoyable afternoon too 😇🤞🏻.`,
   'good night': `Good night to you too ${pushname} 😇. Sleep well and sweet dreams.`,
   'good evening': `Good evening to you too ${pushname} ☺️❤️.`,
   'who': `Let's ask your Father🫳🎤`
@@ -765,6 +785,17 @@ if(quot.message.videoMessage)
       break;
       }
       */
+      case 'vv': {
+       if (!isCreator) return reply(mess.useradmin);
+       If (isBanChat) return reply(mess.bangc);
+	A17.sendMessage(from, { react: { text: "🦄" , key: m.key }})
+       if (!quoted) return await reply('_Reply to a viewOnce image or video_')
+       if (budy !== 'viewOnceMessage') return await reply('_Reply to a viewOnce image or video_')
+       await A17.forwardMessage(m.chat, quoted, { viewOnce: false })
+      }
+      break;
+
+		    
       case 'sc': case 'script': case 'sourcecode': {
         if (isBan) return reply(mess.banned);	 			
     if (isBanChat) return reply(mess.bangc);
@@ -802,7 +833,7 @@ if(quot.message.videoMessage)
         if (!isCreator) return reply(mess.useradmin)
 	if (!m.isGroup) return reply(mess.grouponly)
 	A17.sendMessage(from, { react: { text: "😥" , key: m.key }})
-        A17.sendMessage('Bye Everyone 🥺')
+        await reply('Bye Everyone 🥺')
         await A17.groupLeave(m.chat)
   }
         break;
@@ -874,9 +905,9 @@ case 'repo': case 'botrepo': {
         if (!isCreator) return reply(mess.owner)
         A17.sendMessage(from, { react: { text: "🫡" , key: m.key }})
 
-              if (!quoted) return `*Send/reply Image With Caption* ${prefix + command}`
-              if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
-              if (/webp/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
+              if (!quoted) return reply(`*Send/reply Image With Caption* ${prefix + command}`)
+              if (!/image/.test(mime)) return reply(`*Send/reply Image With Caption* ${prefix + command}`)
+              if (/webp/.test(mime)) return reply(`*Send/reply Image With Caption* ${prefix + command}`)
               let media = await A17.downloadAndSaveMediaMessage(quoted)
               await A17.updateProfilePicture(botNumber, { url: media }).catch((err) => fs.unlinkSync(media))
               m.reply(mess.jobdone)
