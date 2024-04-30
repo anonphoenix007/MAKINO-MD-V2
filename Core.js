@@ -746,7 +746,32 @@ const responses = {
   'good night': `Good night to you too ${pushname} 😇. Sleep well and sweet dreams.`,
  
   library: `*😊Welcome To The Library🤓*\n\nHere You can download the following books📑\n\n1. maths\n2. english\n3. geography\n4. physics\n5. chemistry\n6. biology\n7. computers\n8. history\n9. accounts\n\n *All You Have to Do is type name of book*  *𝗲.𝗴*\n*maths*`,
-  maths: `_Mathematics books coming right up_`,
+  books: ` ┌─『•• 📚 _Library_ 📚 ••──◈
+│╭────────────────···▸▸
+┴│ ▸ _Welcome to the Library!_
+    | ▸  Explore our collection of books
+┬│
+│╰─────────────···▸▸
+
+┌──『•• 📖 _Subjects_ 📖 ••』──◈
+│╭──────────────···▸▸
+┴│ ▸ 1. Mathematics
+⬡│▸ 2. Science
+⬡│▸ 3. History
+⬡│▸ 4. English
+⬡│▸ 5. Shona
+⬡│▸ 6. Computer Science
+⬡│▸ 7. Art
+⬡│▸ 8. Music
+⬡│▸ 9. Accounts
+⬡│▸ 10. Economics
+⬡│▸ 11. Biology
+⬡│▸ 12. Chemistry
+⬡│▸ 13. Physics
+⬡│▸ 14. Geography
+⬡│▸ 15. Business
+┬│   *🇿🇼 Mr Frank⚡📚*
+│╰─────────────···▸▸`,
   english: `_English books coming right up_`,
   geography: `_Geography books coming right up_`,
   physics: `_Physics books coming right up_`,
@@ -755,7 +780,7 @@ const responses = {
   computers: `_Computers books coming right up_`,
   history: `_History books coming right up_`,
   accounts: `_Accounts books coming right up_`,
-  maths: `_ Dear😊📚, click here to get maths books \nhttps://all-textbooks-platform.vercel.app_`,	
+  maths: `Dear😊📚, click here to get maths books \n\nhttps://all-textbooks-platform.vercel.app`,	
  
 };
 
