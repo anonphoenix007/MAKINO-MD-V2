@@ -748,7 +748,7 @@ const responses = {
   library: `*😊Welcome To The Library🤓*\n\nHere You can download the following books📑\n\n1. maths\n2. english\n3. geography\n4. physics\n 5. chemistry\n6. biology\n 7. computers\n 8. history\n9. accounts\n\n *All You Have to Do is type name of book  *e.g*\n*maths*`,
   maths: `_Mathematics books coming right up_`,
   english: `_English books coming right up_`,
-  geography: _Geography books coming right up_`,
+  geography: `_Geography books coming right up_`,
   physics: `_Physics books coming right up_`,
   chemistry: `_Chemistry books coming right up_`,
   biology: `_Biology books coming right up_`,
