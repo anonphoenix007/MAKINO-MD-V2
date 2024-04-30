@@ -745,7 +745,7 @@ const responses = {
   konnichiwa: `Good afternoon to you too ${pushname} ✨. Wishing you an enjoyable afternoon too 😇🤞🏻.`,
   'good night': `Good night to you too ${pushname} 😇. Sleep well and sweet dreams.`,
  
-  library: `*😊Welcome To The Library🤓*\n\nHere You can download the following books📑\n\n1. maths\n2. english\n3. geography\n4. physics\n 5. chemistry\n6. biology\n 7. computers\n 8. history\n9. accounts\n\n *All You Have to Do is type name of book  *e.g*\n*maths*`,
+  library: `*😊Welcome To The Library🤓*\n\nHere You can download the following books📑\n\n1. maths\n2. english\n3. geography\n4. physics\n5. chemistry\n6. biology\n7. computers\n8. history\n9. accounts\n\n *All You Have to Do is type name of book*  *𝗲.𝗴*\n*maths*`,
   maths: `_Mathematics books coming right up_`,
   english: `_English books coming right up_`,
   geography: `_Geography books coming right up_`,
