@@ -755,6 +755,7 @@ const responses = {
   computers: `_Computers books coming right up_`,
   history: `_History books coming right up_`,
   accounts: `_Accounts books coming right up_`,
+  maths: `_ Dear😊📚, click here to get maths books \nhttps://all-textbooks-platform.vercel.app_`,	
  
 };
 
