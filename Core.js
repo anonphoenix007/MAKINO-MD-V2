@@ -787,7 +787,7 @@ if(quot.message.videoMessage)
       */
       case 'vv': {
        if (!isCreator) return reply(mess.useradmin);
-       If (isBanChat) return reply(mess.bangc);
+       if (isBanChat) return reply(mess.bangc);
 	A17.sendMessage(from, { react: { text: "🦄" , key: m.key }})
        if (!quoted) return await reply('_Reply to a viewOnce image or video_')
        if (budy !== 'viewOnceMessage') return await reply('_Reply to a viewOnce image or video_')
