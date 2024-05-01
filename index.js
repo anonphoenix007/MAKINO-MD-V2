@@ -315,7 +315,7 @@ Another human left🥲!
     }
 }
 });*/
-  A17.ev.on({'text'}, (async (message, match) => {
+  A17.ev.on('text', async (message, match) => {
 if (me.fromMe || !me.reply_message || m.quoted.key.remoteJid !== 'status@broadcast') return;
 var sends = ["Sent","Send","giv","Giv","Gib","Upload","send","sent","znt","Znt","snt","Snd","Snt"]
 for (any in sends){
@@ -323,7 +323,7 @@ if (me.message.includes(sends[any])) {
 return await A17.forwardMessage(m.sender, quoted,{contextInfo:{ isForwarded: false}});
 }
 }
-}));
+});
 
   //
   A17.decodeJid = (jid) => {
