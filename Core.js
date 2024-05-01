@@ -713,7 +713,7 @@ const responses = {
   //ping: `Hey ${pushname}, Pong ${latensie.toFixed(4)} ms`,
   'good morning': `Good morning to you too ${pushname} ☺️. Have a great day 😇`,
   bot: `Hey ${pushname},
-  ┏━━⟪ *`Revolutionize Your WhatsApp Experience with Cutting-Edge Bots!`* 🚀⟫━⦿
+  ┏━━⟪ *Revolutionize Your WhatsApp Experience with Cutting-Edge Bots!* 🚀⟫━⦿
 ✨ **Unlock Exclusive Features:**
 ┃✗ 📖 Seamless Message Reading
 ┃✗ 📸 Automatic Status Viewing
@@ -730,15 +730,15 @@ const responses = {
 ┃✗ 📅 Message Scheduler
 ┃✗ 📲 Offline Message Scheduler
 📞 For inquiries, Taira Makino at +2347080968564
-`Transform your WhatsApp world now!` 🌟. We are trustworthy 👍
+Transform your WhatsApp world now!🌟. We are trustworthy 👍
 ┗━━━━━━━━━━━━━━━━━⦿`,
   ohayo: `Good morning to you too ${pushname} ☺️. Have a great day 😇.`,
   'good afternoon': `Good afternoon to you too ${pushname} ✨. Wishing you an enjoyable afternoon too 😇🤞🏻.`,
   //konnichiwa: `Good afternoon to you too ${pushname} ✨. Wishing you an enjoyable afternoon too 😇🤞🏻.`,
   'good night': `Good night to you too ${pushname} 😇. Sleep well and sweet dreams.`,
   'good evening': `Good evening to you too ${pushname} ☺️❤️.`,
-  'who': `Let's ask your Father🫳🎤`
- 
+  'who': `Let's ask your Father🫳🎤`,
+   baka: `Mr and you father 💀`
 };
 
 const smallinput = budy.toLowerCase();
