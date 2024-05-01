@@ -70,7 +70,7 @@ async function startA17() {
     logger: pino({ level: "silent" }),
     printQRInTerminal: true,
     browser: ["MAKINO-V2", "Safari", "3.O"],
-    auth: state,.
+    auth: state,
   });
 
   store.bind(A17.ev);
