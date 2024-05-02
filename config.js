@@ -26,7 +26,7 @@ global.BotName = "🐦Subzeʀo-md-v2";
 global.packname = " ᴍʀ ғʀᴀɴᴋ";                             //Do not change.
 global.author = "🐦Makino md ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ";                               //Do not change.
 global.BotSourceCode = "https://github.com/anonphoenix007/MAKINO-MD-V2"; //Do not change.
-global.SupportGroupLink = "v2https://chat.whatsapp.com/KEg0G3UUs1G39ikdyfF5Pm "; 
+global.SupportGroupLink = "https://chat.whatsapp.com/KEg0G3UUs1G39ikdyfF5Pm "; 
 
 
 //
@@ -34,8 +34,8 @@ global.sessionName = "session";                          //Do not change.
 
 
 //
-global.prefa = ["/"];                                    //Default prefix here.
-global.openAiAPI = "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";
+global.prefa = ["!"];                                    //Default prefix here.
+global.openAiAPI = "sk-proj-bMRibz3zeheSweq7WEPKT3BlbkFJzLxM8NTYtMJ2tPwmCarZ";
 
 
 //
