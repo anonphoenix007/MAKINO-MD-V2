@@ -731,7 +731,7 @@ if (smallinput.includes('arigato')|| smallinput.includes('arigatou') || smallinp
 const responses = {
 
   
-  hi: `Hello ${pushname}😊😄, I am ${BotName}. My current prefix is "${prefix}". How can I help you?🤓\n Type *library* for more info.`,
+  hesi: `Hello ${pushname}😊😄, I am ${BotName}. My current prefix is "${prefix}". How can I help you?🤓\n Type *library* for more info.`,
   hello: `Hello ${pushname}😊😄, I am ${BotName}. My current prefix is "${prefix}". How can I help you?🤓\n Type *library* for more info.`,
   hey: `Hello *${pushname}* 😊😄, I am ${BotName}. My current prefix is "${prefix}". How can I help you?🤓\n Type *library* for more info.`,
   yoh: `Hello ${pushname}😊😄, I am ${BotName}. My current prefix is "${prefix}". How can I help you?🤓\n Type *library* for more info.`,
