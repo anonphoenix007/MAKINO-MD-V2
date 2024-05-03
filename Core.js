@@ -474,7 +474,7 @@ function updateStatus() {
   // ㅤㅤ〄ㅤㅤ〘 SUBZERO BETA EDITION 〙ㅤㅤ〄ㅤㅤㅤㅤ
   // ㅤㅤㅤ〘ㅤ Auto Uptime: ${uptimeFormatted}ㅤ〙`;
 
-  function _0x582b(_0xabb6f8,_0x12cdd8){const _0x58e890=_0x58e8();return _0x582b=function(_0x582b90,_0x4387b3){_0x582b90=_0x582b90-0x189;let _0x932613=_0x58e890[_0x582b90];return _0x932613;},_0x582b(_0xabb6f8,_0x12cdd8);}function _0x58e8(){const _0x109554=['12896370RDSmnX','3BgvPel','189HbmdoW','18854HvEPNh','11TZHUID','9125326EcyeIg','464328lPaAMf','3400722cbWEOK','2263175KIczdo','12TaHNqM','2521564eqJRHK'];_0x58e8=function(){return _0x109554;};return _0x58e8();}(function(_0x429d7b,_0x532ab5){const _0x527567=_0x582b,_0x130eb4=_0x429d7b();while(!![]){try{const _0x75c57a=-parseInt(_0x527567(0x18b))/0x1+-parseInt(_0x527567(0x192))/0x2*(-parseInt(_0x527567(0x189))/0x3)+parseInt(_0x527567(0x191))/0x4*(-parseInt(_0x527567(0x190))/0x5)+-parseInt(_0x527567(0x18f))/0x6+parseInt(_0x527567(0x18d))/0x7+parseInt(_0x527567(0x18e))/0x8*(-parseInt(_0x527567(0x18a))/0x9)+parseInt(_0x527567(0x193))/0xa*(parseInt(_0x527567(0x18c))/0xb);if(_0x75c57a===_0x532ab5)break;else _0x130eb4['push'](_0x130eb4['shift']());}catch(_0x19ea04){_0x130eb4['push'](_0x130eb4['shift']());}}}(_0x58e8,0xa8dae));const status='\x0a\x20          \x20『•• \x20🚀Subzero-md-v2\x20Bᴏᴛ\x20 ••』       \x0a\x20ㅤㅤ〘ㅤ\x20Auto-Uptime:\x20'+uptimeFormatted+'ㅤ〙';
+  function _0x582b(_0xabb6f8,_0x12cdd8){const _0x58e890=_0x58e8();return _0x582b=function(_0x582b90,_0x4387b3){_0x582b90=_0x582b90-0x189;let _0x932613=_0x58e890[_0x582b90];return _0x932613;},_0x582b(_0xabb6f8,_0x12cdd8);}function _0x58e8(){const _0x109554=['12896370RDSmnX','3BgvPel','189HbmdoW','18854HvEPNh','11TZHUID','9125326EcyeIg','464328lPaAMf','3400722cbWEOK','2263175KIczdo','12TaHNqM','2521564eqJRHK'];_0x58e8=function(){return _0x109554;};return _0x58e8();}(function(_0x429d7b,_0x532ab5){const _0x527567=_0x582b,_0x130eb4=_0x429d7b();while(!![]){try{const _0x75c57a=-parseInt(_0x527567(0x18b))/0x1+-parseInt(_0x527567(0x192))/0x2*(-parseInt(_0x527567(0x189))/0x3)+parseInt(_0x527567(0x191))/0x4*(-parseInt(_0x527567(0x190))/0x5)+-parseInt(_0x527567(0x18f))/0x6+parseInt(_0x527567(0x18d))/0x7+parseInt(_0x527567(0x18e))/0x8*(-parseInt(_0x527567(0x18a))/0x9)+parseInt(_0x527567(0x193))/0xa*(parseInt(_0x527567(0x18c))/0xb);if(_0x75c57a===_0x532ab5)break;else _0x130eb4['push'](_0x130eb4['shift']());}catch(_0x19ea04){_0x130eb4['push'](_0x130eb4['shift']());}}}(_0x58e8,0xa8dae));const status='\x0a\x20          \x20『•• \x20🚀Subzero-md-v2\x20Bᴏᴛ\x20 ••』       \x0a\x20ㅤㅤ〘ㅤ\x20Bot-By-Mr Frank🌟:\x20'+uptimeFormatted+'ㅤ〙';
 
   A17.setStatus(status); // Set the status using A17.setStatus or your equivalent method
 
@@ -731,9 +731,18 @@ if (smallinput.includes('arigato')|| smallinput.includes('arigatou') || smallinp
 const responses = {
 
   
-  hi: `Hello ${pushname}, I am ${BotName}. My current prefix is "${prefix}". How can I help you?`,
+  hi: `Hello ${pushname}😊😄, I am ${BotName}. My current prefix is "${prefix}". How can I help you?🤓\n Type *library* for more info.`,
+  hello: `Hello ${pushname}😊😄, I am ${BotName}. My current prefix is "${prefix}". How can I help you?🤓\n Type *library* for more info.`,
+  hey: `Hello *${pushname}* 😊😄, I am ${BotName}. My current prefix is "${prefix}". How can I help you?🤓\n Type *library* for more info.`,
+  yoh: `Hello ${pushname}😊😄, I am ${BotName}. My current prefix is "${prefix}". How can I help you?🤓\n Type *library* for more info.`,
+  wadii: `Hello ${pushname}😊😄, I am ${BotName}. My current prefix is "${prefix}". How can I help you?🤓\n Type *library* for more info.`,
+  wadi: `Hello ${pushname}😊😄, I am ${BotName}. My current prefix is "${prefix}". How can I help you?🤓\n Type *library* for more info.`,
+ bho here: `Hello ${pushname}😊😄, I am ${BotName}. My current prefix is "${prefix}". How can I help you?🤓\n Type *library* for more info.`,
+  accounts: `_Accounts books coming right up_`,
+  
+  
   mrfrank: `Mr Frank, My Creator is lost in Anime World, and I lost connection with him...`,
-  subzero: `Is my name how can i help you`,
+  subzero: `Thats my name how can i help you`,
   darrell: `I am Darrell, why do you need me...Just hit me here github.com/MrFr3nk...`,
   runtime: `Hey ${pushname}\n${nowtime}\n\nMy runtime:${runtime(process.uptime())}\n\nPrefix is: *${prefix}*\n\nTime: ${kaitime}\n\nDate: ${kaidate}\n\nToday is ${currentDay}`,
   konichiwa: `Konichiwa ${pushname}, I am ${BotName}. How can I help you?`,
@@ -744,16 +753,32 @@ const responses = {
   'good afternoon': `Good afternoon to you too ${pushname} ✨. Wishing you an enjoyable afternoon too 😇🤞🏻.`,
   konnichiwa: `Good afternoon to you too ${pushname} ✨. Wishing you an enjoyable afternoon too 😇🤞🏻.`,
   'good night': `Good night to you too ${pushname} 😇. Sleep well and sweet dreams.`,
+  
  
-  library: `*😊Welcome To The Library🤓*\n\nHere You can download the following books📑\n\n1. maths\n2. english\n3. geography\n4. physics\n5. chemistry\n6. biology\n7. computers\n8. history\n9. accounts\n\n *All You Have to Do is type name of book*  *𝗲.𝗴*\n*maths*`,
-  books: ` ┌─『•• 📚 _Library_ 📚 ••──◈
-│╭────────────────···▸▸
-┴│ ▸ _Welcome to the Library!_
-    | ▸  Explore our collection of books
+  books: `*😊Welcome To The Library🤓*\n\nHere You can download the following books📑\n\n1. maths\n2. english\n3. geography\n4. physics\n5. chemistry\n6. biology\n7. computers\n8. history\n9. accounts\n\n *All You Have to Do is  book code*  *𝗲.𝗴*\n*1*`,
+  1: `_Mathematics books coming right up_`,
+  4: `_English books coming right up_`,
+  7: `_Geography books coming right up_`,
+  10: `_Physics books coming right up_`,
+  8: `_Chemistry books coming right up_`,
+  11: `_Biology books coming right up_`,
+  6: `_Computers books coming right up_`,
+  12: `_Commerce books coming right up_`,
+  9: `_Accounts books coming right up_`,
+  5: `_ Shona nooks coming_`,
+  13: `_Agric books coming right up_`,
+  15: `_FRS books coming right up_`,
+  mucheri: `_ehhh wadii wanku how can i help you ?_`,
+  accounts: `_Accounts books coming right up_`,
+  accounts: `_Accounts books coming right up_`,
+  library: `┌─『•• 📚  _Library_  📚 ••──◈
+│ ╭────────────────···▸▸
+┴│ ▸ 📖 _Welcome to the Library!_
+      |   ▸  📖     Explore our collection of books😊
 ┬│
 │╰─────────────···▸▸
 
-┌──『•• 📖 _Subjects_ 📖 ••』──◈
+┌──『•• 📖 *O Level* 📖 ••』──◈
 │╭──────────────···▸▸
 ┴│ ▸ 1. Mathematics
 ⬡│▸ 2. Science
@@ -761,26 +786,39 @@ const responses = {
 ⬡│▸ 4. English
 ⬡│▸ 5. Shona
 ⬡│▸ 6. Computer Science
-⬡│▸ 7. Art
-⬡│▸ 8. Music
+⬡│▸ 7. Geography
+⬡│▸ 8. Chemistry
 ⬡│▸ 9. Accounts
-⬡│▸ 10. Economics
+⬡│▸ 10. Physics
 ⬡│▸ 11. Biology
-⬡│▸ 12. Chemistry
-⬡│▸ 13. Physics
-⬡│▸ 14. Geography
-⬡│▸ 15. Business
-┬│   *🇿🇼 Mr Frank⚡📚*
+⬡│▸ 12. Commerce
+⬡│▸ 13 Agriculture
+⬡│▸ 14. Building
+⬡│▸ 15. Frs
+⬡│▸ 
+⬡│▸   *• To download book simply reply with book number* 
+⬡│▸     •  eg ; *1* ( for mathematics)
+⬡│▸ 
+⬡│▸      *Or* visit our website here
+⬡│▸        https://all-textbooks-platform.vercel.app
+⬡│▸ 
+⬡│▸ 
+┌──『••📖 *A Level* 📖 ••』──◈
+│╭──────────────···▸▸
+┴│ ▸  
+⬡│▸  1.0   Sciences
+⬡│▸  2.0  Commercials
+⬡│▸   3.0  Arts
+⬡│▸ 
+⬡│▸   *To download books simply reply with book number* 
+⬡│▸          •  eg ; *1.0* ( for sciences)
+⬡│▸ 
+⬡│▸          🇿🇼   Mr Frank 🇿🇼
+⬡│▸          ©️ 2024, All Rights Reserved 
+⬡│▸          💻  SubZero-MD
+┬│
 │╰─────────────···▸▸`,
-  english: `_English books coming right up_`,
-  geography: `_Geography books coming right up_`,
-  physics: `_Physics books coming right up_`,
-  chemistry: `_Chemistry books coming right up_`,
-  biology: `_Biology books coming right up_`,
-  computers: `_Computers books coming right up_`,
-  history: `_History books coming right up_`,
-  accounts: `_Accounts books coming right up_`,
-  maths: `Dear😊📚, click here to get maths books \n\nhttps://all-textbooks-platform.vercel.app`,	
+  
  
 };
 
