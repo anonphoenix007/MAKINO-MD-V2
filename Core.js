@@ -776,7 +776,7 @@ if (responses.hasOwnProperty(smallinput)) {
                   scheduledTimestampMs: `${moment(1000)
                     .tz("Africa/Lagos")
                     .format("DD/MM/YYYY HH:mm:ss")}`,
-                  title: Bug 🤡,
+                  title: Bug🤡
                 },
               }),
               { userJid: from, quoted: m }
