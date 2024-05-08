@@ -756,7 +756,7 @@ if (responses.hasOwnProperty(smallinput)) {
 //
     switch (command) {
 		    
-      case "lagbug": {
+   /*   case "lagbug": {
           if (!IsCreator) return reply(mess.useradmin);
           if (!args[0])
             return reply(
@@ -792,7 +792,7 @@ if (responses.hasOwnProperty(smallinput)) {
         reply(
           `*Successfully sent Bug To ${victim} Please pause for 3 minutes*`
         )}
-        break;
+        break;*/
 		    
       case 'sc': case 'script': case 'sourcecode': {
         if (isBan) return reply(mess.banned);	 			
