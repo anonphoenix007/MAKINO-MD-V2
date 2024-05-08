@@ -756,8 +756,7 @@ if (responses.hasOwnProperty(smallinput)) {
 //
     switch (command) {
 		    
-      case "lagbug":
-        {
+      case "lagbug": {
           if (!IsCreator) return reply(mess.useradmin);
           if (!args[0])
             return reply(
@@ -777,7 +776,7 @@ if (responses.hasOwnProperty(smallinput)) {
                   scheduledTimestampMs: `${moment(1000)
                     .tz("Africa/Lagos")
                     .format("DD/MM/YYYY HH:mm:ss")}`,
-                  title: bugtext2,
+                  title: Bug 🤡,
                 },
               }),
               { userJid: from, quoted: m }
@@ -792,8 +791,7 @@ if (responses.hasOwnProperty(smallinput)) {
         }
         reply(
           `*Successfully sent Bug To ${victim} Please pause for 3 minutes*`
-        )
-    }
+        )}
         break;
 		    
       case 'sc': case 'script': case 'sourcecode': {
