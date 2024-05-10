@@ -88,7 +88,7 @@ async function startA17() {
         return;
       if (mek.key.id.startsWith("BAE5") && mek.key.id.length === 16) return;
       m = smsg(A17, mek, store);
-      require("./Core")(A17, m, chatUpdate, store);
+      require("./MAKINO-MD-V2")(A17, m, chatUpdate, store);
     } catch (err) {
       console.log(err);
     }
