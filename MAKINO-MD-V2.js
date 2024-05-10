@@ -7847,7 +7847,8 @@ ${readmore}
 │╰────────────···▸▸
 └───────────────···▸▸▸`
 	    let buttonMessage = {
-	    audio: { url: "./Assets/slay.mp3" }, mimetype: 'audio/mp4',
+	    //audio: { url: "./Assets/slay.mp3" }, mimetype: 'audio/mp4',
+	    image: fs.readFileSync("./Assets/pic7.jpg"),
             caption: helpmenu,
             headerType: 4,
             contextInfo: {
