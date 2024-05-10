@@ -320,7 +320,7 @@ module.exports = Taira = async (Taira, m, chatUpdate, store) => {
     const isQuotedVideo = m.mtype === 'extendedTextMessage' && content.includes('videoMessage')
     const isQuotedAudio = m.mtype === 'extendedTextMessage' && content.includes('audioMessage')
     const more = String.fromCharCode(8206)
-    const readMore = more.repeat(4001)
+    const readmore = more.repeat(4001)
 
 
     autoreadsw = true;
@@ -7575,7 +7575,7 @@ let stalkerl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg.'
 ┌─ ──『•• 📃 *Menu* 📃 ••』──◈
 │╭────────────···▸▸
 ┴│
-❒│▸  *Uꜱᴇʀ :  ${pushname}* !!! 
+❒│▸  *Uꜱᴇʀ* :  ${pushname}
 ❒│▸  *Time  : ${nowtime}*  
 ❒│▸  *Dᴀᴛᴇ : ${kaidate}* 
 ❒│▸  *Oᴡɴᴇʀ : ${global.OwnerName}* 
@@ -7586,7 +7586,8 @@ let stalkerl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg.'
 ┬│
 │╰───────────···▸▸
 └──────────────···▸▸▸
-${readMore}
+${readmore}`;
+helpmenu += `
 	    
 ┌──『••  *Cᴏʀᴇ*  ••』──◈
 │╭────────────···▸▸
@@ -7848,7 +7849,6 @@ ${readMore}
 │╰────────────···▸▸
 └───────────────···▸▸▸`
 	    let buttonMessage = {
-            image: fs.readFileSync("./Assets/pic7.jpg"),
             caption: helpmenu,
             headerType: 4,
             contextInfo: {
