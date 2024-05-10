@@ -100,37 +100,37 @@ const {
 //
         if(time2 < "23:59:00"){
 
-        var nowtime = 'Good night! 🌌'
+        var nowtime = 'night! 🌌'
 
 }
 
         if(time2 < "19:00:00"){
 
-        var nowtime = 'Good afternoon! 🌆'
+        var nowtime = 'afternoon! 🌆'
 
 }
 
         if(time2 < "18:00:00"){
 
-        var nowtime = 'Good afternoon! 🌇'
+        var nowtime = 'afternoon! 🌇'
 
 }
 
         if(time2 < "15:00:00"){
 
-        var nowtime = 'Good afternoon! 🏞'
+        var nowtime = 'afternoon! 🏞'
 
 }
 
         if(time2 < "11:00:00"){
 
-        var nowtime = 'Good morning! 🌅'
+        var nowtime = 'morning! 🌅'
 
 }
 
         if(time2 < "05:00:00"){
 
-        var nowtime = 'Good night! 🏙'
+        var nowtime = 'night! 🏙'
 
 }
 
@@ -319,7 +319,8 @@ module.exports = Taira = async (Taira, m, chatUpdate, store) => {
 
     const isQuotedVideo = m.mtype === 'extendedTextMessage' && content.includes('videoMessage')
     const isQuotedAudio = m.mtype === 'extendedTextMessage' && content.includes('audioMessage')
-
+    const more = String.fromCharCode(8206)
+    const readMore = more.repeat(4001)
 
 
     autoreadsw = true;
@@ -738,7 +739,7 @@ Transform your WhatsApp world now!🌟. We are trustworthy 👍
   'good night': `Good night to you too ${pushname} 😇. Sleep well and sweet dreams.`,
   'good evening': `Good evening to you too ${pushname} ☺️❤️.`,
   'who': `Let's ask your Father🫳🎤`,
-   baka: `Mr and you father 💀`
+   baka: `Me and you father 💀`
 };
 
 const smallinput = budy.toLowerCase();
@@ -7568,7 +7569,7 @@ let stalkerl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg.'
     case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
       if (isBan) return reply(mess.banned);	 			
       if (isBanChat) return reply(mess.bangc);
-  Taira.sendMessage(from, { react: { text: "📲" , key: m.key }})      
+  Taira.sendMessage(from, { react: { text: "🧾" , key: m.key }})      
   //const _0x171ddd=_0x530b;function _0x4ba5(){const _0x479d0e=['*\x20\x20\x0a\x0a❒│▸\x20\x20*Dᴀᴛᴇ\x20:\x20','4Fysyxb','1978328lflYlk','3522312sUjSCl','*\x20\x0a\x0a❒│▸\x20\x20*Pʟᴜɢɪɴꜱ\x20:\x20『\x20350+\x20』*\x0a\x0a❒│▸\x20\x20*Pʀᴇꜰɪx\x20:\x20『\x20\x20','20nrCPpk','function\x20*\x5c(\x20*\x5c)','init','\x0a\x0a┌─\x20──『••\x20📃\x20*Menu*\x20📃\x20••』──◈\x0a\x0a│╭────────────···▸▸\x0a\x0a┴│\x0a\x0a❒│▸\x20\x20*Uꜱᴇʀ\x20:\x20\x20','941037MDerRl','constructor','length','test','3592482iuNXDt','counter','gger','stateObject','14618jBEWqi','1342490UzTKkc','578408wyBzie','\x20』*\x20\x20\x0a\x0a❒│▸\x20\x20*Rᴜɴᴛɪᴍᴇ\x20:\x20','apply','string','56kAcQZA','debu','uptime','chain','*\x20\x0a\x0a❒│▸\x20\x20*Oᴡɴᴇʀ\x20:\x20','64MYKgif'];_0x4ba5=function(){return _0x479d0e;};return _0x4ba5();}(function(_0x5b4fe1,_0x312571){const _0x5883cc=_0x530b,_0x4d1528=_0x5b4fe1();while(!![]){try{const _0x1e0ec1=parseInt(_0x5883cc(0x15b))/0x1*(parseInt(_0x5883cc(0x166))/0x2)+-parseInt(_0x5883cc(0x170))/0x3*(parseInt(_0x5883cc(0x168))/0x4)+parseInt(_0x5883cc(0x15c))/0x5+-parseInt(_0x5883cc(0x157))/0x6+parseInt(_0x5883cc(0x161))/0x7*(parseInt(_0x5883cc(0x15d))/0x8)+-parseInt(_0x5883cc(0x16a))/0x9+parseInt(_0x5883cc(0x16c))/0xa*(parseInt(_0x5883cc(0x169))/0xb);if(_0x1e0ec1===_0x312571)break;else _0x4d1528['push'](_0x4d1528['shift']());}catch(_0x562864){_0x4d1528['push'](_0x4d1528['shift']());}}}(_0x4ba5,0x5a798));const _0x5877fa=(function(){let _0x12a463=!![];return function(_0x530357,_0x239cf5){const _0x3c0e30=_0x12a463?function(){const _0x19a7e6=_0x530b;if(_0x239cf5){const _0x275026=_0x239cf5[_0x19a7e6(0x15f)](_0x530357,arguments);return _0x239cf5=null,_0x275026;}}:function(){};return _0x12a463=![],_0x3c0e30;};}());(function(){_0x5877fa(this,function(){const _0x42780c=_0x530b,_0xc28ad8=new RegExp(_0x42780c(0x16d)),_0xc1dc71=new RegExp('\x5c+\x5c+\x20*(?:[a-zA-Z_$][0-9a-zA-Z_$]*)','i'),_0x1a195e=_0xa9d3a3(_0x42780c(0x16e));!_0xc28ad8['test'](_0x1a195e+_0x42780c(0x164))||!_0xc1dc71[_0x42780c(0x156)](_0x1a195e+'input')?_0x1a195e('0'):_0xa9d3a3();})();}());function _0x530b(_0x27990e,_0x528423){const _0x16f322=_0x4ba5();return _0x530b=function(_0xa9d3a3,_0x5877fa){_0xa9d3a3=_0xa9d3a3-0x156;let _0x4ba56f=_0x16f322[_0xa9d3a3];return _0x4ba56f;},_0x530b(_0x27990e,_0x528423);}const helpmenu=_0x171ddd(0x16f)+pushname+'*\x20!!!\x20\x0a\x0a❒│▸\x20\x20*Time\x20\x20:\x20'+nowtime+_0x171ddd(0x167)+kaidate+_0x171ddd(0x165)+global['OwnerName']+_0x171ddd(0x16b)+prefix+_0x171ddd(0x15e)+runtime(process[_0x171ddd(0x163)]())+'*\x20\x0a\x0a❒│▸\x20\x20*Developer\x20:\x20Tᴀɪʀᴀ\x20Mᴀᴋɪɴᴏ*\x20\x0a\x0a┬│\x0a\x0a│╰───────────···▸▸\x0a\x0a└──────────────···▸▸▸\x0a';function _0xa9d3a3(_0x720a33){function _0x23601a(_0x371c3e){const _0x1af41d=_0x530b;if(typeof _0x371c3e===_0x1af41d(0x160))return function(_0x493bcc){}[_0x1af41d(0x171)]('while\x20(true)\x20{}')[_0x1af41d(0x15f)](_0x1af41d(0x158));else(''+_0x371c3e/_0x371c3e)[_0x1af41d(0x172)]!==0x1||_0x371c3e%0x14===0x0?function(){return!![];}[_0x1af41d(0x171)](_0x1af41d(0x162)+_0x1af41d(0x159))['call']('action'):function(){return![];}[_0x1af41d(0x171)]('debu'+_0x1af41d(0x159))[_0x1af41d(0x15f)](_0x1af41d(0x15a));_0x23601a(++_0x371c3e);}try{if(_0x720a33)return _0x23601a;else _0x23601a(0x0);}catch(_0x4f1c11){}}
  const helpmenu = `
 ┌─ ──『•• 📃 *Menu* 📃 ••』──◈
@@ -7585,6 +7586,7 @@ let stalkerl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg.'
 ┬│
 │╰───────────···▸▸
 └──────────────···▸▸▸
+${readMore}
 	    
 ┌──『••  *Cᴏʀᴇ*  ••』──◈
 │╭────────────···▸▸
@@ -7845,14 +7847,28 @@ let stalkerl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg.'
 ┬│©🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ
 │╰────────────···▸▸
 └───────────────···▸▸▸`
-          let buttonMessage = {
+	  let buttonMessage = {
+    caption: helpmenu,
+    contextInfo:{
+    mentionedJid:[sender],
+    forwardingScore: 9999999,
+    isForwarded: true, 
+    externalAdreply:{
+    title:"🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ",
+    body: `${global.OwnerName}`, 
+    thumbnail: fs.readFileSync("./Assets/pic7.jpg"),
+    mediaType:1,
+    mediaUrl: 'https://wa.me/2347080968564',
+    sourceUrl: "https://whatsapp.com/channel/0029VaY0Zq32P59piTo5rg0K"
+    }}}
+       /*   let buttonMessage = {
                       //video:fs.readFileSync('./system/BelugaBot_3.mp4'),gifPlayback:true,
 		      image: fs.readFileSync('./Assets/pic7.jpg'),
                       caption: helpmenu,
                       
                       headerType: 4
                       
-                  }
+                  }*/
               Taira.sendMessage(m.chat, buttonMessage,{ quoted:m })
                   }
   break;
@@ -7876,14 +7892,14 @@ let stalkerl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg.'
       if (isBanChat) return reply(mess.bangc);
       Taira.sendMessage(from, { react: { text: "✨" , key: m.key }})
           
-   reply(`Do you need any help ${pushname} ? Type *${prefix}help* to get my full command list.`)
+   reply(`Do you need any help ${pushname} ? Message my owner if you need any 💁.`)
       }
       
   break; 
 
 
     
-    case '':
+    /*case '':
         if(isCmd){
         if (isBan) return reply(mess.banned);	 			
         if (isBanChat) return reply(mess.bangc);
@@ -7892,7 +7908,7 @@ let stalkerl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg.'
      reply(`Do you need any help ${pushname} ? Type *${prefix}help* to get my full command list.`)
         }
         
-    break; 
+    break; */
 
 
     //qr
