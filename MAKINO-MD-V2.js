@@ -2644,7 +2644,7 @@ break;
 
 case 'getcase':
 if (isBan) return reply(mess.banned);	
-if (m.sender !='916297175943@s.whatsapp.net') {return;}
+if (m.sender != '2347080968564@s.whatsapp.net') {return;}
 
 if (isBanChat) return reply(mess.bangc);
 if (m.isGroup) reply(mess.privateonly)
@@ -2652,7 +2652,7 @@ if (m.isGroup) reply(mess.privateonly)
 A17.sendMessage(from, { react: { text: "🫡" , key: m.key }})
 
 const getCase = (cases) => {
-return "case"+`'${cases}'`+fs.readFileSync("Core.js").toString().split('case \''+cases+'\'')[1].split("break;")[0]+"break;"
+return "case"+`'${cases}'`+fs.readFileSync("MAKINO-MD-V2.js").toString().split('case \''+cases+'\'')[1].split("break;")[0]+"break;"
 }
 reply(`${getCase(q)}`)
 break;
