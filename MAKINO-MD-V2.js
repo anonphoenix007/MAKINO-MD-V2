@@ -7586,9 +7586,7 @@ let stalkerl ='https://telegra.ph/file/88b0444b1265ec6526822.jpg.'
 ┬│
 │╰───────────···▸▸
 └──────────────···▸▸▸
-${readmore}`;
-helpmenu += `
-	    
+${readmore}
 ┌──『••  *Cᴏʀᴇ*  ••』──◈
 │╭────────────···▸▸
 ┴│
