@@ -7847,7 +7847,26 @@ ${readMore}
 ┬│©🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ
 │╰────────────···▸▸
 └───────────────···▸▸▸`
-	  let buttonMessage = {
+	    let buttonMessage = {
+            image: fs.readFileSync("./Assets/pic7.jpg"),
+            caption: helpmenu,
+            headerType: 4,
+            contextInfo: {
+		    mentionedJid:[sender],
+                    forwardingScore: 9999999,
+                    isForwarded: true, 
+                    externalAdReply: {
+                    title: "🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ",
+                    body: "Command list",
+                    thumbnail: fs.readFileSync("./Assets/pic5.jpg"),
+                    renderLargerThumbnail: false,
+                    mediaType: 4,
+                    mediaUrl: 'https://wa.me/2347080968564',
+                    sourceUrl: `https://whatsapp.com/channel/0029VaY0Zq32P59piTo5rg0K`,
+                },
+            },
+        };
+	/*  let buttonMessage = {
     caption: helpmenu,
     contextInfo:{
     mentionedJid:[sender],
@@ -7860,15 +7879,7 @@ ${readMore}
     mediaType:1,
     mediaUrl: 'https://wa.me/2347080968564',
     sourceUrl: "https://whatsapp.com/channel/0029VaY0Zq32P59piTo5rg0K"
-    }}}
-       /*   let buttonMessage = {
-                      //video:fs.readFileSync('./system/BelugaBot_3.mp4'),gifPlayback:true,
-		      image: fs.readFileSync('./Assets/pic7.jpg'),
-                      caption: helpmenu,
-                      
-                      headerType: 4
-                      
-                  }*/
+    }}}*/
               Taira.sendMessage(m.chat, buttonMessage,{ quoted:m })
                   }
   break;
