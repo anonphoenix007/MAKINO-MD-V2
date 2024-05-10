@@ -7847,6 +7847,7 @@ ${readmore}
 │╰────────────···▸▸
 └───────────────···▸▸▸`
 	    let buttonMessage = {
+	    audio: { url: "./Assets/slay.mp3" }, mimetype: 'audio/mp4',
             caption: helpmenu,
             headerType: 4,
             contextInfo: {
