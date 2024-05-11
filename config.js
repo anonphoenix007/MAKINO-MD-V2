@@ -105,7 +105,7 @@ global.limitawal = {
 };
 
 global.APIs = {
-  zenz: "https://zenzapis.xyz",
+  zenz: "https://zenzapis.xyz":"5d1197db351b",
 };
 global.APIKeys = {
   "https://zenzapis.xyz": "5d1197db351b",
