@@ -6,7 +6,7 @@ const chalk = require("chalk");
 //
 global.available = false;
 global.autoReadGc = false;
-global.autoReadAll = false;
+global.autoReadAll = true;
 global.antitags = false;
 
 
@@ -18,11 +18,11 @@ global.statusseen = false;                 //make true to view statuses
 
 
 //
-global.Owner = ["263719647303"];
-global.OwnerNumber = ["263719647303"]; 
-global.ownertag = ["263719647303"]; 
-global.OwnerName = "Mʀ Fʀᴀɴᴋ";
-global.BotName = "🐦Subzeʀo-md-v2";
+global.Owner = ["27847826044"];
+global.OwnerNumber = ["27847826044"]; 
+global.ownertag = ["27847826044"]; 
+global.OwnerName = "CraigeeX";
+global.BotName = "The Death Of Slim Shady";
 global.packname = " ᴍʀ ғʀᴀɴᴋ";                             //Do not change.
 global.author = "🐦Makino md ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ";                               //Do not change.
 global.BotSourceCode = "https://github.com/anonphoenix007/MAKINO-MD-V2"; //Do not change.
