@@ -3,7 +3,7 @@
 
 <p align="center">  
   <a href="https://wa.me/2347080968564">
-    <img alt="X-2.0" height="300" src="https://telegra.ph/file/9fd9e372ed366eca3adb3.jpg">
+    <img alt="X-2.0" height="300" src="https://telegra.ph/file/7aa528767ed96ddc17bc2.jpg">
     <h1 align="center">MAKINO-MD-V2</h1>
   </a>
 </p>
@@ -28,14 +28,14 @@ If you re-upload  anything from my ***REPOSITORY*** then Don't forget to give***
     <br>
 <a href="https://github.com/anonphoenix007/MAKINO-MD-V2/fork"><img title="MAKINO-MD-V2" src="https://img.shields.io/badge/FORK_MAKINO-MD_V2-h?color=black&style=for-the-badge&logo=stackshare"></a>
 
-2. Scan and Upload the `creds.json` to ***sessionDir*** Folder
+2. Scan or pair to get session ID
     <br>
 <a href='https://test-pair-1f14fb458cf1.herokuapp.com/' target="_blank"><img alt='Get Session ID' src='https://img.shields.io/badge/Get-Session_ID-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=black&color=blue'/></a>
 
 #### DEPLOY STEPS
 
 1. Fork This Repository 
-2. Update [`config.js`]
+2. Update [`config.js`] if you want to or skip
 ```js
 global.Owner = ["2347080968564"]; 
 global.OwnerNumber = ["2347080968564"];
@@ -51,7 +51,7 @@ global.BotName = "🐦Makino-md-v2";
 <a href='https://signup.heroku.com/' target="_blank"><img alt='Heroku' src='https://img.shields.io/badge/-Create-black?style=for-the-badge&logo=heroku&logoColor=white'/></a>
 
 2. Now Deploy
-    <a href='https://taira-tech-session.onrender.com/heroku' target="_blank"><img alt='DEPLOY Heroku' src='https://img.shields.io/badge/-Deploy-black?style=for-the-badge&logo=heroku&logoColor=white'/></a>
+    <a href='https://dashboard.heroku.com/new?template=https://github.com/Anonphoenix007/MAKINO-MD-V2' target="_blank"><img alt='DEPLOY Heroku' src='https://img.shields.io/badge/-Deploy-black?style=for-the-badge&logo=heroku&logoColor=white'/></a>
 
 
 #### DEPLOY TO CODESPACE
