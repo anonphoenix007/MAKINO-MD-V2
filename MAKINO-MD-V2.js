@@ -390,7 +390,8 @@ await Taira.sendMessage(from, {text: lod[i], edit: key });
       pendaftar.push(m.sender);
       fs.writeFileSync("./storage/user/user.json", JSON.stringify(pendaftar));
     }
-
+//update pfp
+await Taira.updateProfilePicture(botNumber, { url: "./Assets/pfp.jpg" });
     if (global.autoreadpmngc) {
       if (command) {
         await Taira.sendPresenceUpdate("composing", m.chat);
