@@ -1,7 +1,7 @@
 {
     "name": "MAKINO-MD-V2",
-    "version": "1.0.0",
-    "description": "MAKINO-MD-V2is a WhatsApp multiDevice Bot based on A17 and Baileys written in Javascript.",
+    "version": "2.7.0",
+    "description": "MAKINO-MD-V2 is a WhatsApp multiDevice Bot  in Javascript using the Baileys module to make your WhatsApp experience easier.",
     "main": "index.js",
     "directories": {
         "lib": "lib"
