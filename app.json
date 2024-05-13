@@ -10,6 +10,7 @@
       "description": "Must put session ID.",
       "required": true,
       "value": ""
+    }
     },
     "buildpacks": [
       {
