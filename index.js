@@ -65,7 +65,7 @@ async function startTaira() {
   console.log(color('\nHello, I am Taira,Developer of MAKINO-V2.\n\nThanks for using: My Bot.', 'aqua'))
   console.log(color('\n Follow me on GitHub: anonphoenix007', 'aqua'))
 const conf = require("./config");
-let cc = conf.sessID.replace(/Taira;;;/gi, "");
+let cc = conf.sessID//.replace(/Taira;;;/gi, "");
 async function TairaSess(){
 if (!fs.existsSync(__dirname + '/auth_info_baileys/creds.json')) {
     if(cc.length<30){
