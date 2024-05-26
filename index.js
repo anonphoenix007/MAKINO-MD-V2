@@ -11,7 +11,7 @@ const {
   downloadContentFromMessage,
   makeInMemoryStore,
   jidDecode,
-  proto,
+  proto
 } = require("@whiskeysockets/baileys");
 const pino = require("pino");
 const fs = require("fs");
@@ -39,7 +39,7 @@ const {
   getSizeMedia,
   fetchJson,
   await,
-  sleep,
+  sleep
 } = require("./lib/myfunc");
 const figlet = require("figlet");
 const { color } = require("./lib/color");
