@@ -68,10 +68,10 @@ const conf = require("./config");
 let cc = conf.sessID//.replace(/Taira;;;/gi, "");
 async function TairaSess(){
 if (!fs.existsSync(__dirname + '/auth_info_baileys/creds.json')) {
-    if(cc.length<30){
+    /*if(cc.length<30){
         let { data } = await axios.get('https://paste.c-net.org/'+cc)
         await fs.writeFileSync(__dirname + '/auth_info_baileys/creds.json', atob(data), "utf8")
-    } else {  await fs.writeFileSync(__dirname + '/auth_info_baileys/creds.json', atob(cc), "utf8")  }
+    } else {  */await fs.writeFileSync(__dirname + '/auth_info_baileys/creds.json', atob(cc), "utf8") 
 }
 };
 TairaSess()
