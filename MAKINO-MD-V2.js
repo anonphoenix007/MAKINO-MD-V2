@@ -7071,7 +7071,7 @@ _Click the button below to download_`
                     text: "            🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ"
                   }),
                   header: proto.Message.InteractiveMessage.Header.create({
-                    ...(await prepareWAMessageMedia({ image: { url: 'https://r4.wallpaperflare.com/wallpaper/1003/376/845/makoto-shinkai-kimi-no-na-wa-wallpaper-0816ade8b0301c58302c014e48d2441a.jpg' } }, { upload: Taira.waUploadToServer })),
+                    ...(await prepareWAMessageMedia({ image: { url: 'https://graph.org/file/b06744135f2f12ec4b4be.jpg' } }, { upload: Taira.waUploadToServer })),
 
 
                     title: "                      Command list",
@@ -7123,39 +7123,13 @@ _Click the button below to download_`
       }
 
 
-
       case '':
         if (isCmd) {
           if (isBan) return reply(mess.banned);
           if (isBanChat) return reply(mess.bangc);
           Taira.sendMessage(from, { react: { text: "✨", key: m.key } })
 
-          reply(`Do you need any help ${pushname} ? Type *${prefix}help* to get my full command list.`)
-        }
-
-        break;
-
-
-      case '':
-        if (isCmd) {
-          if (isBan) return reply(mess.banned);
-          if (isBanChat) return reply(mess.bangc);
-          Taira.sendMessage(from, { react: { text: "✨", key: m.key } })
-
-          reply(`Do you need any help ${pushname} ? Type *${prefix}help* to get my full command list.`)
-        }
-
-        break;
-
-
-
-      case '':
-        if (isCmd) {
-          if (isBan) return reply(mess.banned);
-          if (isBanChat) return reply(mess.bangc);
-          Taira.sendMessage(from, { react: { text: "✨", key: m.key } })
-
-          reply(`Do you need any help ${pushname} ? Type *${prefix}help* to get my full command list.`)
+          reply(`Hi ${pushname}👋 ,I am MAKINO-MD-V2 by Tᴀɪʀᴀ Mᴀᴋɪɴᴏ. Do you need any help ?`)
         }
 
         break;
