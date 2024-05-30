@@ -6818,7 +6818,7 @@ _Click the button below to download_`
 ┃   *Pʀᴇꜰɪx : ${prefix}*
 ┃   *Rᴜɴᴛɪᴍᴇ : ${runtime(process.uptime())}*
 ┃   *RAM  : ${formatp(os.totalmem() - os.freemem())} / ${formatp(os.totalmem())}*
-┃   ⌯CPU : ${totalCpuUsage}%*
+┃   ⌯CPU :* ${totalCpuUsage}%
 ┃   *Developer : Tᴀɪʀᴀ Mᴀᴋɪɴᴏ*
 ┃
 ╰════════════════ ⪨
