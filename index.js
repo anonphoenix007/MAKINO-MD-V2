@@ -69,10 +69,10 @@ async function TairaSess(){
 let cc = global.sessID
 if (fs.existsSync(__dirname + '/auth_info_baileys/creds.json')) {
   await fs.unlinkSync(__dirname + "/auth_info_baileys/creds.json")}
-    await fs.writeFileSync(__dirname + "auth_info_baileys/creds.json", cc, "utf8")
+    await fs.writeFileSync(__dirname + "/auth_info_baileys/creds.json", cc, "utf8")
 }
 TairaSess()
-  const { state, saveCreds } = await useMultiFileAuthState("./auth_info_baileys");
+  const { state, saveCreds } = await useMultiFileAuthState(__dirname + "/auth_info_baileys");
   const Taira = TairaConnect({
     version: [2, 2413, 1],
     logger: pino({ level: "silent" }),
