@@ -41,6 +41,8 @@ const spaceemojis = ["🌌", "🌠", "🚀", "🪐", "🌟"];     // list of emo
 const manyemojis = ["😄", "👍", "👏", "👌", "🥇", "🌟", "🎉", "🙌", "🤩", "💯", "🔥", "✨", "🚀", "💖", "🌈", "🌞", "🌠", "🌼", "💪", "😎", "💫", "💓", "🎈", "🎁", "🍾", "🎊", "🥳", "👑", "🌺", "🌻", "🌸"];
 const os = require('os');       // for os info
 const gis = require("g-i-s");
+const long = String.fromCharCode(8206);
+const readmore = long.repeat(4001); 
 
 const { downloadContentFromMessage,
   WA_DEFAULT_EPHEMERAL,
@@ -816,7 +818,7 @@ const smallinput = budy.toLowerCase();
         if (isBanChat) return reply(mess.bangc);
         Taira.sendMessage(from, { react: { text: "❤", key: m.key } })
 
-        let { data } = await axios.get('https://api.github.com/repos/Kai0071/Taira');
+        let { data } = await axios.get('https://api.github.com/repos/Anonphoenix007/MAKINO-MD-V2');
         teks = `* 🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ Script*\n\n*Repo Stars*: ${data.stargazers_count}⭐\n*Repo Forks*: ${data.forks_count} forks\n*Repo link*: https://github.com/Anonphoenix007/MAKINO-MD-V2\n\nDont forget to follow Me *GitHub* https://github.com/anonphoenix007 and give a ⭐️ to my projects. `
         /*  let buttons = [
           {buttonId: `${prefix}owner`, buttonText: {displayText: '🍁 DEVELOPER 🍁'}, type: 1}
@@ -832,7 +834,7 @@ const smallinput = budy.toLowerCase();
             externalAdreply: {
               title: "🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ",
               body: " ",
-              thumbnail: fs.readFileSync("Assets/pic1.jpg"),
+              thumbnailUrl: "https://graph.org/file/b06744135f2f12ec4b4be.jpg",
               mediaType: 1,
               //mediaUrl: 'https://wallpapercave.com/wp/wp10524580.jpg',
               //sourceUrl: "https://wallpapercave.com/wp/wp10524580.jpg"
@@ -865,7 +867,7 @@ const smallinput = budy.toLowerCase();
           await Taira.sendMessage(from, { react: { text: "❤", key: m.key } });
 
           let { data } = await axios.get('https://api.github.com/repos/anonphoenix007/MAKINO-MD-V2');
-          let teks = `                       🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ Script*\n\n                 *Total Stars*: ${data.stargazers_count}⭐\n              *Total Forks*: ${data.forks_count} forks\n    *GitHub*: github.com/Kai0071/Taira\n\nDon't forget to follow me on *GitHub* and give a ⭐️ to my projects.`;
+          let teks = `🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ*\n\n*Total Stars*: ${data.stargazers_count}⭐\n*Total Forks*: ${data.forks_count} forks\n*GitHub*: github.com/Kai0071/Taira\n\nDon't forget to follow me on *GitHub* and give a ⭐️ to my projects.`;
 
           let msg = generateWAMessageFromContent(m.key.remoteJid, {
             viewOnceMessage: {
@@ -879,10 +881,10 @@ const smallinput = budy.toLowerCase();
                     text: teks
                   }),
                   footer: proto.Message.InteractiveMessage.Footer.create({
-                    text: "                    By Tᴀɪʀᴀ Mᴀᴋɪɴᴏ"
+                    text: "By Tᴀɪʀᴀ Mᴀᴋɪɴᴏ"
                   }),
                   header: proto.Message.InteractiveMessage.Header.create({
-                    title: "                        ©Tᴀɪʀᴀ•Mᴀᴋɪɴᴏ2024",
+                    title: "©Tᴀɪʀᴀ•Mᴀᴋɪɴᴏ2024",
                     subtitle: "🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ",
                     hasMediaAttachment: false
                   }),
@@ -6821,11 +6823,11 @@ _Click the button below to download_`
 ┃
 ╰════════════════ ⪨
 
- ✧✧✧✧✧✧✧✧✧✧✧✧✧
+ ✧✧✧✧✧✧✧✧✧✧✧✧✧ 
  
 ╭════════════════ ⪩
 ┃〘 *Command list* 〙
-╰════════════════ ⪨
+╰════════════════ ⪨ ${readmore}
 ╭═══════════════ ⪩
 ╰╮╰┈➤ *CORE*
 ╭═══════════════ ⪩
@@ -7082,20 +7084,20 @@ _Click the button below to download_`
                     buttons: [
                       {
                         "name": "quick_reply",
-                        "buttonParamsJson": `{"display_text":"OWNER","id":"${prefix}owner"}`
+                        "buttonParamsJson": `{"display_text":"OWNER 🫠","id":"${prefix}owner"}`
                       },
                       {
                         "name": "cta_url",
-                        "buttonParamsJson": `{"display_text":"REPO","url":"https://github.com/anonphoenix007/MAKINO-MD-V2","merchant_url":"https://github.com/anonphoenix007/MAKINO-MD-V2"}`
+                        "buttonParamsJson": `{"display_text":"REPO 🔗 ","url":"https://github.com/anonphoenix007/MAKINO-MD-V2","merchant_url":"https://github.com/anonphoenix007/MAKINO-MD-V2"}`
 
                       },
                       {
                         "name": "cta_url",
-                        "buttonParamsJson": `{"display_text":"Channel","url":"https://whatsapp.com/channel/0029VaY0Zq32P59piTo5rg0K","merchant_url":"https://whatsapp.com/channel/0029VaY0Zq32P59piTo5rg0K"}`
+                        "buttonParamsJson": `{"display_text":"Channel 📰","url":"https://whatsapp.com/channel/0029VaY0Zq32P59piTo5rg0K","merchant_url":"https://whatsapp.com/channel/0029VaY0Zq32P59piTo5rg0K"}`
                       },
                       {
                         "name": "cta_url",
-                        "buttonParamsJson": `{"display_text":"Taira","url":"https://wa.me/2347080968564","merchant_url":"https://wa.me/2347080968564"}`
+                        "buttonParamsJson": `{"display_text":"Taira 🫡","url":"https://wa.me/2347080968564","merchant_url":"https://wa.me/2347080968564"}`
                       }
                     ]
                   })
