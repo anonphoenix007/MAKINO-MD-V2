@@ -134,20 +134,20 @@ TairaSess()
       if (pea[0].announce == true) {
         //Taira.send5ButImg(pea[0].id, `Group has been *Closed!* Only *Admins* can send Messages!`, `BelugaBot-MD`, wm_fatih, [])
   
-        Taira.sendMessage(m.chat, { image: wm_fatih, caption: `〖 *Group settings changed* 〗\nGroup settings has been changed\n Now Only Admin can send messages\n\n🐦Makino-md ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ`})
+        Taira.sendMessage(anu.id, { image: wm_fatih, caption: `〖 *Group settings changed* 〗\nGroup settings has been changed\n Now Only Admin can send messages\n\n🐦Makino-md ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ`})
       } else if (pea[0].announce == false) {
         // Taira.send5ButImg(pea[0].id, `Grop has been *Opened!* Now *Everyone* can send Messages!`, `BelugaBot-MD`, wm_fatih, [])
-        Taira.sendMessage(m.chat, { image: wm_fatih, caption: `〖 *Group settings changed* 〗\nGroup settings has been changed\n Now everyone can send messages\n\n🐦Makino-md ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ`})
+        Taira.sendMessage(anu.id, { image: wm_fatih, caption: `〖 *Group settings changed* 〗\nGroup settings has been changed\n Now everyone can send messages\n\n🐦Makino-md ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ`})
       } else if (pea[0].restrict == true) {
         //Taira.send5ButImg(pea[0].id, `Group Info modification has been *Restricted*, Now only *Admins* can edit Group Info !`, `BelugaBot-MD`, wm_fatih, [])
-        Taira.sendMessage(m.chat, { image: wm_fatih, caption: `〖 *Group settings changed* 〗\nGroup Info modification has been *Restricted*, Now only *Admins* can edit Group Info !`})
+        Taira.sendMessage(anu.id, { image: wm_fatih, caption: `〖 *Group settings changed* 〗\nGroup Info modification has been *Restricted*, Now only *Admins* can edit Group Info !`})
       } else if (pea[0].restrict == false) {
         //Taira.send5ButImg(pea[0].id, `Group Info modification has been *Un-Restricted*, Now only *Everyone* can edit Group Info !`, `BelugaBot-MD`, wm_fatih, [])
-        Taira.sendMessage(m.chat, { image: wm_fatih, caption: `〖 *Group settings changed* 〗\n Group Info modification has been *Un-Restricted*, Now only *Everyone* can edit Group Info !`})
+        Taira.sendMessage(anu.id, { image: wm_fatih, caption: `〖 *Group settings changed* 〗\n Group Info modification has been *Un-Restricted*, Now only *Everyone* can edit Group Info !`})
       } else {
         //Taira.send5ButImg(pea[0].id, `Group Subject has been uhanged To:\n\n*${pea[0].subject}*`, `BelugaBot-MD`, wm_fatih, [])
         Tairatextddfq = `〖 *Group settings changed* 〗\nGroup Subject has been updated To:\n\n*${pea[0].subject}*`
-        Taira.sendMessage(pea[0].id, { image: wm_fatih, caption: Tairatextddfq })
+        Taira.sendMessage(anu.id, { image: wm_fatih, caption: Tairatextddfq })
       }
     })
   
