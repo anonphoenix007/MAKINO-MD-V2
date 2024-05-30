@@ -67,16 +67,15 @@ async function startTaira() {
 const conf = require("./config");
 let cc = conf.sessID//.replace(/Taira;;;/gi, "");
 async function TairaSess(){
-if (!fs.existsSync(__dirname + '/auth_info_baileys/creds.json')) {
-    /*if(cc.length<30){
-        let { data } = await axios.get('https://paste.c-net.org/'+cc)
-        await fs.writeFileSync(__dirname + '/auth_info_baileys/creds.json', atob(data), "utf8")
-    } else {  */await fs.writeFileSync(__dirname + '/auth_info_baileys/creds.json', atob(cc), "utf8") 
+let cc = global.sessID
+if (fs.existsSync(__dirname + '/auth_info_baileys/creds.json')) {
+  await fs.unlinkSync(__dirname + "/auth_info_baileys/creds.json")}
+    await fs.writeFileSync(__dirname + "auth_info_baileys/creds.json", cc, "utf8")
 }
-};
 TairaSess()
   const { state, saveCreds } = await useMultiFileAuthState("./auth_info_baileys");
   const Taira = TairaConnect({
+    version: [2, 2413, 1],
     logger: pino({ level: "silent" }),
     printQRInTerminal: true,
     browser: ["MAKINO-V2", "Safari", "3.O"],
