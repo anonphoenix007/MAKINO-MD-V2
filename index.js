@@ -446,7 +446,7 @@ return await Taira.forwardMessage(m.sender, quoted,{contextInfo:{ isForwarded: f
           console.log("🔎 Connecting to WhatsApp... Please Wait.");
         }
         if (connection === "open") {
-          console.log("Connection to WhatsApp successful ✅").
+          console.log("Connection to WhatsApp successful ✅");
           console.log("Welcome to MAKINO-MD-V2 ✨");
           const packageVersion = require("./package.json").version;
           const long = String.fromCharCode(8206);
