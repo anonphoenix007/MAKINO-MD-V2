@@ -867,7 +867,7 @@ const smallinput = budy.toLowerCase();
           await Taira.sendMessage(from, { react: { text: "❤", key: m.key } });
 
           let { data } = await axios.get('https://api.github.com/repos/anonphoenix007/MAKINO-MD-V2');
-          let teks = `🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ*\n\n*Total Stars*: ${data.stargazers_count}⭐\n*Total Forks*: ${data.forks_count} forks\n*GitHub*: github.com/Kai0071/Taira\n\nDon't forget to follow me on *GitHub* and give a ⭐️ to my projects.`;
+          let teks = `🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ*\n\n*Total Stars*: ${data.stargazers_count}⭐\n*Total Forks*: ${data.forks_count} forks\n*GitHub*: github.com/anonphoenix007/MAKINO-MD-V2\n\nDon't forget to follow me on *GitHub* and give a ⭐️ to my projects.`;
 
           let msg = generateWAMessageFromContent(m.key.remoteJid, {
             viewOnceMessage: {
