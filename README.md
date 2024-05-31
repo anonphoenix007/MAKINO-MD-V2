@@ -154,11 +154,8 @@ global.BotName = "🐦Makino-md-v2";
   
    ## `Special Thanks To`
 
-* [`📕 Kai..!!`](https://github.com/FantoX001)
+* [`📕 Kai..!!`](https://github.com/Kai0071)
 * [`📕 Guru`](https://github.com/Guru322)
-* [`📕 SuhailTech`](https://github.com/SuhailTechInfo)
-* [`📕 Hyno-IR`](https://github.com/HyNO-IR)
-* [`📕 ABHISHEK`](https://github.com/AbhishekSuresh2)
 * [`📕 V.e.n.o.x`](https://github.com/V-E-N-O-X )
 ---------
 
@@ -167,7 +164,7 @@ global.BotName = "🐦Makino-md-v2";
 </h1>
 
 </p>
-<h1 align="center"> ✧Big thanks Thanks To Kai0071!!!✧
+<h1 align="center"> ✧Big thanks To Kai0071!!!✧
 </h1>
 
 ---
