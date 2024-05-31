@@ -442,6 +442,18 @@ return await Taira.forwardMessage(m.sender, quoted,{contextInfo:{ isForwarded: f
 
   Taira.ev.on("connection.update", async (update) => {
     const { connection, lastDisconnect } = update;
+    if (connection === "connecting") {
+          console.log("🔎 Connecting to WhatsApp... Please Wait.");
+        }
+        if (connection === "open") {
+          console.log("Connection to WhatsApp successful ✅").
+          console.log("Welcome to MAKINO-MD-V2 ✨");
+          const packageVersion = require("./package.json").version;
+          const long = String.fromCharCode(8206);
+          const readmore = long.repeat(4001); 
+          let message = `MAKINO-MD-V2 Connected 📎${readmore}\n\nVersion: ${packageVersion}\n\n Default prefix is ${global.prefa}.\nChange your prefix with the setprefix command`
+          await Taira.sendMessage(Taira.user.id, {text: message })
+          };
     if (connection === "close") {
       let reason = lastDisconnect.error
         ? lastDisconnect?.error?.output.statusCode
