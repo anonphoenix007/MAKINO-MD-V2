@@ -18,7 +18,7 @@
 </p>
 
 #### Notice
-If you re-upload  anything from my ***REPOSITORY*** then Don't forget to give***Credit*** 
+If you create a clone of my bot from my ***REPOSITORY*** then Don't forget to give***Credit*** 
 
 ***
 
@@ -30,7 +30,7 @@ If you re-upload  anything from my ***REPOSITORY*** then Don't forget to give***
 
 2. Scan or pair to get session ID
     <br>
-<a href='https://test-pair-1f14fb458cf1.herokuapp.com/' target="_blank"><img alt='Get Session ID' src='https://img.shields.io/badge/Get-Session_ID-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=black&color=blue'/></a>
+<a href='https://taira-web-service.onrender.com/' target="_blank"><img alt='Get Session ID' src='https://img.shields.io/badge/Get-Session_ID-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=black&color=blue'/></a>
 
 #### DEPLOY STEPS
 
@@ -125,7 +125,7 @@ global.BotName = "🐦Makino-md-v2";
   <img src="https://telegra.ph/file/9fd9e372ed366eca3adb3.jpg" alt="Buy Me Coffee" height="40" width="150" style="margin-left: 60px;">
 </a>
 
-<h2 align="center"> Please don't forget to Star the repo🌟
+<h2 align="center"> Please don't forget to Star the repo and follow me🌟
 </h2>
 
 
@@ -167,7 +167,7 @@ global.BotName = "🐦Makino-md-v2";
 </h1>
 
 </p>
-<h1 align="center"> ✧Big thanks Thanks To V.e.n.o.x!!!✧
+<h1 align="center"> ✧Big thanks Thanks To Kai0071!!!✧
 </h1>
 
 ---
