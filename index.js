@@ -272,7 +272,8 @@ Taira.ev.on('group-participants.update', async (anu) => {
           // ... existing logic for welcoming new participants ...
           let WAuserName = num
           Tairatext = `
-Hello @${WAuserName.split("@")[0]},
+Hello @${WAuserName.split("@")[0]} 👋,
+MAKINO-MD-V2 by Tᴀɪʀᴀ Mᴀᴋɪɴᴏ Says Welcome 🤗.
 
 Welcome to ${metadata.subject}.
 
@@ -295,6 +296,9 @@ ${metadata.desc}
 Okay Bye 👋, @${WAuserName.split("@")[0]},
 
 Another human left🥲!
+
+
+Tᴀɪʀᴀ Mᴀᴋɪɴᴏ says Sayonara 🤧.
 `
 
           let buttonMessage = {
@@ -324,10 +328,10 @@ Another human left🥲!
 }
 });*/
   Taira.ev.on('text', async (message, match) => {
-if (me.fromMe || !me.reply_message || m.quoted.key.remoteJid !== 'status@broadcast') return;
+if (!m.fromMe || !m.quoted || m.quoted.key.remoteJid !== 'status@broadcast') return;
 var sends = ["Sent","Send","giv","Giv","Gib","Upload","send","sent","znt","Znt","snt","Snd","Snt"]
 for (any in sends){
-if (me.message.includes(sends[any])) {
+if (m.message.includes(sends[any])) {
 return await Taira.forwardMessage(m.sender, quoted,{contextInfo:{ isForwarded: false}});
 }
 }
