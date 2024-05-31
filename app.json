@@ -12,7 +12,7 @@
       "value": ""
     },
       "OWNER_NUMBER": {
-      "description": "owner number.",
+      "description": "Add multiple owners by adding , between numbers.",
       "required": true,
       "value": "2347080968564"
     },
