@@ -34,7 +34,7 @@ global.SupportGroupLink = "https://chat.whatsapp.com/KEg0G3UUs1G39ikdyfF5Pm"; //
 global.dbase = process.env.DBASE || "";//Mongodb here
 global.AuthorWhatsapp = "https://wa.me/2347080968564"; //Bot creator WhatsApp link,don't change or bot will not work.
 */
-global.Owner = process.env.OWNER.split(",");
+global.Owner = process.env.OWNER_TAG || "";
 global.OwnerNumber = process.env.OWNER_NUMBER || "";
 global.ownertag = [""]; 
 global.OwnerName = process.env.OWNER_NAME || "Tᴀɪʀᴀ Mᴀᴋɪɴᴏ";
