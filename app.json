@@ -10,6 +10,26 @@
       "description": "Must put session ID.",
       "required": true,
       "value": ""
+    },
+      "OWNER_NUMBER": {
+      "description": "owner number.",
+      "required": true,
+      "value": "2347080968564"
+    },
+      "OWNER": {
+      "description": "Owners,add multiple owners by separating with ,",
+      "required": true,
+      "value": "2347080968564"
+    },
+      "OWNER_NAME": {
+      "description": "Must put Owner Name.",
+      "required": true,
+      "value": "Tᴀɪʀᴀ Mᴀᴋɪɴᴏ"
+    },
+      "PREFIX": {
+      "description": "Must put Prefix.",
+      "required": true,
+      "value": "/"
     }
     },
     "buildpacks": [
