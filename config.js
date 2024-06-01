@@ -14,10 +14,10 @@ global.antitags = false;
 
 
 //auto functioner
-global.autoTyping = false;                //make true to enable auto typing
-global.autoRecord = true;                //make true to enable auto recording
+global.autoTyping = true;                //make true to enable auto typing
+global.autoRecord = false;                //make true to enable auto recording
 global.groupevent = true;                //This is the new variable for controlling group event handling.
-global.statusseen = false;                 //make true to view statuses 
+global.statusseen = true;                 //make true to view statuses 
 
 
 //
@@ -34,8 +34,8 @@ global.SupportGroupLink = "https://chat.whatsapp.com/KEg0G3UUs1G39ikdyfF5Pm"; //
 global.dbase = process.env.DBASE || "";//Mongodb here
 global.AuthorWhatsapp = "https://wa.me/2347080968564"; //Bot creator WhatsApp link,don't change or bot will not work.
 */
-global.Owner = [""];
-global.OwnerNumber = [""];
+global.Owner = ["."];
+global.OwnerNumber = ["94713317339"];
 global.ownertag = [""]; 
 global.OwnerName =  "Tᴀɪʀᴀ Mᴀᴋɪɴᴏ";
 global.BotName = "🐦Makino-md-v2";
@@ -52,8 +52,8 @@ global.sessionName = "session";                          //Do not change.
 
 
 //
-global.prefa = ["/"];
-//process.env.PREFIX || "/";// Prefix                                 //Default prefix here.
+global.prefa = ["."];
+//process.env.PREFIX || ".";// Prefix                                 //Default prefix here.
 global.openAiAPI = "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";
 
 
