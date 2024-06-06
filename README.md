@@ -5,6 +5,8 @@
   <a href="https://wa.me/2347080968564">
     <img alt="X-2.0" height="300" src="https://telegra.ph/file/7aa528767ed96ddc17bc2.jpg">
     <h1 align="center">MAKINO-MD-V2</h1>
+    <h4 align="center">Major Update.</h4>
+    <h3 align="center">Buttons Added</h3>
   </a>
 </p>
 <p align="center">
@@ -18,7 +20,7 @@
 </p>
 
 #### Notice
-If you create a clone of my bot from my ***REPOSITORY*** then Don't forget to give***Credit*** 
+If you create a clone of my bot then Don't forget to give ***Credit*** 
 
 ***
 
@@ -35,7 +37,7 @@ If you create a clone of my bot from my ***REPOSITORY*** then Don't forget to gi
 #### DEPLOY STEPS
 
 1. Fork This Repository 
-2. Update [`config.js`] if you want to or skip
+2. Update [`config.js`] if you want more functions or skip
 ```js
 global.Owner = ["2347080968564"]; 
 global.OwnerNumber = ["2347080968564"];
@@ -114,7 +116,7 @@ global.BotName = "🐦Makino-md-v2";
 ## ```Support Me```
 <a href='https://www.instagram.com/anonphoenix007' target="_blank"><img alt='Instagram' src='https://img.shields.io/badge/CONTACT-h?color=black&style=for-the-badge&logo=instagram' width="96.35" height="28"/></a></p>
 <a href='https://wa.me/2347080968564' target="_blank"><img alt='Whatsapp' src='https://img.shields.io/badge/CONTACT-h?color=black&style=for-the-badge&logo=whatsapp' width="96.35" height="28"/></a></p>
-<a href='https://chat.whatsapp.com/KEg0G3UUs1G39ikdyfF5Pm' target="_blank"><img alt='Whatsapp' src='https://img.shields.io/badge/OFFICIAL-GC-h?color=black&style=for-the-badge&logo=whatsapp' width="96.35" height="28"/></a></p>
+<a href='https://chat.whatsapp.com/Isx0zE3Gef78sKBGnEpiaN' target="_blank"><img alt='Whatsapp' src='https://img.shields.io/badge/OFFICIAL-GC-h?color=black&style=for-the-badge&logo=whatsapp' width="96.35" height="28"/></a></p>
 <a href='https://whatsapp.com/channel/0029VaY0Zq32P59piTo5rg0K' target="_blank"><img alt='Whatsapp' src='https://img.shields.io/badge/OFFICIAL-Channel-h?color=black&style=for-the-badge&logo=whatsapp' width="96.35" height="28"/></a></p>
 <a href='https://www.youtube.com' target="_blank"><img alt='Youtube' src='https://img.shields.io/badge/SUBSCRIBE-h?color=black&style=for-the-badge&logo=youtube' width="96.35" height="28"/></a></p>
 </p>
@@ -125,7 +127,7 @@ global.BotName = "🐦Makino-md-v2";
   <img src="https://telegra.ph/file/9fd9e372ed366eca3adb3.jpg" alt="Buy Me Coffee" height="40" width="150" style="margin-left: 60px;">
 </a>
 
-<h2 align="center"> Please don't forget to Star the repo and follow me🌟
+<h2 align="center"> Please don't forget to Star the repo and follow me 🌟
 </h2>
 
 
