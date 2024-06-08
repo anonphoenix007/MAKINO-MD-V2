@@ -14,19 +14,19 @@ global.antitags = false;
 
 
 //auto functioner
-global.autoTyping = false;                //make true to enable auto typing
+global.autoTyping = true;                //make true to enable auto typing
 global.autoRecord = true;                //make true to enable auto recording
 global.groupevent = true;                //This is the new variable for controlling group event handling.
-global.statusseen = false;                 //make true to view statuses 
+global.statusseen = true;                 //make true to view statuses 
 
 
 //
-/*global.Owner = process.env.OWNER || "2347045174399";// Owner number
-global.OwnerNumber = process.env.OWNER_NUMBER || "2347045174399" ;// Also owner number
-global.ownertag = process.env.OWNER_TAG || "2347045174399";// Also owner number
+/*global.Owner = process.env.OWNER || "923377081321";// Owner number
+global.OwnerNumber = process.env.OWNER_NUMBER || "923377081321" ;// Also owner number
+global.ownertag = process.env.OWNER_TAG || "923377081321";// Also owner number
 global.sessID = process.env.sessID || ""; //Session ID here.
-global.OwnerName = process.env.OWNER_NAME || "Tᴀɪʀᴀ Mᴀᴋɪɴᴏ";// Owner Name
-global.BotName = "🐦Makino-md-v2";//Do not change 🥵
+global.OwnerName = process.env.OWNER_NAME || "𒁍 𓆩๛⃝𝞠𝞒𝞘𝞜𝘾𝞢𝙎𝙎 𝞛𝞓𝙇𝞘𝞖𝞓‣᭄𓆪 𑁍 ̽•››̈";// Owner Name
+global.BotName = "🐦𒁍 𓆩๛⃝𝞠𝞒𝞘𝞜𝘾𝞢𝙎𝙎 𝞛𝞓𝙇𝞘𝞖𝞓‣᭄𓆪 𑁍 ̽•››̈";//Do not change 🥵
 global.packname = process.env.PACKNAME || "Tᴀɪʀᴀ Mᴀᴋɪɴᴏ";//Sticker pack name.
 global.author = "🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ";//Do not change                            //Do not change.
 global.BotSourceCode = "https://github.com/anonphoenix007/MAKINO-MD-V2"; //Do not change or bot will not function.
