@@ -811,7 +811,25 @@ const smallinput = budy.toLowerCase();
 
     switch (command) {
 
+  case 'setprefix': {
+  
+    if (isBan) return reply(mess.banned);	 			
+    if (isBanChat) return reply(mess.bangc);
+    if (!isCreator) return reply(mess.botowner)
+      Taira.sendMessage(from, { react: { text: "🌝" , key: m.key }})
 
+    if (args.length !== 1) {
+      return reply(`Please provide a single character as the new prefix.`);
+    } else {
+      const newPrefix = args[0];
+      try {
+        global.prefa = [newPrefix];
+        return reply(`Prefix Successfully changed to "${newPrefix}"`);
+      } catch (error) {
+        console.error('Error changing prefix:', error);
+        return reply(`An error occurred while changing the prefix. Please try again later.`);
+      }
+	}}
       //
       case 'sc': case 'script': case 'sourcecode': {
         if (isBan) return reply(mess.banned);
