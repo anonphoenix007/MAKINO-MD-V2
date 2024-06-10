@@ -118,6 +118,7 @@ global.BotName = "🐦Makino-md-v2";
 <a href='https://wa.me/2347080968564' target="_blank"><img alt='Whatsapp' src='https://img.shields.io/badge/CONTACT-h?color=black&style=for-the-badge&logo=whatsapp' width="96.35" height="28"/></a></p>
 <a href='https://chat.whatsapp.com/Isx0zE3Gef78sKBGnEpiaN' target="_blank"><img alt='Whatsapp' src='https://img.shields.io/badge/OFFICIAL-GC-h?color=black&style=for-the-badge&logo=whatsapp' width="96.35" height="28"/></a></p>
 <a href='https://whatsapp.com/channel/0029VaY0Zq32P59piTo5rg0K' target="_blank"><img alt='Whatsapp' src='https://img.shields.io/badge/OFFICIAL-Channel-h?color=black&style=for-the-badge&logo=whatsapp' width="96.35" height="28"/></a></p>
+<a href='https://whatsapp.com/channel/0029VaCblq44IBhMEiIu3m10' target="_blank"><img alt='WhatsApp 2' src='https://img.shields.io/badge/Channel-2-h?color=black&style=for-the-badge&logo=whatsapp' width="96.35" height="28"/></a></p>
 <a href='https://www.youtube.com' target="_blank"><img alt='Youtube' src='https://img.shields.io/badge/SUBSCRIBE-h?color=black&style=for-the-badge&logo=youtube' width="96.35" height="28"/></a></p>
 </p>
 
