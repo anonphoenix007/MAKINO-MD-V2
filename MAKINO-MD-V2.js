@@ -1004,7 +1004,8 @@ case 'addprem':
       //Hosted platfrom info
       case 'server':
       case 'sysinfo': {
-
+        try {
+          await Taira.sendMessage(from, { react: { text: "📍", key: m.key } });
         let respon = `
      Makino-md-v2 Server
   
