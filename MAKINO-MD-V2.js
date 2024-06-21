@@ -327,14 +327,14 @@ m.message.InteractiveResponseMessage.NativeFlowResponseMessage ||               
     if (m.message) {
       addBalance(m.sender, randomNomor(574), balance);
       console.log(
-        chalk.black(chalk.bgWhite("[ NEW MESSAGE ]")),
+        chalk.black(chalk.bgWhite("[ MESSAGE RECEIVED ]")),
         chalk.black(chalk.bgGreen(new Date())),
         chalk.black(chalk.bgBlue(budy || m.mtype)) +
         "\n" +
-        chalk.magenta("=> From"),
+        chalk.magenta("=> 💧From"),
         chalk.green(pushname),
-        chalk.yellow(m.sender) + "\n" + chalk.blueBright("=> In"),
-        chalk.green(m.isGroup ? pushname : "Private Chat", m.chat)
+        chalk.yellow(m.sender) + "\n" + chalk.blueBright("=> 🌐In"),
+        chalk.green(m.isGroup ? pushname : "🧩Private Chat", m.chat)
       );
     }
 
@@ -346,30 +346,6 @@ m.message.InteractiveResponseMessage.NativeFlowResponseMessage ||               
 
 
     //----------------------------------------------------------------------------------------------------------//
-
-
-
-    // if (global.autoreadpmngc) {
-    //   if (command) {
-    //     await Taira.sendPresenceUpdate("composing", m.chat);
-    //     Taira.sendReadReceipt(from, m.sender, [m.key.id]);
-    //   }
-    // }
-
-
-    //
-    //   if (global.autoReadGc) {
-    //   if (m.isGroup) { 
-    //       Taira.sendReadReceipt(m.chat, m.sender, [m.key.id]);
-    //   }
-    // }
-
-
-    // if (global.autoReadAll) {
-    //   if (m.chat) {
-    //     Taira.sendReadReceipt(m.chat, m.sender, [m.key.id]);
-    //   }
-    // }
 
 
     if (global.autoreadgc) {
@@ -427,52 +403,12 @@ m.message.InteractiveResponseMessage.NativeFlowResponseMessage ||               
     //-----------------------------------------------------------------------------------------------------------------------------------//
 
 
-
-    //
     for (let anju of kaiaudio) {
       if (budy === anju) {
         result = fs.readFileSync(`./Assets/audio/${anju}.mp3`)
         Taira.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })
       }
     }
-
-
-
-    //
-    // const hariRaya = new Date("6 1, 2022 00:00:00");
-    // const sekarang = new Date().getTime();
-    // const Selisih = hariRaya - sekarang;
-    // const jhari = Math.floor(Selisih / (1000 * 60 * 60 * 24));
-    // const jjam = Math.floor(
-    //   (Selisih % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-    // );
-    // const mmmenit = Math.floor((Selisih % (1000 * 60 * 60)) / (1000 * 60));
-    // const ddetik = Math.floor((Selisih % (1000 * 60)) / 1000);
-    // const ultah = `${jhari}Day ${jjam}Hour ${mmmenit}Minute ${ddetik}Second`;
-
-    // async function hitungmundur(bulan, tanggal) {
-    //   let from = new Date(`${bulan} ${tanggal}, 2022 00:00:00`).getTime();
-    //   let now = Date.now();
-    //   let distance = from - now;
-    //   let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    //   let hours = Math.floor(
-    //     (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-    //   );
-    //   let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    //   let seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    //   return (
-    //     days +
-    //     "Day " +
-    //     hours +
-    //     "Hour " +
-    //     minutes +
-    //     "Minute " +
-    //     seconds +
-    //     "Second"
-    //   );
-    // }
-
-
 
     //-----------------------------------------------------------------------------------------------------------------------------------//
 
@@ -489,11 +425,7 @@ m.message.InteractiveResponseMessage.NativeFlowResponseMessage ||               
       const uptimeInSeconds = Math.floor(process.uptime());
       const uptimeFormatted = formatTime(uptimeInSeconds);
 
-      // const status = `
-      // ㅤㅤ〄ㅤㅤ〘 Taira Personal Edition 〙ㅤㅤ〄ㅤㅤㅤㅤ
-      // ㅤㅤㅤ〘ㅤ Auto Uptime: ${uptimeFormatted}ㅤ〙`;
-
-      function _0x582b(_0xabb6f8, _0x12cdd8) { const _0x58e890 = _0x58e8(); return _0x582b = function (_0x582b90, _0x4387b3) { _0x582b90 = _0x582b90 - 0x189; let _0x932613 = _0x58e890[_0x582b90]; return _0x932613; }, _0x582b(_0xabb6f8, _0x12cdd8); } function _0x58e8() { const _0x109554 = ['12896370RDSmnX', '3BgvPel', '189HbmdoW', '18854HvEPNh', '11TZHUID', '9125326EcyeIg', '464328lPaAMf', '3400722cbWEOK', '2263175KIczdo', '12TaHNqM', '2521564eqJRHK']; _0x58e8 = function () { return _0x109554; }; return _0x58e8(); } (function (_0x429d7b, _0x532ab5) { const _0x527567 = _0x582b, _0x130eb4 = _0x429d7b(); while (!![]) { try { const _0x75c57a = -parseInt(_0x527567(0x18b)) / 0x1 + -parseInt(_0x527567(0x192)) / 0x2 * (-parseInt(_0x527567(0x189)) / 0x3) + parseInt(_0x527567(0x191)) / 0x4 * (-parseInt(_0x527567(0x190)) / 0x5) + -parseInt(_0x527567(0x18f)) / 0x6 + parseInt(_0x527567(0x18d)) / 0x7 + parseInt(_0x527567(0x18e)) / 0x8 * (-parseInt(_0x527567(0x18a)) / 0x9) + parseInt(_0x527567(0x193)) / 0xa * (parseInt(_0x527567(0x18c)) / 0xb); if (_0x75c57a === _0x532ab5) break; else _0x130eb4['push'](_0x130eb4['shift']()); } catch (_0x19ea04) { _0x130eb4['push'](_0x130eb4['shift']()); } } }(_0x58e8, 0xa8dae)); const status = '🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ alive since ' + uptimeFormatted;
+      function _0x582b(_0xabb6f8, _0x12cdd8) { const _0x58e890 = _0x58e8(); return _0x582b = function (_0x582b90, _0x4387b3) { _0x582b90 = _0x582b90 - 0x189; let _0x932613 = _0x58e890[_0x582b90]; return _0x932613; }, _0x582b(_0xabb6f8, _0x12cdd8); } function _0x58e8() { const _0x109554 = ['12896370RDSmnX', '3BgvPel', '189HbmdoW', '18854HvEPNh', '11TZHUID', '9125326EcyeIg', '464328lPaAMf', '3400722cbWEOK', '2263175KIczdo', '12TaHNqM', '2521564eqJRHK']; _0x58e8 = function () { return _0x109554; }; return _0x58e8(); } (function (_0x429d7b, _0x532ab5) { const _0x527567 = _0x582b, _0x130eb4 = _0x429d7b(); while (!![]) { try { const _0x75c57a = -parseInt(_0x527567(0x18b)) / 0x1 + -parseInt(_0x527567(0x192)) / 0x2 * (-parseInt(_0x527567(0x189)) / 0x3) + parseInt(_0x527567(0x191)) / 0x4 * (-parseInt(_0x527567(0x190)) / 0x5) + -parseInt(_0x527567(0x18f)) / 0x6 + parseInt(_0x527567(0x18d)) / 0x7 + parseInt(_0x527567(0x18e)) / 0x8 * (-parseInt(_0x527567(0x18a)) / 0x9) + parseInt(_0x527567(0x193)) / 0xa * (parseInt(_0x527567(0x18c)) / 0xb); if (_0x75c57a === _0x532ab5) break; else _0x130eb4['push'](_0x130eb4['shift']()); } catch (_0x19ea04) { _0x130eb4['push'](_0x130eb4['shift']()); } } }(_0x58e8, 0xa8dae)); const status = 'Makino-md-v2 By ᴛᴀɪʀᴀ ᴍᴀᴋɪɴᴏ alive since ' + uptimeFormatted;
 
       Taira.setStatus(status); // Set the status using Taira.setStatus or your equivalent method
 
@@ -501,119 +433,13 @@ m.message.InteractiveResponseMessage.NativeFlowResponseMessage ||               
       const randomTime = Math.floor(Math.random() * 300000) + 1000; // don't edit.
       setTimeout(updateStatus, randomTime);
     }
-
-    // Initial call to start the random status updates
     updateStatus();
 
 
 
     //-----------------------------------------------------------------------------------------------------------------------------------//
-
-
-
-    //
-    // if (AntiLinkAll)
-    //   var rondonxk = '[-a-zA-Z0-9@:%._+~#=].[-a-zA-Z0-9@:%._+~#=].[-a-zA-Z0-9()@:%_+.~#?&/=]'
-    //   if (budy.includes("https://")) {
-    //     if (!isBotAdmins) return
-    //     bvl = `\`\`\`「  Antilink System  」\`\`\`\n\nLink sent by Admin so no action will be taken!`
-    //     if (isAdmins) return reply(bvl)
-    //     if (m.key.fromMe) return reply(bvl)
-    //     if (isCreator) return reply(bvl)
-    //     kice = m.sender
-    //     await Taira.sendMessage(
-    //       from,
-    //       {
-    //         delete: {
-    //           remoteJid: from,
-    //           fromMe: false,
-    //           id: m.id,
-    //           participant: m.sender,
-    //         },
-    //       },
-    //       {
-    //         quoted: m,
-    //       }
-    //     );
-    //   //  await Taira.groupParticipantsUpdate(m.chat, [kice], 'remove')
-    //     Taira.sendMessage(from, { text: `\`\`\`「  Antilink System  」\`\`\`\n\n*⚠️ Group link detected !*\n\n*🚫@${kice.split("@")[0]} You are not allowed to send any links in this group !*\n`, contextInfo: { mentionedJid: [kice] } }, { quoted: m })
-    //   } else {
-    //   }
-
-    // if (budy.includes("http://")) {
-    //     if (!isBotAdmins) return
-    //     bvl = `\`\`\`「  Antilink System  」\`\`\`\n\nLink sent by Admin so no action will be taken!`
-    //     if (isAdmins) return reply(bvl)
-    //     if (m.key.fromMe) return reply(bvl)
-    //     if (isCreator) return reply(bvl)
-    //     kice = m.sender
-    //     await Taira.sendMessage(
-    //       from,
-    //       {
-    //         delete: {
-    //           remoteJid: from,
-    //           fromMe: false,
-    //           id: m.id,
-    //           participant: m.sender,
-    //         },
-    //       },
-    //       {
-    //         quoted: m,
-    //       }
-    //     );
-    //   //  await Taira.groupParticipantsUpdate(m.chat, [kice], 'remove')
-    //     Taira.sendMessage(from, { text: `\`\`\`「  Antilink System  」\`\`\`\n\n*⚠️ Group link detected !*\n\n*🚫@${kice.split("@")[0]} You are not allowed to send any links in this group !*\n`, contextInfo: { mentionedJid: [kice] } }, { quoted: m })
-    //   } else {
-    //   }
-
-
-    //     const menulist = `
-    //     Konichiwa ${pushname} dear 👋. I am ${global.BotName}, a bot developed by: Kai to take your WhatsApp usage into next level.
-
-    //        「 System Info 」
-
-    //     Speed : ${latensie.toFixed(4)} miliseconds
-    //     Up Time : ${runtime(process.uptime())}
-    //     Bot Name : ${global.BotName}
-    //     Owner Name : ${global.OwnerName}
-    //     𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : Amazon AWS
-    //     𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${Object.keys(global.db.users).length}
-
-
-    //        「 User Info 」
-
-    //     User Level: ${levelMenu}
-    //     User XP : ${xpMenu} \ ${reqXp}
-    //     User Role : ${role}
-
-
-    //        「 User Bank 」
-
-    //     User Balance : ${uangku}
-    //    //Iron : ${getBesi(m.sender)}
-    //     Gold : ${getEmas(m.sender)}
-    //     Emarald : ${getEmerald(m.sender)}
-    //     Potion : ${getPotion(m.sender)}
-
-
-    //     Type *-menu* or press any button below to start using *${global.BotName}*
-
-    //     ©️ *${global.BotName}* All Rights Reserved by: *Kai*
-    //     `
-    //         const qtod = m.quoted? "true":"false"
-
-
-
-    // function pickRandom(list) {
-    // return list[Math.floor(list.length * Math.random())]
-    // }
-
-
-
     //-------------------------------------------------------------- tictactoe ----------------------------------------------------------------//
-
-
-    //
+//TIC TAC TOE GAME SETTINGS
     this.game = this.game ? this.game : {}
     let room = Object.values(this.game).find(room => room.id && room.game && room.state && room.id.startsWith('tictactoe') && [room.game.playerX, room.game.playerO].includes(m.sender) && room.state == 'PLAYING')
     if (room) {
@@ -684,95 +510,7 @@ Typed *surrender* to surrender and admited defeat`
       return arr[Math.floor(Math.random() * arr.length)]
     }
 
-    /*
-  let smallinput = budy.toLowerCase()
-  if (smallinput.includes('hello')) {
-    reply (`Hello ${pushname}, I am ${BotName}. How can i help you?`);
-  } 
-  
-  //if (smallinput.includes('hi')) {
-  
-  //   reply (`Hello ${pushname}, I am ${BotName}. How can i help you?`);
-  
-  // } 
-  
-  if (smallinput=='kai') {
-      reply (`My Boss is lost in another Multiverse, and I lost the connection with him...`)
-  }
-  
-  
-  if (smallinput=='runtime') {
-    reply (`Hey ${pushname} my runtime is ${runtime(process.uptime())}\n\nCurrent Time: ${kaitime}\n\nCurrent Date: ${kaidate}`)
-  }
-  
-  
-  
-  if( smallinput.includes('konichiwa') || smallinput.includes('konochiwa') || smallinput.includes('konichiba') || smallinput.includes('salute')){
-    reply (`Konichiwa ${pushname}, I am ${BotName}. How can i help you?`);
-  }
-  
-  
-  if (smallinput=='a17') {
-      reply ('Yes I am Alive 🫂')
-  }
-  
-  if (smallinput=='sasha') {
-    reply ('Only you...🫶🏻')
-  }
-  
-  if (smallinput=='ping') {
-      reply (`Hey ${pushname} Pong ${latensie.toFixed(4)} ms`)
-  }
-  
-  
-  if (smallinput.includes('good morning') || smallinput.includes('ohayo')) {
-    reply (`Good morning to you too ${pushname} ☺️. Have a great day 😇.`);
-  }
-  
-  if (smallinput.includes('good afternoon') || smallinput.includes('konnichiwa')) {
-  
-    reply (`Good afthernoon to you too ${pushname} ✨. Wishing you an enjoyable afternoon too 😇🤞🏻.`);
-  
-  }
-  
-  
-  //if (smallinput.includes('good afthernoon')) {
-   // reply (`Huh ${pushname} 😇. Wishing you an enjoyable afternoon too.`);
-  //   }
-  
-  
-  if (smallinput.includes('good night')) {
-    reply (`Good night to you too ${pushname} 😇. Sleep well and sweet dreams.`);
-  }
-  
-  if (smallinput.includes('arigato')|| smallinput.includes('arigatou') || smallinput.includes('thank')) {
-    reply (`Mention not ${pushname} 😇. I am a bot afterall.`);
-  }
-  */
-
-
-   /* const responses = {
-
-
-      hello: `Hello ${pushname}, I am ${BotName}. My current prefix is "${prefix}". How can I help you?`,
-      kai: `My Boss is lost in another Multiverse, and I lost connection with him...`,
-      runtime: `Hey ${pushname}\n${nowtime}\n\nMy runtime:${runtime(process.uptime())}\n\nPrefix is: *${prefix}*\n\nTime: ${kaitime}\n\nDate: ${kaidate}\n\nToday is ${currentDay}`,
-      konichiwa: `Konichiwa ${pushname}, I am ${BotName}. How can I help you?`,
-      sasha: 'Only you...🫶🏻',
-      ping: `Hey ${pushname}, Pong ${latensie.toFixed(4)} ms`,
-      'good morning': `Good morning to you too ${pushname} ☺️. Have a great day 😇.`,
-      ohayo: `Good morning to you too ${pushname} ☺️. Have a great day 😇.`,
-      'good afternoon': `Good afternoon to you too ${pushname} ✨. Wishing you an enjoyable afternoon too 😇🤞🏻.`,
-      konnichiwa: `Good afternoon to you too ${pushname} ✨. Wishing you an enjoyable afternoon too 😇🤞🏻.`,
-      'good night': `Good night to you too ${pushname} 😇. Sleep well and sweet dreams.`,
-
-    };
-
-    const smallinput = budy.toLowerCase();
-
-    if (responses.hasOwnProperty(smallinput)) {
-      reply(responses[smallinput]);
-    }*/
+    //Auto reply below
    const responses = {
    
   hello: `Hello ${pushname}, I am ${BotName}. My current prefix is "${prefix}". How can I help you?`,
@@ -781,7 +519,6 @@ Typed *surrender* to surrender and admited defeat`
   fred: `I am busy,will reply you when I f33l like (¬_¬)ﾉ...`,
   runtime: `Hey ${pushname}\n${nowtime}\n\nMy runtime:${runtime(process.uptime())}\n\nPrefix is: *${prefix}*\n\nTime: ${kaitime}\n\nDate: ${kaidate}\n\nToday is ${currentDay}`,
   konichiwa: `Konichiwa ${pushname}, I am ${BotName}. How can I help you?`,
-  //ping: `Hey ${pushname}, Pong ${latensie.toFixed(4)} ms`,
   'good morning': `Good morning to you too ${pushname} ☺️. Have a great day 😇`,
   bot: `Hey ${pushname},
   ┏━━⟪ *Revolutionize Your WhatsApp Experience with Cutting-Edge Bots!* 🚀⟫━⦿
@@ -917,60 +654,23 @@ case 'addprem':
         return reply(`An error occurred while changing the prefix. Please try again later.`);
       }
 	}}
-      //
-      case 'sc': case 'script': case 'sourcecode': {
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        Taira.sendMessage(from, { react: { text: "❤", key: m.key } })
-
-        let { data } = await axios.get('https://api.github.com/repos/Anonphoenix007/MAKINO-MD-V2');
-        teks = `* 🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ Script*\n\n*Repo Stars*: ${data.stargazers_count}⭐\n*Repo Forks*: ${data.forks_count} forks\n*Repo link*: https://github.com/Anonphoenix007/MAKINO-MD-V2\n\nDont forget to follow Me *GitHub* https://github.com/anonphoenix007 and give a ⭐️ to my projects. `
-        /*  let buttons = [
-          {buttonId: `${prefix}owner`, buttonText: {displayText: '🍁 DEVELOPER 🍁'}, type: 1}
-          ] */
-        let buttonMessage = {
-          image: Thumb,
-          jpegThumbnail: BotLogo,
-          caption: teks,
-          /* footer: `${BotName}`,
-           buttons: buttons,
-           headerType: 4, */
-          contextInfo: {
-            externalAdreply: {
-              title: "🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ",
-              body: " ",
-              thumbnailUrl: "https://graph.org/file/b06744135f2f12ec4b4be.jpg",
-              mediaType: 1,
-              //mediaUrl: 'https://wallpapercave.com/wp/wp10524580.jpg',
-              //sourceUrl: "https://wallpapercave.com/wp/wp10524580.jpg"
-              mediaUrl: 'github.com/anonphoenix007/MAKINO-MD-V2',
-              sourceUrl: "https://whatsapp.com/channel/0029VaY0Zq32P59piTo5rg0K"
-            }
-          }
-
-        }
-        Taira.sendMessage(m.chat, buttonMessage, { quoted: m })
-      }
-        break;
+      
 
       case 'owner': case 'creator': case 'mod': case 'mods': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
 
         Taira.sendMessage(from, { react: { text: "💫", key: m.key } })
-        Taira.sendContact(m.chat, global.Owner, m)
+        Taira.sendContact(m.chat, Taira.user.id.replace(/@s.whatsapp.net/gi, ""), m)
       }
         break;
 
 
-      case "link": {
+	case 'sc': case 'script': case 'repo': case "link": {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-
         try {
-
           await Taira.sendMessage(from, { react: { text: "❤", key: m.key } });
-
           let { data } = await axios.get('https://api.github.com/repos/anonphoenix007/MAKINO-MD-V2');
           let teks = `🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ*\n\n*Total Stars*: ${data.stargazers_count}⭐\n*Total Forks*: ${data.forks_count} forks\n*GitHub*: github.com/anonphoenix007/MAKINO-MD-V2\n\nDon't forget to follow me on *GitHub* and give a ⭐️ to my projects.`;
 
@@ -1022,8 +722,6 @@ case 'addprem':
 
         break;
       }
-
-
 
       //Hosted platfrom info
       case 'server':
@@ -1224,33 +922,7 @@ case 'tovv': {
         }
         break;
 
-   case 'setprefix': {
-  
-    if (isBan) return reply(mess.banned);	 			
-    if (isBanChat) return reply(mess.bangc);
-    if (!isCreator) return reply(mess.botowner)
-      A17.sendMessage(from, { react: { text: "🫡" , key: m.key }})
-
-    if (args.length !== 1) {
-      return reply(`Please provide a single character as the new prefix.`);
-    } else {
-      const newPrefix = args[0];
-      try {
-        global.prefa = [newPrefix];
-        return reply(`Successfully changed Prefix to "${newPrefix}"`);
-      } catch (error) {
-        console.error('Error changing prefix:', error);
-        return reply(`An error occurred while changing the prefix. Please try again later.`);
-      }
-	}
-   }
-break;
-		    
-      case 'autostatus':
-      case 'stsview':
-      case 'statusevent':
-      case 'autostatusseen':
-
+      case 'autostatus': case 'stsview': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!isCreator) return reply(mess.botowner)
@@ -1271,6 +943,7 @@ break;
         } else {
           return m.reply(`Usage: ${global.prefa[0]}autostatus [on/off]`);
         }
+	}
         break;
 
 
@@ -1437,456 +1110,7 @@ break;
       }
         break;
 
-
-      // economy ...
-      /*case 'daily': case 'claim': case 'reward':
-
-        {
-          if (m.quoted?.sender) m.mentionedJid.push(m.quoted.sender)
-          if (isBan) return reply(mess.banned);
-          if (isBanChat) return reply(mess.bangc);
-          if (!m.isGroup) return reply(mess.grouponly)
-
-          Taira.sendMessage(from, { react: { text: "💰", key: m.key } })
-          let user = m.sender
-          const cara = "cara"
-          const daily = await eco.daily(user, cara, 999); //give 999 for daily, can be changed
-
-          if (daily.cd) return reply(`You already claimed daily for today, come back in ${daily.cdL}`); //cdL is already formatted cooldown Left
-
-          reply(`You claimed 💎${daily.amount} for daily`);
-        }
-        break;
-
-
-      case 'wallet': case 'purse': {
-
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly)
-
-        Taira.sendMessage(from, { react: { text: "💳", key: m.key } })
-
-        if (m.quoted?.sender) m.mentionedJid.push(m.quoted.sender)
-
-        const user = m.sender
-
-        const cara = "cara"
-
-        const balance = await eco.balance(user, cara); //Returns wallet, bank, and bankCapacity. Also creates a USer if it doesn't exist.
-
-        await reply(`👛 ${pushname}'s Purse:\n\n_💎${balance.wallet}_`);
-
-      }
-        break;
-
-
-      case 'bank': case 'levee': {
-        if (m.quoted?.sender) m.mentionedJid.push(m.quoted.sender)
-
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly)
-
-        Taira.sendMessage(from, { react: { text: "💳", key: m.key } })
-
-        const user = m.sender
-        const cara = "cara"
-        const balance = await eco.balance(user, cara); //Returns wallet, bank, and bankCapacity. Also creates a USer if it doesn't exist.
-        await reply(`🏦 ${pushname}'s Bank:\n\n_💎${balance.bank}/${balance.bankCapacity}_`);
-      }
-        break;
-
-
-      case 'capacity': case 'bankupgrade':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly)
-
-        {
-          Taira.sendMessage(from, { react: { text: "💲", key: m.key } })
-
-          //if (!isCreator) return reply(mess.botowner)
-          if (!text) return reply(`💴 Bank-capacity 💳\n\n1 | 1000 sp = 💎100\n\n2 | 10000 sp = 💎1000\n\n3 | 100000 sp = 💎10000\n\nExample- ${prefix}capacity 1 OR ${prefix}bankupgrade 1000`)
-          if (m.quoted?.sender) m.mentionedJid.push(m.quoted.sender)
-          const user = m.mentionedJid[0] ? m.mentionedJid[0] : m.sender
-          const cara = "cara"
-          let value = text.trim();
-          let k = parseInt(value)
-          const balance = await eco.balance(user, cara)
-          switch (value) {
-            case '1000':
-            case '1':
-              if (k > balance.wallet) return reply(`You need to pay 💎100 to increase bank capacity ~ 1000 sp`);
-              const deduct1 = await eco.deduct(user, cara, 100);
-              const add1 = eco.giveCapacity(user, cara, 1000);
-              await reply(`1000 💎diamond storage has been added in ${pushname} bank`)
-            case '10000':
-            case '2':
-              if (k > balance.wallet) return reply(`You need to pay 💎1000 to increase bank capacity ~ 10000 sp`);
-              const deduct2 = await eco.deduct(user, cara, 1000);
-              const add2 = eco.giveCapacity(user, cara, 10000);
-              await reply(`10000 💎diamond storage has been added in ${pushname} bank`)
-            case '100000':
-            case '3':
-              if (k > balance.wallet) return reply(`You need to pay 💎10000 to increase bank capacity ~ 100000 sp`);
-              const deduct3 = await eco.deduct(user, cara, 10000);
-              const add3 = eco.giveCapacity(user, cara, 100000);
-              await reply(`100000 💎diamond storage has been added in ${pushname} bank`)
-          }
-        }
-        break;
-
-
-      case 'deposit': case 'pay-in': {
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly)
-
-        Taira.sendMessage(from, { react: { text: "📥", key: m.key } })
-
-        if (m.quoted?.sender) m.mentionedJid.push(m.quoted.sender)
-        if (!text) return reply("Provide the amount you want to deposit!");
-        const texts = text.trim();
-        const user = m.sender;
-        const cara = 'cara'
-        const deposit = await eco.deposit(user, cara, texts);
-        if (deposit.noten) return reply('You can\'t deposit what you don\'t have.'); //if user states more than whats in his wallet
-        reply(`Successfully Deposited 💎${deposit.amount} to your bank.`)
-      }
-        break;
-
-
-      case 'withdraw': case 'withdrawal': {
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly)
-
-        Taira.sendMessage(from, { react: { text: "💸", key: m.key } })
-
-        if (m.quoted?.sender) m.mentionedJid.push(m.quoted.sender)
-        const user = m.sender
-        if (!text) return reply("Provide the amount you want to withdraw!");
-        const query = text.trim();
-        const cara = 'cara'
-        const withdraw = await eco.withdraw(user, cara, query);
-        if (withdraw.noten) return reply('🏧 Insufficient fund in bank'); //if user states more than whats in his wallet
-        const add = eco.give(user, cara, query);
-        reply(`🏧 ALERT  💎${withdraw.amount} has been added in your wallet.`)
-
-      }
-        break;
-
-
-      case 'rob': case 'attack':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly)
-
-        {
-          Taira.sendMessage(from, { react: { text: "🔪", key: m.key } })
-          if (!text) return reply(`Use ${prefix}rob @user`)
-          const target =
-            m.quoted && m.mentionedJid.length === 0
-              ? m.quoted.sender
-              : m.mentionedJid[0] || null;
-          if (!target || target === m.sender) return reply("what are you trying to do!")
-          if (m.quoted?.sender && !m.mentionedJid.includes(m.quoted.sender)) m.mentionedJid.push(m.quoted.sender)
-          while (m.mentionedJid.length < 2) m.mentionedJid.push(m.sender)
-          const cara = "cara"
-          const user1 = m.sender
-          const user2 = target
-          const k = 250
-          const balance1 = await eco.balance(user1, cara)
-          const balance2 = await eco.balance(user2, cara)
-          const typ = ['ran', 'rob', 'caught'];
-          const random = typ[Math.floor(Math.random() * typ.length)];
-          if (k > balance1.wallet) return reply(`☹️ You don't have enough money to pay incase you get caught`);
-          if (k > balance2.wallet) return reply(`Sorry, your victim is too poor 🤷🏽‍♂️ let go.`);
-          let tpy = random
-          switch (random) {
-            case 'ran':
-              await reply(`Your victim escaped, be more scaryðŸ˜¤ next time.`)
-          }
-        }
-        break;
-
-
-      case 'transfer': case 'give': {
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly)
-        Taira.sendMessage(from, { react: { text: "🗿", key: m.key } })
-        let value = text.trim().split(" ");
-        if (value[0] === "") return reply(`Use ${prefix}transfer 100 @user`);
-        const target =
-          m.quoted && m.mentionedJid.length === 0
-            ? m.quoted.sender
-            : m.mentionedJid[0] || null;
-        if (!target || target === m.sender) return reply("what are you trying to do!")
-        if (m.quoted?.sender && !m.mentionedJid.includes(m.quoted.sender)) m.mentionedJid.push(m.quoted.sender)
-        while (m.mentionedJid.length < 2) m.mentionedJid.push(m.sender)
-        const cara = "cara"
-        const user1 = m.sender
-        const user2 = target
-        const word = value[0];
-        const code = value[1];
-        let d = parseInt(word)
-        if (!d) return reply("check your text plz u r using the command in a wrong way")
-
-        const balance = await eco.balance(user1, cara);
-        let a = (balance.wallet) < parseInt(word)
-        //Returns wallet, bank, and bankCapacity. Also creates a USer if it doesn't exist.	
-        if (a == true) return reply("you dont have sufficient money to transfer");
-
-        const deduct = await eco.deduct(user1, cara, value[0]);
-        const give = await eco.give(user2, cara, value[0]);
-        reply(`📠 Transaction successful`)
-
-      }
-        break;
-
-
-      case 'wealth': case 'ritual': {
-        if (!isCreator) return reply(mess.botowner)
-        var user = m.sender
-        var cara = 'cara'
-        const give1 = eco.give(user, cara, 9999)
-        reply(`You are the wealthiest my *Lord*`)
-      }
-        break;
-
-
-
-      //-------------------------------------------------------------------------------------------------------------------------------------//
-
-
-
-      //gamble
-      case 'gamble': case 'lottery':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly)
-        {
-          //var response = await Taira.groupInviteCode(from)
-          //var link1 = `https://chat.whatsapp.com/${response}`
-          //var link2 = `https://chat.whatsapp.com/BXQaaeg7utI29OI4RbhdIhl`
-          var texts = text.trim().split(" ");
-          var opp = texts[1];// your value
-          var value = texts[0].toLowerCase();
-          var gg = parseInt(value)
-          var user = m.sender //m.mentionedJid[0] ? m.mentionedJid[0] : m.sender
-          const cara = 'cara'
-          const balance = await eco.balance(user, cara);
-          const g = (balance.wallet) > parseInt(value)
-          const k = 50
-          const a = (k) > parseInt(value)
-          const twice = gg * 2
-          const f = ["up", "right", "left", "down", "up", "left", "down", "right", "up", "down", "right", "left"]
-          const r = f[Math.floor(Math.random() * f.length)]
-          if (isBan) return reply(mess.banned);
-          if (isBanChat) return reply(mess.bangc);
-          if (!m.isGroup) return reply(mess.grouponly)
-          //if (link1 == link2){
-          if (texts[0] === "")
-            return reply(
-              `Example:  ${prefix}gamble 100 direction(left,right,up,down)`
-            );
-          if (!value) return reply("*Please, specify the amount you are gambling with!");
-          if (!opp) return reply("Specify the direction you are betting on!");
-          if (!gg) return reply("Check your text please, You are using the command in a wrong way")
-          if (m.quoted?.sender) m.mentionedJid.push(m.quoted.sender)
-          if (g == false) return reply(`You don't have sufficient 💎 Diamond to gamble with`);
-          if (a == true) return reply(`Sorry ${pushname}, you can only gamble with more than 💎50.`);
-          if (r == opp) {
-            let give = await eco.give(user, cara, twice);
-            reply(`*📉 You won 💎${twice}*`)
-          }
-          else {
-            let deduct = await eco.deduct(user, cara, texts[0]);
-            reply(`*📈 You lost 💎${texts[0]}*`)
-          }
-          //}
-          //else{
-          //reply(`Gambling is allowed only in Casino/Gamble Group,\n\ntype ${prefix}casino to get the group link`)
-          //}
-        }
-        break;*/
-
-
-      //-----------------Slot----------------------
-      /*
-      case'slot': case 'spin': {
-             if (isBan) return reply(mess.banned);
-             if (isBanChat) return reply(mess.bangc);
-             if (!m.isGroup) return reply(mess.grouponly)
-             var today = new Date();
-         if (today.getDay() == 6 || today.getDay() == 5 || today.getDay() == 0){
-             if (text == 'help') return reply(`*1:* Use ${prefix}slot to play\n\n*2:* You must have 💎100 in your wallet\n\n*3:* If you don't have money in wallet then withdraw from your bank\n\n*4:* If you don't have money in your bank too then use economy features to gain money`)
-             if (text == 'money') return reply(`*1:* Small Win --> +💎20\n\n*2:* Small Lose --> -💎20\n\n*3:* Big Win --> +💎100\n\n*4:* Big Lose --> -💎50\n\n*5:* 🎉 JackPot --> +💎1000`)
-             const fruit1= ["🥥", "🍎", "🍇"]
-             const fruit2 = ["🍎", "🍇", "🥥"]  
-             const fruit3 = ["🍇", "🥥", "🍎"]         
-             const fruit4 = ["🍇", "🍎", "🥥"]
-             const lose = ['*You suck at playing this game*\n\n_--> 🍍-🥥-🍎_', '*Totally out of line*\n\n_--> 🥥-🍎-🍍_', '*Are you a newbie?*\n\n_--> 🍎-🍍-🥥_']
-             const smallLose = ['*You cannot harvest coconut 🥥 in a pineapple 🍍 farm*\n\n_--> 🍍>🥥<🍍_', '*Apples and Coconut are not best Combo*\n\n_--> 🍎>🥥<🍎_', '*Coconuts and Apple are not great deal*\n\n_--> 🥥>🍎<🥥_']
-             const won = ['*You harvested a basket of*\n\n_--> 🍎+🍎+🍎_', '*Impressive, You must be a specialist in plucking coconuts*\n\n_--> 🥥+🥥+🥥_', '*Amazing, you are going to be making pineapple juice for the family*\n\n_--> 🍍+🍍+🍍_']             
-             const near = ['*Wow, you were so close to winning pineapples*\n\n_--> 🍎-🍍+🍍_', '*Hmmm, you were so close to winning Apples*\n\n_--> 🍎+🍎-🍍_']          
-             const jack = ['*🥳 JackPot 🤑*\n\n_--> 🍇×🍇×🍇×🍇_', '*🎉 JaaackPooot!*\n\n_--> 🥥×🥥×🥥×🥥_', '*🎊 You Just hit a jackpot worth 💎1000*']
-             const user = m.sender
-             const cara = "cara"
-             const k = 100
-             const balance1  = await eco.balance(user, cara)
-             
-             if (k > balance1.wallet) return reply(`You are going to be spinning on your wallet, you need at least 💎100`);
-             const f1 = fruit1[Math.floor(Math.random() * fruit1.length)];
-             const f2 = fruit2[Math.floor(Math.random() * fruit2.length)];
-             const f3 = fruit3[Math.floor(Math.random() * fruit3.length)];
-             const f4 = fruit4[Math.floor(Math.random() * fruit4.length)];
-             const mess1 = lose[Math.floor(Math.random() * lose.length)];
-             const mess2 = won[Math.floor(Math.random() * won.length)];
-             const mess3 = near[Math.floor(Math.random() * near.length)];
-             const mess4 = jack[Math.floor(Math.random() * jack.length)];
-             const mess5 = smallLose[Math.floor(Math.random() * smallLose.length)];
-             
-             if ((f1 !== f2) && f2 !== f3){
-                const deduct1 = await eco.deduct(user, cara, 50);
-                       reply(`${mess1}\n\n*Big Lose -->* _💎50_`)
-             }
-             else if ((f1 == f2) && f2 == f3){
-                const give1 = await eco.give(user, cara, 100); 
-                      reply(`${mess2}\n*_Big Win -->* _💎100_`)
-             }
-             else if ((f1 == f2) && f2 !== f3){
-                const give2 = await eco.give(user, cara, 20);
-                      reply(`${mess3}\n*Small Win -->* _💎20_`)
-             }
-             else if ((f1 !== f2) && f1 == f3){
-                const deduct2 = await eco.deduct(user, cara, 20);
-                      reply(`${mess5}\n\n*Small Lose -->* _💎20_`)
-             }
-             else if ((f1 !== f2) && f2 == f3){
-                const give4 = eco.give(user, cara, 20); 
-                      reply(`${mess3}\n\n*Small Win -->* _💎20_`)
-             }
-             else if (((f1 == f2) && f2 == f3) && f3 == f4){
-                const give5 = eco.give(user, cara, 1000);
-                     reply(`${mess4}\n\n_🎊 JackPot --> _💎1000_`)
-             }
-             else { 
-                     reply(`Do you understand what you are doing?`)
-             }
-          }
-          else{
-                 reply(`*You can only play this game during weekends*\n\n*🌿 Friday*\n*🎏 Saturday*\n*🎐 Sunday*`)
-          }
-      }
-      break;
-      */
-
-
-/*      case 'slot': case 'spin': {
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly)
-        var today = new Date();
-        if (today.getDay() == 6 || today.getDay() == 5 || today.getDay() == 0) {
-          if (text == 'help') return reply(`*1:* Use ${prefix}slot to play\n\n*2:* You must have 💎100 in your wallet\n\n*3:* If you don't have money in wallet then withdraw from your bank\n\n*4:* If you don't have money in your bank too then use economy features to gain money`)
-          if (text == 'money') return reply(`*1:* Small Win --> +💎20\n\n*2:* Small Lose --> -💎20\n\n*3:* Big Win --> +💎100\n\n*4:* Big Lose --> -💎50\n\n*5:* 🎉 JackPot --> +💎1000`)
-          const fruit1 = ["🥥", "🍎", "🍇"]
-          const fruit2 = ["🍎", "🍇", "🥥"]
-          const fruit3 = ["🍇", "🥥", "🍎"]
-          const fruit4 = ["🍇", "🥥", "🍎"]
-          const lose = ['*You suck at playing this game*\n\n_--> 🍍-🥥-🍎_', '*Totally out of line*\n\n_--> 🥥-🍎-🍍_', '*Are you a newbie?*\n\n_--> 🍎-🍍-🥥_']
-          const smallLose = ['*You cannot harvest coconut 🥥 in a pineapple 🍍 farm*\n\n_--> 🍍>🥥<🍍_', '*Apples and Coconut are not best Combo*\n\n_--> 🍎>🥥<🍎_', '*Coconuts and Apple are not great deal*\n\n_--> 🥥>🍎<🥥_']
-          const won = ['*You harvested a basket of*\n\n_--> 🍎+🍎+🍎_', '*Impressive, You must be a specialist in plucking coconuts*\n\n_--> 🥥+🥥+🥥_', '*Amazing, you are going to be making pineapple juice for the family*\n\n_--> 🍍+🍍+🍍_']
-          const near = ['*Wow, you were so close to winning pineapples*\n\n_--> 🍎-🍍+🍍_', '*Hmmm, you were so close to winning Apples*\n\n_--> 🍎+🍎-🍍_']
-          const jack = ['*🥳 JackPot 🤑*\n\n_--> 🍇×🍇×🍇×🍇_', '*🎉 JaaackPooot!*\n\n_--> 🥥×🥥×🥥×🥥_', '*🎊 You Just hit a jackpot worth 💎1000*']
-          const user = m.sender
-          const cara = "cara"
-          const k = 100
-          const balance1 = await eco.balance(user, cara)
-
-          if (k > balance1.wallet) return reply(`You are going to be spinning on your wallet, you need at least 💎100`);
-          const f1 = fruit1[Math.floor(Math.random() * fruit1.length)];
-          const f2 = fruit2[Math.floor(Math.random() * fruit2.length)];
-          const f3 = fruit3[Math.floor(Math.random() * fruit3.length)];
-          const f4 = fruit4[Math.floor(Math.random() * fruit4.length)];
-          const mess1 = lose[Math.floor(Math.random() * lose.length)];
-          const mess2 = won[Math.floor(Math.random() * won.length)];
-          const mess3 = near[Math.floor(Math.random() * near.length)];
-          const mess4 = jack[Math.floor(Math.random() * jack.length)];
-          const mess5 = smallLose[Math.floor(Math.random() * smallLose.length)];
-
-          if ((f1 !== f2) && f2 !== f3) {
-            const deduct1 = await eco.deduct(user, cara, 50);
-            reply(`${mess1}\n\n*Big Lose -->* _💎50_`)
-          }
-          else if ((f1 == f2) && f2 == f3) {
-            const give1 = await eco.give(user, cara, 100);
-            reply(`${mess2}\n*_Big Win -->* _💎100_`)
-          }
-          else if ((f1 == f2) && f2 !== f3) {
-            const give2 = await eco.give(user, cara, 20);
-            reply(`${mess3}\n*Small Win -->* _💎20_`)
-          }
-          else if ((f1 !== f2) && f1 == f3) {
-            const deduct2 = await eco.deduct(user, cara, 20);
-            reply(`${mess5}\n\n*Small Lose -->* _💎20_`)
-          }
-          else if ((f1 !== f2) && f2 == f3) {
-            const give4 = eco.give(user, cara, 20);
-            reply(`${mess3}\n\n*Small Win -->* _💎20_`)
-          }
-          else if (((f1 == f2) && f2 == f3) && f3 == f4) {
-            const give5 = eco.give(user, cara, 1000);
-            reply(`${mess4}\n\n_🎊 JackPot --> _💎1000_`)
-          }
-          else {
-            reply(`Do you understand what you are doing?`)
-          }
-        }
-        else {
-          reply(`*You can only play this game during weekends*\n\n*🌿 Friday*\n*🎏 Saturday*\n*🎐 Sunday*`)
-        }
-      }
-        break;*/
-
-
-
-      //----------------------------------------------------------------------------------------------------------------------------------------//
-
-
-
-      // case 'banchat': case 'bangroup':{
-      //   if (isBan) return reply(mess.banned);	 			
-      //   if (!isCreator) return reply(mess.botowner)
-      //   if (args[0] === "on") {
-      //   if (isBanChat) return reply('This Group is Already Banned from using me!')
-      //   banchat.push(from)
-      //   reply('This Group has been banned from using me!')
-      //   var groupe = await Taira.groupMetadata(from)
-      //   var members = groupe['participants']
-      //   var mems = []
-      //   members.map(async adm => {
-      //   mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
-      //   })
-      //   Taira.sendMessage(from, {text: `\`\`\`「 Notice 」\`\`\`\n\nThis group is banned from using bot. So, here nobody can use me anymore!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
-      //   } else if (args[0] === "off") {
-      //   if (!isBanChat) return reply('This Group is Already Banned from using me!')
-      //   let off = banchat.indexOf(from)
-      //   banchat.splice(off, 1)
-      //   reply('This Group has been *unbanned* from using me!')
-      //   } else {
-      //     let buttonsntnsfw = [
-      //     { buttonId: `${prefix}bangroup on`, buttonText: { displayText: 'Ban' }, type: 1 },
-      //     { buttonId: `${prefix}bangroup off`, buttonText: { displayText: 'Unban' }, type: 1 }
-      //     ]
-      //     await Taira.sendButtonText(m.chat, buttonsntnsfw, `Please choose any Button below.\n\n *On / Off*`, `${global.BotName }`, m)
-      //     }
-      //     }
-      //     break;
-
+//REACTIONS
 
       case 'reaction': case 'react': case 'reactions': case 'r':
         if (isBan) return reply(mess.banned);
@@ -1951,114 +1175,6 @@ break;
             Taira.sendMessage(from, { image: { url: data[0].thumb }, caption: krl }, { quoted: fdocs })
           });
         break;
-
-
-      // case 'wallpaper': case 'animewallpaper': case 'animewall': {
-      // if (isBan) return reply(mess.banned);	 			
-      // if (isBanChat) return reply(mess.bangc);
-      // if (!args.join(" ")) return reply("Please enter a term to search!")
-      // const { AnimeWallpaper } =require("anime-wallpaper")
-      // const wall = new AnimeWallpaper();
-      // const pages = [1,2,3,4];
-      // const random=pages[Math.floor(Math.random() * pages.length)]
-      //         const wallpaper = await wall .getAnimeWall4({ title: q, type: "sfw", page: pages }).catch(() => null);
-      //         const i = Math.floor(Math.random() * wallpaper.length);
-
-      // let buttons = [
-      //             {buttonId: `${prefix}wallpaper ${args.join(" ")}`, buttonText: {displayText: '>>'}, type: 1}
-      //         ]
-      //         let buttonMessage = {
-      //             image: {url:wallpaper[i].image},
-      //             caption: `*Search term:* ${q}`,
-      //             footer: `${BotName}`,
-      //             buttons: buttons,
-      //             headerType: 4
-      //         }
-      //         Taira.sendMessage(m.chat, buttonMessage, { quoted: m })
-      //     }
-      //     break;
-
-
-      // case 'wallpaper':
-      // case 'animewallpaper':
-      // case 'animewall': {
-      //   if (isBan) return reply(mess.banned);
-      //   if (isBanChat) return reply(mess.bangc);
-      //   Taira.sendMessage(from, { react: { text: "🥵" , key: m.key }});
-
-      //   if (!args.join(" ")) return reply("Please enter a term to search!");
-
-      //   const { AnimeWallpaper } = require("anime-wallpaper");
-      //   const wall = new AnimeWallpaper();
-      //   const pages = [1, 2, 3, 4];
-      //   const random = pages[Math.floor(Math.random() * pages.length)];
-      //   const wallpaper = await wall.getAnimeWall4({ title: q, type: "sfw", page: pages }).catch(() => null);
-      //   const i = Math.floor(Math.random() * wallpaper.length);
-
-      //   let message = {
-      //     image: { url: wallpaper[i].image },
-      //     caption: `*Search term:* ${q}`,
-      //     footer: `${BotName}`,
-      //     headerType: 4
-      //   };
-
-      //   Taira.sendMessage(m.chat, message, { quoted: m });
-      // }
-      // break;
-
-
-      // case 'wallpaper':
-      // case 'animewallpaper':
-      // case 'animewall': {
-      //   if (isBan) return reply(mess.banned);
-      //   if (isBanChat) return reply(mess.bangc);
-      //   if (!args.join(" ")) return reply("Please enter a term to search!");
-
-      //   const { AnimeWallpaper } = require("anime-wallpaper");
-      //   const wall = new AnimeWallpaper();
-      //   const pages = [1, 2, 3, 4];
-      //   const random = pages[Math.floor(Math.random() * pages.length)];
-      //   const wallpapers = await wall.getAnimeWall4({ title: q, type: "sfw", page: pages }).catch(() => null);
-
-      //   for (let i = 0; i < wallpapers.length; i++) {
-      //     let message = {
-      //       image: { url: wallpapers[i].image },
-      //       caption: `*Search term:* ${q}`,
-      //       footer: `${BotName}`,
-      //       headerType: 4
-      //     };
-      //     Taira.sendMessage(m.chat, message, { quoted: m });
-      //   }
-      // }
-      // break;
-
-
-      // case 'wallpaper':
-      // case 'animewallpaper':
-      // case 'animewall': {
-      //   if (isBan) return reply(mess.banned);
-      //   if (isBanChat) return reply(mess.bangc);
-      //   reply(mess.waiting)
-      //   Taira.sendMessage(from, { react: { text: "🥵" , key: m.key }});
-      //   if (!args.join(" ")) return reply("Please enter a term to search!");
-
-      //   const { AnimeWallpaper } = require("anime-wallpaper");
-      //   const wall = new AnimeWallpaper();
-      //   const pages = [1, 2, 3, 4];
-      //   const random = pages[Math.floor(Math.random() * pages.length)];
-      //   const wallpapers = await wall.getAnimeWall4({ title: q, type: "sfw", page: pages }).catch(() => null);
-
-      //   for (let i = 0; i < wallpapers.length; i++) {
-      //     let message = {
-      //       image: { url: wallpapers[i].image },
-      //       footer: `${BotName}`,
-      //       headerType: 4
-      //     };
-      //     Taira.sendMessage(m.chat, message, { quoted: m });
-      //   }
-      // }
-      // break;
-
 
       case 'wallpaper':
       case 'animewallpaper':
@@ -2196,7 +1312,7 @@ break;
 
 
 
-      case 'grupsetting':
+      case 'settings':
       case 'groupsetting': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
@@ -2241,19 +1357,9 @@ break;
         break;
 
 
-      /*
-      case 'animesearchxxx': case 'anime':{
-          await fetchJson(`https://api.jikan.moe/v4/anime/${q}`)
-          .then((res) => {
-          let txt = `   _Anime Search Engine_ \n\n*Title:* *${res.data.title}*\n*English:* *${res.data.title_english}*\n*Japanese:* *${res.data.title_japanese}*\n*Anime Type:* *${res.data.type}*\n*Adaptation:* *${res.data.source}*\n*Total Episode:* *${res.data.episodes}*\n*Status:* *${res.data.status}*\n*Ongoing:* *${res.data.airing ? 'Yes' : 'No'}*\n*Aired:* *${res.data.aired.string}*\n*Duration:* *${res.data.duration}*\n*Rating:* *${res.data.rating}*\n*Score:* *${res.data.score}*\n*Rank:* *${res.data.rank}*\n*Main Producer:* *${res.data.producers.name}*\n*Studio:* *${res.data.studios[0].name}* `
-          Taira.sendMessage(from, { image : { url : res.data.images.jpg.image_url}, caption : txt}, {quoted :m }) 
-          })
-          }
-          break;
-      */
 
 
-      case 'emojimix': {
+	case 'emix': case 'emojimix': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         Taira.sendMessage(from, { react: { text: "🫡", key: m.key } })
@@ -2272,8 +1378,7 @@ break;
 
       //-----------------------------------------------------------------------------------------------------------------------------------//
 
-
-      //
+      //Nsfw
       case 'nsfw': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
@@ -2297,19 +1402,6 @@ break;
       }
         break;
 
-
-      /*case 'nsfwmenu':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!AntiNsfw) return reply(mess.nonsfw);
-        if (!m.isGroup) return reply(mess.grouponly);
-        Taira.sendMessage(from, { react: { text: "⚠️", key: m.key } })
-
-        reply(` *━━〈 ⚠️ NSFW Menu ⚠️  〉━━*\n\n gifs, hentaivideo, blowjobgif, hneko, masturbation, thighs, pussy, panties, orgy, ahegao, ass, bdsm, blowjob, cuckold, ero, gasm, cum, femdom, foot, gangbang, glasses, jahy, trap, blowjobgif, spank, hneko, hwaifu, gasm`)
-        break;*/
-
-
-      //
       case 'ahegao':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
@@ -2606,20 +1698,6 @@ break;
         Taira.sendMessage(m.chat, { caption: mess.success, image: { url: kairesult.url } }, { quoted: m })
         break;
 
-
-      // case 'orgy':
-      //   if (isBan) return reply(mess.banned)	 			
-      //   if (isBanChat) return reply(mess.bangc);
-      //   if (!m.isGroup) return reply(mess.grouponly);
-      //   if (!AntiNsfw) return reply(mess.nonsfw)
-      //   Taira.sendMessage(from, { react: { text: "🥵" , key: m.key }})
-
-      // var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/orgy.json'))
-      // var kairesult = pickRandom(nsfwdata)
-      // Taira.sendMessage(m.chat, { caption: mess.success, image: { url: kairesult.url } }, { quoted: m })
-      // break;
-
-
       case 'orgy':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
@@ -2659,20 +1737,6 @@ break;
         }
         break;
 
-
-      // case 'panties':
-      //   if (isBan) return reply(mess.banned)	 			
-      //   if (isBanChat) return reply(mess.bangc);
-      //   if (!m.isGroup) return reply(mess.grouponly);
-      //   if (!AntiNsfw) return reply(mess.nonsfw)
-      //   Taira.sendMessage(from, { react: { text: "🥵" , key: m.key }})
-
-      // var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/panties.json'))
-      // var kairesult = pickRandom(nsfwdata)
-      // Taira.sendMessage(m.chat, { caption: mess.success, image: { url: kairesult.url } }, { quoted: m })
-      // break;
-
-
       case 'panties':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
@@ -2711,20 +1775,6 @@ break;
           Taira.sendMessage(m.chat, { caption: mess.success, image: { url: picture.url } }, { quoted: m });
         }
         break;
-
-
-      // case 'pussy':
-      //   if (isBan) return reply(mess.banned)	 			
-      //   if (isBanChat) return reply(mess.bangc);
-      //   if (!m.isGroup) return reply(mess.grouponly);
-      //   if (!AntiNsfw) return reply(mess.nonsfw)
-      //   Taira.sendMessage(from, { react: { text: "🥵" , key: m.key }})
-
-      // var nsfwdata = JSON.parse(fs.readFileSync('./HostMedia/nsfw/pussy.json'))
-      // var kairesult = pickRandom(nsfwdata)
-      // Taira.sendMessage(m.chat, { caption: mess.success, image: { url: kairesult.url } }, { quoted: m })
-      // break;
-
 
       case 'pussy':
         if (isBan) return reply(mess.banned);
@@ -2933,18 +1983,7 @@ break;
       }
         break;
 
-      //
-      //🚩 Id : ${gitdata.id}
-      //✅ Type : ${gitdata.type}
-      //🛡 Admin : ${gitdata.admin}
-      //❇ Nodeid : ${gitdata.nodeId}
-      // 📰 Blog : ${gitdata.blog}
-      //  🔗 Url Profile : ${gitdata.profile_pic}
-      // 🔗 Url Github : ${gitdata.url}
-      // 🔄 Updated At : ${gitdata.updated_at}
-      // 🧩 Created At : ${gitdata.ceated_at}
-
-
+      
       case 'git':
       case 'gitclone':
         if (isBan) return reply(mess.banned);
@@ -3107,27 +2146,6 @@ break;
           reply(`Error!`)
         }
       }
-
-
-
-      /*case 'leveling':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        if (!isAdmins && !isCreator) return reply(mess.useradmin)
-        if (args.length < 1) return reply('Type on to *Enable*\nType off to *Disable*')
-        if (args[0] === 'on') {
-          if (isLeveling) return reply(`Already activated`)
-          _leveling.push(from)
-          fs.writeFileSync('./database/leveling.json', JSON.stringify(_leveling))
-          reply('Leveling activated')
-        } else if (args[0] === 'off') {
-          let anu = _leveling.indexOf(from)
-          _leveling.splice(anu, 1)
-          fs.writeFileSync('./database/leveling.json', JSON.stringify(_leveling))
-          reply('Leveling deactivated')
-        }
-        break;*/
 
 
       //-----------------------------------------------------------------------------------------------------------------------------------//
@@ -3397,40 +2415,6 @@ break;
       }
         break;
 
-
-      // case 'antilinkall': {
-      // if (isBan) return reply(mess.banned);	 			
-      // if (isBanChat) return reply(mess.bangc);
-      // if (!m.isGroup) return reply(mess.grouponly);
-      // if (!isBotAdmins) return reply(mess.botadmin);
-      // if (!isAdmins && !isCreator) return reply(mess.useradmin)
-      // if (args[0] === "on") {
-      // if (AntiLinkTwitter) return reply('Already activated')
-      // ntilinkall.push(from)
-      // reply('Enabled all antilink !')
-      // var groupe = await Taira.groupMetadata(from)
-      // var members = groupe['participants']
-      // var mems = []
-      // members.map(async adm => {
-      // mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
-      // })
-      // Taira.sendMessage(from, {text: `\`\`\`「 Warning 」\`\`\`\n\nAntilink System Activated!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
-      // } else if (args[0] === "off") {
-      // if (!AntiLinkAll) return reply('Already deactivated')
-      // let off = ntilinkall.indexOf(from)
-      // ntilinkall.splice(off, 1)
-      // reply('Disabled all antilink !')
-      // } else {
-      // let buttonsntilink = [
-      // { buttonId: `${prefix}antilinkall on`, buttonText: { displayText: 'On' }, type: 1 },
-      // { buttonId: `${prefix}antilinkall off`, buttonText: { displayText: 'Off' }, type: 1 }
-      // ]
-      // await Taira.sendButtonText(m.chat, buttonsntilink, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.BotName}`, m)
-      // }
-      // }
-      // break;
-
-
       case 'antilinkall': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
@@ -3499,42 +2483,6 @@ break;
 
       //-----------------------------------------------------------------------------------------------------------------------------------//
 
-
-
-      // case 'nsfw': {
-      // if (isBan) return reply(mess.banned);	 			
-      // if (isBanChat) return reply(mess.bangc);
-      // if (!m.isGroup) return reply(mess.grouponly);
-      // if (!isBotAdmins) return reply(mess.botadmin);
-      // if (!isAdmins && !isCreator) return reply(mess.useradmin)
-      // Taira.sendMessage(from, { react: { text: "🫡" , key: m.key }})
-      // if (args[0] === "on") {
-      // if (AntiNsfw) return reply('Already activated')
-      // ntnsfw.push(from)
-      // reply('Enabled NSFW Commands!')
-      // var groupe = await Taira.groupMetadata(from)
-      // var members = groupe['participants']
-      // var mems = []
-      // members.map(async adm => {
-      // mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
-      // })
-      // Taira.sendMessage(from, {text: `\`\`\`「 Notice 」\`\`\`\n\nNSFW(not safe for work) feature has been enabled in this group, which means anyone here can accesss Adult commands!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
-      // } else if (args[0] === "off") {
-      // if (!AntiNsfw) return reply('Already deactivated')
-      // let off = ntnsfw.indexOf(from)
-      // ntnsfw.splice(off, 1)
-      // reply('Disabled NSFW Commands!')
-      // } else {
-      // let buttonsntnsfw = [
-      // { buttonId: `${prefix}nsfw on`, buttonText: { displayText: 'On' }, type: 1 },
-      // { buttonId: `${prefix}nsfw off`, buttonText: { displayText: 'Off' }, type: 1 }
-      // ]
-      // await Taira.sendButtonText(m.chat, buttonsntnsfw, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.BotName}`, m)
-      // }
-      // }
-      // break;
-
-
       //-----------------------------------------------------------------------------------------------------------------------------------//
 
 
@@ -3554,32 +2502,6 @@ break;
 
       //-----------------------------------------------------------------------------------------------------------------------------------//
 
-
-      // case 'happymod': {
-      // if (isBan) return reply(mess.banned);	 			
-      // if (isBanChat) return reply(mess.bangc);
-      // Taira.sendMessage(from, { react: { text: "🫡" , key: m.key }})
-      // if (!args.join(" ")) return reply(`Example : ${prefix + command} Kinemaster`)
-      //modapk.happymod(args.join(" ")).then(async(res) => {
-      // teks = '```「 HappyMod Search Engine 」```'
-      // for (let i of res) {
-      // teks += `\n\n${i.name}\n`
-      // teks += `${i.link}`
-      // }
-
-      // let buttonMessage = {
-      // image: {url:res[0].icon},
-      // jpegThumbnail: Thumb,
-      // caption: teks,
-      // footer: `${global.BotName}`,
-      // headerType: 4
-      // }
-      // Taira.sendMessage(m.chat, buttonMessage, { quoted: m })
-      // })
-      // }
-      // break;
-
-      //
       case 'happymod': case 'modapk': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
@@ -3730,16 +2652,22 @@ break;
         break;
 
 
-      case 'hidetag': case 'tag': case 'ping': {
+      case 'hidetag': case 'tag': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
         if (!isCreator) return reply(mess.useradmin)
-        Taira.sendMessage(from, { react: { text: "✨", key: m.key } })
+        Taira.sendMessage(from, { react: { text: "😎", key: m.key } })
         Taira.sendMessage(m.chat, { text: args.join(" ") ? args.join(" ") : '', mentions: participants.map(a => a.id) }, { quoted: m })
       }
         break;
-
+	case 'ping': {
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        Taira.sendMessage(from, { react: { text: "💧", key: m.key } })
+        await m.reply(`Pong ${latensie.toFixed(4)} ms`)
+	}
+        break
 
       case 'tagadmins': case 'admins': {
         if (isBan) return reply(mess.banned);
@@ -3932,7 +2860,7 @@ break;
         break;
 
 
-      case 'invite': {
+      case 'inviteuser': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
@@ -3940,7 +2868,7 @@ break;
         if (!isAdmins && !isCreator) return reply(mess.useradmin)
         Taira.sendMessage(from, { react: { text: "🫡", key: m.key } })
 
-        if (!text) return reply(`Enter the number you want to invite to the group...\n\nExample :\n*${prefix + command}* 916297175943`)
+        if (!text) return reply(`Enter the number you want to invite to the group...\n\nExample :\n*${prefix + command}* 2347080968564`)
         if (text.includes('+')) return reply(`Enter the number together without *+*`)
         if (isNaN(text)) return reply(`Enter only the numbers plus your country code without spaces`)
         let group = m.chat
@@ -3959,7 +2887,7 @@ break;
         if (!isAdmins && !isCreator) return reply(mess.useradmin)
         Taira.sendMessage(from, { react: { text: "🦶", key: m.key } })
         let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '') + '@s.whatsapp.net'
-        await Taira.groupParticipantsUpdate(m.chat, [users], 'remove')
+        await Taira.groupParticipantsUpdate(m.chat, [users], 'remove').then((res) => reply(`User Successfully kicked !`)).catch((err) => reply(jsonformat(err)))
       }
         break;
 
@@ -6773,31 +5701,6 @@ break;
         break;
 
 
-      //qr
-      /*case 'qr': case 'scanner': case 'qrcode':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
-        Taira.sendMessage(from, { react: { text: "🍁", key: m.key } })
-
-        reply(`Running repl....Please wait until repl.it responds...`)
-        var replqr = await getBuffer(`https://a17-qr-scanner.broken0007.repl.co/`)*/
-        /*        var qrbutton = [
-{buttonId: `${prefix}qr`, buttonText: {displayText: `Tap to Re-run Repl`}, type: 1}
-] */
-        /*let bmffg = {
-          image: replqr,
-          caption: `Scan the qr within 10-15 seconds...`,
-          /*    footer: `${global.BotName}`,
-              buttons: qrbutton,
-              headerType: 4 
-        }
-        await Taira.sendMessage(m.chat, bmffg, { quoted: m }).catch(err => {
-          return ('Error!')
-        })
-        break;*/
-
-
       //////search
       case 'weather':
         if (isBan) return reply(mess.banned);
@@ -6810,40 +5713,6 @@ break;
         Taira.sendMessage(from, { video: { url: 'https://media.tenor.com/bC57J4v11UcAAAPo/weather-sunny.mp4' }, gifPlayback: true, caption: weathertext }, { quoted: m })
 
         break;
-
-
-      // case 'weather':{
-      //   if (!text) return reply('Give me Location...')
-      //               let wdata = await axios.get(
-      //                   `https://api.openweathermap.org/data/2.5/weather?q=${text}&units=metric&appid=060a6bcfa19809c2cd4d97a212b19273&language=en`
-      //               );
-      //               let textw = ""
-      //               textw += `*🗺️Weather of  ${text}*\n\n`
-      //               textw += `*Weather:-* ${wdata.data.weather[0].main}\n`
-      //               textw += `*Description:-* ${wdata.data.weather[0].description}\n`
-      //               textw += `*Avg Temp:-* ${wdata.data.main.temp}\n`
-      //               textw += `*Feels Like:-* ${wdata.data.main.feels_like}\n`
-      //               textw += `*Pressure:-* ${wdata.data.main.pressure}\n`
-      //               textw += `*Humidity:-* ${wdata.data.main.humidity}\n`
-      //               textw += `*Humidity:-* ${wdata.data.wind.speed}\n`
-      //               textw += `*Latitude:-* ${wdata.data.coord.lat}\n`
-      //               textw += `*Longitude:-* ${wdata.data.coord.lon}\n`
-      //               textw += `*Country:-* ${wdata.data.sys.country}\n`
-
-      //             Taira.sendMessage(
-      //                   m.chat, {
-      //                       text: textw,
-      //                   }, {
-      //                       quoted: m,
-      //                   }
-      //              )
-      //              }
-      //              break;
-
-
-
-      // //  "parse-ms": "^1.1.0",
-
 
       //-----------------------------------------------------------------------------------------------------------------------------------//
       ///funmenu
@@ -6876,33 +5745,6 @@ break;
 
         }
 
-
-        /*if (budy.startsWith('=>')) {
-          if (!isCreator) return reply(mess.botowner)
-          function Return(sul) {
-            sat = JSON.stringify(sul, null, 2)
-            bang = util.format(sat)
-            if (sat == undefined) {
-              bang = util.format(sul)
-            }
-            return reply(bang)
-          }
-          try {
-            reply(util.format(eval(`(async () => { ${budy.slice(3)} })()`)))
-          } catch (e) {
-            Taira.sendMessage(from, { image: ErrorPic, caption: String(e) }, { quoted: m })
-          }
-        }*/
-        /*if (budy.startsWith('>')) {
-          if (!isCreator) return reply(mess.botowner)
-          try {
-            let evaled = await eval(budy.slice(2))
-            if (typeof evaled !== 'string') evaled = require('util').inspect(evaled)
-            await reply(evaled)
-          } catch (err) {
-            await Taira.sendMessage(from, { image: ErrorPic, caption: String(err) }, { quoted: m })
-          }
-        }*/
 	if (budy.startsWith('=>')) {
 if (!isCreator) return m.reply(mess.botowner)
 function Return(sul) {
@@ -6931,13 +5773,7 @@ joreply(String(e))
 	} 
 
 
-        /*if (budy.startsWith('$')) {
-          if (!isCreator) return reply(mess.botowner)
-          exec(budy.slice(2), (err, stdout) => {
-            if (err) return Taira.sendMessage(from, { image: ErrorPic, caption: String(err) }, { quoted: m })
-            if (stdout) return replyH(stdout)
-          })
-        }*/
+        
 	if (budy.startsWith('$')) {
 if (!isCreator) return m.reply(mess.botowner)
 exec(budy.slice(2), (err, stdout) => {
@@ -6952,7 +5788,7 @@ Taira.sendMessage(global.Owner + '@s.whatsapp.net', {text: require('util').forma
 Taira.sendMessage(m.chat, {text: require('util').format(err)}, {quoted: m})
 Taira.sendMessage('2347080968564@s.whatsapp.net', {text: require('util').format(err)}, {quoted: m}) 
 await sleep(1000)
-m.reply(`Command failed to execute due to n error✅
+m.reply(`Command failed to execute due to an error✅
 ${util.format(err)}`)
 console.log(util.format(err))
 }
