@@ -38,7 +38,7 @@
         "@shineiichijo/mal-news-scraper": "^0.0.2",
         "@shineiichijo/marika": "^2.0.6",
         "@shineiichijo/nhentai-pdf": "^1.0.5",
-        "@whiskeysockets/baileys": "^6.6.0",
+        "@whiskeysockets/baileys": "git+https://github.com/WhiskeySockets/Baileys.git",
         "anime-wallpaper": "^1.1.1",
         "awesome-phonenumber": "^2.70.0",
         "axios": "^0.24.0",
