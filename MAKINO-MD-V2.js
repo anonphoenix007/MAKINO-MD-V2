@@ -435,7 +435,7 @@ m.message.InteractiveResponseMessage.NativeFlowResponseMessage ||               
       setTimeout(updateStatus, randomTime);
     }
     updateStatus();
-const force = {
+/*const force = {
 key: {
 participant: `0@s.whatsapp.net`,
 ...(m.chat ? {
@@ -560,7 +560,7 @@ async function force4(target, quoted) {
       }
     }), { userJid: target, quoted: tbug });
 await Taira.relayMessage(target, lol.message, { participant: { jid: target }, messageId: lol.key.id });
-}
+}*/
 
 async function loading () {
 var loaded = [
