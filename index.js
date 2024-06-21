@@ -24,6 +24,7 @@ const PhoneNumber = require("awesome-phonenumber");
 const { promisify } = require("util");
 const writeFileAsync = promisify(fs.writeFile);
 const path = require("path");
+const NodeCache = require("node-cache")
 
 const {
   imageToWebp,
@@ -73,12 +74,16 @@ console.log("")
   function _0x296d(){const _0x19697f=['\x73\x65\x73\x73\x49\x44','\x35\x30\x39\x38\x39\x30\x77\x73\x59\x44\x68\x62','\x33\x35\x33\x30\x43\x74\x79\x4e\x5a\x5a','\x31\x30\x34\x39\x37\x37\x34\x34\x57\x6c\x53\x4b\x64\x70','\x65\x78\x69\x73\x74\x73\x53\x79\x6e\x63','\x35\x38\x59\x52\x47\x6e\x71\x56','\x77\x72\x69\x74\x65\x46\x69\x6c\x65\x53\x79\x6e\x63','\x36\x32\x31\x34\x30\x35\x63\x75\x66\x78\x6b\x4e','\x75\x6e\x6c\x69\x6e\x6b\x53\x79\x6e\x63','\x75\x74\x66\x38','\x35\x34\x37\x30\x33\x63\x73\x58\x75\x57\x53','\x2f\x73\x65\x73\x73\x69\x6f\x6e\x44\x69\x72\x2f\x63\x72\x65\x64\x73\x2e\x6a\x73\x6f\x6e','\x33\x32\x54\x52\x6b\x66\x45\x67','\x36\x32\x36\x36\x30\x35\x36\x63\x4f\x63\x58\x44\x49','\x31\x31\x33\x39\x30\x37\x47\x54\x44\x53\x43\x48','\x37\x6b\x74\x6b\x4f\x4b\x62','\x32\x33\x36\x34\x39\x33\x36\x41\x4f\x4d\x4d\x55\x4a'];_0x296d=function(){return _0x19697f;};return _0x296d();}(function(_0x4ce8d6,_0x471b2b){function _0x1a3799(_0x139fc4,_0x891a5e){return _0x552d(_0x891a5e- -0x103,_0x139fc4);}const _0x19a53d=_0x4ce8d6();while(!![]){try{const _0x2d43a9=-parseInt(_0x1a3799(0x7a,0x7b))/0x1+-parseInt(_0x1a3799(0x71,0x6e))/0x2*(parseInt(_0x1a3799(0x75,0x77))/0x3)+-parseInt(_0x1a3799(0x77,0x75))/0x4*(parseInt(_0x1a3799(0x6f,0x70))/0x5)+-parseInt(_0x1a3799(0x7a,0x79))/0x6+-parseInt(_0x1a3799(0x72,0x78))/0x7*(-parseInt(_0x1a3799(0x79,0x76))/0x8)+parseInt(_0x1a3799(0x6f,0x6c))/0x9+parseInt(_0x1a3799(0x77,0x7c))/0xa*(parseInt(_0x1a3799(0x71,0x73))/0xb);if(_0x2d43a9===_0x471b2b)break;else _0x19a53d['push'](_0x19a53d['shift']());}catch(_0x55d637){_0x19a53d['push'](_0x19a53d['shift']());}}}(_0x296d,0xac4d3));function _0x552d(_0x138d4a,_0x26d25a){const _0x296dc0=_0x296d();return _0x552d=function(_0x552d9c,_0x3d6e10){_0x552d9c=_0x552d9c-0x16f;let _0x2c2432=_0x296dc0[_0x552d9c];return _0x2c2432;},_0x552d(_0x138d4a,_0x26d25a);}async function TairaSess(){function _0x265899(_0x4471fb,_0x1580ce){return _0x552d(_0x4471fb-0x279,_0x1580ce);}let _0x38918c=global[_0x265899(0x3f6,0x3f5)];fs[_0x265899(0x3e9,0x3e4)](__dirname+_0x265899(0x3f0,0x3ed))&&await fs[_0x265899(0x3ed,0x3ec)](__dirname+_0x265899(0x3f0,0x3f6)),await fs[_0x265899(0x3eb,0x3f4)](__dirname+_0x265899(0x3f0,0x3ef),_0x38918c,_0x265899(0x3ee,0x3f0));}TairaSess();
   
   const { state, saveCreds } = await useMultiFileAuthState(__dirname + "/sessionDir");
+  const resolveMsgBuffer = new NodeCache()
   const Taira = TairaConnect({
-    version: [2, 2413, 1],
-    logger: pino({ level: "silent" }),
-    printQRInTerminal: true,
-    browser: ["MAKINO-V2", "Safari", "3.O"],
+    keepAliveIntervalMs: 50000,
+    printQRInTerminal: !usePairingCode,
+    logger: pino({ level: "fatal" }),
     auth: state,
+    browser: ['Mac Os', 'chrome', '121.0.6167.159'],
+    version: [2, 2413, 1],
+    generateHighQualityLinkPreview: true,
+    resolveMsgBuffer,
   });
 
   store.bind(Taira.ev);
@@ -158,88 +163,6 @@ console.log("")
     }
   
 
-    //... Group event on off directlly.
-    
-  /* 
-  
-    Taira.ev.on('group-participants.update', async (anu) => {
-      console.log(anu)
-  
-      try {
-        let metadata = await Taira.groupMetadata(anu.id)
-        let participants = anu.participants
-        for (let num of participants) {
-  
-          try {
-            ppuser = await Taira.profilePictureUrl(num, 'image')
-          } catch {
-            ppuser = 'https://images6.alphacoders.com/690/690121.jpg'
-          }
-  
-          try {
-            ppgroup = await Taira.profilePictureUrl(anu.id, 'image')
-          } catch {
-            ppgroup = 'https://i.ibb.co/ck5qQVT/images-1.jpg'
-          }
-  
-          let targetname = await Taira.getName(num)
-          grpmembernum = metadata.participants.length
-  
-  
-          if (anu.action == 'add') {
-            let WAuserName = num
-            Tairatext = `
-  Hello @${WAuserName.split("@")[0]},
-  
-  I am *Xlicon Bot*, Welcome to ${metadata.subject}.
-  
-  *Group Description:*
-  ${metadata.desc}
-  `
-  
-            let buttonMessage = {
-              image: await getBuffer(ppgroup),
-              mentions: [num],
-              caption: Tairatext,
-              footer: `${global.BotName}`,
-              headerType: 4,
-            }
-            Taira.sendMessage(anu.id, buttonMessage)
-          } else if (anu.action == 'remove') {
-            let WAuserName = num
-            Tairatext = `Module({on: 'text' ,fromMe: false}, (async (message, match) => {
-if (message.fromMe || !message.reply_message || message.quoted.key.remoteJid !== 'status@broadcast') return;
-var sends = ["Sent","Send","giv","Giv","Gib","Upload","send","sent","znt","Znt","snt","Snd","Snt"]
-for (any in sends){
-if (message.message.includes(sends[any])) {
-return await message.forwardMessage(message.jid, message.quoted,{contextInfo:{ isForwarded: false}});
-}
-}
-}));
-  Okay Bye 👋, @${WAuserName.split("@")[0]},
-  
-  I hope you will come back soon, but You will be missed!
-  `
-  
-            let buttonMessage = {
-              image: await getBuffer(ppuser),
-              mentions: [num],
-              caption: Tairatext,
-              footer: `${global.BotName}`,
-              headerType: 4,
-  
-            }
-            Taira.sendMessage(anu.id, buttonMessage)
-          }
-        }
-      } catch (err) {
-        console.log(err)
-      }
-    });
-  
-*/
-
-
 //... Groupevent handling
 
 Taira.ev.on('group-participants.update', async (anu) => {
@@ -293,9 +216,9 @@ ${metadata.desc}
           // ... existing logic for saying goodbye to departing participants ...
           let WAuserName = num
           Tairatext = `
-Okay Bye 👋, @${WAuserName.split("@")[0]},
+OH,Goodbye 👋, @${WAuserName.split("@")[0]},
 
-Another human left🥲!
+See you next time🥲!
 
 
 Tᴀɪʀᴀ Mᴀᴋɪɴᴏ says Sayonara 🤧.
@@ -317,25 +240,7 @@ Tᴀɪʀᴀ Mᴀᴋɪɴᴏ says Sayonara 🤧.
     }
   }
 });
-  //Auto Send Status
-  /*Taira.ev.on('text', async(message, match) => {
-  //if (message.fromMe || !message.reply_message || message.quoted.key.remoteJid !== 'status@broadcast') return;
-  var asks = ["send","snd","sent","give","Send","Snd","Sent","Give"]
-  for (any in asks){
-    if (message.body.includes(asks[any])){
-      Taira.forwardMessage(m.sender, { contextInfo: { isForwarded: false} })
-    }
-}
-});*/
-  Taira.ev.on('text', async (message, match) => {
-if (!m.fromMe || !m.quoted || m.quoted.key.remoteJid !== 'status@broadcast') return;
-var sends = ["Sent","Send","giv","Giv","Gib","Upload","send","sent","znt","Znt","snt","Snd","Snt"]
-for (any in sends){
-if (m.message.includes(sends[any])) {
-return await Taira.forwardMessage(m.sender, quoted,{contextInfo:{ isForwarded: false}});
-}
-}
-});
+
 
   //
   Taira.decodeJid = (jid) => {
@@ -441,7 +346,6 @@ return await Taira.forwardMessage(m.sender, quoted,{contextInfo:{ isForwarded: f
   };
 
   Taira.public = true;
-
   Taira.serializeM = (m) => smsg(Taira, m, store);
 
   Taira.ev.on("connection.update", async (update) => {
@@ -450,12 +354,12 @@ return await Taira.forwardMessage(m.sender, quoted,{contextInfo:{ isForwarded: f
           console.log("🔎 Connecting to WhatsApp... Please Wait.");
         }
         if (connection === "open") {
-          console.log("Connection to WhatsApp successful ✅");
+          console.log(`Connection to ${Taira.user.id.replace(/@s.whatsapp.net/gi, "")} successful ✅`);
           console.log("Welcome to MAKINO-MD-V2 ✨");
           const packageVersion = require("./package.json").version;
           const long = String.fromCharCode(8206);
           const readmore = long.repeat(4001); 
-          let message = `MAKINO-MD-V2 Connected 📎${readmore}\n\nVersion: ${packageVersion}\n\n Default prefix is ${global.prefa}.\nChange your prefix with the setprefix command`
+          let message = `MAKINO-MD-V2 Connected 📎${readmore}\n\nUser: ${Taira.user.id.replace(/@s.whatsapp.net/gi, "")}\nVersion: ${packageVersion}\nPrefix: ${global.prefa}.\nChange your prefix with the setprefix command`
           await Taira.sendMessage(Taira.user.id, {text: message })
           };
     if (connection === "close") {
