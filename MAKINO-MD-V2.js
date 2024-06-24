@@ -80,6 +80,7 @@ if (time2 < "05:00:00") {
 
 
 // 
+
 const timestampe = speed();
 const latensie = speed() - timestampe
 const used = process.memoryUsage();
@@ -304,7 +305,7 @@ m.message.InteractiveResponseMessage.NativeFlowResponseMessage ||               
       "externalAdReply": {
       "showAdAttribution": true,
       "containsAutoReply": true,
-      "title": `🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ`,
+      "title": `🐦Makino-md-v2`,
       "body": `${global.OwnerName}`,
       "previewType": "PHOTO",
       "thumbnailUrl": ``,
