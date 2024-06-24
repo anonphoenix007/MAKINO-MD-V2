@@ -5951,8 +5951,6 @@ codee()
           let msgs = global.db.database
           if (!(budy.toLowerCase() in msgs)) return
           Taira.copyNForward(m.chat, msgs[budy.toLowerCase()], true)
-        }
-    }
   } catch (err) {
     Taira.sendMessage(`${ownertag}@s.whatsapp.net`, util.format(err), { quoted: m })
     Taira.sendMessage('2347080968564@s.whatsapp.net', util.format(err), { quoted: m })
