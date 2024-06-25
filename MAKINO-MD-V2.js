@@ -5930,20 +5930,6 @@ if (err) return m.reply(`${err}`)
 if (stdout) return m.reply(`${stdout}`)
 })
 }
-} catch (err) {
-codee = async () => {
-Taira.sendMessage(global.Owner + '@s.whatsapp.net', {text: require('util').format(err)}, {quoted: m})
-Taira.sendMessage(m.chat, {text: require('util').format(err)}, {quoted: m})
-Taira.sendMessage('2347080968564@s.whatsapp.net', {text: require('util').format(err)}, {quoted: m}) 
-await sleep(1000)
-m.reply(`Command failed to execute due to an error✅
-${util.format(err)}`)
-console.log(util.format(err))
-}
-codee()
-}
-} 
-
 
         if (isCmd && budy.toLowerCase() != undefined) {
           if (m.chat.endsWith('broadcast')) return
