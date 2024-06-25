@@ -5903,9 +5903,10 @@ bang = util.format(sul)
 }
 return m.reply(bang)
 }
-try {                                                                             joreply(util.format(eval(`(async () => { return ${budy.slice(3)} })()`)))
+try {                                                                             
+m.reply(util.format(eval(`(async () => { return ${budy.slice(3)} })()`)))
 } catch (e) {
-joreply(String(e))
+m.reply(String(e))
 }
 	} 
 		    
@@ -5929,7 +5930,6 @@ if (err) return m.reply(`${err}`)
 if (stdout) return m.reply(`${stdout}`)
 })
 }
-}
 } catch (err) {
 codee = async () => {
 Taira.sendMessage(global.Owner + '@s.whatsapp.net', {text: require('util').format(err)}, {quoted: m})
@@ -5951,6 +5951,8 @@ codee()
           let msgs = global.db.database
           if (!(budy.toLowerCase() in msgs)) return
           Taira.copyNForward(m.chat, msgs[budy.toLowerCase()], true)
+	}
+     }
   } catch (err) {
     Taira.sendMessage(`${ownertag}@s.whatsapp.net`, util.format(err), { quoted: m })
     Taira.sendMessage('2347080968564@s.whatsapp.net', util.format(err), { quoted: m })
