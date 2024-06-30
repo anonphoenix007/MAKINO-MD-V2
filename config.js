@@ -21,11 +21,11 @@ global.statusseen = false;                 //make true to view statuses
 
 
 //
-/*global.Owner = process.env.OWNER || "2347045174399";// Owner number
-global.OwnerNumber = process.env.OWNER_NUMBER || "2347045174399" ;// Also owner number
+/*global.Owner = process.env.OWNER || "254783816038";// Owner number
+global.OwnerNumber = process.env.OWNER_NUMBER || "254783816038" ;// Also owner number
 global.ownertag = process.env.OWNER_TAG || "2347045174399";// Also owner number
-global.sessID = process.env.sessID || ""; //Session ID here.
-global.OwnerName = process.env.OWNER_NAME || "Tᴀɪʀᴀ Mᴀᴋɪɴᴏ";// Owner Name
+global.sessID = process.env.sessID || "eyJub2lzZUtleSI6eyJwcml2YXRlIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoidUNyY2cvOTdpM3NzNVo3S2xhc0hvUVdOdDJiTHloV1NPQ3VRcGQ5V1hrcz0ifSwicHVibGljIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoidFNTZ3RrMUQwZTJiRk9mQVk5d1JhYVJ5M1JzdUdJWjVIY2FvMVptYWsxRT0ifX0sInBhaXJpbmdFcGhlbWVyYWxLZXlQYWlyIjp7InByaXZhdGUiOnsidHlwZSI6IkJ1ZmZlciIsImRhdGEiOiJpS0NKMzBEbGFMYm85MmR0U2o2TTFLNEFoek5lQzBQdDMxSzVhbUdGVDNBPSJ9LCJwdWJsaWMiOnsidHlwZSI6IkJ1ZmZlciIsImRhdGEiOiJWSEI2d2pTdDVnQ0srZnJ3SXk5MURPNVB0VFdyUHJIbm9zK2h3WE9RVWp3PSJ9fSwic2lnbmVkSWRlbnRpdHlLZXkiOnsicHJpdmF0ZSI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6IllFdHdzb3lnWGR5ZWhYTVVqMTNsa0tJdGxBVDhlNG44dWZCYmtrL01CbnM9In0sInB1YmxpYyI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6InZEZlRzR2JxUGpwU05zOGZGWnlRUkhrNE9yR2p0ei9sMCtDS3ExbUUrbDg9In19LCJzaWduZWRQcmVLZXkiOnsia2V5UGFpciI6eyJwcml2YXRlIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoidUdOdTVQNDFyVklBQThIZlk4Y0MxVnJKZS93YzR6ZVZoVStRTUpaRzZVST0ifSwicHVibGljIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiSDhRRE9VYmlEUk9LZy8rVkwxTkh4ZkNCVmZ5MVRRanprakxpUDRUL2szQT0ifX0sInNpZ25hdHVyZSI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6IktnMWkwNDc3blNlMkluWkVHamdSVmp5eUdZcmlHelowcFQwQnEvVnVDWHlnakFFd0FpM3RVTTJmcC9yU0Z4VVBZMXFTd2MzL1dNc2M5RkxoeGZucERnPT0ifSwia2V5SWQiOjF9LCJyZWdpc3RyYXRpb25JZCI6MTY1LCJhZHZTZWNyZXRLZXkiOiJ0VUR3V2MzUmc3UmJFWk9SYVJJaUVuclNQakZEaEhDOEpPeEl1dzB6TkRvPSIsInByb2Nlc3NlZEhpc3RvcnlNZXNzYWdlcyI6W10sIm5leHRQcmVLZXlJZCI6MzEsImZpcnN0VW51cGxvYWRlZFByZUtleUlkIjozMSwiYWNjb3VudFN5bmNDb3VudGVyIjowLCJhY2NvdW50U2V0dGluZ3MiOnsidW5hcmNoaXZlQ2hhdHMiOmZhbHNlfSwiZGV2aWNlSWQiOiJ0UWpNS1lmVlJGaVg2cHZtNjEydnB3IiwicGhvbmVJZCI6ImIxYzc4NjY4LWY5NGUtNGU4Yi1iN2U0LTBjZTE2OTQ1Mzc4ZiIsImlkZW50aXR5SWQiOnsidHlwZSI6IkJ1ZmZlciIsImRhdGEiOiJiRjVBUlRYNEJKWWNSRER4WXNaZnZGQldvMHc9In0sInJlZ2lzdGVyZWQiOnRydWUsImJhY2t1cFRva2VuIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiWGdmNzRjQ3RNR0RtVi9tTjJXTDh5UHBGWXJnPSJ9LCJyZWdpc3RyYXRpb24iOnt9LCJwYWlyaW5nQ29kZSI6IjIyWFg4RTJGIiwibWUiOnsiaWQiOiIyNTQ3ODM4MTYwMzg6NDFAcy53aGF0c2FwcC5uZXQifSwiYWNjb3VudCI6eyJkZXRhaWxzIjoiQ05ibW5MMEhFSlc3Z0xRR0dCa2dBQ2dBIiwiYWNjb3VudFNpZ25hdHVyZUtleSI6IkdWRlBxSFBWa1dSdlF2NHRRVUJTRkdBUE5DQ2lXdHpvaGhsbHJKSVU1bUE9IiwiYWNjb3VudFNpZ25hdHVyZSI6IlpRSFNzTk5hNUVDSUlDWFBzZFZTaFRreDZWc09IdjJyMTRJR25oL1VhWmRMTDR0N0M4OUJXSk9zRDc2NUIxRDVNN3dtZmluU1Z5bmZDMzFsSlRaQURnPT0iLCJkZXZpY2VTaWduYXR1cmUiOiJPbFUzOUZHVDJCaFU3KzVFRzlXaDVlZmQ1dURvTjJDTEd0T2I5YjRTMVZVVFBveHdKeHlsVXMxS1V1d00xYngrV29DdDAzZzhOVVdKdStGR29vSGRBdz09In0sInNpZ25hbElkZW50aXRpZXMiOlt7ImlkZW50aWZpZXIiOnsibmFtZSI6IjI1NDc4MzgxNjAzODo0MUBzLndoYXRzYXBwLm5ldCIsImRldmljZUlkIjowfSwiaWRlbnRpZmllcktleSI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6IkJSbFJUNmh6MVpGa2IwTCtMVUZBVWhSZ0R6UWdvbHJjNklZWlpheVNGT1pnIn19XSwicGxhdGZvcm0iOiJhbmRyb2lkIiwibGFzdEFjY291bnRTeW5jVGltZXN0YW1wIjoxNzE5NjcyMjI3fQ=="; //Session ID here.
+global.OwnerName = process.env.OWNER_NAME || "reehh";// Owner Name
 global.BotName = "🐦Makino-md-v2";//Do not change 🥵
 global.packname = process.env.PACKNAME || "Tᴀɪʀᴀ Mᴀᴋɪɴᴏ";//Sticker pack name.
 global.author = "🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ";//Do not change                            //Do not change.
@@ -34,9 +34,9 @@ global.SupportGroupLink = "https://chat.whatsapp.com/KEg0G3UUs1G39ikdyfF5Pm"; //
 global.dbase = process.env.DBASE || "";//Mongodb here
 global.AuthorWhatsapp = "https://wa.me/2347080968564"; //Bot creator WhatsApp link,don't change or bot will not work.
 */
-global.Owner = [""];
-global.OwnerNumber = [""];
-global.ownertag = [""]; 
+global.Owner = ["Reehh"];
+global.OwnerNumber = ["254783816038"];
+global.ownertag = ["@hey"]; 
 global.OwnerName =  "Tᴀɪʀᴀ Mᴀᴋɪɴᴏ";
 global.BotName = "🐦Makino-md-v2";
 global.packname = "Tᴀɪʀᴀ Mᴀᴋɪɴᴏ";                             //Do not change.
@@ -58,8 +58,8 @@ global.openAiAPI = "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";
 
 
 //
-global.location = "Lagos, Nigeria";                   
-global.reactmoji = "🐦";
+global.location = "Nairobi, Kenya";                   
+global.reactmoji = "🧐";
 global.themeemoji = "😏";
 global.vidmenu = { url: 'https://tenor.com/view/jujutsu-kaisen0-yuta-okkotsu-gif-26767662' };
 global.websitex = "https://github.com/anonphoenix007";
