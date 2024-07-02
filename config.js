@@ -1,8 +1,5 @@
 const fs = require("fs");
 const chalk = require("chalk");
-//const fs = require('fs-extra')
-//if (fs.existsSync('config.env')) require('dotenv').config({ path: __dirname+'/config.env' })
-
 
 //to enable function - true
 //to disable function - false
@@ -20,20 +17,6 @@ global.groupevent = true;                //This is the new variable for controll
 global.statusseen = false;                 //make true to view statuses 
 
 
-//
-/*global.Owner = process.env.OWNER || "2347045174399";// Owner number
-global.OwnerNumber = process.env.OWNER_NUMBER || "2347045174399" ;// Also owner number
-global.ownertag = process.env.OWNER_TAG || "2347045174399";// Also owner number
-global.sessID = process.env.sessID || ""; //Session ID here.
-global.OwnerName = process.env.OWNER_NAME || "Tᴀɪʀᴀ Mᴀᴋɪɴᴏ";// Owner Name
-global.BotName = "🐦Makino-md-v2";//Do not change 🥵
-global.packname = process.env.PACKNAME || "Tᴀɪʀᴀ Mᴀᴋɪɴᴏ";//Sticker pack name.
-global.author = "🐦Makino-md-v2 ᴍᴜʟᴛɪ-ᴅᴇᴠɪᴄᴇ";//Do not change                            //Do not change.
-global.BotSourceCode = "https://github.com/anonphoenix007/MAKINO-MD-V2"; //Do not change or bot will not function.
-global.SupportGroupLink = "https://chat.whatsapp.com/KEg0G3UUs1G39ikdyfF5Pm"; //Do not change!
-global.dbase = process.env.DBASE || "";//Mongodb here
-global.AuthorWhatsapp = "https://wa.me/2347080968564"; //Bot creator WhatsApp link,don't change or bot will not work.
-*/
 global.Owner = [""];
 global.OwnerNumber = [""];
 global.ownertag = [""]; 
@@ -47,24 +30,10 @@ global.sessID = process.env.sessID || `{"noiseKey":{"private":{"type":"Buffer","
 global.SupportGroupLink = "https://chat.whatsapp.com/KEg0G3UUs1G39ikdyfF5Pm"; //Do not change!
 //global.dbase = process.env.DBASE || "";//Mongodb here
 global.AuthorWhatsapp = "https://wa.me/2347080968564"; //Bot creator WhatsApp link,don't change or bot will not work.
-//
-global.sessionName = "session";                          //Do not change.
 
 
 //
-global.prefa = ["/"];
-//process.env.PREFIX || "/";// Prefix                                 //Default prefix here.
-global.openAiAPI = "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";
-
-
-//
-global.location = "Lagos, Nigeria";                   
-global.reactmoji = "🐦";
-global.themeemoji = "😏";
-global.vidmenu = { url: 'https://tenor.com/view/jujutsu-kaisen0-yuta-okkotsu-gif-26767662' };
-global.websitex = "https://github.com/anonphoenix007";
-global.lolhuman = "KaysaS";
-
+global.prefa = ["/"]
 
 //
 global.BotLogo = fs.readFileSync("./Assets/pic1.jpg");
@@ -111,21 +80,3 @@ global.mess = {
     nonsfw: 'Dont be a pervert,idiot! This is not a NSFW enabled group!'
     
 }
-
-global.limitawal = {
-  premium: "Infinity",
-  free: 2,
-  monayawal: 1000,
-};
-
-global.limitawal = {
-  rakyat: "Infinity",
-  free: 100,
-};
-
-global.APIs = {
-  zenz: "https://zenzapis.xyz",
-};
-global.APIKeys = {
-  "https://zenzapis.xyz": "5d1197db351b",
-};
