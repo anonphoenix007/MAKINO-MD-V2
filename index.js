@@ -724,7 +724,7 @@ TairaStart()
 let file = require.resolve(__filename);
 fs.watchFile(file, () => {
     fs.unwatchFile(file);
-    console.log(chalk.yellowBright(`File ${__filename}` updated .));
+    console.log(chalk.yellowBright(`File ${__filename} updated.`));
     delete require.cache[file];
     require(file);
 });
