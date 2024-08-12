@@ -34,7 +34,7 @@ const { Low, JSONFile } = low
 const mongoDB = require('./lib/mongoDB')
 
 const { imageToWebp, videoToWebp, writeExifImg, writeExifVid } = require('./lib/exif');
-const { smsg, isUrl, generateMessageTag, getBuffer, getSizeMedia, fetchJson, sleep } = require('./lib/myfunction');
+const { smsg, isUrl, generateMessageTag, getBuffer, getSizeMedia, fetchJson, sleep } = require('./lib/myfunc');
 
 const { color } = require('./lib/color');
 
