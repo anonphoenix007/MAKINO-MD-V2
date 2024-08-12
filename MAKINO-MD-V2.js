@@ -377,6 +377,24 @@ m.message.InteractiveResponseMessage.NativeFlowResponseMessage ||               
       }
     }
 
+	///Auto Block DM
+     if (global.PM_BLOCKER == 'true' && m.chat.endsWith("@s.whatsapp.net")) {
+            return Taira.updateBlockStatus(m.sender, 'block')
+        }
+
+           
+     // anti bot
+        if (global.ANTI_BOT == 'true' && m.isBaileys) {
+          if (!isBotAdmins) {
+            reply("_*Bot detected,promote MAKINO-MD-V2 to kick bot user*_");
+          return;
+           }
+           reply(`Bot detected ,User *@${m.sender.split("@")[0]}*_ Kicked successfully 🔪.`, { mentions: [m.sender] });
+           Taira.groupParticipantsUpdate(m.chat, [m.sender], 'remove');
+           //m.deleteMsg(m.key);
+           return;
+	}
+        
 
 
     // //Dm and Groups Autoreply/Bot chat
