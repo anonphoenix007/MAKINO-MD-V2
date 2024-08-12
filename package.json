@@ -31,6 +31,7 @@
         "qrcode-terminal": "^0.12.0"
     },
     "dependencies": {
+        "@colors/colors": "^1.5.0",
         "@adiwajshing/keyed-db": "^0.2.4",
         "@bochilteam/scraper": "^4.2.3",
         "@develoka/angka-terbilang-js": "^1.4.2",
