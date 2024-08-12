@@ -220,7 +220,6 @@ Taira.setStatus = (status) => {
                 } else Taira.end(`Unknown DisconnectReason: ${reason}|${connection}`)
             }
             if (update.connection == "connecting" || update.receivedPendingNotifications == "false") {
-                console.log(color(`Mengkoneksikan`,`${randomcolor}`)) //Console-1
             }
             
              if (connection === "connecting") {
