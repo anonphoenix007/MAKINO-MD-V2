@@ -17,6 +17,7 @@ global.groupevent = true;                //This is the new variable for controll
 global.statusseen = false;                 //make true to view statuses 
 global.ANTI_BOT = false;
 global.PM_BLOCKER = false;
+global.CHATBOT = false;
 
 
 global.Owner = [""];
