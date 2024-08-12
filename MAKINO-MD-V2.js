@@ -399,11 +399,11 @@ m.message.InteractiveResponseMessage.NativeFlowResponseMessage ||               
 
     // //Dm and Groups Autoreply/Bot chat
 
-    // if (!isCmd && !m.isGroup){
-    //     const botreply = await axios.get(`http://api.brainshop.ai/get?bid=166512&key=5nz1Ha6nS9Zx1MfT&uid=[uid]&msg=[msg]=[${budy}]`)
-    //     txt = `${botreply.data.cnt}`
-    //     m.reply(txt)
-    //     }    
+     if (!isCmd && !m.isGroup && global.CHATBOT == 'true'){
+         const reslt = await axios.get(`http://api.brainshop.ai/get?bid=182984&key=Z6xmJK2QWmzJ0Ohk&uid=[uid]&msg=[msg]=[${budy}]`)
+         const outp = `${reslt.data.cnt}`
+         m.reply(outp)
+         }    
 
 
 
