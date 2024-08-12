@@ -425,6 +425,19 @@ m.message.InteractiveResponseMessage.NativeFlowResponseMessage ||               
       setTimeout(updateStatus, randomTime);
     }
     updateStatus();
+
+const statrp = {
+	key: {
+		remoteJid: 'status@broadcast',
+		fromMe: false, 
+		participant: '0@s.whatsapp.net'
+	},
+    message: {
+        listResponseMessage: {
+            title: `♱MAKINO-MD-V2♱`
+        }
+    }
+} 
 	
 const quote = {
 key: {
@@ -437,7 +450,7 @@ remoteJid: "status@broadcast"
 "interactiveMessage": { 
 "header": {
 "hasMediaAttachment": true,
-"jpegThumbnail": fs.readFileSync(`./image/latx.png`)
+"jpegThumbnail": fs.readFileSync(`./image/empty.png`)
 },
 "nativeFlowMessage": {
 "buttons": [
