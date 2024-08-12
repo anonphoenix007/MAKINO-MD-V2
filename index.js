@@ -61,7 +61,7 @@ const question = (text) => {
 
 async function TairaStart() {
 const store = makeInMemoryStore({ logger: pino().child({ level: 'silent', stream: 'store' }) });
-const { state, saveCreds } = await useMultiFileAuthState(`sessionDir`);
+const { state, saveCreds } = await useMultiFileAuthState(`./sessionDir`);
 const { version, isLatest } = await fetchLatestBaileysVersion();
 const resolveMsgBuffer = new NodeCache()
 
@@ -78,17 +78,13 @@ const Taira = TairaConnect({
 })
 
     if (usePairingCode && !Taira.authState.creds.registered) {
-    say(`Spider\nV5\n`, {
+    say(`MAKINO\nMD\n\nV2`, {
         font: 'block',
         align: 'center',
         gradient: [randomcolor, randomcolor]
     })
-say(`MAKINO-V2`, {
-  font: 'console',
-  align: 'center',
-  gradient: [randomcolor, randomcolor]
-})
-    const phoneNumber = await question(`💢 Input your phone number\n<🩸 EXAMPLE : 254742491666\n Number without (+): `);
+	    
+    const phoneNumber = await question(` Input your phone number\n<🩸 EXAMPLE : 2347080968564\n Number without (+): `);
    // Request and display the pairing code
    const code = await Taira.requestPairingCode(phoneNumber.trim());
    console.log(color(`[ # ] enter this code into whatspp to pair : ${code}`, `${randomcolor}`));
@@ -271,7 +267,7 @@ Taira.setStatus = (status) => {
           };
 
         } catch (err) {
-            console.log('Error Di Connection.update ' + err);
+            console.log('Error in  Connection.update ' + err);
                 TairaStart()
         }
 
@@ -686,7 +682,7 @@ Taira.ev.on('messages.upsert', async chatUpdate => {
             return msg?.message
         }
         return {
-            conversation: "Hi, I'm King Sam :D"
+            conversation: "♱MAKINO-MD-V2♱"
         }
     }
     //respon polling
@@ -728,7 +724,7 @@ TairaStart()
 let file = require.resolve(__filename);
 fs.watchFile(file, () => {
     fs.unwatchFile(file);
-    console.log(chalk.yellowBright(`Update File Terbaru ${__filename}`));
+    console.log(chalk.yellowBright(`File ${__filename}` updated .));
     delete require.cache[file];
     require(file);
 });
