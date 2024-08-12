@@ -102,26 +102,6 @@ console.log("")
     }
   });
 
-
-  /* 
- Taira.ev.on('groups.update', async pea => {
-     
-        try {     
-        ppgc = await Taira.profilePictureUrl(pea[0].id, 'image')
-        } catch {
-        ppgc = 'https://wallpapercave.com/wp/wp10524580.jpg'
-        }
-        let wm_fatih = { url : ppgc }
-        if (pea[0].announce == true) {
-        Taira.send5ButImg(pea[0].id, `Grop has been *Closed!* Only *Admins* can send Messages!`, `${BotName}`, wm_fatih, [])
-        } else if(pea[0].announce == false) {
-        Taira.send5ButImg(pea[0].id, `Grop has been *Opened!* Now *Everyone* can send Messages!`, `${BotName}`, wm_fatih, [])
-        } else {
-        Taira.send5ButImg(pea[0].id, `Group Subject has been updated to *${pea[0].subject}*`, `${BotName}`, wm_fatih, [])
-      }
-     })
- */
-
      Taira.ev.on('groups.update', async pea => {
       //console.log(pea)
       // Get Profile Picture Group
@@ -157,90 +137,6 @@ console.log("")
       return list[Math.floor(list.length * Math.random())]
     }
   
-
-    //... Group event on off directlly.
-    
-  /* 
-  
-    Taira.ev.on('group-participants.update', async (anu) => {
-      console.log(anu)
-  
-      try {
-        let metadata = await Taira.groupMetadata(anu.id)
-        let participants = anu.participants
-        for (let num of participants) {
-  
-          try {
-            ppuser = await Taira.profilePictureUrl(num, 'image')
-          } catch {
-            ppuser = 'https://images6.alphacoders.com/690/690121.jpg'
-          }
-  
-          try {
-            ppgroup = await Taira.profilePictureUrl(anu.id, 'image')
-          } catch {
-            ppgroup = 'https://i.ibb.co/ck5qQVT/images-1.jpg'
-          }
-  
-          let targetname = await Taira.getName(num)
-          grpmembernum = metadata.participants.length
-  
-  
-          if (anu.action == 'add') {
-            let WAuserName = num
-            Tairatext = `
-  Hello @${WAuserName.split("@")[0]},
-  
-  I am *Xlicon Bot*, Welcome to ${metadata.subject}.
-  
-  *Group Description:*
-  ${metadata.desc}
-  `
-  
-            let buttonMessage = {
-              image: await getBuffer(ppgroup),
-              mentions: [num],
-              caption: Tairatext,
-              footer: `${global.BotName}`,
-              headerType: 4,
-            }
-            Taira.sendMessage(anu.id, buttonMessage)
-          } else if (anu.action == 'remove') {
-            let WAuserName = num
-            Tairatext = `Module({on: 'text' ,fromMe: false}, (async (message, match) => {
-if (message.fromMe || !message.reply_message || message.quoted.key.remoteJid !== 'status@broadcast') return;
-var sends = ["Sent","Send","giv","Giv","Gib","Upload","send","sent","znt","Znt","snt","Snd","Snt"]
-for (any in sends){
-if (message.message.includes(sends[any])) {
-return await message.forwardMessage(message.jid, message.quoted,{contextInfo:{ isForwarded: false}});
-}
-}
-}));
-  Okay Bye 👋, @${WAuserName.split("@")[0]},
-  
-  I hope you will come back soon, but You will be missed!
-  `
-  
-            let buttonMessage = {
-              image: await getBuffer(ppuser),
-              mentions: [num],
-              caption: Tairatext,
-              footer: `${global.BotName}`,
-              headerType: 4,
-  
-            }
-            Taira.sendMessage(anu.id, buttonMessage)
-          }
-        }
-      } catch (err) {
-        console.log(err)
-      }
-    });
-  
-*/
-
-
-//... Groupevent handling
 
 Taira.ev.on('group-participants.update', async (anu) => {
   if (global.groupevent) { // Check if group event handling is enabled ...
@@ -309,25 +205,7 @@ GoodBye @${WAuserName.split("@")[0]} 👋
     }
   }
 });
-  //Auto Send Status
-  /*Taira.ev.on('text', async(message, match) => {
-  //if (message.fromMe || !message.reply_message || message.quoted.key.remoteJid !== 'status@broadcast') return;
-  var asks = ["send","snd","sent","give","Send","Snd","Sent","Give"]
-  for (any in asks){
-    if (message.body.includes(asks[any])){
-      Taira.forwardMessage(m.sender, { contextInfo: { isForwarded: false} })
-    }
-}
-});*/
-  Taira.ev.on('text', async (message, match) => {
-if (!m.fromMe || !m.quoted || m.quoted.key.remoteJid !== 'status@broadcast') return;
-var sends = ["Sent","Send","giv","Giv","Gib","Upload","send","sent","znt","Znt","snt","Snd","Snt"]
-for (any in sends){
-if (m.message.includes(sends[any])) {
-return await Taira.forwardMessage(m.sender, quoted,{contextInfo:{ isForwarded: false}});
-}
-}
-});
+
 
   //
   Taira.decodeJid = (jid) => {
@@ -445,7 +323,7 @@ return await Taira.forwardMessage(m.sender, quoted,{contextInfo:{ isForwarded: f
           console.log("Connection to WhatsApp successful ✅");
           console.log("Welcome to MAKINO-MD-V2 ✨");
           const userName = Taira.user.name ? Taira.user.name : global.BotName;
-          console.log(chalk.bold(chalk.cyan.blue('♱ MAKINO-MD-V2 User Info')));
+          console.log('♱ MAKINO-MD-V2 User Info');
           console.log(`♱ Name     : ${userName}`);
           console.log(`♱ Number   : ${Taira.user.id.split(':')[0]}`);
           console.log(`♱ Status   : Connected`);
@@ -459,6 +337,21 @@ return await Taira.forwardMessage(m.sender, quoted,{contextInfo:{ isForwarded: f
           ♱ Status   : Connected
           ♱ Version: : ${packageVersion}
           ♱ Prefix   : ${global.prefa}
+          ♱ Creator  : https://t.me/Tha_Healer
+          ♱ GitHub   : https://github.com/anonphoenix007
+          ${readmore}
+
+  ⠛⠛⣿⣿⣿⣿⣿⡷⢶⣦⣶⣶⣤⣤⣤⣀⠀⠀⠀
+ ⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡀⠀
+ ⠀⠀⠀⠉⠉⠉⠙⠻⣿⣿⠿⠿⠛⠛⠛⠻⣿⣿⣇⠀
+ ⠀⠀⢤⣀⣀⣀⠀⠀⢸⣷⡄⠀⣁⣀⣤⣴⣿⣿⣿⣆
+ ⠀⠀⠀⠀⠹⠏⠀⠀⠀⣿⣧⠀⠹⣿⣿⣿⣿⣿⡿⣿
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠛⠿⠇⢀⣼⣿⣿⠛⢯⡿⡟
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠦⠴⢿⢿⣿⡿⠷⠀⣿⠀
+ ⠀⠀⠀⠀⠀⠀⠀⠙⣷⣶⣶⣤⣤⣤⣤⣤⣶⣦⠃⠀
+ ⠀⠀⠀⠀⠀⠀⠀⢐⣿⣾⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀
+ ⠀⠀⠀⠀⠀⠀⠀⠈⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠻⢿⣿⣿⣿⣿⠟⠁
 
           change prefix with setprefix command!
           ` 
@@ -496,7 +389,6 @@ return await Taira.forwardMessage(m.sender, quoted,{contextInfo:{ isForwarded: f
         console.log(`Unknown DisconnectReason: ${reason}|${connection}`);
       }
     }
-    //console.log('Connected...', update)
   });
 
   Taira.ev.on("creds.update", saveCreds);
