@@ -5,8 +5,9 @@
   <a href="https://t.me/Tha_Healer">
     <img alt="X-2.0" height="300" src="https://telegra.ph/file/7aa528767ed96ddc17bc2.jpg">
     <h1 align="center">MAKINO-MD-V2</h1>
-    <h4 align="center">Major Update.</h4>
-    <h3 align="center">TODO: Bug menu</h3>
+    <h4 align="center">Major Update available.</h4>
+    <h3 align="center">Bug Menu</h3>
+    <h3 align="center">menutype command, 5 Menu types</h3>
   </a>
 </p>
 <p align="center">
