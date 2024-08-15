@@ -7,8 +7,8 @@
         "lib": "lib"
     },
     "scripts": {
-        "start": "npm install chalk && node server.js",
-        "test": "npm install chalk && node server.js"
+        "start": "npm install chalk @hapi/boom && node server.js",
+        "test": "npm install chalk @hapi/boom && node server.js"
     },
     "repository": {
         "type": "git",
