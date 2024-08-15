@@ -9,7 +9,7 @@ RUN apt-get update && \
 
 COPY package.json .
 
-RUN npm install && npm install qrcode-terminal chalk
+RUN npm install && npm install qrcode-terminal chalk @hapi/boom
 
 COPY . .
 
