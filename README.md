@@ -43,10 +43,9 @@ If you create a clone of my bot then Don't forget to give ***Credit***
 2. Update [`config.js`] if you want more functions or skip
 ```js
 global.Owner = ["2347080968564"]; 
-global.OwnerNumber = ["2347080968564"];
-global.ownertag = ["2347080968564"];
 global.OwnerName = "Tᴀɪʀᴀ Mᴀᴋɪɴᴏ";
 global.BotName = "🐦Makino-md-v2";
+global.sessID = process.env.sessID || `session ID here`
 ```
 
 #### DEPLOY TO HEROKU 
