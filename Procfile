@@ -1,1 +1,1 @@
-worker: npm i pm2 -g && pm2 install ffmpeg && node server.js
+worker: npm i pm2 chalk -g && pm2 install ffmpeg && node server.js
