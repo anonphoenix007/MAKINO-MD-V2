@@ -8,6 +8,8 @@
     <h4 align="center">Major Update available.</h4>
     <h3 align="center">Bug Menu</h3>
     <h3 align="center">menutype command, 5 Menu types</h3>
+    <h3 align="center">Added Jid/getjid command</h3>
+       <h3 align="center">Added Different menu(Core menu,all menu ...)</h3>
   </a>
 </p>
 <p align="center">
