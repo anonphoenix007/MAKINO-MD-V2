@@ -7,8 +7,8 @@
         "lib": "lib"
     },
     "scripts": {
-        "start": "npm install chalk @hapi/boom && node server.js",
-        "test": "npm install chalk @hapi/boom && node server.js"
+        "start": "npm install chalk && node server.js",
+        "test": "npm install chalk && node server.js"
     },
     "repository": {
         "type": "git",
@@ -35,7 +35,7 @@
         "@adiwajshing/keyed-db": "^0.2.4",
         "@bochilteam/scraper": "^4.2.3",
         "@develoka/angka-terbilang-js": "^1.4.2",
-        "@hapi/boom": "^10.0.1",
+        "@hapi/boom": "^10.0.0",
         "@shineiichijo/mal-news-scraper": "^0.0.2",
         "@shineiichijo/marika": "^2.0.6",
         "@shineiichijo/nhentai-pdf": "^1.0.5",
