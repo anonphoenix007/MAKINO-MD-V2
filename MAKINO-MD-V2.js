@@ -224,7 +224,6 @@ m.message.InteractiveResponseMessage.NativeFlowResponseMessage ||               
     const args = body.trim().split(/ +/).slice(1)
     const pushname = m.pushName || "No Name"
     const botNumber = await Taira.decodeJid(Taira.user.id)
-    global.OwnerNumber[""]
     const _auth = global.OwnerNumber
    // const owners = [global.Owner,botNumber,_premium].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const isCreator = [_auth, botNumber, ...global.Owner].map(v => String(v).replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
