@@ -8,7 +8,7 @@ const {
 } = require("@whiskeysockets/baileys")
 const pino = require('pino')
 const chalk = require('chalk')
-const { Boom } = require('@hapi/boom')
+//const { Boom } = require('@hapi/boom')
 const fs = require('fs')
 const FileType = require('file-type')
 const path = require('path')
@@ -194,7 +194,10 @@ Taira.setStatus = (status) => {
         } = update
         try {
             if (connection === 'close') {
-                let reason = new Boom(lastDisconnect?.error)?.output.statusCode
+                //let reason = new Boom(lastDisconnect?.error)?.output.statusCode
+		let reason = lastDisconnect.error
+        ? lastDisconnect?.error?.output.statusCode
+        : 0; 
                 if (reason === DisconnectReason.badSession) {
                     console.log(`Bad Session File, Please Delete Session and Scan Again`);
                     Taira()
