@@ -38,7 +38,7 @@ global.BotLogo = fs.readFileSync("./Assets/pic1.jpg");
 global.Thumb = fs.readFileSync("./Assets/pic7.jpg");
 global.Thumb1 = fs.readFileSync("./Assets/pic5.jpg");
 global.ErrorPic = fs.readFileSync("./Assets/pic7.jpg");
-
+global.OwnerNumber = [""] //Ignore,Unused
 
 //
 global.ntilinkytvid = []
