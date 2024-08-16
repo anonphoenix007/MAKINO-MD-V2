@@ -5341,9 +5341,49 @@ if(global.menutype === "v1"){
 } else if(global.menutype === "v2"){
   await Taira.sendMessage(m.chat , { text: helpMenuText}, {quoted: statrp })
   } else if (global.menutype === "v3"){
-  var _0x9e5cb0=_0x1279;function _0x5f06(){var _0x507a37=['sendMessage','chat','5754490uUubqO','1562720qpMsau','1925541AZqFcP','1219830RiysIw','5009034CpfDdZ','https://whatsapp.com/channel/0029Vag5l2ALSmbi14YryJ2r','https://graph.org/file/fad20d219e426d3c65e5f.mp4','https://telegra.ph/file/dfad7a7afb54498391945.jpg','Taira\x20Tech','Taira\x20Makino','556281JZigbC','120363320283062687@newsletter','47166wIlNPM','72KhpsAO','32ywpLor'];_0x5f06=function(){return _0x507a37;};return _0x5f06();}function _0x1279(_0x47462d,_0x355136){var _0x5f062b=_0x5f06();return _0x1279=function(_0x127975,_0x2b2694){_0x127975=_0x127975-0x11f;var _0x8a6464=_0x5f062b[_0x127975];return _0x8a6464;},_0x1279(_0x47462d,_0x355136);}(function(_0x15aa09,_0xbce77d){var _0x374db9=_0x1279,_0x8c9fdd=_0x15aa09();while(!![]){try{var _0x44d551=-parseInt(_0x374db9(0x122))/0x1+parseInt(_0x374db9(0x126))/0x2*(parseInt(_0x374db9(0x124))/0x3)+parseInt(_0x374db9(0x12a))/0x4+parseInt(_0x374db9(0x12c))/0x5+-parseInt(_0x374db9(0x12d))/0x6+-parseInt(_0x374db9(0x129))/0x7+parseInt(_0x374db9(0x125))/0x8*(parseInt(_0x374db9(0x12b))/0x9);if(_0x44d551===_0xbce77d)break;else _0x8c9fdd['push'](_0x8c9fdd['shift']());}catch(_0x323207){_0x8c9fdd['push'](_0x8c9fdd['shift']());}}}(_0x5f06,0x92215),Taira[_0x9e5cb0(0x127)](m[_0x9e5cb0(0x128)],{'video':{'url':_0x9e5cb0(0x12f)},'caption':helpMenuText,'gifPlayback':!![],'contextInfo':{'forwardingScore':0x3e7,'isForwarded':!![],'mentionedJid':[sender],'forwardedNewsletterMessageInfo':{'newsletterName':_0x9e5cb0(0x120),'newsletterJid':_0x9e5cb0(0x123)},'externalAdReply':{'showAdAttribution':!![],'title':'♱MAKINO-MD-V2♱♡⃤','body':_0x9e5cb0(0x121),'thumbnailUrl':_0x9e5cb0(0x11f),'sourceUrl':_0x9e5cb0(0x12e),'mediaType':0x1,'renderLargerThumbnail':!![]}}},{'quoted':m})); 
+  Taira.sendMessage(m.chat, {
+video : { url: "https://graph.org/file/fad20d219e426d3c65e5f.mp4" }, 
+caption: helpMenuText,
+gifPlayback: true,
+contextInfo: {
+forwardingScore: 999,
+isForwarded: true,
+mentionedJid: [sender],
+forwardedNewsletterMessageInfo: {
+newsletterName: "Taira Tech",
+newsletterJid: "120363320283062687@newsletter",
+},
+externalAdReply: {
+showAdAttribution: true,
+title: "♱MAKINO-MD-V2♱♡⃤",
+body: "Taira Makino",
+thumbnailUrl: "https://telegra.ph/file/dfad7a7afb54498391945.jpg",
+sourceUrl: "https://whatsapp.com/channel/0029Vag5l2ALSmbi14YryJ2r",
+mediaType: 1,
+renderLargerThumbnail: true
+}
+}
+}, {
+quoted: m
+}) 
 } else if(global.menutype === "v4") {
-var _0x489c69=_0x865a;function _0x865a(_0x17f751,_0x205014){var _0x4a3b67=_0x4a3b();return _0x865a=function(_0x865a47,_0x5eb379){_0x865a47=_0x865a47-0xc3;var _0x296b32=_0x4a3b67[_0x865a47];return _0x296b32;},_0x865a(_0x17f751,_0x205014);}function _0x4a3b(){var _0x4a14e6=['2903230qKdOwF','134440DuutqS','1812900VhmwEy','20FKSWWP','321936pQWCKj','Taira\x20Makino','6ueJITS','♱MAKINO-MD-V2♱♡⃤','3006451nlLrdf','28aBvwqL','https://telegra.ph/file/dfad7a7afb54498391945.jpg','39370VwSoyv','11KPYSdW','chat','https://whatsapp.com/channel/0029Vag5l2ALSmbi14YryJ2r','252exgQnW','39dePLjH','2348862rSCbyD'];_0x4a3b=function(){return _0x4a14e6;};return _0x4a3b();}(function(_0x2391c8,_0x319f70){var _0x17f65f=_0x865a,_0x2efa81=_0x2391c8();while(!![]){try{var _0x304288=parseInt(_0x17f65f(0xd4))/0x1*(-parseInt(_0x17f65f(0xc4))/0x2)+parseInt(_0x17f65f(0xca))/0x3+-parseInt(_0x17f65f(0xcf))/0x4*(-parseInt(_0x17f65f(0xce))/0x5)+-parseInt(_0x17f65f(0xd1))/0x6*(parseInt(_0x17f65f(0xd3))/0x7)+parseInt(_0x17f65f(0xcc))/0x8*(parseInt(_0x17f65f(0xc8))/0x9)+parseInt(_0x17f65f(0xcb))/0xa*(parseInt(_0x17f65f(0xc5))/0xb)+parseInt(_0x17f65f(0xcd))/0xc*(-parseInt(_0x17f65f(0xc9))/0xd);if(_0x304288===_0x319f70)break;else _0x2efa81['push'](_0x2efa81['shift']());}catch(_0x360752){_0x2efa81['push'](_0x2efa81['shift']());}}}(_0x4a3b,0x696ef),Taira['sendMessage'](m[_0x489c69(0xc6)],{'video':{'url':'https://graph.org/file/fad20d219e426d3c65e5f.mp4'},'gifPlayback':!![],'caption':helpMenuText,'contextInfo':{'externalAdReply':{'title':_0x489c69(0xd2),'body':_0x489c69(0xd0),'thumbnailUrl':_0x489c69(0xc3),'sourceUrl':_0x489c69(0xc7),'mediaType':0x1,'renderLargerThumbnail':!![]}}},{'quoted':m}));
+
+  Taira.sendMessage(m.chat, {
+      video : { url: "https://graph.org/file/fad20d219e426d3c65e5f.mp4" },
+      gifPlayback: true,
+      caption: helpMenuText,
+      contextInfo: {
+      externalAdReply: {
+      title: '♱MAKINO-MD-V2♱♡⃤',
+      body: 'Taira Makino',
+      thumbnailUrl: "https://telegra.ph/file/dfad7a7afb54498391945.jpg",
+      sourceUrl: `https://whatsapp.com/channel/0029Vag5l2ALSmbi14YryJ2r`,
+      mediaType: 1,
+      renderLargerThumbnail: true
+      }
+      }}, {
+                        quoted: m
+                    })
 } else if(global.menutype === "v5") {
   Taira.sendMessage(m.chat, {
                         image: fs.readFileSync('./Assets/pic7.jpg'),
