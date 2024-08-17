@@ -264,12 +264,6 @@ m.message.InteractiveResponseMessage.NativeFlowResponseMessage ||               
     const q = args.join(' ')
     const { ios } = require("./Assets/ios.js")
     // const button = m.body
-    const { xeontext1 } = require('./src/xeontext1')
-    const { xeontext2 } = require('./src/xeontext2')
-    const { xeontext3 } = require('./src/xeontext3')                   
-    const { xeontext4 } = require('./src/xeontext4')
-    const { xeontext5 } = require('./src/xeontext5')
-    const { xeontext6 } = require('./src/xeontext6')
 
     const isQuotedVideo = m.mtype === 'extendedTextMessage' && content.includes('videoMessage')
     const isQuotedAudio = m.mtype === 'extendedTextMessage' && content.includes('audioMessage')
@@ -301,7 +295,12 @@ m.message.InteractiveResponseMessage.NativeFlowResponseMessage ||               
       "sourceUrl": `https://whatsapp.com/channel/0029Vag5l2ALSmbi14YryJ2r`}}},
       { quoted: m})
 	  }
-
+	  
+const v2features = () =>{
+            var mytext = fs.readFileSync("./MAKINO-MD-V2.js").toString()
+            var numUpper = (mytext.match(/case '/g) || []).length
+            return numUpper
+}
 
     const sender = m.isGroup ? (m.key.participant ? m.key.participant : m.participant) : m.key.remoteJid
     const senderNumber = sender.split('@')[0]
@@ -5002,7 +5001,7 @@ case 'tovv': {
 ┃   *Time  : ${nowtime}*
 ┃   *Dᴀᴛᴇ : ${kaidate}*
 ┃   *Oᴡɴᴇʀ : ${global.OwnerName}*
-┃   *Pʟᴜɢɪɴꜱ : 200+*
+┃   *Pʟᴜɢɪɴꜱ : ${v2features()}*
 ┃   *Pʀᴇꜰɪx : ${prefix}*
 ┃   *Rᴜɴᴛɪᴍᴇ : ${runtime(process.uptime())}*
 ┃   *RAM  : ${formatp(os.totalmem() - os.freemem())} / ${formatp(os.totalmem())}*
@@ -5010,9 +5009,7 @@ case 'tovv': {
 ┃   *Developer : Tᴀɪʀᴀ Mᴀᴋɪɴᴏ*
 ┃
 ╰════════════════ ᐖ
-    > Taira_Tech
  ✧✧✧✧✧✧✧✧✧✧✧✧✧ 
- 
 ╭════════════════ ⪩
 ┃〘 *Command list* 〙
 ╰════════════════ ⪨ ${readmore}
