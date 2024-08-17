@@ -730,8 +730,10 @@ const smallinput = budy.toLowerCase();
          if (!isCreator) return reply(mess.botowner)
          if (!q) return reply(`use like ${command} on/off`)
          if (q === 'on') { global.PM_BLOCKER = true 
+			  await reply("Pm Blocker has been turned on")
                          } else if (q === 'off') {
                           global.PM_BLOCKER = false
+		 await reply("Pm blocker has been turned off")
                          } else reply(`use like ${command} on/off`)
       }
       break
