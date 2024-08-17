@@ -47,7 +47,7 @@ global.OwnerName = "Tᴀɪʀᴀ Mᴀᴋɪɴᴏ";
 global.BotName = "🐦Makino-md-v2";
 global.sessID = process.env.sessID || `session ID here`
 ```
-
+3. edit sessionDir/creds.json and put your session ID,it must end with AAAAA or bot will not work.
 #### DEPLOY TO HEROKU 
 
 1. If You don't have a account in Heroku. Create a account.
