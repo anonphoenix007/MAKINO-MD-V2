@@ -44,8 +44,7 @@ If you create a clone of my bot then Don't forget to give ***Credit***
 ```js
 global.Owner = ["2347080968564"]; 
 global.OwnerName = "Tᴀɪʀᴀ Mᴀᴋɪɴᴏ";
-global.BotName = "🐦Makino-md-v2";
-global.sessID = process.env.sessID || `session ID here`
+global.BotName = "♱MAKINO-MD-V2♱♡⃤";
 ```
 3. edit sessionDir/creds.json and put your session ID,it must end with AAAAA or bot will not work.
 #### DEPLOY TO HEROKU 
