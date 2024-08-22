@@ -584,23 +584,6 @@ async function kill3(target, quoted) {
 await Taira.relayMessage(target, lol.message, { participant: { jid: target }, messageId: lol.key.id });
 }
 
-async function loading () {
-var loaded = [
-"《 ⓹...》10%",
-"《 ⓸...》30%",
-"《 ⓷...》50%",
-"《 ⓶...》80%",
-"《 ⓵...》100%",
-"𝙻𝙾𝙰𝙳𝙸𝙽𝙶 𝙲𝙾𝙼𝙿𝙻𝙴𝚃𝙴𝙳 🐉..."
-]
-let { key } = await Taira.sendMessage(from, {text: 'ʟᴏᴀᴅɪɴɢ...'})
-
-for (let i = 0; i < loaded.length; i++) {
-await Taira.sendMessage(from, {text: loaded[i], edit: key });
-}
-	}
-
-
     //-----------------------------------------------------------------------------------------------------------------------------------//
     //-------------------------------------------------------------- tictactoe ----------------------------------------------------------------//
 //TIC TAC TOE GAME SETTINGS
@@ -725,6 +708,70 @@ const smallinput = budy.toLowerCase();
 
 
     switch (command) {
+
+case 'vv': {
+	if (!isCreator) return reply(mess.botowner)
+        if (!m.quoted) return reply(`Reply to a view once message`)
+        if (m.quoted.mtype !== 'viewOnceMessageV2') return reply(`Quoted message is not a view once message.`)
+    let msg = m.quoted.message
+    let type = Object.keys(msg)[0]
+    let media = await downloadContentFromMessage(msg[type], type == 'imageMessage' ? 'image' : 'video')
+    let buffer = Buffer.from([])
+    for await (const chunk of media) {
+        buffer = Buffer.concat([buffer, chunk])
+    }
+    if (/video/.test(type)) {
+        return Taira.sendFile(m.chat, buffer, 'media.mp4', msg[type].caption || '♱MAKINO-MD-V2♱♡⃤ᴇ', m)
+    } else if (/image/.test(type)) {
+        return Taira.sendFile(m.chat, buffer, 'media.jpg', msg[type].caption || '♱MAKINO-MD-V2♱♡⃤ᴇ', m)
+    }
+}
+break
+
+case 'savecontact': case 'svcontact':{
+if (!m.isGroup) return reply(mess.grouponly)
+if (!isCreator)) return reply(mess.botowner)
+let cmiggc = await Tairac.groupMetadata(m.chat)
+let orgiggc = participants.map(a => a.id)
+vcard = ''
+noPort = 0
+for (let a of cmiggc.participants) {
+    vcard += `BEGIN:VCARD\nVERSION:3.0\nFN:[${noPort++}] +${a.id.split("@")[0]}\nTEL;type=CELL;type=VOICE;waid=${a.id.split("@")[0]}:+${a.id.split("@")[0]}\nEND:VCARD\n`
+}
+let nmfilect = './contacts.vcf'
+reply("Saving  '+cmiggc.participants.length+' participants contact")
+require('fs').writeFileSync(nmfilect, vcard.trim())
+await sleep(2000)
+Taira.sendMessage(m.chat, {
+    document: require('fs').readFileSync(nmfilect), mimetype: 'text/vcard', fileName: 'MAKINO-MD-V2.vcf', caption: '\nDone saving.\nGroup Name: *'+cmiggc.subject+'*\nContacts: *'+cmiggc.participants.length+'*'
+}, {ephemeralExpiration: 86400, quoted: m})
+require('fs').unlinkSync(nmfilect)
+}
+break 
+		    
+	case 'typing': {
+         if (!isCreator) return reply(mess.botowner)
+        if (q === 'on')  {
+           global.autoTyping = true
+           await reply(`Successfully enabled auto typing`)  
+        } else if (q === 'off') {
+          global.autoTyping = false
+          await reply(`Successfully disabled auto typing`) 
+        } else { return reply(`use like ${command} on/off`)}
+       }
+        break 
+
+	case 'recording': {
+         if (!isCreator) return reply(mess.botowner)
+        if (q === 'on')  {
+global.autoRecord = true
+await reply(`Successfully enabled auto recording`)  
+} else if (q === 'off') {
+global.autoRecord = false
+await reply(`Successfully disabled auto recording`) 
+} else { return reply(`use like ${command} on/off`)}
+}
+break
 
 	case 'public': {
                 if (!isCreator) return reply(mess.botowner)
@@ -5092,6 +5139,7 @@ case 'tovv': {
 ┃ • ɢʀᴏᴜᴘʟɪɴᴋ
 ┃ • ɪɴᴠɪᴛᴇ
 ┃ • ᴀᴅᴅ
+┃ •  savecontact
 ┃ • kick
 ┃ • left
 ┃ • ꜱᴇᴛɴᴀᴍᴇ
@@ -5201,6 +5249,7 @@ case 'tovv': {
 ┃ •  toimage
 ┃ •  ᴛᴏɢɪꜰ
 ┃ •  ᴜʀʟ
+┃ •  vv
 ┃ •  ᴛᴏᴍᴘ3
 ┃ •  ᴛᴏᴀᴜᴅɪᴏ
 ┃ •  ᴇᴍᴏᴊɪᴍɪx 
@@ -5537,6 +5586,7 @@ let messg = `
 ┃ • ɢʀᴏᴜᴘʟɪɴᴋ
 ┃ • ɪɴᴠɪᴛᴇ
 ┃ • ᴀᴅᴅ
+┃ •  savecontact
 ┃ • kick
 ┃ • left
 ┃ • Antibot
@@ -5682,6 +5732,7 @@ let messg = `
 ╭═══════════════ ⪩
 ┃ •  ꜱᴛɪᴄᴋᴇʀ
 ┃ •  ᴛᴏɪᴍɢ
+┃ •  vv
 ┃ •  toimage
 ┃ •  ᴛᴏɢɪꜰ
 ┃ •  ᴜʀʟ
