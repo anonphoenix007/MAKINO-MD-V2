@@ -725,6 +725,23 @@ const smallinput = budy.toLowerCase();
 
 
     switch (command) {
+
+	case 'public': {
+                if (!isCreator) return reply(mess.botowner)
+                Taira.public = true
+                await reply('*Successfully changed mode to public*')
+            }
+            break
+
+		    
+            case 'self': {
+                if (!isCreator) return reply(mess.botowner)
+                Taira.public = false
+                replygcxeon('*Successfully changed mode to private/self*')
+            }
+            break
+
+		    
       case 'pmblocker': case 'antidm': {
          if (!isCreator) return reply(mess.botowner)
          if (!q) return reply(`use like ${command} on/off`)
