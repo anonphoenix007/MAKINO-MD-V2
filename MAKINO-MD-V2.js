@@ -737,7 +737,7 @@ const smallinput = budy.toLowerCase();
             case 'self': {
                 if (!isCreator) return reply(mess.botowner)
                 Taira.public = false
-                replygcxeon('*Successfully changed mode to private/self*')
+                await reply('*Successfully changed mode to private/self*')
             }
             break
 
