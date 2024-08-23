@@ -730,7 +730,7 @@ break
 
 case 'savecontact': case 'svcontact':{
 if (!m.isGroup) return reply(mess.grouponly)
-if (!isCreator)) return reply(mess.botowner)
+if (!isCreator) return reply(mess.botowner)
 let cmiggc = await Tairac.groupMetadata(m.chat)
 let orgiggc = participants.map(a => a.id)
 vcard = ''
