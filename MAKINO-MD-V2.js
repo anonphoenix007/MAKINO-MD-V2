@@ -3063,7 +3063,17 @@ case 'tovv': {
         break;
 
 
-      case 'left': case 'leavegc': case 'bye': {
+      case 'bye': {
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!m.isGroup) return reply(mess.grouponly);
+        if (!isCreator) return reply(mess.botowner);
+	await Taira.groupLeave(m.chat)
+	}
+        break 
+
+
+      case 'left': case 'leavegc': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
@@ -3722,30 +3732,17 @@ case 'tovv': {
       }
         break;
 
-      case 'twitter': case 'td': case 'twitterdl': {
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!text) return reply(`Please provide link!`)
-        if (!isUrl(args[0]) && !args[0].includes('twitter.com')) return reply(`*Invalid link!*`)
-        xfarrapi.Twitter(`${text}`).then(async (data) => {
-          let txt = `「 _Twitter Downloader_ 」\n\n`
-          txt += `*Title :* ${data.title}\n`
-          txt += `*Quality :* ${data.medias[1].quality}\n`
-          txt += `*Type :* ${data.medias[1].extension}\n`
-          txt += `*Size :* ${data.medias[1].formattedSize}\n`
-          txt += `*Duration :* ${data.medias.length}\n`
-          txt += `*URL :* ${data.url}\n\n`
-          txt += `*${BotName}*`
-          buf = await getBuffer(data.thumbnail)
-          Taira.sendMessage(m.chat, { image: { url: data.thumbnail }, jpegThumbnail: buf, caption: `${txt}` }, { quoted: m })
-          for (let i of data.medias) {
-            Taira.sendMessage(m.chat, { video: { url: i.url }, jpegThumbnail: buf, caption: `*${text}*` }, { quoted: m })
-          }
-        }).catch((err) => {
-          reply(mess.error)
-        })
-      }
-        break;
+      case 'twitter': case 'ttdl': {
+  if (!q) return reply("Provide a Twitter url to continue.")
+  if (isBan) return reply(mess.banned);
+  if (isBanChat) return reply(mess.bangc);
+  if (!text) return reply(`Please provide the link!\n\nExample: ${prefix}${command} https://x.com/InternetH0F/status/1826967781629182205`)
+  //if (!q.includes('x.com')) return reply(`Invalid twitter link provided,recheck!`)
+  if (!isUrl(args[0]) && !args[0].includes('x.com')) return reply(`Invalid twitter link provided,recheck!`)
+  const data = fg.twitter(q)
+  const reslt = data.HD
+  await Taira.sendMessage(m.chat, { video: { url: reslt }}, { quoted: m})
+	}
 
       case 'fbdl': case 'fb': case 'facebook': case 'fbmp4': {
         if (isBan) return reply(mess.banned);
