@@ -40,7 +40,7 @@ const os = require('os');       // for os info
 const gis = require("g-i-s");
 const long = String.fromCharCode(8206);
 const readmore = long.repeat(4001); 
-
+const fg = require("api-dylux")
 const { downloadContentFromMessage,
   WA_DEFAULT_EPHEMERAL,
   proto, jid,
