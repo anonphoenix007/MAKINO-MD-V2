@@ -3741,7 +3741,8 @@ case 'tovv': {
   if (!isUrl(args[0]) && !args[0].includes('x.com')) return reply(`Invalid twitter link provided,recheck!`)
   const data = fg.twitter(q)
   const reslt = data.HD
-  await Taira.sendMessage(m.chat, { video: { url: reslt }}, { quoted: m})
+  const trimmed = reslt.match(/.*\.mp4/)[0];
+  await Taira.sendMessage(m.chat, { video: { url: trimmed }}, { quoted: m})
 	}
 
       case 'fbdl': case 'fb': case 'facebook': case 'fbmp4': {
