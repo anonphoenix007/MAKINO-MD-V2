@@ -5,10 +5,10 @@
   <a href="https://t.me/Tha_Healer">
     <img alt="X-2.0" height="300" src="https://telegra.ph/file/7aa528767ed96ddc17bc2.jpg">
     <h1 align="center">MAKINO-MD-V2</h1>
-    <h4 align="center">Major Update available.</h4>
-    <h3 align="center">Bug Menu</h3>
-    <h3 align="center">menutype command, 5 Menu types</h3>
-    <h3 align="center">Added Jid/getjid command</h3>
+    <h4 align="center">Minor Update available.</h4>
+    <h3 align="center">Self/Public command</h3>
+    <h3 align="center">vv antiviewonce command</h3>
+    <h3 align="center">typing/recording command</h3>
        <h3 align="center">Added Different menu(Core menu,all menu ...)</h3>
   </a>
 </p>
