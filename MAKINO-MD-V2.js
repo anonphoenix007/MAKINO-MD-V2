@@ -42,7 +42,7 @@ const long = String.fromCharCode(8206);
 const readmore = long.repeat(4001); 
 const fg = require("api-dylux")
 const { 
-  .downloadContentFromMessage,
+  downloadContentFromMessage,
   WA_DEFAULT_EPHEMERAL,
   proto, jid,
   getContentType,
