@@ -15,9 +15,9 @@ const { addBalance } = require("./lib/limit.js");
 const { smsg, formatp, tanggal, GIFBufferToVideoBuffer, formatDate, getTime, isUrl, sleep, clockString, runtime, fetchJson, getBuffer, jsonformat, format, parseMention, getRandom, fetchBuffer } = require('./lib/myfunc')
 const _ = require("lodash");
 const yargs = require("yargs/yargs");
-const kaitime = moment.tz('Asia/Kolkata').format('HH:mm:ss');
-const kaidate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY');
-const time2 = moment().tz('Asia/Kolkata').format('HH:mm:ss');
+const kaitime = moment.tz('Africa/Lagos').format('HH:mm:ss');
+const kaidate = moment.tz('Africa/Lagos').format('DD/MM/YYYY');
+const time2 = moment().tz('Africa/Lagos').format('HH:mm:ss');
 const currentDate = new Date();
 const options = { weekday: 'long' }; // Specify 'long' to get the full day name
 const currentDay = new Intl.DateTimeFormat('en-US', options).format(currentDate);
@@ -41,7 +41,8 @@ const gis = require("g-i-s");
 const long = String.fromCharCode(8206);
 const readmore = long.repeat(4001); 
 const fg = require("api-dylux")
-const { downloadContentFromMessage,
+const { 
+  .downloadContentFromMessage,
   WA_DEFAULT_EPHEMERAL,
   proto, jid,
   getContentType,
@@ -50,7 +51,8 @@ const { downloadContentFromMessage,
   BufferJSON,
   prepareWAMessageMedia,
   MessageType,
-  areJidsSameUser, } = require('@whiskeysockets/baileys');
+  areJidsSameUser
+      } = require('@whiskeysockets/baileys');
 
 let nowtime = '';
 
@@ -149,7 +151,7 @@ let owner = JSON.parse(fs.readFileSync('./database/premium.json'))
 let isSleeping = false; // Move the declaration here.
 let banUser = JSON.parse(fs.readFileSync('./database/banUser.json'));
 let banchat = JSON.parse(fs.readFileSync('./database/banChat.json'));
-let kaiaudio = JSON.parse(fs.readFileSync('./Media-Database/audio.json'));
+let kaiaudio = JSON.parse(fs.readFileSync('./database/audio.json'));
 let _limit = JSON.parse(fs.readFileSync('./storage/user/limit.json'));
 let _buruan = JSON.parse(fs.readFileSync('./storage/user/bounty.json'));
 let _darahOrg = JSON.parse(fs.readFileSync('./storage/user/blood.json'))
@@ -289,7 +291,7 @@ m.message.InteractiveResponseMessage.NativeFlowResponseMessage ||               
       "containsAutoReply": true,
       "title": `♱MAKINO-MD-V2♱♡⃤`,
       "body": `Hi ${pushname} 👋`,
-      "previewType": "PHOTO",
+      "previewType": "VIDEO",
       "thumbnailUrl": ``,
       "thumbnail": fs.readFileSync(`./Assets/pic7.jpg`),
       "sourceUrl": `https://whatsapp.com/channel/0029Vag5l2ALSmbi14YryJ2r`}}},
