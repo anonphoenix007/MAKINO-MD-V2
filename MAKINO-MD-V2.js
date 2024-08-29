@@ -297,7 +297,7 @@ m.message.InteractiveResponseMessage.NativeFlowResponseMessage ||               
       "title": `♱MAKINO-MD-V2♱♡⃤`,
       "body": `Hi ${pushname} 👋`,
       "previewType": "VIDEO",
-      "thumbnailUrl": ``,
+      "thumbnailUrl": "https://graph.org/file/30265f2195f076e1bb3c3.jpg",
       "thumbnail": fs.readFileSync(`./Assets/pic7.jpg`),
       "sourceUrl": `https://whatsapp.com/channel/0029Vag5l2ALSmbi14YryJ2r`}}},
       { quoted: m})
