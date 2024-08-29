@@ -60,7 +60,7 @@ const question = (text) => {
 };
 async function TairaStart() {
 const store = makeInMemoryStore({ logger: pino().child({ level: 'silent', stream: 'store' }) });
-const { state, saveCreds } = await useMultiFileAuthState('./sessionDir/');
+const { state, saveCreds } = await useMultiFileAuthState('./taira_baileys/');
 const { version, isLatest } = await fetchLatestBaileysVersion();
 const resolveMsgBuffer = new NodeCache()
 
