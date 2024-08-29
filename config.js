@@ -65,7 +65,7 @@ global.mess = {
     jobdone: 'Here you go...',
     useradmin: 'Only group Admin can use the command 😂 ',
     botadmin: 'Make me Admin first 😌📍.',
-    botowner: 'Only my *Owner* or ταιяα мακιиο can use this command!',
+    botowner: 'Only my *Owner* can use this command!',
     grouponly: 'This command is only made for *Groups*',
     privateonly: 'This command is only made for *Private Chat*',
     botonly: 'Only the *Bot itself* can use this command!',
