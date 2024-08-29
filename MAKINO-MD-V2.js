@@ -719,7 +719,7 @@ const smallinput = budy.toLowerCase();
 case 'addowner': {
 if (!isCreator) return reply(mess.botowner)
 if (!args[0]) return reply(`Use like ${prefix+command} 234708096xxx\nExample ${prefix+command} 234708096xxx`)
-tobe = q.split("|")[0].replace(/[^0-9]/g, '')
+tobe = args[0].split("|")[0].replace(/[^0-9]/g, '')
 let checknum = await Taira.onWhatsApp(tobe)
 if (checknum.length == 0) return reply(`Enter A registered WhatsApp number.`)
 owner.push(tobe)
@@ -731,7 +731,7 @@ break
 case 'delowner': {
 if (!isCreator) return reply(mess.botowner)
 if (!args[0]) return reply(`Use like ${prefix+command} 234708096xxx\nExample ${prefix+command} 234708096xxx`)
-torem = q.split("|")[0].replace(/[^0-9]/g, '')
+torem = args[0].split("|")[0].replace(/[^0-9]/g, '')
 toremm = owner.indexOf(torem)
 owner.splice(toremm, 1)
 fs.writeFileSync('./database/owner.json', JSON.stringify(owner))
