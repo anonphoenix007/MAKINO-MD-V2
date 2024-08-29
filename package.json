@@ -93,6 +93,7 @@
         "node-youtube-music": "^0.7.0",
         "openai": "^3.2.0",
         "os": "^0.1.2",
+        "pastebin-js": "^1.0.6",
         "path": "^0.12.7",
         "perf_hooks": "^0.0.1",
         "pino": "^7.0.5",
