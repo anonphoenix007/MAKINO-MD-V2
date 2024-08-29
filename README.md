@@ -6,7 +6,7 @@
     <img alt="X-2.0" height="300" src="https://telegra.ph/file/7aa528767ed96ddc17bc2.jpg">
     <h1 align="center">MAKINO-MD-V2</h1>
     <h4 align="center">Minor Update available.</h4>
-    <h3 align="center">Self/Public command</h3>
+    <h3 align="center">New session ID type</h3>
     <h3 align="center">vv antiviewonce command</h3>
     <h3 align="center">typing/recording command</h3>
        <h3 align="center">Added Different menu(Core menu,all menu ...)</h3>
@@ -35,7 +35,7 @@ If you create a clone of my bot then Don't forget to give ***Credit***
 
 2. Scan or pair to get session ID
     <br>
-<a href='https://taira-web-service.onrender.com/' target="_blank"><img alt='Get Session ID' src='https://img.shields.io/badge/Get-Session_ID-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=black&color=blue'/></a>
+<a hrefhttps://ttech-web-server.onrender.com/' target="_blank"><img alt='Get Session ID' src='https://img.shields.io/badge/Get-Session_ID-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=black&color=blue'/></a>
 
 #### DEPLOY STEPS
 
@@ -45,8 +45,9 @@ If you create a clone of my bot then Don't forget to give ***Credit***
 global.Owner = ["2347080968564"]; 
 global.OwnerName = "Tᴀɪʀᴀ Mᴀᴋɪɴᴏ";
 global.BotName = "♱MAKINO-MD-V2♱♡⃤";
+global.SESSION_ID = process.env.SESSION_ID || "" //session ID here
 ```
-3. edit sessionDir/creds.json and put your session ID,it must end with AAAAA or bot will not work.
+3.  put your session ID in global.SESSION_ID
 #### DEPLOY TO HEROKU 
 
 1. If You don't have a account in Heroku. Create a account.
