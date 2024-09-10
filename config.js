@@ -20,8 +20,8 @@ global.PM_BLOCKER = false;
 global.CHATBOT = false;
 
 global.SESSION_ID = process.env.SESSION_ID || ""
-global.Owner = ["2348138686232"]; //like 2347080968564 
-global.OwnerName =  "Tᴀɪʀᴀ Mᴀᴋɪɴᴏ";
+global.Owner = ["23481849292"]; //like 2347080968564 
+global.OwnerName =  "mick cole";
 global.BotName = "♱MAKINO-MD-V2♱♡⃤";
 global.packname = "♱MAKINO-MD-V2♱♡⃤";                             //Do not change.
 global.author = "TAIRA MAKINO";                               //Do not change.
