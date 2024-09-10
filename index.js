@@ -40,7 +40,7 @@ const { color } = require('./lib/color');
 
 const listcolor = ['red', 'blue', 'magenta'];
 const randomcolor = listcolor[Math.floor(Math.random() * listcolor.length)];
-
+let usePairingCode = global.connect
 //Puki
 const question = (text) => {
   const rl = readline.createInterface({
@@ -56,8 +56,7 @@ const question = (text) => {
   });
 };
 let QrConn = false
-//const _0x410c81=_0x5d5c;(function(_0x1bfc0b,_0x510a70){const _0x39ed05=_0x5d5c,_0x99015d=_0x1bfc0b();while(!![]){try{const _0x465848=parseInt(_0x39ed05(0x19e))/0x1*(parseInt(_0x39ed05(0x1a8))/0x2)+-parseInt(_0x39ed05(0x1ab))/0x3+-parseInt(_0x39ed05(0x1a9))/0x4*(-parseInt(_0x39ed05(0x1a5))/0x5)+-parseInt(_0x39ed05(0x1a0))/0x6+parseInt(_0x39ed05(0x1a7))/0x7*(parseInt(_0x39ed05(0x19f))/0x8)+-parseInt(_0x39ed05(0x1ad))/0x9*(-parseInt(_0x39ed05(0x1a6))/0xa)+-parseInt(_0x39ed05(0x19c))/0xb*(parseInt(_0x39ed05(0x19d))/0xc);if(_0x465848===_0x510a70)break;else _0x99015d['push'](_0x99015d['shift']());}catch(_0x46e971){_0x99015d['push'](_0x99015d['shift']());}}}(_0x491b,0x4d5ea));function _0x5d5c(_0x5106ef,_0x365da1){const _0x491be9=_0x491b();return _0x5d5c=function(_0x5d5c2a,_0x3270b0){_0x5d5c2a=_0x5d5c2a-0x19c;let _0x52b2b8=_0x491be9[_0x5d5c2a];return _0x52b2b8;},_0x5d5c(_0x5106ef,_0x365da1);}const {writeFileSync}=require('fs'),PastebinAPI=require('pastebin-js'),pastebin=new PastebinAPI(_0x410c81(0x1a4));async function getp(){const _0x2486d5=_0x410c81;let _0x1e6774=global[_0x2486d5(0x1a3)]['split'](_0x2486d5(0x1a2))[0x1];try{const _0x62ce48=await pastebin['getPaste'](_0x1e6774);writeFileSync(__dirname+_0x2486d5(0x1ac),_0x62ce48,_0x2486d5(0x1aa));}catch(_0x249eff){console[_0x2486d5(0x1a1)](_0x249eff);}}getp();function _0x491b(){const _0x1b199d=['SESSION_ID','__pA4nkzbqvtej7ujWpA92U0UAmXHwIQ','15DYxNEW','5080TYPvlo','16702XISYwB','868468IUvDVY','615100TIbDFy','utf8','1101981NCzWbi','/taira_baileys/creds.json','5121RqWTuh','575927aqIbHE','36dvnHUb','1vZjWwN','176SitVOq','2374794dlUodY','log','taira_tech-'];_0x491b=function(){return _0x1b199d;};return _0x491b();}
-const _0x360bab=_0x550f;(function(_0x46ed2f,_0xdfea36){const _0xac5a0b=_0x550f,_0x596056=_0x46ed2f();while(!![]){try{const _0x2174ad=-parseInt(_0xac5a0b(0xd9))/0x1+-parseInt(_0xac5a0b(0xe9))/0x2+parseInt(_0xac5a0b(0xe2))/0x3+parseInt(_0xac5a0b(0xed))/0x4+parseInt(_0xac5a0b(0xdd))/0x5+parseInt(_0xac5a0b(0xde))/0x6+-parseInt(_0xac5a0b(0xdc))/0x7;if(_0x2174ad===_0xdfea36)break;else _0x596056['push'](_0x596056['shift']());}catch(_0x1f857b){_0x596056['push'](_0x596056['shift']());}}}(_0x5131,0xaa1c3));function _0x5131(){const _0x16dc8b=['341419LOijEi','url','taira_baileys','8404277szviBf','5566090YPXgzG','1383060RXfUAa','taira_tech-','SESSION_ID','error','575553sBRYZJ','writeFile','Put\x20Session\x20ID\x20in\x20your\x20bot\x20config\x20file\x20then\x20restart','split','__dirname','existsSync','pathname','1185568itWGaU','__pA4nkzbqvtej7ujWpA92U0UAmXHwIQ','pastebin-js','log','5184024GOVTxq','creds.json'];_0x5131=function(){return _0x16dc8b;};return _0x5131();}function _0x550f(_0x3c3ef0,_0xba99aa){const _0x513108=_0x5131();return _0x550f=function(_0x550f98,_0x77cbe9){_0x550f98=_0x550f98-0xd8;let _0x2baa15=_0x513108[_0x550f98];return _0x2baa15;},_0x550f(_0x3c3ef0,_0xba99aa);}const PastebinAPI=require(_0x360bab(0xeb)),pastebin=new PastebinAPI(_0x360bab(0xea)),__filename=new URL(import.meta[_0x360bab(0xda)])[_0x360bab(0xe8)],__dirname=path[_0x360bab(0xe6)](__filename),sessionPath=path['join'](__dirname,_0x360bab(0xdb)),authfile=path['join'](sessionPath,_0x360bab(0xd8));!fs[_0x360bab(0xe7)](sessionPath)&&fs['mkdirSync'](sessionPath,{'recursive':!![]});async function fetchPaste(){const _0x499eb6=_0x360bab;if(!global[_0x499eb6(0xe0)])return console[_0x499eb6(0xe1)](_0x499eb6(0xe4)),![];let _0x3170ce=global[_0x499eb6(0xe0)][_0x499eb6(0xe5)](_0x499eb6(0xdf))[0x1];try{const _0x5e43b6=await pastebin['getPaste'](_0x3170ce);return await fs['promises'][_0x499eb6(0xe3)](authfile,_0x5e43b6),console[_0x499eb6(0xec)]('Successfully\x20retrieved\x20Required\x20Connection\x20data.'),!![];}catch(_0x5b52bb){return![];}}
+function _0x4087(_0x1cb3ad,_0x4a50dc){const _0x389776=_0x3897();return _0x4087=function(_0x40872c,_0x5b4ac5){_0x40872c=_0x40872c-0x170;let _0x1d8fc4=_0x389776[_0x40872c];return _0x1d8fc4;},_0x4087(_0x1cb3ad,_0x4a50dc);}(function(_0x56516b,_0xd57657){const _0x577ad4=_0x4087,_0x13db3d=_0x56516b();while(!![]){try{const _0x2d5566=parseInt(_0x577ad4(0x183))/0x1+-parseInt(_0x577ad4(0x175))/0x2*(-parseInt(_0x577ad4(0x189))/0x3)+parseInt(_0x577ad4(0x180))/0x4+-parseInt(_0x577ad4(0x173))/0x5*(-parseInt(_0x577ad4(0x17e))/0x6)+parseInt(_0x577ad4(0x182))/0x7+-parseInt(_0x577ad4(0x178))/0x8*(-parseInt(_0x577ad4(0x188))/0x9)+-parseInt(_0x577ad4(0x17f))/0xa;if(_0x2d5566===_0xd57657)break;else _0x13db3d['push'](_0x13db3d['shift']());}catch(_0x1418db){_0x13db3d['push'](_0x13db3d['shift']());}}}(_0x3897,0x1de4e));async function getSession(){const _0xfc2696=_0x4087,_0xaa89d7=require(_0xfc2696(0x17a));let _0x52dbed=__dirname+_0xfc2696(0x181);const _0x4e874c=_0xfc2696(0x170);let _0x3024cf=global['SESSION_ID']['replace']('taira-tech-','');await exec(_0xfc2696(0x17d)),console['log']('Auth\x20folder\x20cleaned');if(!_0x3024cf){console[_0xfc2696(0x184)](_0xfc2696(0x174));return;}try{const _0x48d354={'method':_0xfc2696(0x17b),'url':_0xfc2696(0x176)+_0x3024cf,'headers':{'Accept':_0xfc2696(0x186),'Authorization':_0xfc2696(0x179)+_0x4e874c,'X-GitHub-Api-Version':_0xfc2696(0x185)}},_0x20c64e=await _0xaa89d7(_0x48d354);console[_0xfc2696(0x184)]('Connection\x20credentials\x20retrieved\x20successfully!');const _0x5e57be=Object[_0xfc2696(0x187)](_0x20c64e[_0xfc2696(0x17c)]['files'])[0x0][_0xfc2696(0x172)];await fs['writeFileSync'](''+_0x52dbed,_0x5e57be,_0xfc2696(0x171));}catch(_0x1b91f9){console[_0xfc2696(0x177)](_0x1b91f9);}}function _0x3897(){const _0x158f27=['17330vkCDMa','https://api.github.com/gists/','error','72MDAwVZ','Bearer\x20','axios','get','data','rm\x20-rf\x20taira_baileys/*','1276764XVUtoK','7245370UIaRao','192252bcbzUU','/taira_baileys/creds.json','505960pjzfRW','117735ZsTviX','log','2022-11-28','application/vnd.github+json','values','214146CTaLSr','63HWfwoq','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','utf8','content','5zRgpHp','SESSION_ID\x20not\x20Found,edit\x20config.js\x20and\x20try\x20again'];_0x3897=function(){return _0x158f27;};return _0x3897();}
 
 async function TairaStart() {
 const store = makeInMemoryStore({ logger: pino().child({ level: 'silent', stream: 'store' }) });
@@ -70,7 +69,7 @@ const resolveMsgBuffer = new NodeCache()
 const Taira = TairaConnect({
     version,
     keepAliveIntervalMs: 50000,
-    printQRInTerminal: QrConn,
+    printQRInTerminal: !usePairingCode,
     logger: pino({ level: "silent" }),
     auth: state,
     browser: ['MAKINO-MD-V2', 'safari', '3.3'],
@@ -732,17 +731,16 @@ return Taira
 
 
 async function startBot() {
-if (fs.existsSync(authfile) {
+if (fs.existsSync(__dirname + "/taira_baileys/creds.json") {
 	console.log("Connection Data found,Establishing connection...")
 	TairaStart();
 } else {
-	getCreds = fetchPaste();
-	if (fetchPaste) {
+	getCreds = getSession();
+	if (getCreds) {
 		console.log("Successfully fetched Connection credentials from server,Establishing connection....")
 		TairaStart();
 } else {
 	console.log("No session Credentials found,Please Scan or pair.")
-	QrConn = true
 	TairaStart();
 }
 }
