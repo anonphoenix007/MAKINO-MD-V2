@@ -731,7 +731,7 @@ return Taira
 
 
 async function startBot() {
-if (fs.existsSync(__dirname + "/taira_baileys/creds.json") {
+if (fs.existsSync(__dirname + "/taira_baileys/creds.json")) {
 	console.log("Connection Data found,Establishing connection...")
 	TairaStart();
 } else {
@@ -744,7 +744,7 @@ if (fs.existsSync(__dirname + "/taira_baileys/creds.json") {
 	TairaStart();
 }
 }
-}
+};
 
 startBot();
 
