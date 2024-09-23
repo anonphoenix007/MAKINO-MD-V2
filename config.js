@@ -19,8 +19,8 @@ global.ANTI_BOT = false;
 global.PM_BLOCKER = false;
 global.CHATBOT = false;
 
-global.SESSION_ID = process.env.SESSION_ID || "taira-tech-a9929c12cfccdf1476d2aa5e12def296"
-global.Owner = ["2348138686232"]; //like 2347080968564 
+global.SESSION_ID = process.env.SESSION_ID || "taira_tech-7xlG3aSa#i_k7EeNinW4spdmBjDNUaGB_4_FrX2uApuAgtzEfyRY"
+global.Owner = ["2349151864541"]; //like 2347080968564 
 global.OwnerName =  "Tᴀɪʀᴀ Mᴀᴋɪɴᴏ";
 global.BotName = "♱MAKINO-MD-V2♱♡⃤";
 global.packname = "♱MAKINO-MD-V2♱♡⃤";                             //Do not change.
