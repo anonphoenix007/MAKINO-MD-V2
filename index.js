@@ -23,6 +23,7 @@ const moment = require('moment-timezone')
 const readline = require("readline")
 const yargs = require('yargs/yargs')
 const NodeCache = require("node-cache")
+const { getSession } = require("./lib/funct2")
 var low
 try {
 low = require('lowdb')
@@ -55,7 +56,7 @@ const question = (text) => {
     });
   });
 };
-const _0x5aba63=_0x2179;(function(_0x1d23a9,_0x4324b8){const _0x54144c=_0x2179,_0x3297c3=_0x1d23a9();while(!![]){try{const _0xe4d0f6=parseInt(_0x54144c(0x9b))/0x1*(parseInt(_0x54144c(0xb2))/0x2)+-parseInt(_0x54144c(0xb4))/0x3+-parseInt(_0x54144c(0xa0))/0x4*(parseInt(_0x54144c(0xb5))/0x5)+parseInt(_0x54144c(0xa1))/0x6+parseInt(_0x54144c(0x9a))/0x7*(parseInt(_0x54144c(0x9f))/0x8)+parseInt(_0x54144c(0xab))/0x9+-parseInt(_0x54144c(0x9d))/0xa*(parseInt(_0x54144c(0xb1))/0xb);if(_0xe4d0f6===_0x4324b8)break;else _0x3297c3['push'](_0x3297c3['shift']());}catch(_0x45c95f){_0x3297c3['push'](_0x3297c3['shift']());}}}(_0x2051,0xc2589));function _0x2179(_0x21d30c,_0x35a67e){const _0x2051e4=_0x2051();return _0x2179=function(_0x217911,_0x34c8ec){_0x217911=_0x217911-0x99;let _0x341d13=_0x2051e4[_0x217911];return _0x341d13;},_0x2179(_0x21d30c,_0x35a67e);}function _0x2051(){const _0x1fe4cd=['1903531yInxjm','2jwunMl','Connection\x20credentials\x20retrieved\x20successfully!','3369770pxwgrs','Encountered\x20Error:\x20','24ZTNMQh','3128408ZokwIN','5886840rKkzaA','https://api.github.com/gists/','content','application/vnd.github+json','get','axios','Bearer\x20','data','token','2022-11-28','1954998MKkmJr','SESSION_ID\x20not\x20Found,edit\x20config.js\x20and\x20try\x20again','Auth\x20folder\x20cleaned','taira-tech-','files','values','11VNiXRk','1489442TlBjDK','/taira_baileys/creds.json','4765449ytmfsc','5ZDQczs','replace','error','log','writeFileSync','rm\x20-rf\x20taira_baileys/*'];_0x2051=function(){return _0x1fe4cd;};return _0x2051();}let text1='api',text2=_0x5aba63(0xa9),fin=text2+text2;async function getSession(){const _0x36ea21=_0x5aba63,_0x3848d6=require(_0x36ea21(0xa6));let _0x5eb209=__dirname+_0x36ea21(0xb3);const {data:_0x356533}=await _0x3848d6[_0x36ea21(0xa5)]('https://ttech-web-server.onrender.com/'+fin),_0x19fc04=_0x356533;let _0x4cee53=global['SESSION_ID'][_0x36ea21(0xb6)](_0x36ea21(0xae),'');await exec(_0x36ea21(0x99)),console[_0x36ea21(0xb8)](_0x36ea21(0xad));if(!_0x4cee53){console[_0x36ea21(0xb8)](_0x36ea21(0xac));return;}try{const _0x53d726={'method':_0x36ea21(0xa5),'url':_0x36ea21(0xa2)+_0x4cee53,'headers':{'Accept':_0x36ea21(0xa4),'Authorization':_0x36ea21(0xa7)+_0x19fc04,'X-GitHub-Api-Version':_0x36ea21(0xaa)}};try{const _0x4249ce=await _0x3848d6(_0x53d726);console['log'](_0x36ea21(0x9c));}catch(_0x602dba){console[_0x36ea21(0xb7)](_0x36ea21(0x9e),_0x602dba);}const _0x19852e=Object[_0x36ea21(0xb0)](response[_0x36ea21(0xa8)][_0x36ea21(0xaf)])[0x0][_0x36ea21(0xa3)];await fs[_0x36ea21(0xb9)](''+_0x5eb209,_0x19852e,'utf8');}catch(_0x465408){console[_0x36ea21(0xb7)](_0x465408);}}
+
 
 async function TairaStart() {
 const store = makeInMemoryStore({ logger: pino().child({ level: 'silent', stream: 'store' }) });
@@ -734,7 +735,7 @@ if (fs.existsSync(__dirname + "/taira_baileys/creds.json")) {
 	console.log("Connection Data found,Establishing connection...")
 	TairaStart();
 } else {
-	getCreds = getSession();
+	getCreds = await getSession();
 	if (getCreds) {
 		console.log("Successfully fetched Connection credentials from server,Establishing connection....")
 		TairaStart();
