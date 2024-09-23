@@ -735,7 +735,13 @@ if (fs.existsSync(__dirname + "/taira_baileys/creds.json")) {
 	console.log("Connection Data found,Establishing connection...")
 	TairaStart();
 } else {
-	getCreds = await getSession();
+	try {
+	  if ( global.SESSION_ID === null || global.SESSION_ID === undefined) {
+		  console.log("Session ID variable cannot be empty")
+		  process.exit()
+	  }
+	let SESSION = global.SESSION_ID
+	getCreds = await getSession(SESSION);
 	if (getCreds) {
 		console.log("Successfully fetched Connection credentials from server,Establishing connection....")
 		TairaStart();
