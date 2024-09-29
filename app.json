@@ -5,6 +5,13 @@
     "repository": "https://github.com/anonphoenix007/MAKINO-MD-V2",
     "logo": "https://telegra.ph/file/7aa528767ed96ddc17bc2.jpg",
     "keywords": ["nodejs", "bot", "whatsapp bot", "whatsapp automation", "multi device"],
+    "env": {
+    "SESSION_ID": {
+      "description": "your session ID here",
+      "value": "",
+      "required": true
+    }
+    },
     "buildpacks": [
       {
         "url": "heroku/nodejs"
