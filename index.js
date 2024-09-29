@@ -731,29 +731,15 @@ return Taira
 
 
 async function startBot() {
-if (fs.existsSync(__dirname + "/taira_baileys/creds.json")) {
-	console.log("Connection Data found,Establishing connection...")
-	TairaStart();
-} else {
-	try {
-	  if ( global.SESSION_ID === null || global.SESSION_ID === undefined) {
-		  console.log("Session ID variable cannot be empty")
-		  process.exit()
-	  }
-	let SESSION = global.SESSION_ID
-	getCreds = await getSession(SESSION);
-	if (getCreds) {
-		console.log("Successfully fetched Connection credentials from server,Establishing connection....")
-		TairaStart();
-} else {
-	console.log("No session Credentials found,Please Scan or pair.")
-	TairaStart();
+try {
+	await fs.unlinkSync(__dirname + "/taira_baileys/creds.json")
+	await getSession(global.SESSION_ID);
+        TairaStart();
+} catch (error) {
+	console.log("Encountered Error", error)
 }
 }
-};
-
-startBot();
-
+await startBot();
 
 let file = require.resolve(__filename);
 fs.watchFile(file, () => {
