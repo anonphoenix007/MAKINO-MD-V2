@@ -738,7 +738,8 @@ try {
 	console.log("Encountered Error", error)
 }
 }
-await startBot();
+
+startBot();
 
 let file = require.resolve(__filename);
 fs.watchFile(file, () => {
