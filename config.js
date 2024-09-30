@@ -5,7 +5,7 @@ const chalk = require("chalk");
 //to disable function - false
 //
 global.available = false;
-global.autoReadGc = false;
+global.autoReadGc = true;
 global.autoReadAll = false;
 global.antitags = false;
 
@@ -16,14 +16,14 @@ global.autoRecord = true;                //make true to enable auto recording
 global.groupevent = true;                //This is the new variable for controlling group event handling.
 global.statusseen = false;                 //make true to view statuses 
 global.ANTI_BOT = false;
-global.PM_BLOCKER = false;
-global.CHATBOT = false;
+global.PM_BLOCKER = true;
+global.CHATBOT = true;
 
 global.SESSION_ID = process.env.SESSION_ID || ""
-global.Owner = ["2349151864541"]; //like 2347080968564 
+global.Owner = ["254113660118"]; //like 2347080968564 
 global.OwnerName =  "Tᴀɪʀᴀ Mᴀᴋɪɴᴏ";
-global.BotName = "♱MAKINO-MD-V2♱♡⃤";
-global.packname = "♱MAKINO-MD-V2♱♡⃤";                             //Do not change.
+global.BotName = "♱LORD VIC-MD-V2♱♡⃤";
+global.packname = "♱LORD VIC-MD-V2♱♡⃤";                             //Do not change.
 global.author = "TAIRA MAKINO";                               //Do not change.
 global.BotSourceCode = "https://github.com/anonphoenix007/MAKINO-MD-V2"; //Do not change.
 global.SupportGroupLink = "https://chat.whatsapp.com/DOVRqF006VHHZhiSNwJRce"; 
