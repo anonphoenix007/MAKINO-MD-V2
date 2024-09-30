@@ -732,7 +732,6 @@ return Taira
 
 async function startBot() {
 try {
-	await fs.unlinkSync(__dirname + "/taira_baileys/creds.json")
 	await getSession(global.SESSION_ID);
         TairaStart();
 } catch (error) {
