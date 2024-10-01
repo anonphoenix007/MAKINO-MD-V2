@@ -16,7 +16,6 @@ const pm2 = require('pm2');
 const util = require("util");
 const { promisify } = require('util');
 const setTimeoutPromise = promisify(setTimeout);
-const chalk = require("chalk");
 const axios = require('axios');
 const { spawn, exec, execSync } = require("child_process");
 const moment = require("moment-timezone");
@@ -5988,7 +5987,7 @@ if (stdout) return reply(`${stdout}`)
 let file = require.resolve(__filename)
 fs.watchFile(file, () => {
   fs.unwatchFile(file)
-  console.log(chalk.redBright(`Update ${__filename}`))
+  console.log(`Update ${__filename}`)
   delete require.cache[file]
   require(file)
 })
