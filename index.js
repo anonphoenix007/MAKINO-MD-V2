@@ -44,9 +44,10 @@ const question = (text) => {
     output: process.stdout
   });
 
-  return new Promise((resolve) => {
-    rl.question(text), (answer) => {
-      resolve(answer);
+
+return new Promise((resolve) => {
+  rl.question(text,(answer) => {
+            resolve(answer);
       rl.close();
     });
   });
