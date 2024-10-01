@@ -316,17 +316,19 @@ const v2features = () =>{
     }
 
     if (m.message) {
-      addBalance(m.sender, randomNomor(574), balance);
       console.log(
-        chalk.black(chalk.bgWhite(`[ NEW MESSAGE RECEIVED ]\n`)),
-        chalk.black(chalk.bgGreen(new Date())),
-        chalk.black(chalk.bgBlue(budy || m.mtype)) +
-        "\n" +
-        chalk.magenta("=> 💧Message From"),
-        chalk.green(pushname),
-        chalk.yellow(m.sender) + "\n" + chalk.blueBright(`=> 🌐 Message In\n`),
-        chalk.green(m.isGroup ? pushname : "🧩Private Chat", m.chat)
-      );
+        `[ NEW MESSAGE RECEIVED ]\n
+        ${new Date()}
+        ${budy || m.mtype}
+        
+        => 💧Message From
+        ${pushname}
+        ${m.sender}
+	
+	=> 🌐 Message In
+ 
+        ${m.isGroup ? pushname : "🧩Private Chat", m.chat}
+	`);
     }
 
     if (isCmd && !isUser) {
