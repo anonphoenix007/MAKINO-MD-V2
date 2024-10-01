@@ -1,5 +1,4 @@
 const fs = require("fs");
-const chalk = require("chalk");
 
 //to enable function - true
 //to disable function - false
