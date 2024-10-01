@@ -7,8 +7,6 @@ const {
   DisconnectReason, getAggregateVotesInPollMessage 
 } = require("@whiskeysockets/baileys")
 const pino = require('pino')
-const chalk = require('chalk')
-//const { Boom } = require('@hapi/boom')
 const fs = require('fs')
 const FileType = require('file-type')
 const path = require('path')
@@ -37,10 +35,7 @@ const mongoDB = require('./lib/mongoDB')
 const { imageToWebp, videoToWebp, writeExifImg, writeExifVid } = require('./lib/exif');
 const { smsg, isUrl, generateMessageTag, getBuffer, getSizeMedia, fetchJson, sleep } = require('./lib/myfunc');
 
-const { color } = require('./lib/color');
 
-const listcolor = ['red', 'blue', 'magenta'];
-const randomcolor = listcolor[Math.floor(Math.random() * listcolor.length)];
 let usePairingCode = global.connect
 //Puki
 const question = (text) => {
@@ -50,7 +45,7 @@ const question = (text) => {
   });
 
   return new Promise((resolve) => {
-    rl.question(color(text, randomcolor), (answer) => {
+    rl.question(text), (answer) => {
       resolve(answer);
       rl.close();
     });
@@ -88,13 +83,12 @@ const Taira = TairaConnect({
     say(`MAKINO\nMD\n\nV2`, {
         font: 'block',
         align: 'center',
-        gradient: [randomcolor, randomcolor]
     })
 	    
     const phoneNumber = await question(` Input your phone number\n<🩸 EXAMPLE : 2347080968564\n Number without (+): `);
    // Request and display the pairing code
    const code = await Taira.requestPairingCode(phoneNumber.trim());
-   console.log(color(`[ # ] enter this code into whatspp to pair : ${code}`, `${randomcolor}`));
+   console.log(`[ # ] enter this code into whatspp to pair : ${code}`);
 }
 
     // Status 
@@ -202,7 +196,6 @@ Taira.setStatus = (status) => {
         } = update
         try {
             if (connection === 'close') {
-                //let reason = new Boom(lastDisconnect?.error)?.output.statusCode
 		let reason = lastDisconnect.error
         ? lastDisconnect?.error?.output.statusCode
         : 0; 
@@ -255,20 +248,7 @@ Taira.setStatus = (status) => {
           ♱ Prefix   : ${global.prefa}
           ♱ Creator  : https://t.me/Tha_Healer
           ♱ GitHub   : https://github.com/anonphoenix007
-          ${readmore}
-
-  ⠛⠛⣿⣿⣿⣿⣿⡷⢶⣦⣶⣶⣤⣤⣤⣀⠀⠀⠀
- ⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡀⠀
- ⠀⠀⠀⠉⠉⠉⠙⠻⣿⣿⠿⠿⠛⠛⠛⠻⣿⣿⣇⠀
- ⠀⠀⢤⣀⣀⣀⠀⠀⢸⣷⡄⠀⣁⣀⣤⣴⣿⣿⣿⣆
- ⠀⠀⠀⠀⠹⠏⠀⠀⠀⣿⣧⠀⠹⣿⣿⣿⣿⣿⡿⣿
- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠛⠿⠇⢀⣼⣿⣿⠛⢯⡿⡟
- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠦⠴⢿⢿⣿⡿⠷⠀⣿⠀
- ⠀⠀⠀⠀⠀⠀⠀⠙⣷⣶⣶⣤⣤⣤⣤⣤⣶⣦⠃⠀
- ⠀⠀⠀⠀⠀⠀⠀⢐⣿⣾⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀
- ⠀⠀⠀⠀⠀⠀⠀⠈⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀
- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠻⢿⣿⣿⣿⣿⠟⠁
-
+	  
           change prefix with setprefix command!
           ` 
           await sleep(30000)
@@ -744,7 +724,7 @@ startBot();
 let file = require.resolve(__filename);
 fs.watchFile(file, () => {
     fs.unwatchFile(file);
-    console.log(chalk.yellowBright(`File ${__filename} updated.`));
+    console.log(`File ${__filename} updated.`);
     delete require.cache[file];
     require(file);
 });
