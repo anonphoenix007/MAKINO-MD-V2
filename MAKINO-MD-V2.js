@@ -282,14 +282,6 @@ m.message.InteractiveResponseMessage.NativeFlowResponseMessage ||               
     const reply = (teks) => {
       Taira.sendMessage(m.chat,
       { text: teks,
-      contextInfo:{
-      mentionedJid:[m.sender],
-      forwardingScore: 9999999,
-      isForwarded: true,
-      forwardedNewsletterMessageInfo: {
-      newsletterName: "♱♡ 𓆩Ⱦⱥīɍⱥ Ⱦēȼħ𓆪 ♱♡",
-      newsletterJid: "120363320283062687@newsletter",
-      },
       "externalAdReply": {
       "showAdAttribution": true,
       "containsAutoReply": true,
