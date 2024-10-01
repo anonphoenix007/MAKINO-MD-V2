@@ -1,14 +1,14 @@
 {
     "name": "MAKINO-MD-V2",
-    "version": "2.5.0",
+    "version": "2.6.0",
     "description": "MAKINO-MD-V2 is a WhatsApp multiDevice Bot  in Javascript using the Baileys module to make your WhatsApp experience easier.",
     "main": "server.js",
     "directories": {
         "lib": "lib"
     },
     "scripts": {
-        "start": "npm install chalk && node server.js",
-        "test": "npm install chalk && node server.js"
+        "start": "node server.js",
+        "test": "node server.js"
     },
     "repository": {
         "type": "git",
@@ -46,7 +46,6 @@
         "axios": "^0.24.0",
         "canvacord": "^5.4.10",
         "cfonts": "^3.2.0",
-        "chalk": "^4.1.2",
         "cheerio": "^1.0.0-rc.12",
         "child_process": "^1.0.2",
         "crypto": "^1.0.1",
