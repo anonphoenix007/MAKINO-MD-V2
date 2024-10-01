@@ -284,11 +284,11 @@ m.message.InteractiveResponseMessage.NativeFlowResponseMessage ||               
       Taira.sendMessage(m.chat,
       { text: teks,
       contextInfo:{
-      mentionedJid:[sender],
+      mentionedJid:[m.sender],
       forwardingScore: 9999999,
       isForwarded: true,
       forwardedNewsletterMessageInfo: {
-      newsletterName: "♱Click Me♱♡⃤",
+      newsletterName: "♱♡ 𓆩Ⱦⱥīɍⱥ Ⱦēȼħ𓆪 ♱♡",
       newsletterJid: "120363320283062687@newsletter",
       },
       "externalAdReply": {
