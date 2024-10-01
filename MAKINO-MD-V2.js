@@ -2780,6 +2780,8 @@ case 'tovv': {
         Taira.sendMessage(m.chat, { text: args.join(" ") ? args.join(" ") : '', mentions: participants.map(a => a.id) }, { quoted: m })
       }
         break;
+
+		    
 	case 'ping': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
@@ -2839,6 +2841,7 @@ case 'tovv': {
 	  Taira.sendMessage(from, { react: { text: "💧", key: m.key } })
           await Taira.sendMessage(m.chat, {text: `${m.chat}`}, { quoted: m})
         }
+	break 
 
 
       case 'nowa': case 'find': case 'stalk': case 'stalknumber': {
