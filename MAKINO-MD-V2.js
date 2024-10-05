@@ -708,6 +708,12 @@ const smallinput = budy.toLowerCase();
 
 
     switch (command) {
+case 'clear': case 'clearchat': {
+	     if (!isCreator) return
+	     await Taira.chatModify({ delete: true, lastMessages: [{ key: m.key, messageTimestamp: m.messageTimestamp }] }, m.chat);
+             await reply('Chat Cleared.');
+	    }
+	break
 
 case 'addowner': {
 if (!isCreator) return reply(mess.botowner)
@@ -753,8 +759,8 @@ break
 
 case 'savecontact': case 'svcontact':{
 if (!m.isGroup) return reply(mess.grouponly)
-if (!isCreator) return reply(mess.botowner)
-let cmiggc = await Tairac.groupMetadata(m.chat)
+if (!isCreator) return
+let cmiggc = await Taira.groupMetadata(m.chat)
 let orgiggc = participants.map(a => a.id)
 vcard = ''
 noPort = 0
@@ -762,11 +768,11 @@ for (let a of cmiggc.participants) {
     vcard += `BEGIN:VCARD\nVERSION:3.0\nFN:[${noPort++}] +${a.id.split("@")[0]}\nTEL;type=CELL;type=VOICE;waid=${a.id.split("@")[0]}:+${a.id.split("@")[0]}\nEND:VCARD\n`
 }
 let nmfilect = './contacts.vcf'
-reply("Saving  '+cmiggc.participants.length+' participants contact")
+reply('Saving  ' + cmiggc.participants.length+' participants contact')
 require('fs').writeFileSync(nmfilect, vcard.trim())
 await sleep(2000)
 Taira.sendMessage(m.chat, {
-    document: require('fs').readFileSync(nmfilect), mimetype: 'text/vcard', fileName: 'MAKINO-MD-V2.vcf', caption: '\nDone saving.\nGroup Name: *'+cmiggc.subject+'*\nContacts: *'+cmiggc.participants.length+'*'
+    document: require('fs').readFileSync(nmfilect), mimetype: 'text/vcard', fileName: 'MAKINO-MD-V3.vcf', caption: '\nDone saving.\nGroup Name: *'+cmiggc.subject+'*\nContacts: *'+cmiggc.participants.length+'*'
 }, {ephemeralExpiration: 86400, quoted: m})
 require('fs').unlinkSync(nmfilect)
 }
@@ -5100,6 +5106,7 @@ case 'tovv': {
 ╭═══════════════ ⪩
 ┃ • Addowner
 ┃ • delowner
+┃ • clear
 ┃ • ᴘᴜʙʟɪᴄ
 ┃ • self
 ┃ • ʀᴇꜱᴛᴀʀᴛ
@@ -5141,7 +5148,7 @@ case 'tovv': {
 ┃ • ɢʀᴏᴜᴘʟɪɴᴋ
 ┃ • ɪɴᴠɪᴛᴇ
 ┃ • ᴀᴅᴅ
-┃ •  savecontact
+┃ • savecontact
 ┃ • kick
 ┃ • left
 ┃ • ꜱᴇᴛɴᴀᴍᴇ
@@ -5549,6 +5556,7 @@ let messg = `
 ╭═══════════════ ⪩
 ┃ • Addowner
 ┃ • Delowner
+┃ • clear
 ┃ • ᴘᴜʙʟɪᴄ
 ┃ • self
 ┃ • ʀᴇꜱᴛᴀʀᴛ
@@ -5587,7 +5595,7 @@ let messg = `
 ┃ • ɢʀᴏᴜᴘʟɪɴᴋ
 ┃ • ɪɴᴠɪᴛᴇ
 ┃ • ᴀᴅᴅ
-┃ •  savecontact
+┃ • savecontact
 ┃ • kick
 ┃ • left
 ┃ • Antibot
