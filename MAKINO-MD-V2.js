@@ -414,7 +414,32 @@ const v2features = () =>{
     }
 
     //-----------------------------------------------------------------------------------------------------------------------------------//
+ 
+   async function TylorXMp3 (link) {
+try {
+Taira.sendMessage(m.chat, { react: { text: '⏯️', key: m.key }})
+let kyuu = await fetchJson (`https://widipe.com/download/ytdl?url=${link}`)
+Taira.sendMessage(m.chat, {
+ audio: {url: kyuu.result.mp3}, 
+ mimetype: "audio/mpeg",
+ contextInfo: {
+        externalAdReply: {
+          title: 'ミ★ MAKINO-MD-V3 ★彡',
+          body: kyuu.result.title,
+          thumbnailUrl: kyuu.result.image,
+          sourceUrl: kyuu.result.url,
+          mediaType: 2,
+          showAdAttribution: true,
+          renderLargerThumbnail: false
+        }
+      }
+    }, { quoted: m });
 
+  } catch (error) {
+    console.error('Error fetching the song:', error);
+    await reply(`*Error fetching the song.* \n_Please try again later._`)
+  }
+}
 
     // //don't edit this part.
     const formatTime = (seconds) => {
@@ -1448,21 +1473,20 @@ case 'tovv': {
 
       case 'chat':
       case 'gpt':
+      {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-
-        if (!args[0]) {
-          return reply(`Please provide a message to chat with the AI chatbot. Example: ${prefix}chat How are you?`);
-        }
-        const message = encodeURIComponent(args.join(' '));
-        const gptapi = `https://api.maher-zubair.tech/ai/chatgpt3?q=${message}`;
-        try {
-          const response = await axios.get(gptapi);
-          const result = response.data.result;
-          reply(result);
-        } catch (error) {
-          console.error('Error fetching AI chatbot response:', error);
-          reply('An error occurred while fetching the AI chatbot response. Please try again later.');
+        if (!text) return reply(`Please provide a message to chat with the AI chatbot. Example: ${prefix}chat How are you?`);
+          let d = await fetchJson(
+            `https://bk9.fun/ai/gptt4?q=${text}`
+          );
+          if (!d.BK9) {
+            return reply(
+              "An error occurred while fetching the AI chatbot response. Please try again later."
+            );
+          } else {
+            reply(d.BK9);
+          }
         }
         break;
 
@@ -1474,7 +1498,7 @@ case 'tovv': {
         const randomEmoji = manyemojis[Math.floor(Math.random() * manyemojis.length)];
         Taira.sendMessage(from, { react: { text: randomEmoji, key: m.key } });
         if (!q) return reply(`Please provide a query to generate an image. Example: ${prefix + command} Beautiful landscape`);
-        const apiUrl = `https://gurugpt.cyclic.app/dalle?prompt=${encodeURIComponent(q)}`;
+        const apiUrl = `https://widipe.com/dalle?text=${encodeURIComponent(q)}`;
         try {
           await Taira.sendMessage(m.chat, { image: { url: apiUrl } }, { quoted: m });
         } catch (error) {
@@ -3675,36 +3699,47 @@ case 'tovv': {
           // Send a reaction emoji
           Taira.sendMessage(from, { react: { text: "🪄", key: m.key } });
 
-          // Check if a link is provided
-          if (!text) {
-            return reply(`Where is the link?\n\nExample: ${prefix + command} https://www.instagram.com/reel/Ctjt0srIQFg/?igshid=MzRlODBiNWFlZA==`);
-          }
+ if (!text) return reply(`Please provide an Instagram video url!`)
+var anu = await fetchJson(`https://widipe.com/download/igdl?url=${q}`)
+var hassdl = anu.result[0].url
+await Taira.sendMessage(m.chat, {
+video: {
+url: hassdl,
+caption: 'ミ★ MAKINO-MD-V2 ★彡'
+}
+}, {
+quoted: m
+})
+}
+break;
 
-          try {
-            // Download the Instagram video
-            let instadownload = await instadl(text);
-
-            // Send the downloaded video as a reply to the command
-            await Taira.sendMessage(m.chat, { video: { url: instadownload.url[0].url }, caption: mess.jobdone }, { quoted: m });
-          } catch (error) {
-            console.error('Error while processing Instagram video:', error);
-            return reply('An error occurred while processing the Instagram video.');
-          }
-        }
-        break;
-
-      case 'ig': {
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (args[0] === "mp4") {
-          Taira.sendMessage(from, { video: { url: args[1] }, caption: 'Here it is...', mimetype: 'video/mp4' }, { quoted: m })
-        } else if (args[0] === "jpg") {
-          Taira.sendMessage(from, { image: { url: args[1] }, caption: 'Here it is...' }, { quoted: m })
-        } else {
-          reply("Error! ")
+     case "apk":
+      case "apkdl":
+        {
+          if (!text) return reply("What apk do you wanna download?");
+        let kyuu = await fetchJson (`https://bk9.fun/search/apk?q=${text}`);
+        let tylor = await fetchJson (`https://bk9.fun/download/apk?id=${kyuu.BK9[0].id}`);
+         await Taira.sendMessage(
+              m.chat,
+              {
+                document: { url: tylor.BK9.dllink },
+                fileName: tylor.BK9.name,
+                mimetype: "application/vnd.android.package-archive",
+                contextInfo: {
+        externalAdReply: {
+          title: `ミ★ MAKINO-MD-V2 ★彡`,
+          body: `${tylor.BK9.name}`,
+          thumbnailUrl: `${tylor.BK9.icon}`,
+          sourceUrl: `${tylor.BK9.dllink}`,
+          mediaType: 2,
+          showAdAttribution: true,
+          renderLargerThumbnail: false
         }
       }
-        break;
+    }, { quoted: m });
+          }
+      break;
+
 
 
       case 'mp4': {
@@ -3813,7 +3848,7 @@ case 'ttdl': {
     Taira.sendMessage(from, { 
         video: { url: videoUrl }, 
         mimetype: "video/mp4", 
-        caption: '> *ミ★ MAKINO-MD-V3 ★彡*' 
+        caption: '> *ミ★ MAKINO-MD-V2 ★彡*' 
     }, { quoted: m });
     break;
 }
@@ -3836,11 +3871,25 @@ case 'video': {
     Taira.sendMessage(from, { 
         video: { url: videoUrl }, 
         mimetype: "video/mp4", 
-        caption: videoTitle + `\n> *ミ★ MAKINO-MD-V3 ★彡*`
+        caption: videoTitle + `\n> *ミ★ MAKINO-MD-V2 ★彡*`
     }, { quoted: m });
     
     break;
 }
+
+case 'ytmp3':
+{
+      if (isBan) return reply(mess.banned);
+      if (isBanChat) return reply(mess.bangc);
+	if (!text) return reply('Please provide a valid  YouTube link!');
+	let urls = text.match(/(?:https?:\/\/)?(?:youtu\.be\/|(?:www\.|m\.)?youtube\.com\/(?:watch\?v=|v\/|embed\/|shorts\/|playlist\?list=)?)([a-zA-Z0-9_-]{11})/gi);
+	if (!urls) return reply('Seems like your message does not contain a valid YouTube link');
+	let urlIndex = parseInt(text) - 1;
+	if (urlIndex < 0 || urlIndex >= urls.length)
+		return reply('Invalid URL index');
+	await TylorXMp3(urls);
+}
+break;
 
 case 'ytdl': case 'ytmp4': {
       if (isBan) return reply(mess.banned);
@@ -3855,14 +3904,14 @@ case 'ytdl': case 'ytmp4': {
     Taira.sendMessage(from, { 
         video: { url: videoUrl }, 
         mimetype: "video/mp4", 
-        caption: videoTitle + `\n> *ミ★ MAKINO-MD-V3 ★彡*`
+        caption: videoTitle + `\n> *ミ★ MAKINO-MD-V2 ★彡*`
     }, { quoted: m });
     
     break;
     }
 
 	
-   case'play': case 'song': {
+   case 'play': case 'song': {
       if (isBan) return reply(mess.banned);
       if (isBanChat) return reply(mess.bangc);
     if (!text) return reply(`Example : ${prefix + command} Halsey Without me`);
@@ -3945,38 +3994,29 @@ break
         );
       }
         break;
-		    
 
-      case 'lyrics':
+        case 'lyrics':
+        {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        if (!m.isGroup) return reply(mess.grouponly);
         Taira.sendMessage(from, { react: { text: "🍁", key: m.key } });
-
-        if (!text) return reply(`Command usage: ${prefix}lyrics <song title>`);
-
-        reply(mess.waiting);
-
-        const { getLyrics } = require("@fantox01/lyrics-scraper");
-
-        try {
-          const data = await getLyrics(text);
-
-          const message = `
-        *♱MAKINO-MD-V2♱♡⃤ lyrics*
-        *Title:* ${text}
-        *Artist:* ${data.artist}
-        *Album:* ${data.album}
-        *Release Date:* ${data.release_date}
-        
-        *Lyrics:*\n${data.lyrics}
-            `.trim();
-
-          Taira.sendMessage(from, { text: message, quoted: m });
-        } catch (error) {
-          console.error('Error fetching lyrics:', error);
-          const errorMessage = 'Failed to fetch lyrics. Please try again later.';
-          Taira.sendMessage(from, { text: errorMessage, quoted: m });
+          if (!text)
+            return reply(
+              `What lyrics you looking for?\nExample usage: ${prefix}lyrics Thunder`
+            );
+          let lyric = await fetch(
+            `https://widipe.com/lirik?text=${text}`
+          );
+          let jsonxeon = await lyric.json();
+          if (jsonxeon.result.error) {
+            reply("Lyrics not found.");
+          } else {
+            reply(
+              `
+*♱MAKINO-MD-V2♱♡⃤*
+*Artist*: ${jsonxeon.result.artist}\n*Lyrics*:\n${jsonxeon.result.lyrics}`
+            );
+          }
         }
         break;
 
@@ -5206,7 +5246,7 @@ break
 ╭═══════════════ ⪩
 ╰╮╰┈➤ *AI*
 ╭═══════════════ ⪩
-┃ • ᴄʜᴀᴛɢᴘᴛ 
+┃ • ɢᴘᴛ 
 ┃ • ᴅᴀʟʟᴇ 
 ┃ • ꜱᴀʏ
 ┃ • ꜰʟɪᴘᴛᴇxᴛ
@@ -5219,9 +5259,11 @@ break
 ┃ •  ᴘʟᴀʏ
 ┃ •  ᴠɪᴅᴇᴏ
 ┃ •  YTDL
+┃ •  ʏᴛᴍᴘ3
 ┃ •  ʏᴛᴍᴘ4
 ┃ •  video
 ┃ •  ʟʏʀɪᴄꜱ
+┃ •  ᴀᴘᴋ
 ┃ •  ᴍᴏᴠɪᴇ
 ┃ •  mediafire
 ┃ •  ɢᴏᴏɢʟᴇ
