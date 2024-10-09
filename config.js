@@ -13,6 +13,8 @@ global.antitags = false;
 global.autoTyping = false;                //make true to enable auto typing
 global.autoRecord = true;                //make true to enable auto recording
 global.autoviewstatus = false;                 //make true to view statuses 
+global.anticall = false
+
 
 global.SESSION_ID = process.env.SESSION_ID || ""
 global.Owner = ["2349151864541"]; //like 2347080968564 
