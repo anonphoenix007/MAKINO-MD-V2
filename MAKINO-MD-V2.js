@@ -1186,29 +1186,6 @@ case 'tovv': {
         break;
 
 
-      case 'autostatus': case 'stsview': {
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        if (!isCreator) return reply(mess.botowner)
-        Taira.sendMessage(from, { react: { text: '❤', key: m.key } });
-        if (args.length === 0) {
-          // Display the current status of autostatus
-          return m.reply(`Auto-Status is currently ${global.statusseen ? 'enabled' : 'disabled'}.`);
-        } else if (args.length === 1 && (args[0] === 'on' || args[0] === 'off')) {
-          const status = args[0];
-          if (status === 'on') {
-            global.statusseen = true;
-            return m.reply('Auto-Status is now enabled.');
-          } else {
-            global.statusseen = false;
-            return m.reply('Auto-Status is now disabled.');
-          }
-        } else {
-          return m.reply(`Usage: ${global.prefa[0]}autostatus [on/off]`);
-        }
-	}
-        break;
-
 
       case 'ban': {
         if (isBan) return reply(mess.banned);
