@@ -4174,25 +4174,21 @@ break
       }
         break;
 
-
-      case 'sticker': case 's': {
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        Taira.sendMessage(from, { react: { text: "🌝", key: m.key } })
-        if (/image/.test(mime)) {
-          let media = await Taira.downloadAndSaveMediaMessage(quoted)
-          let encmedia = await Taira.sendImageAsSticker(m.chat, media, m, { packname: '♱MAKINO-MD-V2♱♡⃤', author: global.author })
-          await fs.unlinkSync(encmedia)
-        } else if (/video/.test(mime)) {
-          if ((quoted.msg || quoted).seconds > 11) return reply('Maximum 10 seconds!')
-          let media = await Taira.downloadAndSaveMediaMessage(quoted)
-          let encmedia = await Taira.sendVideoAsSticker(m.chat, media, m, { packname: '♱MAKINO-MD-V2♱♡⃤', author: global.author })
-          await fs.unlinkSync(encmedia)
-        } else {
-          reply(`Send Image/Video With Caption ${prefix + command}\nVideo Duration 1-9 Seconds`)
-        }
-      }
-        break;
+            
+case 's': case 'sticker': {
+if (!quoted) return reply(`Send/Reply Images/Videos/Gifs With Captions ${prefix+command}\nVideo Duration 1-9 Seconds`)
+if (/image/.test(mime)) {
+let media = await quoted.download()
+let encmedia = await Taira.sendImageAsSticker(m.chat, media, m, { packname: '♱MAKINO-MD-V2♱♡⃤', author: global.author })
+} else if (/video/.test(mime)) {
+if ((quoted.msg || quoted).seconds > 11) return reply('Send/Reply Images/Videos/Gifs With Captions ${prefix+command}\nVideo Duration 1-9 Seconds')
+let media = await quoted.download()
+let encmedia = await Taira.sendVideoAsSticker(m.chat, media, m, { packname: '♱MAKINO-MD-V2♱♡⃤', author: global.author })
+} else {
+reply(`Send/Reply Images/Videos/Gifs With Captions ${prefix+command}\nVideo Duration 1-9 Seconds`)
+}
+}
+break
 
 
 
