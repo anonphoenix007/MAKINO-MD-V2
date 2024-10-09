@@ -6,7 +6,7 @@
     <img alt="X-2.0" height="300" src="https://telegra.ph/file/7aa528767ed96ddc17bc2.jpg">
     <h1 align="center">MAKINO-MD-V2</h1>
     <h4 align="center">Minor Update available.</h4>
-    <h3 align="center">New session ID type</h3>
+    <h3 align="center">Downloaders fixed</h3>
     <h3 align="center">vv antiviewonce command</h3>
     <h3 align="center">typing/recording command</h3>
        <h3 align="center">Added Different menu(Core menu,all menu ...)</h3>
@@ -118,7 +118,7 @@ global.SESSION_ID = process.env.SESSION_ID || "" //session ID here
 ## ```Support Me```
 <a href='https://www.instagram.com/anonphoenix007' target="_blank"><img alt='Instagram' src='https://img.shields.io/badge/CONTACT-h?color=black&style=for-the-badge&logo=instagram' width="96.35" height="28"/></a></p>
 <a href='https://t.me/Tha_Healer' target="_blank"><img alt='Telegram' src='https://img.shields.io/badge/CONTACT-h?color=black&style=for-the-badge&logo=Telegram' width="96.35" height="28"/></a></p>
-<a href='https://chat.whatsapp.com/EKdfDFDoi5C3ck88OmbJyk' target="_blank"><img alt='Whatsapp' src='https://img.shields.io/badge/OFFICIAL-GC-h?color=black&style=for-the-badge&logo=whatsapp' width="96.35" height="28"/></a></p>
+<a href='https://chat.whatsapp.com/DOVRqF006VHHZhiSNwJRce' target="_blank"><img alt='Whatsapp' src='https://img.shields.io/badge/OFFICIAL-GC-h?color=black&style=for-the-badge&logo=whatsapp' width="96.35" height="28"/></a></p>
 <a href='https://whatsapp.com/channel/0029Vag5l2ALSmbi14YryJ2r' target="_blank"><img alt='Whatsapp' src='https://img.shields.io/badge/OFFICIAL-Channel-h?color=black&style=for-the-badge&logo=whatsapp' width="96.35" height="28"/></a></p>
 <a href='https://www.youtube.com' target="_blank"><img alt='Youtube' src='https://img.shields.io/badge/SUBSCRIBE-h?color=black&style=for-the-badge&logo=youtube' width="96.35" height="28"/></a></p>
 </p>
@@ -159,7 +159,6 @@ global.SESSION_ID = process.env.SESSION_ID || "" //session ID here
    ## `Special Thanks To`
 
 * [`📕 Kai..!!`](https://github.com/Kai0071)
-* [`📕 Guru`](https://github.com/Guru322)
 * [`📕 V.e.n.o.x`](https://github.com/V-E-N-O-X )
 ---------
 
