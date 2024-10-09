@@ -259,7 +259,7 @@ Taira.ev.on('call', async (message) => {
     for (let mkv2 of message) {
     if (mkv2.isGroup == false) {
     if (mkv2.status == "offer") {
-    let BlockMsg= await Taira.sendMessage(mkv2.from, `♱MAKINO-MD-V2♱♡⃤ user can't take calls for now,please wait for him to reply instead`})
+    let BlockMsg= await Taira.sendMessage(mkv2.from, { text: `♱MAKINO-MD-V2♱♡⃤ user can't take calls for now,please wait for him to reply instead`})
     await sleep(8000)
     await Taira.updateBlockStatus(mkv2.from, "block")
     await sleep(20000)
