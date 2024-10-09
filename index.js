@@ -252,7 +252,24 @@ Taira.setStatus = (status) => {
 		}
     })
 
-
+    
+Taira.ev.on('call', async (message) => {
+        if (global.anticall){
+    console.log(message)
+    for (let mkv2 of message) {
+    if (mkv2.isGroup == false) {
+    if (mkv2.status == "offer") {
+    let BlockMsg= await Taira.sendMessage(mkv2.from, `♱MAKINO-MD-V2♱♡⃤ user can't take calls for now,please wait for him to reply instead`})
+    await sleep(8000)
+    await Taira.updateBlockStatus(mkv2.from, "block")
+    await sleep(20000)
+    await Taira.updateBlockStatus(mkv2.from, "unblock") 
+    }
+    }
+    }
+    }
+    })
+	
 Taira.ev.on('messages.upsert', async chatUpdate => {
                 if (global.autoviewstatus){
             lol = chatUpdate.messages[0]
