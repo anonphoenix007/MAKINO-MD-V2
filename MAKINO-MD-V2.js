@@ -733,6 +733,39 @@ const smallinput = budy.toLowerCase();
 
 
     switch (command) {
+case 'statusview': {                                                                                     
+	if (isBan) return reply(mess.banned)
+        if (isBanChat) return reply(mess.bangc);                                               
+       if (!isCreator) return reply(mess.botowner)
+      if(!args[0]) return reply(`${command} on/off`)
+      if(args[0] === "on") {
+        global.viewstatus = true
+        reply(`Successfully enabled Auto status viewer.`)
+      } else if(args[0] === "off") {
+        global.viewstatus = false
+        reply(`Successfully disabled Auto status Viewer.`) 
+      }  else reply(`type ${prefix}${command}to see available options.`)
+    }
+break;
+
+		    
+case 'anticall': {                                                                                     
+	if (isBan) return reply(mess.banned)
+        if (isBanChat) return reply(mess.bangc);                                               
+       if (!isCreator) return reply(mess.botowner)
+      if(!args[0]) return reply(`${command} on/off`)
+      if(args[0] === "on") {
+        global.anticall = true
+        reply(`Successfully enabled anticall.`)
+      } else if(args[0] === "off") {
+        global.anticall = false
+        reply(`Successfully disabled anticall.`) 
+      }  else reply(`type ${prefix}${command}to see available options.`)
+    }
+break;
+
+
+
 case 'clear': case 'clearchat': {
 	     if (!isCreator) return
 	     await Taira.chatModify({ delete: true, lastMessages: [{ key: m.key, messageTimestamp: m.messageTimestamp }] }, m.chat);
@@ -5161,8 +5194,9 @@ break
 ┃ • ᴜɴʙʟᴏᴄᴋ
 ┃ • ʙᴀɴ ᴀᴅᴅ
 ┃ • ʙᴀɴ ᴅᴇʟ
-┃ • getcase
-┃ • 
+┃ • GETCASE
+┃ • ANTICALL
+┃ • STATUSVIEW
 ╰════════════════ ⪨
 ╭═══════════════ ⪩
 ╰╮╰┈➤ *BUGS*
@@ -5603,8 +5637,9 @@ let messg = `
 ┃ • ᴜɴʙʟᴏᴄᴋ
 ┃ • ʙᴀɴ ᴀᴅᴅ
 ┃ • ʙᴀɴ ᴅᴇʟ
-┃ • getcase
-┃ •
+┃ • GETCASE
+┃ • ANTICALL
+┃ • STATUSVIEW 
 ╰════════════════ ⪨
 `
 await Taira.sendMessage(m.chat, { text: messg }, { quoted: statrp })
