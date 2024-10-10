@@ -340,7 +340,7 @@ const v2features = () =>{
       return;
     }
 
-   m.reply(`\`\`\` Bot Detected!!\`\`\`\n\n_*@${m.sender.split("@")[0]}*_ kicked by Anti Not!`, { mentions: [m.sender] });
+   m.reply(`\`\`\` Bot Detected!!\`\`\`\n\n_*@${m.sender.split("@")[0]}*_ kicked by Anti Bot!`, { mentions: [m.sender] });
    Taira.groupParticipantsUpdate(m.chat, [m.sender], 'remove');
    m.deleteMsg(m.key);
     return;
