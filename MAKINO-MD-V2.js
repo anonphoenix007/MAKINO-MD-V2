@@ -5464,7 +5464,8 @@ if(global.menutype === "v1"){
   await Taira.sendMessage(m.chat , { text: helpMenuText}, {quoted: statrp })
   } else if (global.menutype === "v3"){
   Taira.sendMessage(m.chat, {
-video : { url: "https://graph.org/file/fad20d219e426d3c65e5f.mp4" }, 
+//video : { url: "https://graph.org/file/fad20d219e426d3c65e5f.mp4" }, 
+video: { url: "https://widipe.com/file/jpaLRLZBBpPE.mp4" },
 caption: helpMenuText,
 gifPlayback: true,
 contextInfo: {
@@ -5491,7 +5492,8 @@ quoted: m
 } else if(global.menutype === "v4") {
 
   Taira.sendMessage(m.chat, {
-      video : { url: "https://graph.org/file/fad20d219e426d3c65e5f.mp4" },
+      //video : { url: "https://graph.org/file/fad20d219e426d3c65e5f.mp4" },
+      video: { url: "https://widipe.com/file/jpaLRLZBBpPE.mp4" },
       gifPlayback: true,
       caption: helpMenuText,
       contextInfo: {
