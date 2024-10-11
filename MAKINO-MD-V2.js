@@ -5480,7 +5480,7 @@ externalAdReply: {
 showAdAttribution: true,
 title: "♱MAKINO-MD-V2♱♡⃤",
 body: "Taira Makino",
-thumbnailUrl: "https://telegra.ph/file/dfad7a7afb54498391945.jpg",
+thumbnailUrl: "https://widipe.com/file/rGQFTKL2GoTF.jpg",
 sourceUrl: "https://whatsapp.com/channel/0029Vag5l2ALSmbi14YryJ2r",
 mediaType: 1,
 renderLargerThumbnail: true
@@ -5500,7 +5500,7 @@ quoted: m
       externalAdReply: {
       title: '♱MAKINO-MD-V2♱♡⃤',
       body: 'Taira Makino',
-      thumbnailUrl: "https://telegra.ph/file/dfad7a7afb54498391945.jpg",
+      thumbnailUrl: "https://widipe.com/file/rGQFTKL2GoTF.jpg",
       sourceUrl: `https://whatsapp.com/channel/0029Vag5l2ALSmbi14YryJ2r`,
       mediaType: 1,
       renderLargerThumbnail: true
