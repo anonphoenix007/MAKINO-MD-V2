@@ -1380,18 +1380,45 @@ case 'tovv': {
       case 'film': case 'movie': case 'moviesearch':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        reply(mess.waiting)
         if (!q) return reply(`Please enter a Movie search term...\nExample: ${prefix}movie Spiderman`)
-        xfarrapi.Film(q)
-          .then(data => {
-            console.log(data)
-            let krl = `*Search Term:* ${q}\n\n`
-            for (let i of data) {
-              krl += (`${prefix}----------------------------------------------------------------------------\n\n\n*Movie Name:* ${i.judul}\n *Quality :* ${i.quality}\n *Type : ${i.type}*\n *Uploaded on :* ${i.upload}\n *Source URL :* ${i.link}\n\n\n`)
-            }
-            Taira.sendMessage(from, { image: { url: data[0].thumb }, caption: krl }, { quoted: fdocs })
-          });
-        break;
+        let msearch = await axios.get(
+          `http://www.omdbapi.com/?apikey=742b2d09&t=${text}&plot=full`
+        );
+        let mv2 = "";
+        console.log(msearch.data);
+        mv2 +=
+          "♱MAKINO-MD-V2♱♡⃤\n\n" + " ``` MOVIE SEARCH```\n";
+        mv2 += "Title      : " + msearch.data.Title + "\n";
+        mv2 += "Year       : " + msearch.data.Year + "\n";
+        mv2 += "Rated      : " + msearch.data.Rated + "\n";
+        mv2 += "Released   : " + msearch.data.Released + "\n";
+        mv2 += "Runtime    : " + msearch.data.Runtime + "\n";
+        mv2 += "Genre      : " + msearch.data.Genre + "\n";
+        mv2 += "Director   : " + msearch.data.Director + "\n";
+        mv2 += "Writer     : " + msearch.data.Writer + "\n";
+        mv2 += "Actors     : " + msearch.data.Actors + "\n";
+        mv2 += "Plot       : " + msearch.data.Plot + "\n";
+        mv2 += "Language   : " + msearch.data.Language + "\n";
+        mv2 += "Country    : " + msearch.data.Country + "\n";
+        mv2 += "Awards     : " + msearch.data.Awards + "\n";
+        mv2 += "BoxOffice  : " + msearch.data.BoxOffice + "\n";
+        mv2 += "Production : " + msearch.data.Production + "\n";
+        mv2 += "imdbRating : " + msearch.data.imdbRating + "\n";
+        mv2 += "imdbVotes  : " + msearch.data.imdbVotes + "";
+        Taira.sendMessage(
+          m.chat,
+          {
+            image: {
+              url: msearch.data.Poster,
+            },
+            caption: mv2,
+          },
+          {
+            quoted: m,
+          }
+        );
+        break;  
+      
 
       case 'wallpaper':
       case 'animewallpaper':
