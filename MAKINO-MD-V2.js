@@ -1451,25 +1451,22 @@ case 'tovv': {
         break;
 
 
-      case 'wikimedia': case 'wikiimage': {
+case 'wikimedia': case 'wikiimage': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!args.join(" ")) return reply("What picture are you looking for??")
         let { wikimedia } = require('./lib/scraper')
-        anu = await wikimedia(args)
-        hasil = anu[Math.floor(Math.random() * anu.length)]
-        let buttons = [
-          { buttonId: `${prefix}wikimedia ${args.join(" ")}`, buttonText: { displayText: 'Next Image' }, type: 1 }
-        ]
-        let buttonMessage = {
-          image: { url: hasil.image },
-          caption: `Title : ${hasil.title}\nSource : ${hasil.source}\nMedia Url : ${hasil.image}`,
-          footer: `♱MAKINO-MD-V2♱♡⃤`,
-          buttons: buttons,
-          headerType: 4
+          let anumedia = await wikimedia(text);
+          result = anumedia[Math.floor(Math.random() * anumedia.length)];
+          Taira.sendMessage(
+            m.chat,
+            {
+              caption: `♱MAKINO-MD-V2♱♡⃤\n\nTitle : ${result.title}\nSource : ${result.source}\nMedia Url : ${result.image}`,
+              image: { url: result.image },
+            },
+            { quoted: m }
+          );
         }
-        Taira.sendMessage(m.chat, buttonMessage, { quoted: m })
-      }
         break;
 
 
