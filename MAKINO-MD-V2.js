@@ -3808,41 +3808,39 @@ break;
       }
         break;
 
-      case 'twitter': case 'ttdl': {
+         case 'twitter': case 'ttdl': {
   if (!q) return reply("Provide a Twitter url to continue.")
-  if (isBan) return reply(mess.banned);
+   if (isBan) return reply(mess.banned);
   if (isBanChat) return reply(mess.bangc);
   if (!text) return reply(`Please provide the link!\n\nExample: ${prefix}${command} https://x.com/InternetH0F/status/1826967781629182205`)
-  //if (!q.includes('x.com')) return reply(`Invalid twitter link provided,recheck!`)
-  if (!isUrl(args[0]) && !args[0].includes('x.com')) return reply(`Invalid twitter link provided,recheck!`)
-  const data = fg.twitter(q)
-  const reslt = data.HD
-  const trimmed = reslt.match(/.*\.mp4/)[0];
-  await Taira.sendMessage(m.chat, { video: { url: trimmed }}, { quoted: m})
-	}
+let ty = await fetchJson(`https://widipe.com/download/twtdl?url=${encodeURIComponent(q)}`)
+await Taira.sendMessage(m.chat, {
+video: {
+url: ty.result.url.hd,
+caption: '♱MAKINO-MD-V2♱♡⃤'
+}
+}, {
+quoted: m
+})
+}
+break;
+
 
       case 'fbdl': case 'fb': case 'facebook': case 'fbmp4': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`Please provide the link!\n\nExample: ${prefix}facebook https://www.facebook.com/groups/599913174599515/permalink/705467384044093/`)
-        if (!isUrl(args[0]) && !args[0].includes('facebook.com')) return reply(`Invalid link!`)
-        let bocil = require('@bochilteam/scraper')
-        bocil.facebookdlv2(`${text}`).then(async (data) => {
-          let txt = `「 _Facebook Downloader_ 」\n\n`
-          txt += `*Title :* ${data.title}\n`
-          txt += `*Quality :* ${data.result[0].quality}\n`
-          txt += `*Description:* ${data.description}\n`
-          txt += `*URL :* ${text}\n\n`
-          buf = await getBuffer(data.thumbnail)
-          Taira.sendMessage(m.chat, { image: { url: data.thumbnail }, jpegThumbnail: buf, caption: `${txt}` }, { quoted: m })
-          for (let i of data.result) {
-            Taira.sendMessage(m.chat, { video: { url: i.url }, jpegThumbnail: buf, caption: `*Quality :* ${i.quality}` }, { quoted: m })
-          }
-        }).catch((err) => {
-          reply(mess.error)
-        })
-      }
-        break;
+let tyf = await fetchJson(`https://widipe.com/download/fbdl?url=${encodeURIComponent(q)}`)
+await Taira.sendMessage(m.chat, {
+video: {
+url: tyf.result.Normal_video,
+caption: '♱MAKINO-MD-V2♱♡⃤'
+}
+}, {
+quoted: m
+})
+}
+break;
 
 
       case 'yts': case 'ytsearch': {
